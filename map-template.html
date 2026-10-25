@@ -13,6 +13,7 @@
 @media(max-width:1000px){.app{padding:18px}.flow{column-gap:32px;grid-template-columns:minmax(0,1fr) minmax(175px,.8fr) minmax(0,1fr)}.node{padding:11px;gap:8px}.quantity{max-width:40%}.process-card{padding:15px}}
 @media(max-width:760px){.flow{grid-template-columns:minmax(0,1fr);gap:25px}.edge-layer{display:none}.stage+.stage:before{content:'↓';display:block;font-size:23px;color:var(--muted);margin:-15px 0 10px;text-align:center}.stage h3{margin-bottom:8px}.process-card{max-width:none}.selected-heading h2{font-size:22px}.search{flex:1 1 100%;min-width:0}.top{gap:18px}.related-list,.detail-grid{grid-template-columns:minmax(0,1fr)}.toolbar{margin-top:18px}.app{padding:16px 12px 24px}.node{font-size:16px;min-height:64px;padding:13px}.modes button,.navigation button{font-size:14px;min-height:42px}.crumbs{font-size:12px}.craft-grid{border-spacing:2px}.craft-grid td{padding:2px}.map-selection{align-items:stretch}.map-selection strong{flex-basis:100%}#map{min-height:340px;height:55vh}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+.chain-intro{max-width:780px}.chain-tools{display:flex;gap:8px;margin:16px 0}.chain-node{border:1px solid var(--line);border-radius:9px;background:var(--surface);margin:8px 0;overflow-wrap:anywhere}.chain-node>summary{padding:14px;min-height:52px;font-weight:550}.chain-node>summary::marker{color:var(--accent)}.chain-node>summary .quantity{margin-right:9px}.chain-node>summary small{display:block;font-size:12px;font-weight:400;color:var(--muted);margin:4px 0 0 16px}.chain-body{padding:0 14px 12px 20px}.chain-process{background:var(--process);border-radius:7px;padding:10px 12px;font-size:14px;margin:6px 0 12px}.chain-process button{margin-top:8px;display:block;font-size:13px}.chain-children{border-left:2px solid var(--line);padding-left:12px}.chain-cost{color:var(--muted);font-size:12px}.chain-view{max-width:1040px}.chain-node[open]>summary{background:var(--soft);border-radius:9px}.chain-body>.notice{margin:12px 0}.chain-node .pager{margin-bottom:6px}@media(max-width:760px){.chain-body{padding:0 6px 10px}.chain-children{padding-left:5px}.chain-node>summary{padding:12px 8px}.chain-view h2{font-size:22px}}
 </style>
 </head>
 <body>
@@ -23,11 +24,12 @@
 </header>
 <div class="toolbar">
  <nav class="navigation" aria-label="Navegación"><button id="back" disabled>← Atrás</button><button id="forward" disabled aria-label="Adelante">→</button><button id="home">Stargate</button></nav>
- <div class="modes" aria-label="Vista"><button id="recipe-mode" aria-pressed="true">Por receta</button><button id="map-mode" aria-pressed="false">Mapa general</button></div>
+ <div class="modes" aria-label="Vista"><button id="recipe-mode" aria-pressed="true">Por receta</button><button id="chain-mode" aria-pressed="false">Cadena desplegable</button><button id="map-mode" aria-pressed="false">Mapa general</button></div>
 </div>
 <nav id="breadcrumbs" class="crumbs" aria-label="Ruta de navegación"></nav>
 <main>
 <section id="recipe-view"><div class="loading" role="status">Cargando la cadena de fabricación…</div></section>
+<section id="chain-view" class="chain-view" hidden aria-label="Cadena de ingredientes desplegable"></section>
 <section id="overview" hidden aria-label="Orientación en el mapa global">
  <h2 style="margin:0;font-size:22px">Mapa general</h2>
  <p class="subtext">Vista de orientación. Selecciona un nodo y abre su receta para leer ingredientes y cantidades.</p>
@@ -63,7 +65,7 @@ const R=data.resources,Q=data.recipes,fmt=new Intl.NumberFormat('es-MX',{maximum
 const clean=s=>String(s??'').replace(/§./g,''),fold=s=>clean(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
 const res=id=>R[id]||{name:id,kind:'item',status:'missing'};
 const name=id=>clean(res(id).name);
-const label=key=>key[0]==='i'?name(key.slice(1)):clean(Q[key.slice(1)]?.machine||key.slice(1));
+const label=key=>key[0]==='i'?name(key.slice(1)):clean(Q[key.slice(1)]?.machine||key.slice(1))+' → '+(Q[key.slice(1)]?.outputs.slice(0,2).map(s=>name(s.id)).join(', ')||'');
 const valid=key=>typeof key==='string'&&(key[0]==='i'?!!R[key.slice(1)]:key[0]==='r'&&!!Q[key.slice(1)]);
 const uses=new Map(),producers=new Map(),searchIndex=[];
 for(const [id,r]of Object.entries(R))searchIndex.push({key:'i'+id,text:fold(r.name+' '+id),title:clean(r.name),kind:r.kind==='fluid'?'Fluido':r.kind==='research'?'Investigación':r.status==='raw'?'Obtención natural':'Recurso'});
@@ -73,6 +75,7 @@ for(const [id,r]of Object.entries(Q)){
  searchIndex.push({key:'r'+id,text:fold(r.machine+' '+id+' '+r.outputs.map(s=>name(s.id)).join(' ')),title:clean(r.machine),kind:'Proceso · '+r.outputs.slice(0,2).map(s=>name(s.id)).join(', ')});
 }
 $('counts').textContent=fmt.format(Object.keys(R).length)+' recursos · '+fmt.format(Object.keys(Q).length)+' procesos';
+for(const hit of searchIndex)hit.foldedTitle=fold(hit.title);
 const home='i'+data.root;
 let trail=[home],cursor=0,mode='recipe',pages={inputs:0,outputs:0},edgeObserver=null,edgeFrame=0,searchTimer=0;
 const current=()=>trail[cursor];
@@ -81,6 +84,7 @@ function button(text,click,cls){const b=el('button',cls,text);b.type='button';b.
 function link(text,url){const a=el('a','small-link',text);try{const parsed=new URL(url,location.href);if(!['http:','https:','file:'].includes(parsed.protocol))return el('span','',text);a.href=parsed.href;a.target='_blank';a.rel='noopener noreferrer'}catch(_){return el('span','',text)}return a}
 function number(v){return typeof v==='number'&&Number.isFinite(v)?fmt.format(v):String(v??'?')}
 function quantity(s){let v=s.amount;if(s.consumed===false&&(v===0||v==='0'))v=1;const kind=res(s.id).kind;return number(v)+(kind==='fluid'?' mB':kind==='vis'?' vis':kind==='aspect'?' essentia':' ×')}
+function manualRecipe(recipe){return /^(Shaped Crafting|Shapeless Crafting|Extreme Crafting|Avaritia Extreme Crafting|Montaje|Quest reward|Natural acquisition|Selección aleatoria|Captura)/i.test(recipe.machine||'')}
 function routeUrl(key){const p=new URLSearchParams();p.set(key[0]==='i'?'item':'recipe',key.slice(1));return '#'+p.toString()}
 function parseUrl(){const h=new URLSearchParams(location.hash.slice(1)),q=new URL(location.href).searchParams;let key=h.has('recipe')?'r'+h.get('recipe'):h.has('item')?'i'+h.get('item'):q.has('recipe')?'r'+q.get('recipe'):q.has('item')?'i'+q.get('item'):home;return valid(key)?key:home}
 function navigate(key,{replace=false,write=true}={}){
@@ -152,7 +156,9 @@ function recipeDetails(recipe,rid,root){
  root.append(tech);
 }
 function render(){
- const start=performance.now();if(edgeObserver)edgeObserver.disconnect();cancelAnimationFrame(edgeFrame);view.replaceChildren();nav();
+ const start=performance.now();if(edgeObserver)edgeObserver.disconnect();cancelAnimationFrame(edgeFrame);nav();
+ if(mode==='chain'){renderChain();return}if(mode==='map')return;
+ view.replaceChildren();
  const key=current(),id=key.slice(1),selected=key[0]==='i'?res(id):null,{rid,recipe}=recipeFor(key);
  const heading=el('div','selected-heading');heading.append(el('h2','',selected?selected.name:recipe.machine));view.append(heading);
  const info=selected?(selected.kind==='research'?'Investigación':selected.status==='raw'?'Obtención natural':'Fabricación del recurso'):'Proceso seleccionado · receta exacta';
@@ -166,7 +172,7 @@ function render(){
  const card=el('div','process-card');card.id='process-card';card.append(el('h4','',recipe.machine));
  const dl=el('dl');function stat(k,v){const pair=el('div');pair.append(el('dt','',k),el('dd','',v));dl.append(pair)}
  if(recipe.tier)stat('Nivel',recipe.tier);
- const manual=/^(Shaped Crafting|Shapeless Crafting|Extreme Crafting|Avaritia Extreme Crafting|Montaje|Quest reward|Natural acquisition|Selección aleatoria|Captura)/i.test(recipe.machine||'');
+ const manual=manualRecipe(recipe);
  if(!manual&&Number.isFinite(recipe.durationTicks))stat('Tiempo base',number(recipe.durationTicks/20)+' s');
  if(!manual&&Number.isFinite(recipe.eut))stat('Potencia base',number(recipe.eut)+' EU/t');
  if(dl.children.length)card.append(dl);
@@ -179,6 +185,41 @@ function render(){
  if(selected){relatedSection('Se utiliza en',uses.get(id)||[],extras);const other=(producers.get(id)||[]).filter(r=>r!==rid);relatedSection('Otros procesos que lo producen',other,extras)}
  view.append(extras);$('announcement').textContent=label(key)+(recipe?'. '+recipe.inputs.length+' ingredientes y '+recipe.outputs.length+' salidas.':'. '+selected.acquisition);
  const duration=performance.now()-start;metrics.renders.push(duration);if(metrics.renders.length>100)metrics.renders.shift();view.dataset.key=key;view.dataset.recipe=rid||'';document.body.dataset.ready='true';
+}
+function chainNode(key,entry,ancestors=new Set(),depth=0,parentRecipe=null){
+ const node=el('details','chain-node'),summary=el('summary'),body=el('div','chain-body'),{rid,recipe}=recipeFor(key),resource=key[0]==='i'?res(key.slice(1)):null;
+ node.dataset.key=key;
+ if(entry)summary.append(el('span','quantity',quantity(entry)+' '));
+ summary.append(el('span','',label(key)));
+ const tags=[];if(entry?.consumed===false)tags.push('Reutilizable');if(entry?.toolWear)tags.push('Con desgaste');if(entry?.chance!==undefined)tags.push(number(entry.chance*100)+' % de probabilidad');if(resource?.status==='raw')tags.push('Obtención natural');if(recipe)tags.push(recipe.inputs.length+' entradas por lote');
+ if(tags.length)summary.append(el('small','',tags.join(' · ')));
+ node.append(summary,body);
+ node.addEventListener('toggle',()=>{
+  if(!node.open){body.replaceChildren();return}if(body.childNodes.length)return;
+  const openRecipe=()=>{navigate(key);setMode('recipe')};
+  if(entry?.tooltip?.length)entry.tooltip.forEach(t=>body.append(el('p','notice',t)));
+  if(entry?.alternatives?.length||entry?.consumptionByVariant||entry?.returnedContainer||entry?.conditional){body.append(el('p','notice','Este ingrediente tiene alternativas o condiciones de uso en la receta superior.'));if(parentRecipe)body.append(button('Ver uso en la receta superior',()=>{navigate(parentRecipe);setMode('recipe')}))}
+  if(!recipe){body.append(el('p','notice',resource?.acquisition||'Consulta la ficha de este recurso.'),button('Abrir ficha completa',openRecipe));return}
+  const card=el('div','chain-process');card.append(el('strong','',recipe.machine));
+  const cost=[];if(recipe.tier)cost.push(recipe.tier);if(!manualRecipe(recipe)&&Number.isFinite(recipe.durationTicks))cost.push(number(recipe.durationTicks/20)+' s base');if(!manualRecipe(recipe)&&Number.isFinite(recipe.eut))cost.push(number(recipe.eut)+' EU/t base');
+  if(cost.length)card.append(el('div','chain-cost',cost.join(' · ')));
+  card.append(el('div','chain-cost','Salidas por lote: '+recipe.outputs.slice(0,3).map(s=>quantity(s)+' '+name(s.id)+(s.chance!==undefined?' ('+number(s.chance*100)+' % de probabilidad)':'')+(s.conditional?' (alternativa aleatoria)':'')+(s.consumed===false?' (reutilizable)':'')).join(' · ')+(recipe.outputs.length>3?' · '+(recipe.outputs.length-3)+' salidas más en la receta completa':'')));
+  if(recipe.conditions?.length)card.append(el('div','chain-cost',recipe.conditions.length+' requisitos / condiciones en la receta completa'));
+  card.append(button('Abrir receta completa',openRecipe));body.append(card);
+  if(ancestors.has(key)){body.append(el('p','notice','Este recurso ya aparece antes en esta rama. Abre su receta para examinar la dependencia.'));return}
+  if(depth>=5){body.append(el('p','notice','Continúa desde aquí para mantener el texto legible.'),button('Continuar esta rama',()=>navigate(key)));return}
+  const children=el('div','chain-children'),path=new Set(ancestors);path.add(key);let page=0;
+  const pager=el('div','pager'),status=el('span'),prev=button('Anterior',()=>change(-1)),next=button('Siguiente',()=>change(1));
+  function paint(){children.replaceChildren();recipe.inputs.slice(page*pageSize,(page+1)*pageSize).forEach(s=>children.append(chainNode('i'+s.id,s,path,depth+1,'r'+rid)));status.textContent=(page*pageSize+1)+'–'+Math.min((page+1)*pageSize,recipe.inputs.length)+' de '+recipe.inputs.length+' entradas';prev.disabled=page===0;next.disabled=(page+1)*pageSize>=recipe.inputs.length}
+  function change(delta){page+=delta;paint()}
+  paint();body.append(children);if(!recipe.inputs.length)body.append(el('p','notice','Sin entradas de receta.'));if(recipe.inputs.length>pageSize){pager.append(prev,status,next);body.append(pager)}
+ });return node;
+}
+function renderChain(){
+ const root=$('chain-view');root.replaceChildren();root.dataset.key=current();
+ root.append(el('h2','','Cadena de '+label(current())),el('p','subtext chain-intro','Abre las flechas para desplegar ingredientes. Cada nivel muestra las cantidades de su propia receta, sin multiplicarlas por las del nivel superior. Cierra una rama para liberar la vista.'));
+ const tools=el('div','chain-tools');tools.append(button('Contraer ramas',()=>renderChain()),button('Ver receta principal',()=>setMode('recipe')));root.append(tools);
+ const tree=chainNode(current(),null);tree.open=true;root.append(tree);$('announcement').textContent='Cadena de '+label(current())+'. Abre cada ingrediente para continuar.';
 }
 function queueEdges(){cancelAnimationFrame(edgeFrame);edgeFrame=requestAnimationFrame(drawEdges)}
 function drawEdges(){
@@ -195,9 +236,10 @@ function drawEdges(){
 function closeSearch(){results.hidden=true;results.replaceChildren();field.setAttribute('aria-expanded','false')}
 function search(){
  const start=performance.now(),query=fold(field.value).trim();results.replaceChildren();if(!query){closeSearch();return}
- const tokens=query.split(/\s+/);let matches=searchIndex.filter(r=>tokens.every(t=>r.text.includes(t)));matches.sort((a,b)=>(b.key.slice(1)===query)-(a.key.slice(1)===query)||(fold(b.title)===query)-(fold(a.title)===query)||(b.key[0]==='i')-(a.key[0]==='i')||(fold(b.title).startsWith(query))-(fold(a.title).startsWith(query)));
+ const tokens=query.split(/\s+/);const ranked=[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]];let total=0;
+ for(const hit of searchIndex){if(!tokens.every(t=>hit.text.includes(t)))continue;total++;const score=(hit.key.slice(1)===query?8:0)+(hit.foldedTitle===query?4:0)+(hit.key[0]==='i'?2:0)+(hit.foldedTitle.startsWith(query)?1:0);if(ranked[score].length<30)ranked[score].push(hit)}const matches=ranked.reverse().flat().slice(0,30);
  matches.slice(0,30).forEach(hit=>{const b=button('',()=>{field.value='';navigate(hit.key)});b.dataset.key=hit.key;b.append(el('span','',hit.title),el('small','',hit.kind));results.append(b)});
- results.append(el('p','',matches.length?matches.length>30?'30 de '+matches.length+' resultados. Escribe más para afinar.':matches.length+' resultados.':'No se encontraron coincidencias.'));
+ results.append(el('p','',total?total>30?'30 de '+total+' resultados. Escribe más para afinar.':total+' resultados.':'No se encontraron coincidencias.'));
  results.hidden=false;field.setAttribute('aria-expanded','true');metrics.searches.push(performance.now()-start);if(metrics.searches.length>100)metrics.searches.shift();
 }
 field.addEventListener('input',()=>{clearTimeout(searchTimer);searchTimer=setTimeout(search,100)});
@@ -207,23 +249,23 @@ document.addEventListener('pointerdown',e=>{if(!e.target.closest('.search'))clos
 $('back').onclick=()=>move(-1);$('forward').onclick=()=>move(1);$('home').onclick=()=>navigate(home);
 window.addEventListener('popstate',e=>{if(Array.isArray(e.state?.sgTrail)&&e.state.sgTrail.every(valid)){trail=e.state.sgTrail;cursor=Math.min(e.state.sgCursor,trail.length-1)}else{trail=[home];cursor=0;const key=parseUrl();if(key!==home){trail.push(key);cursor=1}}pages={inputs:0,outputs:0};render();if(mode==='map'){mapSelected=current();focusMap(current())}});
 function setMode(next){
- mode=next;$('recipe-mode').setAttribute('aria-pressed',String(mode==='recipe'));$('map-mode').setAttribute('aria-pressed',String(mode==='map'));view.hidden=mode==='map';$('overview').hidden=mode!=='map';
- if(mode==='map'){ensureMap();mapSelected=current();focusMap(current())}else queueEdges();
+ if(mode===next)return;mode=next;for(const id of ['recipe','chain','map'])$(id+'-mode').setAttribute('aria-pressed',String(mode===id));view.hidden=mode!=='recipe';$('overview').hidden=mode!=='map';$('chain-view').hidden=mode!=='chain';
+ if(mode==='map'){const ready=mapReady;ensureMap();if(!ready||mapSelected!==current())focusMap(current());else requestDraw()}else render();
 }
-$('recipe-mode').onclick=()=>setMode('recipe');$('map-mode').onclick=()=>setMode('map');
+$('recipe-mode').onclick=()=>setMode('recipe');$('chain-mode').onclick=()=>setMode('chain');$('map-mode').onclick=()=>setMode('map');
 // Canvas is created only on request. Spatial buckets avoid full scans during pan.
 const canvas=$('map');let ctx=null,mapReady=false,canvasFrame=0,mapSelected=home,transform={x:0,y:0,scale:1},width=0,height=0,pointers=new Map(),gesture=null;
-const nodes=[],nodeByKey=new Map(),buckets=new Map(),adjacent=new Map();const cellW=580,cellH=460,nodeW=260,nodeH=92;let colors={};
+const nodes=[],nodeByKey=new Map(),buckets=new Map(),adjacent=new Map();const cellW=580,cellH=460,nodeW=260,nodeH=92;let colors={},overviewImage=null,multiTouch=false;
 function ensureMap(){
  if(mapReady)return;mapReady=true;ctx=canvas.getContext('2d');
  for(const [key,pos]of Object.entries(data.mapLayout.positions)){
- const n={key,x:pos[0],y:pos[1],label:label(key),type:key[0]==='r'?'process':res(key.slice(1)).status==='raw'?'raw':'resource'};nodes.push(n);nodeByKey.set(key,n);
+ const n={key,x:pos[0],y:pos[1],label:label(key),type:key[0]==='r'?'process':res(key.slice(1)).status==='raw'?'raw':'resource'};n.words=n.label.split(/\s+/);nodes.push(n);nodeByKey.set(key,n);
  const cell=Math.floor(n.x/cellW)+','+Math.floor(n.y/cellH);if(!buckets.has(cell))buckets.set(cell,[]);buckets.get(cell).push(n);
  }
  for(const [id,r]of Object.entries(Q)){for(const side of ['inputs','outputs'])for(const s of r[side]){const edge={a:side==='inputs'?'i'+s.id:'r'+id,b:side==='inputs'?'r'+id:'i'+s.id,reuse:s.consumed===false};for(const key of [edge.a,edge.b]){if(!adjacent.has(key))adjacent.set(key,[]);adjacent.get(key).push(edge)}}}
  const resize=()=>{const rect=canvas.getBoundingClientRect();width=rect.width;height=rect.height;const dpr=Math.min(devicePixelRatio||1,2);canvas.width=Math.round(width*dpr);canvas.height=Math.round(height*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);const css=getComputedStyle(document.documentElement);colors={ink:css.getPropertyValue('--ink').trim(),muted:css.getPropertyValue('--muted').trim(),line:css.getPropertyValue('--line').trim(),accent:css.getPropertyValue('--accent').trim(),surface:css.getPropertyValue('--surface').trim(),process:css.getPropertyValue('--process').trim(),raw:css.getPropertyValue('--raw').trim(),soft:css.getPropertyValue('--soft').trim(),resource:css.getPropertyValue('--resource').trim(),resourceDot:css.getPropertyValue('--resource-dot').trim(),processDot:css.getPropertyValue('--process-dot').trim(),rawDot:css.getPropertyValue('--raw-dot').trim()};
  // Resolve light-dark() through computed DOM colors before passing values to Canvas.
- const probe=el('span');probe.hidden=true;document.body.append(probe);for(const key of Object.keys(colors)){probe.style.color=colors[key];colors[key]=getComputedStyle(probe).color}probe.remove();requestDraw()};
+ const probe=el('span');probe.hidden=true;document.body.append(probe);for(const key of Object.keys(colors)){probe.style.color=colors[key];colors[key]=getComputedStyle(probe).color}probe.remove();overviewImage=null;requestDraw()};
  new ResizeObserver(resize).observe(canvas);matchMedia('(prefers-color-scheme:dark)').addEventListener('change',resize);resize();
 }
 function visibleNodes(){
@@ -232,9 +274,22 @@ function visibleNodes(){
  const out=[];for(let col=Math.floor(x0/cellW);col<=Math.floor(x1/cellW);col++)for(let row=Math.floor(y0/cellH);row<=Math.floor(y1/cellH);row++){for(const n of buckets.get(col+','+row)||[])if(n.x+nodeW>=x0&&n.x<=x1&&n.y+nodeH>=y0&&n.y<=y1)out.push(n)}return out;
 }
 function requestDraw(){if(mode!=='map'||!ctx)return;if(!canvasFrame)canvasFrame=requestAnimationFrame(()=>{canvasFrame=0;drawMap()})}
+function panorama(){
+ if(overviewImage)return overviewImage;
+ const l=data.mapLayout,c=document.createElement('canvas'),ratio=2048/l.width;c.width=2048;c.height=Math.ceil(l.height*ratio);const g=c.getContext('2d');
+ for(const n of nodes){g.fillStyle=n.type==='process'?colors.processDot:n.type==='raw'?colors.rawDot:colors.resourceDot;g.fillRect(n.x*ratio,n.y*ratio,Math.max(1,nodeW*ratio),Math.max(1,nodeH*ratio))}
+ overviewImage=c;return c;
+}
+function nodeLines(n,fontSize,max){
+ const cacheKey=fontSize+':'+max;if(n.textKey===cacheKey)return n.lines;
+ const lines=[];let line='';for(const word of n.words){const next=line?line+' '+word:word;if(ctx.measureText(next).width>max&&line){lines.push(line);line=word}else line=next}if(line)lines.push(line);
+ const visible=lines.slice(0,3);if(lines.length>3)visible[2]+='…';for(let i=0;i<visible.length;i++){let text=visible[i];if(ctx.measureText(text).width>max){while(text.length&&ctx.measureText(text+'…').width>max)text=text.slice(0,-1);visible[i]=text+'…'}}
+ n.textKey=cacheKey;n.lines=visible;return visible;
+}
 function drawMap(){
- const start=performance.now(),s=transform.scale,visible=visibleNodes();ctx.clearRect(0,0,width,height);
+ const start=performance.now(),s=transform.scale,visible=s<.13?[]:visibleNodes();ctx.clearRect(0,0,width,height);
  const sx=x=>x*s+transform.x,sy=y=>y*s+transform.y;
+ if(s<.13){const l=data.mapLayout;ctx.drawImage(panorama(),transform.x,transform.y,l.width*s,l.height*s)}
  // Only direct connections of the selection; never paint the 17,755-edge hairball.
  if(s>.12){ctx.save();ctx.strokeStyle=colors.accent;ctx.fillStyle=colors.accent;ctx.globalAlpha=.6;ctx.lineWidth=1.2;for(const edge of adjacent.get(mapSelected)||[]){const a=nodeByKey.get(edge.a),b=nodeByKey.get(edge.b);if(!a||!b)continue;const x1=sx(a.x+nodeW),x2=sx(b.x),y1=sy(a.y+nodeH/2),y2=sy(b.y+nodeH/2);if(Math.max(x1,x2)<0||Math.min(x1,x2)>width||Math.max(y1,y2)<0||Math.min(y1,y2)>height)continue;const mid=(x1+x2)/2;ctx.setLineDash(edge.reuse?[5,4]:[]);ctx.beginPath();ctx.moveTo(x1,y1);ctx.bezierCurveTo(mid,y1,mid,y2,x2,y2);ctx.stroke();ctx.setLineDash([]);ctx.beginPath();ctx.moveTo(x2,y2);ctx.lineTo(x2-5,y2-3);ctx.lineTo(x2-5,y2+3);ctx.closePath();ctx.fill()}ctx.restore()}
  for(const n of visible){
@@ -242,11 +297,11 @@ function drawMap(){
  ctx.fillStyle=isSelected?colors.soft:n.type==='process'?colors.process:n.type==='raw'?colors.raw:colors.resource;
  if(s<.13){ctx.fillStyle=isSelected?colors.accent:n.type==='process'?colors.processDot:n.type==='raw'?colors.rawDot:colors.resourceDot;ctx.globalAlpha=isSelected?1:.75;ctx.fillRect(x,y,Math.max(w,1.5),Math.max(h,1.5));ctx.globalAlpha=1;continue}
  ctx.beginPath();ctx.roundRect(x,y,w,h,Math.min(8,8*s));ctx.fill();ctx.strokeStyle=isSelected?colors.accent:colors.line;ctx.lineWidth=isSelected?2:1;ctx.stroke();
- if(s>=.72){ctx.save();ctx.beginPath();ctx.rect(x+4,y+4,w-8,h-8);ctx.clip();const fontSize=Math.max(12,Math.min(19,15*s));ctx.font='500 '+fontSize+'px system-ui';ctx.fillStyle=colors.ink;const max=w-20,words=n.label.split(/\s+/);let line='',row=0;for(const word of words){if(ctx.measureText(line+' '+word).width>max&&line){ctx.fillText(line,x+10,y+fontSize+8+row*(fontSize+3));row++;line=word;if(row===2)break}else line+=(line?' ':'')+word}if(row<2)ctx.fillText(line,x+10,y+fontSize+8+row*(fontSize+3));else ctx.fillText(line+'…',x+10,y+fontSize+8+row*(fontSize+3));ctx.restore()}
+ if(s>=.72){ctx.save();ctx.beginPath();ctx.rect(x+4,y+4,w-8,h-8);ctx.clip();const fontSize=Math.max(12,Math.min(19,15*s));ctx.font='500 '+fontSize+'px system-ui';ctx.fillStyle=colors.ink;nodeLines(n,fontSize,w-20).forEach((line,row)=>ctx.fillText(line,x+10,y+fontSize+8+row*(fontSize+3)));ctx.restore()}
  }
  if(s<.72){const selected=nodeByKey.get(mapSelected);if(selected){const x=sx(selected.x+nodeW/2),y=sy(selected.y+nodeH/2);if(x>=0&&x<=width&&y>=0&&y<=height){ctx.fillStyle=colors.accent;ctx.beginPath();ctx.arc(x,y,5,0,Math.PI*2);ctx.fill();ctx.font='500 13px system-ui';const text=selected.label.length>42?selected.label.slice(0,41)+'…':selected.label,tw=ctx.measureText(text).width,tx=Math.max(8,Math.min(width-tw-12,x+10)),ty=Math.max(24,y-14);ctx.fillStyle=colors.surface;ctx.fillRect(tx-4,ty-16,tw+8,22);ctx.fillStyle=colors.ink;ctx.fillText(text,tx,ty)}}}
  $('map-status').textContent=s<.72?'Vista general · acerca para leer nombres':visible.length+' nodos en pantalla · '+Math.round(s*100)+' %';
- metrics.mapFrames.push(performance.now()-start);if(metrics.mapFrames.length>200)metrics.mapFrames.shift();metrics.visibleNodes=visible.length;metrics.canvasFrames=(metrics.canvasFrames||0)+1;
+ metrics.mapFrames.push(performance.now()-start);if(metrics.mapFrames.length>200)metrics.mapFrames.shift();metrics.visibleNodes=visible.length;metrics.panoramaCached=!!overviewImage;metrics.canvasFrames=(metrics.canvasFrames||0)+1;
 }
 function selectMap(key){if(!valid(key))return;mapSelected=key;$('map-name').textContent=label(key);requestDraw()}
 function focusMap(key){ensureMap();const n=nodeByKey.get(key);if(!n)return;transform={scale:1,x:width/2-n.x-nodeW/2,y:height/2-n.y-nodeH/2};selectMap(key)}
@@ -256,10 +311,10 @@ $('fit-map').onclick=()=>{const l=data.mapLayout,s=Math.min((width-40)/l.width,(
 $('open-selection').onclick=()=>{navigate(mapSelected);setMode('recipe')};
 canvas.addEventListener('wheel',e=>{e.preventDefault();const r=canvas.getBoundingClientRect();zoomMap(Math.exp(-Math.max(-100,Math.min(100,e.deltaY))*.003),e.clientX-r.left,e.clientY-r.top)},{passive:false});
 function resetGesture(){const points=[...pointers.values()];if(!points.length){gesture=null;return}const mid=points.length===1?points[0]:{x:(points[0].x+points[1].x)/2,y:(points[0].y+points[1].y)/2};gesture={start:{...transform},mid,distance:points.length>1?Math.hypot(points[0].x-points[1].x,points[0].y-points[1].y):0,moved:false,pinch:points.length>1}}
-canvas.addEventListener('pointerdown',e=>{canvas.setPointerCapture(e.pointerId);pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});resetGesture()});
+canvas.addEventListener('pointerdown',e=>{canvas.setPointerCapture(e.pointerId);pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});if(pointers.size>1)multiTouch=true;resetGesture()});
 canvas.addEventListener('pointermove',e=>{if(!pointers.has(e.pointerId)||!gesture)return;pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});const pts=[...pointers.values()],mid=pts.length===1?pts[0]:{x:(pts[0].x+pts[1].x)/2,y:(pts[0].y+pts[1].y)/2};if(pts.length>1&&gesture.distance){const distance=Math.hypot(pts[0].x-pts[1].x,pts[0].y-pts[1].y),s=Math.min(2.5,Math.max(.005,gesture.start.scale*distance/gesture.distance)),rect=canvas.getBoundingClientRect(),cx=gesture.mid.x-rect.left,cy=gesture.mid.y-rect.top;transform={scale:s,x:cx-(cx-gesture.start.x)*s/gesture.start.scale+mid.x-gesture.mid.x,y:cy-(cy-gesture.start.y)*s/gesture.start.scale+mid.y-gesture.mid.y};gesture.moved=true}else{const dx=mid.x-gesture.mid.x,dy=mid.y-gesture.mid.y;transform.x=gesture.start.x+dx;transform.y=gesture.start.y+dy;if(Math.abs(dx)+Math.abs(dy)>4)gesture.moved=true}requestDraw()});
-canvas.addEventListener('pointerup',e=>{if(gesture&&!gesture.moved&&!gesture.pinch){const rect=canvas.getBoundingClientRect(),x=(e.clientX-rect.left-transform.x)/transform.scale,y=(e.clientY-rect.top-transform.y)/transform.scale;const hits=visibleNodes().filter(n=>x>=n.x&&x<=n.x+nodeW&&y>=n.y&&y<=n.y+nodeH);if(hits.length){selectMap(hits[hits.length-1].key);if(transform.scale<.72)focusMap(mapSelected)}}pointers.delete(e.pointerId);resetGesture()});
-canvas.addEventListener('pointercancel',e=>{pointers.delete(e.pointerId);resetGesture()});
+canvas.addEventListener('pointerup',e=>{if(gesture&&!gesture.moved&&!gesture.pinch&&!multiTouch){const rect=canvas.getBoundingClientRect(),x=(e.clientX-rect.left-transform.x)/transform.scale,y=(e.clientY-rect.top-transform.y)/transform.scale;const candidates=[];for(let col=Math.floor((x-nodeW)/cellW);col<=Math.floor(x/cellW);col++)for(let row=Math.floor((y-nodeH)/cellH);row<=Math.floor(y/cellH);row++)candidates.push(...(buckets.get(col+','+row)||[]));const hits=candidates.filter(n=>x>=n.x&&x<=n.x+nodeW&&y>=n.y&&y<=n.y+nodeH);if(hits.length){selectMap(hits[hits.length-1].key);if(transform.scale<.72)focusMap(mapSelected)}}pointers.delete(e.pointerId);if(!pointers.size)multiTouch=false;resetGesture()});
+canvas.addEventListener('pointercancel',e=>{pointers.delete(e.pointerId);if(!pointers.size)multiTouch=false;resetGesture()});
 const initial=parseUrl();if(initial!==home){trail.push(initial);cursor=1}try{history.replaceState({sgTrail:trail,sgCursor:cursor},'',routeUrl(initial))}catch(_){}
 render();metrics.ready=performance.now();metrics.resourceCount=Object.keys(R).length;metrics.recipeCount=Object.keys(Q).length;metrics.slotCount=Object.values(Q).reduce((n,r)=>n+r.inputs.length+r.outputs.length,0);
 })();

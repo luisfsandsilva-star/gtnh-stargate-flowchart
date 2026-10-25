@@ -4,15 +4,16 @@ Diagrama de fabricación en español para **1 Stargate Base + 8 Stargate Ring Bl
 
 El recorrido seleccionado contiene **4.807 recursos y 4.076 procesos**. Incluye ingredientes, fluidos, coproductos, adquisiciones naturales, herramientas, catalizadores, investigaciones, condiciones y enlaces de fuentes. El mapa global contiene **8.883 nodos**.
 
-![Vista del visor optimizado](entrega/preview-mapa.png)
+![Cadena desplegable del visor v3](entrega/preview-cadena.jpg)
 
 ## Abrir el diagrama
 
-1. Descarga el [paquete completo de la versión 2.9.0-RC-2](https://github.com/luisfsandsilva-star/gtnh-stargate-flowchart/releases/download/gtnh-2.9.0-rc2-visor-v2/stargate-gtnh-2.9.0-rc2.zip).
+1. Descarga el [paquete completo de la versión 2.9.0-RC-2](https://github.com/luisfsandsilva-star/gtnh-stargate-flowchart/releases/download/gtnh-2.9.0-rc2-visor-v3/stargate-gtnh-2.9.0-rc2.zip).
 2. Extrae todos los archivos en una misma carpeta.
 3. Abre **`stargate-rc2-mapa.html`** en un navegador moderno. La vista **Por receta** muestra ingredientes → proceso → productos con texto legible. Pulsa un ingrediente para seguir su fabricación; usa Atrás, Adelante y el buscador para moverte.
-4. La pestaña **Mapa general** permite ampliar y desplazarse. Selecciona un nodo y pulsa **Abrir receta** para consultar sus detalles. Las listas largas tienen páginas de ocho elementos con su total visible.
-5. Usa **`stargate-rc2-atlas.html`** para consultar alternativas del catálogo general. El recorrido anterior sigue disponible en **`stargate-rc2-recorrido.html`**.
+4. **Cadena desplegable** permite abrir varias generaciones a la vez. Pulsa las flechas de cada ingrediente para explorar sus dependencias. Cierra una rama para liberar la vista. A partir de cinco niveles puedes usar **Continuar esta rama** como nueva raíz.
+5. La pestaña **Mapa general** permite ampliar y desplazarse. Selecciona un nodo y pulsa **Abrir receta** para consultar sus detalles. Las listas largas tienen páginas de ocho elementos con su total visible.
+6. Usa **`stargate-rc2-atlas.html`** para consultar alternativas del catálogo general. El recorrido anterior sigue disponible en **`stargate-rc2-recorrido.html`**.
 
 Los visores funcionan sin conexión ni servidor. Mantén juntos los archivos para conservar los enlaces entre ellos. El atlas puede tardar unos segundos en cargar. GitHub muestra el código de los HTML; para usar los visores, descarga y abre los archivos localmente.
 
@@ -30,7 +31,19 @@ Los visores funcionan sin conexión ni servidor. Mantén juntos los archivos par
 | [Auditoría](entrega/auditoria-del-grafo.json) | Comprobaciones estructurales del grafo |
 | [LEEME](entrega/LEEME.txt) | Alcance, interpretación de cantidades y límites de verificación |
 
-## Rendimiento del visor v2
+## Visor v3: cadena desplegable y menos trabajo de dibujo
+
+- Solo se crean las ramas que abres; al cerrarlas se eliminan sus elementos. Los ingredientes se paginan de ocho en ocho. La cadena completa sigue accesible al continuar desde cualquier recurso.
+- Cada nivel muestra cantidades por lote de su propia receta, sin multiplicarlas por las del nivel superior. Las probabilidades se indican; el botón de receta completa conserva acceso a todos los coproductos, condiciones y metadatos.
+- El panorama general reutiliza una imagen, y las etiquetas se calculan de nuevo solo al cambiar el zoom. El hit testing consulta celdas próximas, y la búsqueda mantiene solo los mejores candidatos por prioridad.
+- Cambiar de vista conserva el zoom del mapa. Los procesos muestran también sus productos para distinguir recetas de la misma máquina.
+- HTML autónomo de aproximadamente **0,70 MB**. Datos íntegros cotejados contra el JSON original: 4.807 recursos, 4.076 procesos y 17.755 slots.
+
+Comprobado en el navegador integrado: expansión y cierre de ramas, paginación, búsqueda de nombre e ID, herramientas reutilizables, enlace a la receta superior, probabilidades, navegación entre vistas y 390 px sin desbordamiento horizontal. Una rama inicial abierta añade ocho nodos y vuelve a liberarlos al cerrarse. Véase [registro de comprobaciones](qa/visor-v3.json).
+
+## Mediciones anteriores del visor v2
+
+Estas mediciones corresponden al visor v2; no son un benchmark nuevo del v3.
 
 Se conserva el contenido del recorrido: **4.807 recursos, 4.076 recetas y 17.755 entradas/salidas de receta**, incluyendo slots repetidos, NBT, alternativas, herramientas, probabilidades y condiciones. El cambio afecta a la presentación.
 
@@ -84,5 +97,5 @@ Las licencias originales de los datos y descripciones de terceros se mantienen. 
 SHA-256 del paquete de la release:
 
 ```text
-77d747904c8ce014faf30474f34d4a97c97cc43c03eb1563a14af5312661a38d
+aee04c961c7af6405f89102348c120afe19c685c4e96ab2a76612dc8709d8dcf
 ```

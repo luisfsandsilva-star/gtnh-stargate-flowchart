@@ -1,7 +1,7 @@
 {
   "name": "gtnh-stargate-flowchart",
   "private": true,
-  "version": "2.0.0",
+  "version": "3.0.0",
   "scripts": {
     "build": "python3 build_fast_map.py",
     "test": "python3 qa/check-map-data.py && node qa/fast-map-check.cjs && node qa/map-extras.cjs"

@@ -1,0 +1,30 @@
+{
+  "version": 3,
+  "checkedIn": "Navegador integrado, verificación mediante UI y DOM",
+  "dataPreserved": {
+    "resources": 4807,
+    "recipes": 4076,
+    "slots": 17755,
+    "method": "Comparación exacta de campos con JSON original"
+  },
+  "checks": {
+    "rootTreeNodes": 5,
+    "expandedBaseTreeNodes": 13,
+    "collapsedBaseTreeNodes": 5,
+    "basePagination": [
+      "1–8 de 16 entradas",
+      "9–16 de 16 entradas"
+    ],
+    "nameSearch": "sgcraft:sgcorecrystal",
+    "recipeIdSearch": "192839",
+    "parentSlotDetailsDestination": "192839",
+    "probabilisticOutputSummary": "75536: 51 %, 21.25 %, 1.7 %, 28 salidas adicionales accesibles",
+    "mapZoomBeforeAndAfterModeChange": "135 %",
+    "mobileWidth": 390,
+    "mobileSummaryFont": "16px",
+    "horizontalOverflow": false,
+    "consoleErrorsObserved": [],
+    "continueAtVisualDepthFive": "gregtech:gt.metaitem.01@23129 como nueva raíz, 3 nodos visibles"
+  },
+  "newTimingBenchmark": false
+}
