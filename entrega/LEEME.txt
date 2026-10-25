@@ -6,10 +6,10 @@ Raíz: 1 Stargate Base + 8 Stargate Ring Blocks + 7 Stargate Chevron Blocks + 1 
 El recorrido incluye ingredientes sólidos/fluidos, coproductos, adquisiciones naturales, herramientas, catalizadores, genotipos, investigaciones, requisitos y fuentes. Las máquinas usadas aparecen como procesos; el diseño completo de cada fábrica/multibloque, sus redes eléctricas y su construcción no están desglosados como otro objetivo.
 
 Cómo abrir
-1. stargate-rc2-mapa.html: mapa global con zoom, desplazamiento y búsqueda. Pulsa un nodo para ver sus condiciones; su enlace abre la receta.
+1. stargate-rc2-mapa.html: visor optimizado. Abre una receta legible cada vez; pulsa un ingrediente para seguir su fabricación. El buscador consulta toda la cadena. Atrás, Adelante y la ruta permiten volver. Las listas largas se paginan de ocho en ocho, con su total visible. La pestaña Mapa general ofrece zoom y desplazamiento; selecciona un nodo y pulsa Abrir receta. Las condiciones, alternativas, configuración NBT y cuadrículas de crafteo se pueden desplegar. El mapa general se dibuja solo al solicitarlo y muestra las conexiones de la selección para evitar cruces ilegibles.
 2. stargate-rc2-recorrido.html: recorrido seleccionado; pulsa cada ingrediente para abrir su fabricación. Sin profundidad máxima artificial.
 3. stargate-rc2-atlas.html: catálogo general con 276,088 registros y alternativas seleccionables. Incluye recetas ajenas a Stargate; sus cifras globales no son cifras de la ruta.
-Los HTML funcionan sin servidor ni conexión en un navegador moderno con DecompressionStream. El atlas grande puede tardar en cargar. Mantén los archivos juntos para los enlaces entre mapa y atlas.
+Los HTML funcionan sin servidor ni conexión en un navegador moderno con DecompressionStream. El atlas grande puede tardar en cargar. Mantén los archivos juntos para los enlaces entre mapa y atlas. Si tenías el mapa anterior abierto, recarga la pestaña para usar el visor optimizado.
 4. stargate-rc2.svg: mapa vectorial completo. stargate-rc2.dot: grafo editable.
 5. recetas-del-recorrido.csv y stargate-rc2-recorrido.json: datos para análisis o edición.
 

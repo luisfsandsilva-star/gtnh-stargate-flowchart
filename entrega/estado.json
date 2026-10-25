@@ -7,5 +7,7 @@
   "quantitativeCompleteness": false,
   "edges": 17755,
   "inlineBytes": 575429,
-  "fullAtlasBytes": 17519916
+  "fullAtlasBytes": 17519916,
+  "mapViewerVersion": 2,
+  "mapBytes": 694079
 }

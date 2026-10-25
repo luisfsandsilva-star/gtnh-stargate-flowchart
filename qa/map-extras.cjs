@@ -1,0 +1,40 @@
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright-core');
+const assert=require('assert/strict'),path=require('path');
+const url='file://'+path.resolve('entrega/stargate-rc2-mapa.html');
+(async()=>{
+ const browser=await chromium.launch({executablePath:process.env.CHROME_PATH||'/usr/bin/google-chrome',headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});
+ const p=await browser.newPage({viewport:{width:1360,height:950}}),errors=[];
+ p.on('pageerror',e=>errors.push(e.message));
+ await p.goto(url+'?item=gregtech%3Agt.integrated_circuit%401');await p.waitForSelector('body[data-ready=true]');
+ const uses=p.locator('details').filter({has:p.locator('summary', {hasText:'Se utiliza en'})}).first();
+ await uses.locator('summary').click();await uses.locator('.related-list button').first().waitFor();
+ assert.equal(await uses.locator('.related-list button').count(),10);
+ assert.match(await uses.locator('summary').innerText(),/271/);
+ await uses.getByText('Siguiente',{exact:true}).click();assert.match(await uses.locator('.pager').innerText(),/11–20 de 271/);
+ await p.locator('#search').fill('686');await p.locator('#search').press('Enter');
+ assert.equal(await p.locator('#recipe-view').getAttribute('data-key'),'r686');
+ await p.locator('#search').fill('Water');await p.locator('#search').press('Enter');
+ assert.match(await p.locator('.natural').innerText(),/agua/);
+ await p.goBack();assert.equal(await p.locator('#recipe-view').getAttribute('data-key'),'r686');
+ await p.goto(url+'?recipe=192839');await p.waitForSelector('body[data-ready=true]');
+ assert(await p.locator('.node.reuse').count()>0);
+ assert.match(await p.locator('.inputs').innerText(),/Con desgaste/);
+ const alternatives=p.locator('.slot details').filter({hasText:'Alternativas de ingrediente'}).first();
+ await alternatives.locator('summary').click();await alternatives.locator('button').first().waitFor();
+ const [altId]=await alternatives.locator('button').first().evaluate(n=>[n.textContent]);assert(altId);
+ await p.goto(url+'?recipe=277676');await p.waitForSelector('body[data-ready=true]');
+ const nbt=p.getByText('Configuración / NBT',{exact:true}).first();await nbt.click();assert.match(await nbt.locator('..').innerText(),/NBT|Spawner|spawner/);
+ await p.emulateMedia({colorScheme:'dark'});
+ await p.goto(url);await p.waitForSelector('body[data-ready=true]');await p.screenshot({path:'qa/fast-dark.png',fullPage:true});
+ await p.locator('#map-mode').click();await p.waitForFunction(()=>window.__mapMetrics.canvasFrames>0);
+ await p.screenshot({path:'qa/fast-map-dark.png',fullPage:true});
+ await p.locator('#fit-map').click();await p.waitForTimeout(100);await p.screenshot({path:'qa/fast-overview-dark.png',fullPage:true});
+ await p.emulateMedia({colorScheme:'light'});
+ for(const width of [320,736]){
+  await p.setViewportSize({width,height:850});
+  assert((await p.evaluate(()=>document.documentElement.scrollWidth-innerWidth))<=1);
+  await p.locator('#center-map').click();await p.locator('#zoom-in').click();
+ }
+ assert.deepEqual(errors,[]);console.log('Hub pagination, exact recipe search, history, natural acquisition, tool wear, NBT, dark mode and narrow Canvas: OK');
+ await browser.close();
+})().catch(e=>{console.error(e);process.exit(1)});
