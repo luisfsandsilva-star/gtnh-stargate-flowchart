@@ -1,0 +1,40 @@
+{
+  "resources": [
+    {
+      "id": "thaumcraft:vis:aer",
+      "displayName": "Aer Vis · varita",
+      "kind": "vis"
+    },
+    {
+      "id": "thaumcraft:vis:ignis",
+      "displayName": "Ignis Vis · varita",
+      "kind": "vis"
+    },
+    {
+      "id": "thaumcraft:vis:terra",
+      "displayName": "Terra Vis · varita",
+      "kind": "vis"
+    },
+    {
+      "id": "thaumcraft:vis:aqua",
+      "displayName": "Aqua Vis · varita",
+      "kind": "vis"
+    },
+    {
+      "id": "thaumcraft:vis:ordo",
+      "displayName": "Ordo Vis · varita",
+      "kind": "vis"
+    },
+    {
+      "id": "thaumcraft:vis:perditio",
+      "displayName": "Perditio Vis · varita",
+      "kind": "vis"
+    }
+  ],
+  "recipes": [],
+  "notes": [
+    "Arcane Crafting consume vis almacenado en varita; no essentia destilada. Las cantidades son costes base antes de descuentos de equipo/varita.",
+    "Adquisición: extraer vis de nodos de aura y almacenarlo en una varita compatible, respetando capacidad/afinidad/requisitos de investigación."
+  ],
+  "source": "https://mediafilez.forgecdn.net/files/2227/552/Thaumcraft-1.7.10-4.2.3.5.jar"
+}

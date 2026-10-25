@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "packVersion": "2.9.0-RC-2",
+  "modVersion": "Hardcore-Ender-Expansion 1.12.28-GTNH",
+  "resources": {},
+  "sourceUrls": [
+    "https://github.com/GTNewHorizons/Hardcore-Ender-Expansion/blob/1.12.28-GTNH/src/main/java/chylex/hee/world/feature/WorldGenEndPowderOre.java",
+    "https://github.com/GTNewHorizons/Hardcore-Ender-Expansion/blob/1.12.28-GTNH/src/main/java/chylex/hee/world/biome/BiomeDecoratorHardcoreEnd.java",
+    "https://github.com/GTNewHorizons/Hardcore-Ender-Expansion/blob/1.12.28-GTNH/src/main/java/chylex/hee/block/BlockEndPowderOre.java",
+    "https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/blob/2.9.0-nightly-2026-10-04/config/HardcoreEnderExpansion.cfg"
+  ],
+  "verification": {
+    "manifest": "sources/verified/manifest-2.9.0-RC-2.json github_mods.Hardcore-Ender-Expansion.version=1.12.28-GTNH",
+    "worldgen": "BiomeDecoratorHardcoreEnd dimension1 invokes WorldGenEndPowderOre. Starting Y is35+nextInt(92); generator starts only inEndStone and replaces EndStone with end_powder_ore. InitialYrange is not a guaranteed final vein height range.",
+    "config": "PinnedRC2overrideWorldGen=false does not disable HEE generation: BiomeDecoratorHardcoreEnd only uses the flag for forwarding OreGenEvent; the ore generator call is unconditional in dimension1.",
+    "normalDrop": "BlockEndPowderOre.getItemDropped returns ItemList.end_powder; quantityDroppedWithBonus=1+rand.nextInt(3+fortune). At Fortune0 this is1–3powder. No claim about required pickaxe level or SilkTouch is added.",
+    "dataset": "SQLite recipe137569, Macerator:1hardcoreenderexpansion:end_powder_ore→8hardcoreenderexpansion:end_powder. This machine ratio is distinct from natural block drops."
+  },
+  "recipes": [
+    {
+      "id": "verified:hee:natural-end-powder-ore",
+      "machineType": "Natural acquisition · End Powder Ore del End",
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "hardcoreenderexpansion:end_powder_ore",
+          "amount": 1
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "conditions": [
+        "Acceder al End y localizar un bloque de End Powder Ore generado naturalmente por HEE en End Stone. No requiere Space Mining ni un Mining Drone.",
+        "Esta ruta de1bloque en inventario requiere recuperar el mineral como bloque. El método de recuperación no se especifica ni se presupone una herramienta concreta.",
+        "El minado normal entrega End Powder, no el bloque de mineral. Para la ruta primaria de polvo se recomienda el drop natural directo.",
+        "La posición y disponibilidad del depósito dependen del mundo. No hay un tiempo fijo de adquisición."
+      ],
+      "metadata": {
+        "acquisition": true,
+        "worldgen": true,
+        "dimensionId": 1,
+        "blockRecoveryRequired": true,
+        "normalMiningDoesNotReturnOre": true
+      },
+      "source": {
+        "url": "https://github.com/GTNewHorizons/Hardcore-Ender-Expansion/blob/1.12.28-GTNH/src/main/java/chylex/hee/world/feature/WorldGenEndPowderOre.java"
+      }
+    },
+    {
+      "id": "verified:hee:natural-end-powder-drop",
+      "machineType": "Natural acquisition · minar End Powder Ore en el End",
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "hardcoreenderexpansion:end_powder",
+          "amount": "1–3"
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "conditions": [
+        "Acceder al End, encontrar End Powder Ore natural en End Stone y recolectar su drop normal. No requiere Space Mining, Mining Drone, Hypogen ni Infinity Egg.",
+        "Rendimiento sin Fortuna:1–3End Powder por bloque; fórmula del código1+rand.nextInt(3+fortune). La cantidad es aleatoria, no una salida fija.",
+        "Esta ruta usa el polvo soltado por el bloque, sin asumir que el mineral se conserva como ítem. No se atribuyen requisitos de pico no verificados.",
+        "Buscar y minar el depósito tiene tiempo variable; no se proporciona duración ni consumoEU/t de máquina."
+      ],
+      "metadata": {
+        "acquisition": true,
+        "worldgen": true,
+        "dimensionId": 1,
+        "quantityRandom": true,
+        "fortune": 0,
+        "minAmount": 1,
+        "maxAmount": 3
+      },
+      "source": {
+        "url": "https://github.com/GTNewHorizons/Hardcore-Ender-Expansion/blob/1.12.28-GTNH/src/main/java/chylex/hee/block/BlockEndPowderOre.java"
+      }
+    }
+  ],
+  "producerOverrides": {
+    "hardcoreenderexpansion:end_powder": "patch:verified:hee:natural-end-powder-drop",
+    "hardcoreenderexpansion:end_powder_ore": "patch:verified:hee:natural-end-powder-ore"
+  }
+}

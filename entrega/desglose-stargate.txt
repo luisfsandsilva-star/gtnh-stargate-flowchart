@@ -1,0 +1,47 @@
+DESGLOSE DE MONTAJE Y COMPONENTES STARGATE
+Cantidades acumuladas en las recetas finales, antes de desglosar todos los materiales industriales.
+El montaje físico lleva 8 Ring Blocks y 7 Chevron Blocks; los totales de abajo incluyen bloques consumidos al fabricar otras piezas.
+
+1 × Stargate Base
+2 × Space Assembler Module Mk-III
+15 × Stargate Chevron Block
+180 × Block of Magmatter
+346 × Dark Matter
+60 × Stargate Chevron Upgrade
+1364 × Stargate Frame Part
+349184 × Perfected Shielding
+349188 × Perfected Electrogravitic Valve
+349190 × Perfected Energy Conduit
+5456 × Stargate Material Mesh
+312 × Stargate Chevron
+180 × Electric Piston (UXV)
+397 × Field Generator (UXV)
+60 × Sensor (UXV)
+60 × Emitter (UXV)
+228 × Perfected Waveguide
+1320 × Superdense Magmatter Plate
+24 × Stargate Ring Block
+526 × Stargate-Radiation-Containment-Plate
+382 × Field Energy Absorber Casing
+144 × Precision Field Sync Casing
+64 × Central Graviton Flow Modulator
+10 × Magmatter Nanites
+2 × Mining Drone Mk-XIII (UXV)
+5 × Mega Ultimate Battery
+1 × Artificial Universe ME Storage Cell
+6 × Astral Array Fabricator
+27 × Celestial Magnetic Chassis
+2 × ME Fluid Artificial Universe Storage Cell
+1 × Stargate Core Crystal
+4 × Transdimensional Alignment Matrix
+4 × Universal Collapser Casing
+1 × Stargate Controller (DHD)
+8 × Keyboard
+1 × Stargate Controller Crystal
+1 × OpenComputers Stargate Interface
+10 × Condensate Transformative Coil
+1 × Cloud Computation Client Hatch
+4 × appliedenergistics2:tile.blocksingularitycraftingstorage
+2 × Giga Chad Token
+1 × eternalsingularity:combined_singularity@10
+2 × Resplendent Field Manipulator

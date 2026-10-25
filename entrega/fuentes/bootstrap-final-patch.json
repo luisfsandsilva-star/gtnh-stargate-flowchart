@@ -1,0 +1,41 @@
+{
+  "resources": [],
+  "recipes": [
+    {
+      "id": "verified:bootstrap:treetap-resin",
+      "machineType": "Recolección · Treetap en Rubber Tree",
+      "inputs": [
+        {
+          "id": "ic2:itemtreetap",
+          "amount": 1,
+          "consumed": false
+        }
+      ],
+      "outputs": [
+        {
+          "id": "ic2:itemharz",
+          "amount": 1
+        }
+      ],
+      "conditions": [
+        "Usar Treetap sobre una mancha naranja de resina en un Rubber Tree vivo. Se requiere encontrar una mancha disponible; regenera con el tiempo.",
+        "1 representa una unidad de resina recolectada con éxito, no un rendimiento fijo por clic. La herramienta se desgasta.",
+        "La adquisición y el método están documentados por IC2 y por la wiki de GTNH; no se presupone una máquina eléctrica."
+      ],
+      "source": {
+        "url": "https://wiki.industrial-craft.net/index.php?title=Sticky_Resin"
+      }
+    }
+  ],
+  "producerOverrides": {
+    "minecraft:iron_ingot": "247378",
+    "gregtech:gt.metaitem.01@27032": "222894",
+    "minecraft:redstone": "47276",
+    "gregtech:gt.metaitem.01@3810": "117748",
+    "gregtech:gt.metaitem.01@5810": "122367",
+    "ic2:itemharz": "patch:verified:bootstrap:treetap-resin",
+    "gregtech:gt.blockmachines@5102": "218913",
+    "gregtech:gt.metaitem.01@2305": "144159",
+    "minecraft:ender_eye": "49426"
+  }
+}

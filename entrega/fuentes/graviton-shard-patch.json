@@ -1,0 +1,211 @@
+{
+  "resources": [
+    {
+      "id": "gregtech:gt.metaitem.01@8150",
+      "displayName": "Graviton Shard",
+      "kind": "item"
+    },
+    {
+      "id": "access:godforge:graviton-shard-ejection",
+      "displayName": "Forge of Gods: END / expulsi\u00f3n de Graviton Shards desbloqueada",
+      "kind": "research",
+      "reusable": true
+    },
+    {
+      "id": "gregtech:gt.blockframes@583",
+      "displayName": "Magnetohydrodynamically Constrained Star Matter Frame Box",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.blockframes@141",
+      "displayName": "Eternity Frame Box",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.blockframes@143",
+      "displayName": "Magmatter Frame Box",
+      "kind": "item"
+    },
+    {
+      "id": "tectech:gt.stabilisation_field_generator@8",
+      "displayName": "\u00a7f\u00a7lGallifreyan\u00a7r Stabilisation Field Generator",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.blockmachines@15415",
+      "displayName": "Heliofusion Exoticizer",
+      "kind": "item"
+    },
+    {
+      "id": "tectech:item.tm.itemastralarrayfabricator",
+      "displayName": "Astral Array Fabricator",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.metaitem.03@4143",
+      "displayName": "Magmatter Nanites",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.metaitem.01@32146",
+      "displayName": "Mega Ultimate Battery",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.metaitem.01@32047",
+      "displayName": "Field Generator (UXV)",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.metaitem.01@32035",
+      "displayName": "Robot Arm (UXV)",
+      "kind": "item"
+    }
+  ],
+  "recipes": [
+    {
+      "id": "verified:rc2:godforge:unlock-end",
+      "machineType": "Forge of Gods \u00b7 install END upgrade",
+      "inputs": [
+        {
+          "id": "gregtech:gt.blockframes@583",
+          "amount": 64
+        },
+        {
+          "id": "gregtech:gt.blockframes@141",
+          "amount": 64
+        },
+        {
+          "id": "gregtech:gt.blockframes@143",
+          "amount": 64
+        },
+        {
+          "id": "tectech:gt.stabilisation_field_generator@8",
+          "amount": 64
+        },
+        {
+          "id": "gregtech:gt.blockmachines@15415",
+          "amount": 64
+        },
+        {
+          "id": "tectech:item.tm.itemastralarrayfabricator",
+          "amount": 4
+        },
+        {
+          "id": "gregtech:gt.metaitem.03@4143",
+          "amount": 1
+        },
+        {
+          "id": "gregtech:gt.metaitem.01@32146",
+          "amount": 32
+        },
+        {
+          "id": "gregtech:gt.metaitem.01@32047",
+          "amount": 64
+        },
+        {
+          "id": "gregtech:gt.metaitem.01@32035",
+          "amount": 64
+        }
+      ],
+      "outputs": [
+        {
+          "id": "access:godforge:graviton-shard-ejection",
+          "amount": 1
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/GT5-Unofficial/blob/5.09.54.205/src/main/java/tectech/loader/recipe/Godforge.java#L752"
+      },
+      "conditions": {
+        "reusableUnlock": true,
+        "upgradeId": "END",
+        "prerequisiteUpgrade": "EE must be active, with its own prerequisite tree and material/progress costs satisfied.",
+        "internalGravitonCreditCost": 12,
+        "internalCurrencyNotPhysicalGem": true,
+        "costSource": "https://github.com/GTNewHorizons/GT5-Unofficial/blob/5.09.54.205/src/main/java/tectech/thing/metaTileEntity/multi/godforge/upgrade/ForgeOfGodsUpgrade.java#L250",
+        "scope": "These materials and 12 internal credits are paid for installing END, not per emitted shard. No Graviton Shard or casing is manufactured by the fake upgrade-cost display.",
+        "machine": "Existing formed and progressed Forge of Gods, relevant structure/modules and fuel infrastructure."
+      },
+      "steps": [
+        "Progress Forge of Gods and install prerequisites through EE.",
+        "Submit END extra material costs and spend 12 internal Graviton credits to install END.",
+        "Use the unlocked physical shard ejection option."
+      ]
+    },
+    {
+      "id": "verified:rc2:godforge:graviton-shard-ejection",
+      "machineType": "Forge of Gods \u00b7 eject earned Graviton Shard",
+      "inputs": [
+        {
+          "id": "access:godforge:graviton-shard-ejection",
+          "amount": 1,
+          "consumed": false,
+          "role": "END upgrade installed; reusable machine state"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "gregtech:gt.metaitem.01@8150",
+          "amount": 1
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/GT5-Unofficial/blob/5.09.54.205/src/main/java/tectech/thing/metaTileEntity/multi/godforge/MTEForgeOfGods.java#L939"
+      },
+      "conditions": {
+        "conditionalStatefulOperation": true,
+        "requires": "END active; Graviton Shard Ejection enabled; exactly one output bus; at least one available unspent internal Graviton credit.",
+        "progressDebitPerOutput": {
+          "gravitonShardsAvailable": -1,
+          "gravitonShardsSpent": 1
+        },
+        "notFreeRepeatableProduction": true,
+        "actualBatch": "Implementation attempts to eject all currently available credits; normalized here to one physical gem per one ejected credit.",
+        "progressGeneration": "available = sum_i[p_i*(p_i+1)/2] - shardsSpent; p_i capped at7 before inversion. Source determineGravitonShardAmount L928.",
+        "milestoneTracks": [
+          "Charge: total power consumed by Godforge modules.",
+          "Conversion: total recipes processed by Godforge modules.",
+          "Catalyst: total Forge of Gods fuel consumed.",
+          "Composition: structure/extensions and module composition."
+        ],
+        "inversionCondition": "All four milestone tracks at least7 unlock inversion; later progress may exceed7.",
+        "milestoneSource": "https://github.com/GTNewHorizons/GT5-Unofficial/blob/5.09.54.205/src/main/java/tectech/thing/metaTileEntity/multi/godforge/util/GodforgeMath.java#L342",
+        "progressConstantsSource": "https://github.com/GTNewHorizons/GT5-Unofficial/blob/5.09.54.205/src/main/java/tectech/thing/metaTileEntity/multi/godforge/util/ForgeOfGodsData.java#L34",
+        "accounting": "There is no fixed item/fluid/EU recipe per Graviton Shard. Milestone progress requires previous machine operation, fuel, processing and power; exact marginal cost depends on saved Godforge state and chosen work.",
+        "machineTickSource": "https://github.com/GTNewHorizons/GT5-Unofficial/blob/5.09.54.205/src/main/java/tectech/thing/metaTileEntity/multi/godforge/MTEForgeOfGods.java#L425"
+      },
+      "steps": [
+        "Earn internal Graviton credits through the four Godforge milestone tracks.",
+        "Activate the END upgrade and enable Graviton Shard Ejection.",
+        "With one output bus available, eject credits as physical Graviton Shard gems; each emitted gem spends one credit."
+      ]
+    }
+  ],
+  "producerOverrides": {
+    "gregtech:gt.metaitem.01@8150": "patch:verified:rc2:godforge:graviton-shard-ejection"
+  },
+  "rejectPhysicalProducerSourceIds": [
+    "oracle:local-2.9.0-rc-2:gregtech:gt-recipe-upgrade-costs:52db61142d0da81f"
+  ],
+  "rejectedRecipeExplanation": "Godforge Upgrades source_id is a .fake() display of END material costs/unlocks, not a machine recipe that produces one casing plus one Graviton Shard. Tool-only crafting record228750 is invalid for this material tree and must also be excluded.",
+  "milestoneReference": {
+    "preInversionProgressFormulas": {
+      "charge": "max(floor(log_9(totalPower/10^15)+1),0)",
+      "conversion": "max(floor(log_4(totalRecipes/10^7)+1),0)",
+      "catalyst": "max(floor(log_3(totalFuel/10000)+1),0)"
+    },
+    "preInversionCreditProgressCap": 7,
+    "maximumPreInversionCreditsBeforeSpending": 112,
+    "formulaNote": "Reference summarizes source logarithmic milestones. Java integer division/floating precision and saved counters govern exact threshold behavior; use implementation for exact edge cases.",
+    "source": "https://github.com/GTNewHorizons/GT5-Unofficial/blob/5.09.54.205/src/main/java/tectech/thing/metaTileEntity/multi/godforge/util/GodforgeMath.java#L342"
+  },
+  "limitations": [
+    "Upgrade prerequisite tree through EE, Forge construction, fuel selection and module recipe workloads are explicit operational prerequisites, not expanded into one universal per-shard bill.",
+    "Unspent credits are state, not a freely renewable inventory item. Ejection must not be treated as unlimited generation merely because no ordinary item input is consumed per shard."
+  ]
+}

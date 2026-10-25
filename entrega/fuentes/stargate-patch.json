@@ -1,0 +1,945 @@
+{
+  "resources": [
+    {
+      "id": "sgcraft:stargatering",
+      "displayName": "Stargate Ring Block",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.blockmetal9@10",
+      "displayName": "Block of Magmatter",
+      "kind": "item"
+    },
+    {
+      "id": "galacticraftamunra:tile.baseblockrock@14",
+      "displayName": "Dark Matter",
+      "kind": "item"
+    },
+    {
+      "id": "dreamcraft:stargateframepart",
+      "displayName": "Stargate Frame Part",
+      "kind": "item"
+    },
+    {
+      "id": "dreamcraft:stargatechevron",
+      "displayName": "Stargate Chevron",
+      "kind": "item"
+    },
+    {
+      "id": "dreamcraft:stargateshieldingfoil",
+      "displayName": "Stargate-Radiation-Containment-Plate",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.metaitem.01@32047",
+      "displayName": "Field Generator (UXV)",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.metaitem.03@32312",
+      "displayName": "Perfected Waveguide",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.blockcasings13@7",
+      "displayName": "Field Energy Absorber Casing",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.blockcasings13@5",
+      "displayName": "Precision Field Sync Casing",
+      "kind": "item"
+    },
+    {
+      "id": "sgcraft:sgchevronupgrade",
+      "displayName": "Stargate Chevron Upgrade",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.metaitem.01@32023",
+      "displayName": "Electric Piston (UXV)",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.metaitem.01@32043",
+      "displayName": "Sensor (UXV)",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.metaitem.01@32039",
+      "displayName": "Emitter (UXV)",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.metaitem.03@6143",
+      "displayName": "Superdense Magmatter Plate",
+      "kind": "item"
+    },
+    {
+      "id": "sgcraft:stargatering@1",
+      "displayName": "Stargate Chevron Block",
+      "kind": "item"
+    },
+    {
+      "id": "tectech:gt.godforgecasing@7",
+      "displayName": "Central Graviton Flow Modulator",
+      "kind": "item"
+    },
+    {
+      "id": "sgcraft:stargatebase",
+      "displayName": "Stargate Base",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.blockmachines@14006",
+      "displayName": "Space Assembler Module Mk-III",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.metaitem.03@32315",
+      "displayName": "Perfected Energy Conduit",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.metaitem.03@4143",
+      "displayName": "Magmatter Nanites",
+      "kind": "item"
+    },
+    {
+      "id": "gtnhintergalactic:item.miningdrone@12",
+      "displayName": "Mining Drone Mk-XIII (UXV)",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.metaitem.01@32146",
+      "displayName": "Mega Ultimate Battery",
+      "kind": "item"
+    },
+    {
+      "id": "appliedenergistics2:item.itemextremestoragecell.universe",
+      "displayName": "Artificial Universe ME Storage Cell",
+      "kind": "item"
+    },
+    {
+      "id": "tectech:item.tm.itemastralarrayfabricator",
+      "displayName": "Astral Array Fabricator",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.foundrycasings@3",
+      "displayName": "Celestial Magnetic Chassis",
+      "kind": "item"
+    },
+    {
+      "id": "ae2fc:fluid_storage.universe",
+      "displayName": "ME Fluid Artificial Universe Storage Cell",
+      "kind": "item"
+    },
+    {
+      "id": "sgcraft:sgcorecrystal",
+      "displayName": "Stargate Core Crystal",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.metaitem.03@32758",
+      "displayName": "Transdimensional Alignment Matrix",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.foundrycasings@4",
+      "displayName": "Universal Collapser Casing",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.metaitem.03@32318",
+      "displayName": "Perfected Electrogravitic Valve",
+      "kind": "item"
+    },
+    {
+      "id": "sgcraft:ic2capacitor",
+      "displayName": "Ridiculously Large Capacitor",
+      "kind": "item"
+    },
+    {
+      "id": "tectech:gt.godforgecasing@4",
+      "displayName": "Stellar Energy Siphon Casing",
+      "kind": "item"
+    },
+    {
+      "id": "kekztech:kekztech_lapotronicenergyunit_block@10",
+      "displayName": "Mega Ultimate Capacitor (UMV)",
+      "kind": "item"
+    },
+    {
+      "id": "enderio:blockcapbank",
+      "displayName": "Chaotic Capacitor Bank (CREATIVE NBT)",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.blockmachines@13106",
+      "displayName": "Lapotronic Supercapacitor",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.blockmachines@16027",
+      "displayName": "UXV 16,777,216A Wireless Energy Hatch",
+      "kind": "item"
+    },
+    {
+      "id": "sgcraft:sgirisblade",
+      "displayName": "Stargate Iris Blade",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.metaitem.03@6585",
+      "displayName": "Superdense White Dwarf Matter Plate",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.metaitem.03@6586",
+      "displayName": "Superdense Black Dwarf Matter Plate",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.blockcasings.bec@5",
+      "displayName": "Condensate Transformative Coil",
+      "kind": "item"
+    },
+    {
+      "id": "sgcraft:sgirisupgrade",
+      "displayName": "Stargate Iris Upgrade",
+      "kind": "item"
+    },
+    {
+      "id": "sgcraft:rfpowerunit",
+      "displayName": "RF Stargate Power Unit",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.metaitem.01@32416",
+      "displayName": "Giga Chad Token",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.metaitem.03@32326",
+      "displayName": "Resplendent Resonance Chamber",
+      "kind": "item"
+    },
+    {
+      "id": "sgcraft:ocinterface",
+      "displayName": "OpenComputers Stargate Interface",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.blockmachines@15445",
+      "displayName": "Cloud Computation Client Hatch",
+      "kind": "item"
+    },
+    {
+      "id": "appliedenergistics2:tile.blocksingularitycraftingstorage",
+      "displayName": "Singularity Crafting Storage",
+      "kind": "item"
+    },
+    {
+      "id": "sgcraft:stargatecontroller",
+      "displayName": "Stargate Controller (DHD)",
+      "kind": "item"
+    },
+    {
+      "id": "opencomputers:keyboard",
+      "displayName": "Keyboard",
+      "kind": "item"
+    },
+    {
+      "id": "sgcraft:sgcontrollercrystal",
+      "displayName": "Stargate Controller Crystal",
+      "kind": "item"
+    },
+    {
+      "id": "eternalsingularity:combined_singularity@10",
+      "displayName": "Arithmetic Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.metaitem.03@32334",
+      "displayName": "Resplendent Field Manipulator",
+      "kind": "item"
+    }
+  ],
+  "recipes": [
+    {
+      "id": "verified:rc2:extreme:ringblock",
+      "inputs": [
+        {
+          "id": "gregtech:gt.blockmetal9@10",
+          "amount": 5
+        },
+        {
+          "id": "galacticraftamunra:tile.baseblockrock@14",
+          "amount": 9
+        },
+        {
+          "id": "dreamcraft:stargateframepart",
+          "amount": 19
+        },
+        {
+          "id": "dreamcraft:stargatechevron",
+          "amount": 3
+        },
+        {
+          "id": "dreamcraft:stargateshieldingfoil",
+          "amount": 11
+        },
+        {
+          "id": "gregtech:gt.metaitem.01@32047",
+          "amount": 9
+        },
+        {
+          "id": "gregtech:gt.metaitem.03@32312",
+          "amount": 2
+        },
+        {
+          "id": "gregtech:gt.blockcasings13@7",
+          "amount": 10
+        },
+        {
+          "id": "gregtech:gt.blockcasings13@5",
+          "amount": 3
+        }
+      ],
+      "outputs": [
+        {
+          "id": "sgcraft:stargatering",
+          "amount": 1
+        }
+      ],
+      "machineType": "Extreme Crafting",
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptSGCraft.java"
+      },
+      "grid": [
+        "aaafcffpp",
+        "addfffpgg",
+        "admfwpg--",
+        "sdmffpg--",
+        "sdmfcpg--",
+        "sdmffpg--",
+        "admfwpg--",
+        "addfffpgg",
+        "aaafcffpp"
+      ]
+    },
+    {
+      "id": "verified:rc2:extreme:chevronupgrade",
+      "inputs": [
+        {
+          "id": "dreamcraft:stargateframepart",
+          "amount": 15
+        },
+        {
+          "id": "dreamcraft:stargatechevron",
+          "amount": 4
+        },
+        {
+          "id": "gregtech:gt.metaitem.01@32023",
+          "amount": 3
+        },
+        {
+          "id": "gregtech:gt.metaitem.01@32047",
+          "amount": 2
+        },
+        {
+          "id": "gregtech:gt.metaitem.01@32043",
+          "amount": 1
+        },
+        {
+          "id": "gregtech:gt.metaitem.01@32039",
+          "amount": 1
+        },
+        {
+          "id": "gregtech:gt.metaitem.03@32312",
+          "amount": 2
+        },
+        {
+          "id": "gregtech:gt.metaitem.03@6143",
+          "amount": 22
+        }
+      ],
+      "outputs": [
+        {
+          "id": "sgcraft:sgchevronupgrade",
+          "amount": 1
+        }
+      ],
+      "machineType": "Extreme Crafting",
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptSGCraft.java"
+      },
+      "grid": [
+        "mmmmmmmmm",
+        "fpfsfpfm-",
+        "mfcgcfmmm",
+        "-mfwfefpf",
+        "--mfcgcfm",
+        "---mfwfm-",
+        "----mfm--",
+        "-----m---",
+        "---------"
+      ]
+    },
+    {
+      "id": "verified:rc2:extreme:chevronblock",
+      "inputs": [
+        {
+          "id": "gregtech:gt.blockmetal9@10",
+          "amount": 4
+        },
+        {
+          "id": "galacticraftamunra:tile.baseblockrock@14",
+          "amount": 8
+        },
+        {
+          "id": "sgcraft:sgchevronupgrade",
+          "amount": 4
+        },
+        {
+          "id": "sgcraft:stargatering",
+          "amount": 1
+        },
+        {
+          "id": "gregtech:gt.metaitem.01@32047",
+          "amount": 4
+        },
+        {
+          "id": "tectech:gt.godforgecasing@7",
+          "amount": 4
+        },
+        {
+          "id": "dreamcraft:stargateshieldingfoil",
+          "amount": 16
+        },
+        {
+          "id": "gregtech:gt.metaitem.03@32312",
+          "amount": 4
+        },
+        {
+          "id": "gregtech:gt.blockcasings13@7",
+          "amount": 8
+        },
+        {
+          "id": "gregtech:gt.blockcasings13@5",
+          "amount": 4
+        }
+      ],
+      "outputs": [
+        {
+          "id": "sgcraft:stargatering@1",
+          "amount": 1
+        }
+      ],
+      "machineType": "Extreme Crafting",
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptSGCraft.java"
+      },
+      "grid": [
+        "---psp---",
+        "--pamap--",
+        "-pwdgdwp-",
+        "padfufdap",
+        "smgubugms",
+        "padfufdap",
+        "-pwdgdwp-",
+        "--pamap--",
+        "---psp---"
+      ]
+    },
+    {
+      "id": "verified:rc2:extreme:stargatebase",
+      "inputs": [
+        {
+          "id": "gregtech:gt.blockmachines@14006",
+          "amount": 2
+        },
+        {
+          "id": "sgcraft:stargatering@1",
+          "amount": 8
+        },
+        {
+          "id": "gregtech:gt.metaitem.03@32315",
+          "amount": 4
+        },
+        {
+          "id": "gregtech:gt.metaitem.03@4143",
+          "amount": 4
+        },
+        {
+          "id": "tectech:gt.godforgecasing@7",
+          "amount": 4
+        },
+        {
+          "id": "gtnhintergalactic:item.miningdrone@12",
+          "amount": 2
+        },
+        {
+          "id": "gregtech:gt.metaitem.01@32146",
+          "amount": 4
+        },
+        {
+          "id": "appliedenergistics2:item.itemextremestoragecell.universe",
+          "amount": 1
+        },
+        {
+          "id": "tectech:item.tm.itemastralarrayfabricator",
+          "amount": 6
+        },
+        {
+          "id": "gregtech:gt.foundrycasings@3",
+          "amount": 16
+        },
+        {
+          "id": "ae2fc:fluid_storage.universe",
+          "amount": 1
+        },
+        {
+          "id": "sgcraft:sgcorecrystal",
+          "amount": 1
+        },
+        {
+          "id": "dreamcraft:stargateshieldingfoil",
+          "amount": 16
+        },
+        {
+          "id": "gregtech:gt.metaitem.03@32758",
+          "amount": 4
+        },
+        {
+          "id": "gregtech:gt.foundrycasings@4",
+          "amount": 4
+        },
+        {
+          "id": "gregtech:gt.metaitem.03@32318",
+          "amount": 4
+        }
+      ],
+      "outputs": [
+        {
+          "id": "sgcraft:stargatebase",
+          "amount": 1
+        }
+      ],
+      "machineType": "Extreme Crafting",
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptSGCraft.java"
+      },
+      "grid": [
+        "tppcdcppt",
+        "pesmhmsep",
+        "psimjmisp",
+        "vkummmukv",
+        "dkamomakd",
+        "vkummmukv",
+        "psimnmisp",
+        "pesmhmsep",
+        "tppcdcppt"
+      ]
+    },
+    {
+      "id": "verified:rc2:extreme:stargatecapacitor",
+      "inputs": [
+        {
+          "id": "dreamcraft:stargateshieldingfoil",
+          "amount": 16
+        },
+        {
+          "id": "tectech:gt.godforgecasing@4",
+          "amount": 8
+        },
+        {
+          "id": "gregtech:gt.metaitem.01@32047",
+          "amount": 4
+        },
+        {
+          "id": "kekztech:kekztech_lapotronicenergyunit_block@10",
+          "amount": 9
+        },
+        {
+          "id": "enderio:blockcapbank",
+          "amount": 10
+        },
+        {
+          "id": "gregtech:gt.blockmachines@13106",
+          "amount": 1
+        },
+        {
+          "id": "gregtech:gt.blockmachines@16027",
+          "amount": 1
+        },
+        {
+          "id": "gregtech:gt.foundrycasings@3",
+          "amount": 4
+        }
+      ],
+      "outputs": [
+        {
+          "id": "sgcraft:ic2capacitor",
+          "amount": 1
+        }
+      ],
+      "machineType": "Extreme Crafting",
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptSGCraft.java"
+      },
+      "grid": [
+        "---sms---",
+        "---sms---",
+        "-ppgpgpp-",
+        "pcbcbcbcp",
+        "pbcblbcbp",
+        "pcbchcbcp",
+        "-ppgpgpp-",
+        "---sms---",
+        "---sms---"
+      ],
+      "conditions": [
+        {
+          "resourceId": "enderio:blockcapbank",
+          "requiredNBT": "{type:\"CREATIVE\",storedEnergyRF:2500000}"
+        }
+      ]
+    },
+    {
+      "id": "verified:rc2:extreme:irisblade",
+      "inputs": [
+        {
+          "id": "gregtech:gt.metaitem.03@6585",
+          "amount": 26
+        },
+        {
+          "id": "gregtech:gt.metaitem.03@6586",
+          "amount": 7
+        },
+        {
+          "id": "gregtech:gt.metaitem.03@6143",
+          "amount": 12
+        },
+        {
+          "id": "gregtech:gt.metaitem.01@32023",
+          "amount": 4
+        },
+        {
+          "id": "gregtech:gt.metaitem.01@32146",
+          "amount": 1
+        },
+        {
+          "id": "gregtech:gt.blockcasings.bec@5",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "sgcraft:sgirisblade",
+          "amount": 1
+        }
+      ],
+      "machineType": "Extreme Crafting",
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptSGCraft.java"
+      },
+      "grid": [
+        "-----wwww",
+        "----wmbw-",
+        "---wmbw--",
+        "--wmbw---",
+        "-wmmbw---",
+        "wpmmbw---",
+        "wpmmmbw--",
+        "wuppmmbw-",
+        "cwwwwwwww"
+      ]
+    },
+    {
+      "id": "verified:rc2:extreme:irisupgrade",
+      "inputs": [
+        {
+          "id": "sgcraft:sgirisblade",
+          "amount": 24
+        },
+        {
+          "id": "galacticraftamunra:tile.baseblockrock@14",
+          "amount": 4
+        },
+        {
+          "id": "gregtech:gt.metaitem.03@4143",
+          "amount": 12
+        },
+        {
+          "id": "gregtech:gt.foundrycasings@3",
+          "amount": 1
+        },
+        {
+          "id": "gregtech:gt.blockcasings13@7",
+          "amount": 12
+        }
+      ],
+      "outputs": [
+        {
+          "id": "sgcraft:sgirisupgrade",
+          "amount": 1
+        }
+      ],
+      "machineType": "Extreme Crafting",
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptSGCraft.java"
+      },
+      "grid": [
+        "aabbbbbaa",
+        "ab--n--ba",
+        "b----n--b",
+        "b-nndn--b",
+        "bn-dmd-nb",
+        "b--ndnn-b",
+        "b--n----b",
+        "ab--n--ba",
+        "aabbbbbaa"
+      ]
+    },
+    {
+      "id": "verified:rc2:extreme:rfunit",
+      "inputs": [
+        {
+          "id": "galacticraftamunra:tile.baseblockrock@14",
+          "amount": 6
+        },
+        {
+          "id": "gregtech:gt.blockcasings.bec@5",
+          "amount": 10
+        },
+        {
+          "id": "gregtech:gt.metaitem.01@32146",
+          "amount": 1
+        },
+        {
+          "id": "sgcraft:ic2capacitor",
+          "amount": 4
+        },
+        {
+          "id": "sgcraft:stargatering",
+          "amount": 1
+        },
+        {
+          "id": "gregtech:gt.metaitem.03@4143",
+          "amount": 6
+        },
+        {
+          "id": "gregtech:gt.metaitem.01@32416",
+          "amount": 2
+        },
+        {
+          "id": "gregtech:gt.foundrycasings@3",
+          "amount": 11
+        },
+        {
+          "id": "gregtech:gt.blockcasings13@5",
+          "amount": 3
+        },
+        {
+          "id": "gregtech:gt.blockcasings13@7",
+          "amount": 16
+        },
+        {
+          "id": "gregtech:gt.metaitem.03@32326",
+          "amount": 2
+        }
+      ],
+      "outputs": [
+        {
+          "id": "sgcraft:rfpowerunit",
+          "amount": 1
+        }
+      ],
+      "machineType": "Extreme Crafting",
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptSGCraft.java"
+      },
+      "grid": [
+        "aacssscaa",
+        "adcnnncda",
+        "m-cnnnc-m",
+        "m--cpc--m",
+        "m-oprpo-m",
+        "m--cpc--m",
+        "ad--b--da",
+        "agd---dga",
+        "aaammmaaa"
+      ]
+    },
+    {
+      "id": "verified:rc2:extreme:ocinterface",
+      "inputs": [
+        {
+          "id": "galacticraftamunra:tile.baseblockrock@14",
+          "amount": 6
+        },
+        {
+          "id": "gregtech:gt.blockcasings.bec@5",
+          "amount": 10
+        },
+        {
+          "id": "gregtech:gt.blockmachines@15445",
+          "amount": 1
+        },
+        {
+          "id": "appliedenergistics2:tile.blocksingularitycraftingstorage",
+          "amount": 4
+        },
+        {
+          "id": "sgcraft:stargatering",
+          "amount": 1
+        },
+        {
+          "id": "gregtech:gt.metaitem.03@4143",
+          "amount": 6
+        },
+        {
+          "id": "gregtech:gt.metaitem.01@32416",
+          "amount": 2
+        },
+        {
+          "id": "gregtech:gt.foundrycasings@3",
+          "amount": 11
+        },
+        {
+          "id": "gregtech:gt.blockcasings13@5",
+          "amount": 3
+        },
+        {
+          "id": "gregtech:gt.blockcasings13@7",
+          "amount": 16
+        },
+        {
+          "id": "gregtech:gt.metaitem.03@32315",
+          "amount": 2
+        }
+      ],
+      "outputs": [
+        {
+          "id": "sgcraft:ocinterface",
+          "amount": 1
+        }
+      ],
+      "machineType": "Extreme Crafting",
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptSGCraft.java"
+      },
+      "grid": [
+        "aacssscaa",
+        "adcnnncda",
+        "m-cnnnc-m",
+        "m--cpc--m",
+        "m-oprpo-m",
+        "m--cpc--m",
+        "ad--b--da",
+        "agd---dga",
+        "aaammmaaa"
+      ]
+    },
+    {
+      "id": "verified:rc2:extreme:stargatecontroller",
+      "inputs": [
+        {
+          "id": "galacticraftamunra:tile.baseblockrock@14",
+          "amount": 4
+        },
+        {
+          "id": "opencomputers:keyboard",
+          "amount": 8
+        },
+        {
+          "id": "dreamcraft:stargateframepart",
+          "amount": 8
+        },
+        {
+          "id": "sgcraft:sgcontrollercrystal",
+          "amount": 1
+        },
+        {
+          "id": "dreamcraft:stargateshieldingfoil",
+          "amount": 6
+        },
+        {
+          "id": "gregtech:gt.metaitem.01@32146",
+          "amount": 1
+        },
+        {
+          "id": "sgcraft:ocinterface",
+          "amount": 1
+        },
+        {
+          "id": "ae2fc:fluid_storage.universe",
+          "amount": 1
+        },
+        {
+          "id": "gregtech:gt.blockcasings13@5",
+          "amount": 9
+        },
+        {
+          "id": "gregtech:gt.blockcasings13@7",
+          "amount": 6
+        },
+        {
+          "id": "gregtech:gt.metaitem.01@32047",
+          "amount": 1
+        },
+        {
+          "id": "eternalsingularity:combined_singularity@10",
+          "amount": 1
+        },
+        {
+          "id": "gregtech:gt.metaitem.03@32334",
+          "amount": 2
+        }
+      ],
+      "outputs": [
+        {
+          "id": "sgcraft:stargatecontroller",
+          "amount": 1
+        }
+      ],
+      "machineType": "Extreme Crafting",
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptSGCraft.java"
+      },
+      "grid": [
+        "---sss---",
+        "--dkfkd--",
+        "-skfcfks-",
+        "-sfmzmfs-",
+        "-skflfks-",
+        "--dkfkd--",
+        "--apbpa--",
+        "--apopa--",
+        "--apupa--"
+      ]
+    }
+  ]
+}

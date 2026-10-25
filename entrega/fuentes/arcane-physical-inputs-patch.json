@@ -1,0 +1,1684 @@
+{
+  "resources": [
+    {
+      "id": "thaumcraft:itemshard",
+      "displayName": "Air Shard",
+      "kind": "item"
+    },
+    {
+      "id": "thaumcraft:aspect:aer",
+      "displayName": "Aer",
+      "kind": "aspect"
+    },
+    {
+      "id": "thaumcraft:aspect:terra",
+      "displayName": "Terra",
+      "kind": "aspect"
+    },
+    {
+      "id": "thaumcraft:aspect:ignis",
+      "displayName": "Ignis",
+      "kind": "aspect"
+    },
+    {
+      "id": "thaumcraft:aspect:aqua",
+      "displayName": "Aqua",
+      "kind": "aspect"
+    },
+    {
+      "id": "thaumcraft:aspect:ordo",
+      "displayName": "Ordo",
+      "kind": "aspect"
+    },
+    {
+      "id": "thaumcraft:aspect:perditio",
+      "displayName": "Perditio",
+      "kind": "aspect"
+    },
+    {
+      "id": "thaumcraft:blockcrystal",
+      "displayName": "Air Crystal Cluster",
+      "kind": "item"
+    },
+    {
+      "id": "thaumcraft:itemshard@1",
+      "displayName": "Fire Shard",
+      "kind": "item"
+    },
+    {
+      "id": "thaumcraft:blockcrystal@1",
+      "displayName": "Fire Crystal Cluster",
+      "kind": "item"
+    },
+    {
+      "id": "thaumcraft:itemshard@2",
+      "displayName": "Water Shard",
+      "kind": "item"
+    },
+    {
+      "id": "thaumcraft:blockcrystal@2",
+      "displayName": "Water Crystal Cluster",
+      "kind": "item"
+    },
+    {
+      "id": "thaumcraft:itemshard@3",
+      "displayName": "Earth Shard",
+      "kind": "item"
+    },
+    {
+      "id": "thaumcraft:blockcrystal@3",
+      "displayName": "Earth Crystal Cluster",
+      "kind": "item"
+    },
+    {
+      "id": "thaumcraft:itemshard@4",
+      "displayName": "Order Shard",
+      "kind": "item"
+    },
+    {
+      "id": "thaumcraft:blockcrystal@4",
+      "displayName": "Order Crystal Cluster",
+      "kind": "item"
+    },
+    {
+      "id": "thaumcraft:itemshard@5",
+      "displayName": "Entropy Shard",
+      "kind": "item"
+    },
+    {
+      "id": "thaumcraft:blockcrystal@5",
+      "displayName": "Entropy Crystal Cluster",
+      "kind": "item"
+    },
+    {
+      "id": "thaumcraft:itemshard@6",
+      "displayName": "Balanced Shard",
+      "kind": "item"
+    },
+    {
+      "id": "thaumcraft:blockcrystal@6",
+      "displayName": "Mixed Crystal Cluster",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:ingredient@34",
+      "displayName": "Whiff of Magic",
+      "kind": "item"
+    },
+    {
+      "id": "botania:manaresource@2",
+      "displayName": "Mana Diamond",
+      "kind": "item"
+    },
+    {
+      "id": "minecraft:lava_bucket",
+      "displayName": "Lava Bucket",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:ingredient@10",
+      "displayName": "Attuned Stone",
+      "kind": "item"
+    },
+    {
+      "id": "minecraft:bucket",
+      "displayName": "Bucket",
+      "kind": "item"
+    }
+  ],
+  "recipes": [
+    {
+      "id": "verified:rc2:arcane:crystal-cluster-0",
+      "name": "Thaumcraft Arcane Crafting: Air Crystal Cluster",
+      "kind": "gregtech_machine",
+      "category": "thaumcraft",
+      "machineType": "Thaumcraft Arcane Crafting",
+      "minimumTier": "NONE",
+      "durationTicks": 1,
+      "eut": 0,
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "thaumcraft:itemshard",
+          "amount": 7
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:aer",
+          "amount": 10,
+          "neiSlot": {
+            "x": 34,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:terra",
+          "amount": 5,
+          "neiSlot": {
+            "x": 52,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:ignis",
+          "amount": 5,
+          "neiSlot": {
+            "x": 70,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:aqua",
+          "amount": 5,
+          "neiSlot": {
+            "x": 88,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:ordo",
+          "amount": 5,
+          "neiSlot": {
+            "x": 106,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:perditio",
+          "amount": 5,
+          "neiSlot": {
+            "x": 124,
+            "y": 115
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "thaumcraft:blockcrystal",
+          "amount": 1,
+          "neiSlot": {
+            "x": 74,
+            "y": 2
+          }
+        }
+      ],
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptThaumcraft.java#L218",
+        "originalSourceId": "oracle:local-2.9.0-beta-2:thaumcraft:arcane:b456c21f26c82be7",
+        "sqliteRecipeId": 252003
+      },
+      "nei": {
+        "slots": [
+          {
+            "side": "output",
+            "kind": "item",
+            "slotIndex": 0,
+            "x": 74,
+            "y": 2
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 0,
+            "x": 34,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 1,
+            "x": 52,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 2,
+            "x": 70,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 3,
+            "x": 88,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 4,
+            "x": 106,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 5,
+            "x": 124,
+            "y": 115
+          }
+        ],
+        "progressBars": []
+      },
+      "metadata": {
+        "thaumcraftType": "arcane",
+        "research": "ASPECTS",
+        "physicalInputsVerified": true,
+        "aspectConsumption": "wand_vis",
+        "baseVisBeforeDiscounts": true
+      },
+      "grid": [
+        "abc",
+        "def",
+        "ghi"
+      ],
+      "gridMapping": {
+        "a": "thaumcraft:itemshard",
+        "b": "thaumcraft:itemshard",
+        "c": "thaumcraft:itemshard",
+        "e": "thaumcraft:itemshard",
+        "g": "thaumcraft:itemshard",
+        "h": "thaumcraft:itemshard",
+        "i": "thaumcraft:itemshard"
+      },
+      "conditions": [
+        "Arcane Workbench; research ASPECTS complete.",
+        "Aspect amounts here are base wand VIS, not essentia; apply typed-vis mapping after this physical-input correction.",
+        "Pattern letters without an ingredient mapping represent empty slots."
+      ]
+    },
+    {
+      "id": "verified:rc2:arcane:crystal-cluster-1",
+      "name": "Thaumcraft Arcane Crafting: Fire Crystal Cluster",
+      "kind": "gregtech_machine",
+      "category": "thaumcraft",
+      "machineType": "Thaumcraft Arcane Crafting",
+      "minimumTier": "NONE",
+      "durationTicks": 1,
+      "eut": 0,
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "thaumcraft:itemshard@1",
+          "amount": 7
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:ignis",
+          "amount": 10,
+          "neiSlot": {
+            "x": 34,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:aer",
+          "amount": 5,
+          "neiSlot": {
+            "x": 52,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:terra",
+          "amount": 5,
+          "neiSlot": {
+            "x": 70,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:aqua",
+          "amount": 5,
+          "neiSlot": {
+            "x": 88,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:ordo",
+          "amount": 5,
+          "neiSlot": {
+            "x": 106,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:perditio",
+          "amount": 5,
+          "neiSlot": {
+            "x": 124,
+            "y": 115
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "thaumcraft:blockcrystal@1",
+          "amount": 1,
+          "neiSlot": {
+            "x": 74,
+            "y": 2
+          }
+        }
+      ],
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptThaumcraft.java#L240",
+        "originalSourceId": "oracle:local-2.9.0-beta-2:thaumcraft:arcane:9a02a1ab88725c9f",
+        "sqliteRecipeId": 252004
+      },
+      "nei": {
+        "slots": [
+          {
+            "side": "output",
+            "kind": "item",
+            "slotIndex": 0,
+            "x": 74,
+            "y": 2
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 0,
+            "x": 34,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 1,
+            "x": 52,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 2,
+            "x": 70,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 3,
+            "x": 88,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 4,
+            "x": 106,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 5,
+            "x": 124,
+            "y": 115
+          }
+        ],
+        "progressBars": []
+      },
+      "metadata": {
+        "thaumcraftType": "arcane",
+        "research": "ASPECTS",
+        "physicalInputsVerified": true,
+        "aspectConsumption": "wand_vis",
+        "baseVisBeforeDiscounts": true
+      },
+      "grid": [
+        "abc",
+        "def",
+        "ghi"
+      ],
+      "gridMapping": {
+        "a": "thaumcraft:itemshard@1",
+        "b": "thaumcraft:itemshard@1",
+        "c": "thaumcraft:itemshard@1",
+        "e": "thaumcraft:itemshard@1",
+        "g": "thaumcraft:itemshard@1",
+        "h": "thaumcraft:itemshard@1",
+        "i": "thaumcraft:itemshard@1"
+      },
+      "conditions": [
+        "Arcane Workbench; research ASPECTS complete.",
+        "Aspect amounts here are base wand VIS, not essentia; apply typed-vis mapping after this physical-input correction.",
+        "Pattern letters without an ingredient mapping represent empty slots."
+      ]
+    },
+    {
+      "id": "verified:rc2:arcane:crystal-cluster-2",
+      "name": "Thaumcraft Arcane Crafting: Water Crystal Cluster",
+      "kind": "gregtech_machine",
+      "category": "thaumcraft",
+      "machineType": "Thaumcraft Arcane Crafting",
+      "minimumTier": "NONE",
+      "durationTicks": 1,
+      "eut": 0,
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "thaumcraft:itemshard@2",
+          "amount": 7
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:aqua",
+          "amount": 10,
+          "neiSlot": {
+            "x": 34,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:aer",
+          "amount": 5,
+          "neiSlot": {
+            "x": 52,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:terra",
+          "amount": 5,
+          "neiSlot": {
+            "x": 70,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:ignis",
+          "amount": 5,
+          "neiSlot": {
+            "x": 88,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:ordo",
+          "amount": 5,
+          "neiSlot": {
+            "x": 106,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:perditio",
+          "amount": 5,
+          "neiSlot": {
+            "x": 124,
+            "y": 115
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "thaumcraft:blockcrystal@2",
+          "amount": 1,
+          "neiSlot": {
+            "x": 74,
+            "y": 2
+          }
+        }
+      ],
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptThaumcraft.java#L262",
+        "originalSourceId": "oracle:local-2.9.0-beta-2:thaumcraft:arcane:8d432ec3da161f88",
+        "sqliteRecipeId": 252005
+      },
+      "nei": {
+        "slots": [
+          {
+            "side": "output",
+            "kind": "item",
+            "slotIndex": 0,
+            "x": 74,
+            "y": 2
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 0,
+            "x": 34,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 1,
+            "x": 52,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 2,
+            "x": 70,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 3,
+            "x": 88,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 4,
+            "x": 106,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 5,
+            "x": 124,
+            "y": 115
+          }
+        ],
+        "progressBars": []
+      },
+      "metadata": {
+        "thaumcraftType": "arcane",
+        "research": "ASPECTS",
+        "physicalInputsVerified": true,
+        "aspectConsumption": "wand_vis",
+        "baseVisBeforeDiscounts": true
+      },
+      "grid": [
+        "abc",
+        "def",
+        "ghi"
+      ],
+      "gridMapping": {
+        "a": "thaumcraft:itemshard@2",
+        "b": "thaumcraft:itemshard@2",
+        "c": "thaumcraft:itemshard@2",
+        "e": "thaumcraft:itemshard@2",
+        "g": "thaumcraft:itemshard@2",
+        "h": "thaumcraft:itemshard@2",
+        "i": "thaumcraft:itemshard@2"
+      },
+      "conditions": [
+        "Arcane Workbench; research ASPECTS complete.",
+        "Aspect amounts here are base wand VIS, not essentia; apply typed-vis mapping after this physical-input correction.",
+        "Pattern letters without an ingredient mapping represent empty slots."
+      ]
+    },
+    {
+      "id": "verified:rc2:arcane:crystal-cluster-3",
+      "name": "Thaumcraft Arcane Crafting: Earth Crystal Cluster",
+      "kind": "gregtech_machine",
+      "category": "thaumcraft",
+      "machineType": "Thaumcraft Arcane Crafting",
+      "minimumTier": "NONE",
+      "durationTicks": 1,
+      "eut": 0,
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "thaumcraft:itemshard@3",
+          "amount": 7
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:terra",
+          "amount": 10,
+          "neiSlot": {
+            "x": 34,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:aer",
+          "amount": 5,
+          "neiSlot": {
+            "x": 52,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:ignis",
+          "amount": 5,
+          "neiSlot": {
+            "x": 70,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:aqua",
+          "amount": 5,
+          "neiSlot": {
+            "x": 88,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:ordo",
+          "amount": 5,
+          "neiSlot": {
+            "x": 106,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:perditio",
+          "amount": 5,
+          "neiSlot": {
+            "x": 124,
+            "y": 115
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "thaumcraft:blockcrystal@3",
+          "amount": 1,
+          "neiSlot": {
+            "x": 74,
+            "y": 2
+          }
+        }
+      ],
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptThaumcraft.java#L284",
+        "originalSourceId": "oracle:local-2.9.0-beta-2:thaumcraft:arcane:0d521d469cd2f164",
+        "sqliteRecipeId": 252006
+      },
+      "nei": {
+        "slots": [
+          {
+            "side": "output",
+            "kind": "item",
+            "slotIndex": 0,
+            "x": 74,
+            "y": 2
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 0,
+            "x": 34,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 1,
+            "x": 52,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 2,
+            "x": 70,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 3,
+            "x": 88,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 4,
+            "x": 106,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 5,
+            "x": 124,
+            "y": 115
+          }
+        ],
+        "progressBars": []
+      },
+      "metadata": {
+        "thaumcraftType": "arcane",
+        "research": "ASPECTS",
+        "physicalInputsVerified": true,
+        "aspectConsumption": "wand_vis",
+        "baseVisBeforeDiscounts": true
+      },
+      "grid": [
+        "abc",
+        "def",
+        "ghi"
+      ],
+      "gridMapping": {
+        "a": "thaumcraft:itemshard@3",
+        "b": "thaumcraft:itemshard@3",
+        "c": "thaumcraft:itemshard@3",
+        "e": "thaumcraft:itemshard@3",
+        "g": "thaumcraft:itemshard@3",
+        "h": "thaumcraft:itemshard@3",
+        "i": "thaumcraft:itemshard@3"
+      },
+      "conditions": [
+        "Arcane Workbench; research ASPECTS complete.",
+        "Aspect amounts here are base wand VIS, not essentia; apply typed-vis mapping after this physical-input correction.",
+        "Pattern letters without an ingredient mapping represent empty slots."
+      ]
+    },
+    {
+      "id": "verified:rc2:arcane:crystal-cluster-4",
+      "name": "Thaumcraft Arcane Crafting: Order Crystal Cluster",
+      "kind": "gregtech_machine",
+      "category": "thaumcraft",
+      "machineType": "Thaumcraft Arcane Crafting",
+      "minimumTier": "NONE",
+      "durationTicks": 1,
+      "eut": 0,
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "thaumcraft:itemshard@4",
+          "amount": 7
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:ordo",
+          "amount": 10,
+          "neiSlot": {
+            "x": 34,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:aer",
+          "amount": 5,
+          "neiSlot": {
+            "x": 52,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:terra",
+          "amount": 5,
+          "neiSlot": {
+            "x": 70,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:ignis",
+          "amount": 5,
+          "neiSlot": {
+            "x": 88,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:aqua",
+          "amount": 5,
+          "neiSlot": {
+            "x": 106,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:perditio",
+          "amount": 5,
+          "neiSlot": {
+            "x": 124,
+            "y": 115
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "thaumcraft:blockcrystal@4",
+          "amount": 1,
+          "neiSlot": {
+            "x": 74,
+            "y": 2
+          }
+        }
+      ],
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptThaumcraft.java#L306",
+        "originalSourceId": "oracle:local-2.9.0-beta-2:thaumcraft:arcane:44ca82fc7fe06578",
+        "sqliteRecipeId": 252007
+      },
+      "nei": {
+        "slots": [
+          {
+            "side": "output",
+            "kind": "item",
+            "slotIndex": 0,
+            "x": 74,
+            "y": 2
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 0,
+            "x": 34,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 1,
+            "x": 52,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 2,
+            "x": 70,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 3,
+            "x": 88,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 4,
+            "x": 106,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 5,
+            "x": 124,
+            "y": 115
+          }
+        ],
+        "progressBars": []
+      },
+      "metadata": {
+        "thaumcraftType": "arcane",
+        "research": "ASPECTS",
+        "physicalInputsVerified": true,
+        "aspectConsumption": "wand_vis",
+        "baseVisBeforeDiscounts": true
+      },
+      "grid": [
+        "abc",
+        "def",
+        "ghi"
+      ],
+      "gridMapping": {
+        "a": "thaumcraft:itemshard@4",
+        "b": "thaumcraft:itemshard@4",
+        "c": "thaumcraft:itemshard@4",
+        "e": "thaumcraft:itemshard@4",
+        "g": "thaumcraft:itemshard@4",
+        "h": "thaumcraft:itemshard@4",
+        "i": "thaumcraft:itemshard@4"
+      },
+      "conditions": [
+        "Arcane Workbench; research ASPECTS complete.",
+        "Aspect amounts here are base wand VIS, not essentia; apply typed-vis mapping after this physical-input correction.",
+        "Pattern letters without an ingredient mapping represent empty slots."
+      ]
+    },
+    {
+      "id": "verified:rc2:arcane:crystal-cluster-5",
+      "name": "Thaumcraft Arcane Crafting: Entropy Crystal Cluster",
+      "kind": "gregtech_machine",
+      "category": "thaumcraft",
+      "machineType": "Thaumcraft Arcane Crafting",
+      "minimumTier": "NONE",
+      "durationTicks": 1,
+      "eut": 0,
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "thaumcraft:itemshard@5",
+          "amount": 7
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:perditio",
+          "amount": 10,
+          "neiSlot": {
+            "x": 34,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:aer",
+          "amount": 5,
+          "neiSlot": {
+            "x": 52,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:terra",
+          "amount": 5,
+          "neiSlot": {
+            "x": 70,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:ignis",
+          "amount": 5,
+          "neiSlot": {
+            "x": 88,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:aqua",
+          "amount": 5,
+          "neiSlot": {
+            "x": 106,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:ordo",
+          "amount": 5,
+          "neiSlot": {
+            "x": 124,
+            "y": 115
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "thaumcraft:blockcrystal@5",
+          "amount": 1,
+          "neiSlot": {
+            "x": 74,
+            "y": 2
+          }
+        }
+      ],
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptThaumcraft.java#L328",
+        "originalSourceId": "oracle:local-2.9.0-beta-2:thaumcraft:arcane:08f2db6441928151",
+        "sqliteRecipeId": 252008
+      },
+      "nei": {
+        "slots": [
+          {
+            "side": "output",
+            "kind": "item",
+            "slotIndex": 0,
+            "x": 74,
+            "y": 2
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 0,
+            "x": 34,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 1,
+            "x": 52,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 2,
+            "x": 70,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 3,
+            "x": 88,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 4,
+            "x": 106,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 5,
+            "x": 124,
+            "y": 115
+          }
+        ],
+        "progressBars": []
+      },
+      "metadata": {
+        "thaumcraftType": "arcane",
+        "research": "ASPECTS",
+        "physicalInputsVerified": true,
+        "aspectConsumption": "wand_vis",
+        "baseVisBeforeDiscounts": true
+      },
+      "grid": [
+        "abc",
+        "def",
+        "ghi"
+      ],
+      "gridMapping": {
+        "a": "thaumcraft:itemshard@5",
+        "b": "thaumcraft:itemshard@5",
+        "c": "thaumcraft:itemshard@5",
+        "e": "thaumcraft:itemshard@5",
+        "g": "thaumcraft:itemshard@5",
+        "h": "thaumcraft:itemshard@5",
+        "i": "thaumcraft:itemshard@5"
+      },
+      "conditions": [
+        "Arcane Workbench; research ASPECTS complete.",
+        "Aspect amounts here are base wand VIS, not essentia; apply typed-vis mapping after this physical-input correction.",
+        "Pattern letters without an ingredient mapping represent empty slots."
+      ]
+    },
+    {
+      "id": "verified:rc2:arcane:crystal-cluster-6",
+      "name": "Thaumcraft Arcane Crafting: Mixed Crystal Cluster",
+      "kind": "gregtech_machine",
+      "category": "thaumcraft",
+      "machineType": "Thaumcraft Arcane Crafting",
+      "minimumTier": "NONE",
+      "durationTicks": 1,
+      "eut": 0,
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "thaumcraft:itemshard",
+          "amount": 1
+        },
+        {
+          "kind": "item",
+          "id": "thaumcraft:itemshard@1",
+          "amount": 1
+        },
+        {
+          "kind": "item",
+          "id": "thaumcraft:itemshard@2",
+          "amount": 1
+        },
+        {
+          "kind": "item",
+          "id": "thaumcraft:itemshard@3",
+          "amount": 1
+        },
+        {
+          "kind": "item",
+          "id": "thaumcraft:itemshard@4",
+          "amount": 1
+        },
+        {
+          "kind": "item",
+          "id": "thaumcraft:itemshard@5",
+          "amount": 1
+        },
+        {
+          "kind": "item",
+          "id": "thaumcraft:itemshard@6",
+          "amount": 3
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:aer",
+          "amount": 10,
+          "neiSlot": {
+            "x": 34,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:terra",
+          "amount": 10,
+          "neiSlot": {
+            "x": 52,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:ignis",
+          "amount": 10,
+          "neiSlot": {
+            "x": 70,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:aqua",
+          "amount": 10,
+          "neiSlot": {
+            "x": 88,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:ordo",
+          "amount": 10,
+          "neiSlot": {
+            "x": 106,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:perditio",
+          "amount": 10,
+          "neiSlot": {
+            "x": 124,
+            "y": 115
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "thaumcraft:blockcrystal@6",
+          "amount": 1,
+          "neiSlot": {
+            "x": 74,
+            "y": 2
+          }
+        }
+      ],
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptThaumcraft.java#L350",
+        "originalSourceId": "oracle:local-2.9.0-beta-2:thaumcraft:arcane:5ce73d69d8faa281",
+        "sqliteRecipeId": 252009
+      },
+      "nei": {
+        "slots": [
+          {
+            "side": "output",
+            "kind": "item",
+            "slotIndex": 0,
+            "x": 74,
+            "y": 2
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 0,
+            "x": 34,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 1,
+            "x": 52,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 2,
+            "x": 70,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 3,
+            "x": 88,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 4,
+            "x": 106,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 5,
+            "x": 124,
+            "y": 115
+          }
+        ],
+        "progressBars": []
+      },
+      "metadata": {
+        "thaumcraftType": "arcane",
+        "research": "ASPECTS",
+        "physicalInputsVerified": true,
+        "aspectConsumption": "wand_vis",
+        "baseVisBeforeDiscounts": true
+      },
+      "grid": [
+        "abc",
+        "def",
+        "ghi"
+      ],
+      "gridMapping": {
+        "a": "thaumcraft:itemshard",
+        "b": "thaumcraft:itemshard@1",
+        "c": "thaumcraft:itemshard@2",
+        "d": "thaumcraft:itemshard@6",
+        "e": "thaumcraft:itemshard@6",
+        "f": "thaumcraft:itemshard@6",
+        "g": "thaumcraft:itemshard@3",
+        "h": "thaumcraft:itemshard@4",
+        "i": "thaumcraft:itemshard@5"
+      },
+      "conditions": [
+        "Arcane Workbench; research ASPECTS complete.",
+        "Aspect amounts here are base wand VIS, not essentia; apply typed-vis mapping after this physical-input correction.",
+        "Pattern letters without an ingredient mapping represent empty slots."
+      ]
+    },
+    {
+      "id": "verified:rc2:arcane:attuned-stone",
+      "name": "Thaumcraft Arcane Crafting: Attuned Stone",
+      "kind": "gregtech_machine",
+      "category": "thaumcraft",
+      "machineType": "Thaumcraft Arcane Crafting",
+      "minimumTier": "NONE",
+      "durationTicks": 1,
+      "eut": 0,
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "witchery:ingredient@34",
+          "amount": 1
+        },
+        {
+          "kind": "item",
+          "id": "botania:manaresource@2",
+          "amount": 1
+        },
+        {
+          "kind": "item",
+          "id": "minecraft:lava_bucket",
+          "amount": 1
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:aer",
+          "amount": 30,
+          "neiSlot": {
+            "x": 50,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:ignis",
+          "amount": 30,
+          "neiSlot": {
+            "x": 68,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:terra",
+          "amount": 30,
+          "neiSlot": {
+            "x": 86,
+            "y": 115
+          }
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:ordo",
+          "amount": 30,
+          "neiSlot": {
+            "x": 104,
+            "y": 115
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "kind": "item",
+          "id": "witchery:ingredient@10",
+          "amount": 1,
+          "neiSlot": {
+            "x": 74,
+            "y": 2
+          }
+        },
+        {
+          "kind": "item",
+          "id": "minecraft:bucket",
+          "amount": 1,
+          "returnedContainer": true
+        }
+      ],
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptWitchery.java#L394",
+        "originalSourceId": "oracle:local-2.9.0-beta-2:thaumcraft:arcane:80d5b6bf73870b83",
+        "sqliteRecipeId": 252397
+      },
+      "nei": {
+        "slots": [
+          {
+            "side": "output",
+            "kind": "item",
+            "slotIndex": 0,
+            "x": 74,
+            "y": 2
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 0,
+            "x": 50,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 1,
+            "x": 68,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 2,
+            "x": 86,
+            "y": 115
+          },
+          {
+            "side": "input",
+            "kind": "aspect",
+            "slotIndex": 3,
+            "x": 104,
+            "y": 115
+          }
+        ],
+        "progressBars": []
+      },
+      "metadata": {
+        "thaumcraftType": "arcane",
+        "research": "ATTUNEDSTONE",
+        "physicalInputsVerified": true,
+        "aspectConsumption": "wand_vis",
+        "baseVisBeforeDiscounts": true,
+        "returnedContainers": [
+          "minecraft:bucket"
+        ],
+        "containerEvidence": {
+          "url": "https://mediafilez.forgecdn.net/files/2227/552/Thaumcraft-1.7.10-4.2.3.5.jar",
+          "class": "thaumcraft/common/container/SlotCraftingArcaneWorkbench.class",
+          "decompiledLine": 54
+        }
+      },
+      "grid": [
+        "abc",
+        "def",
+        "ghi"
+      ],
+      "gridMapping": {
+        "b": "witchery:ingredient@34",
+        "e": "botania:manaresource@2",
+        "h": "minecraft:lava_bucket"
+      },
+      "conditions": [
+        "Arcane Workbench; research ATTUNEDSTONE complete.",
+        "Aspect amounts here are base wand VIS, not essentia; apply typed-vis mapping after this physical-input correction.",
+        "Pattern letters without an ingredient mapping represent empty slots.",
+        "Lava Bucket leaves its Bucket container; it is recovered container, not a primary bucket production recipe."
+      ]
+    }
+  ],
+  "producerOverrides": {
+    "thaumcraft:blockcrystal": "patch:verified:rc2:arcane:crystal-cluster-0",
+    "thaumcraft:blockcrystal@1": "patch:verified:rc2:arcane:crystal-cluster-1",
+    "thaumcraft:blockcrystal@2": "patch:verified:rc2:arcane:crystal-cluster-2",
+    "thaumcraft:blockcrystal@3": "patch:verified:rc2:arcane:crystal-cluster-3",
+    "thaumcraft:blockcrystal@4": "patch:verified:rc2:arcane:crystal-cluster-4",
+    "thaumcraft:blockcrystal@5": "patch:verified:rc2:arcane:crystal-cluster-5",
+    "thaumcraft:blockcrystal@6": "patch:verified:rc2:arcane:crystal-cluster-6",
+    "witchery:ingredient@10": "patch:verified:rc2:arcane:attuned-stone"
+  },
+  "recipeInputCorrections": [
+    {
+      "source_id": "oracle:local-2.9.0-beta-2:thaumcraft:arcane:b456c21f26c82be7",
+      "sqliteRecipeId": 252003,
+      "output": "thaumcraft:blockcrystal",
+      "addPhysicalInputs": [
+        {
+          "kind": "item",
+          "id": "thaumcraft:itemshard",
+          "amount": 7
+        }
+      ],
+      "replacementRecipeId": "verified:rc2:arcane:crystal-cluster-0",
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptThaumcraft.java#L218"
+      }
+    },
+    {
+      "source_id": "oracle:local-2.9.0-beta-2:thaumcraft:arcane:9a02a1ab88725c9f",
+      "sqliteRecipeId": 252004,
+      "output": "thaumcraft:blockcrystal@1",
+      "addPhysicalInputs": [
+        {
+          "kind": "item",
+          "id": "thaumcraft:itemshard@1",
+          "amount": 7
+        }
+      ],
+      "replacementRecipeId": "verified:rc2:arcane:crystal-cluster-1",
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptThaumcraft.java#L240"
+      }
+    },
+    {
+      "source_id": "oracle:local-2.9.0-beta-2:thaumcraft:arcane:8d432ec3da161f88",
+      "sqliteRecipeId": 252005,
+      "output": "thaumcraft:blockcrystal@2",
+      "addPhysicalInputs": [
+        {
+          "kind": "item",
+          "id": "thaumcraft:itemshard@2",
+          "amount": 7
+        }
+      ],
+      "replacementRecipeId": "verified:rc2:arcane:crystal-cluster-2",
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptThaumcraft.java#L262"
+      }
+    },
+    {
+      "source_id": "oracle:local-2.9.0-beta-2:thaumcraft:arcane:0d521d469cd2f164",
+      "sqliteRecipeId": 252006,
+      "output": "thaumcraft:blockcrystal@3",
+      "addPhysicalInputs": [
+        {
+          "kind": "item",
+          "id": "thaumcraft:itemshard@3",
+          "amount": 7
+        }
+      ],
+      "replacementRecipeId": "verified:rc2:arcane:crystal-cluster-3",
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptThaumcraft.java#L284"
+      }
+    },
+    {
+      "source_id": "oracle:local-2.9.0-beta-2:thaumcraft:arcane:44ca82fc7fe06578",
+      "sqliteRecipeId": 252007,
+      "output": "thaumcraft:blockcrystal@4",
+      "addPhysicalInputs": [
+        {
+          "kind": "item",
+          "id": "thaumcraft:itemshard@4",
+          "amount": 7
+        }
+      ],
+      "replacementRecipeId": "verified:rc2:arcane:crystal-cluster-4",
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptThaumcraft.java#L306"
+      }
+    },
+    {
+      "source_id": "oracle:local-2.9.0-beta-2:thaumcraft:arcane:08f2db6441928151",
+      "sqliteRecipeId": 252008,
+      "output": "thaumcraft:blockcrystal@5",
+      "addPhysicalInputs": [
+        {
+          "kind": "item",
+          "id": "thaumcraft:itemshard@5",
+          "amount": 7
+        }
+      ],
+      "replacementRecipeId": "verified:rc2:arcane:crystal-cluster-5",
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptThaumcraft.java#L328"
+      }
+    },
+    {
+      "source_id": "oracle:local-2.9.0-beta-2:thaumcraft:arcane:5ce73d69d8faa281",
+      "sqliteRecipeId": 252009,
+      "output": "thaumcraft:blockcrystal@6",
+      "addPhysicalInputs": [
+        {
+          "kind": "item",
+          "id": "thaumcraft:itemshard",
+          "amount": 1
+        },
+        {
+          "kind": "item",
+          "id": "thaumcraft:itemshard@1",
+          "amount": 1
+        },
+        {
+          "kind": "item",
+          "id": "thaumcraft:itemshard@2",
+          "amount": 1
+        },
+        {
+          "kind": "item",
+          "id": "thaumcraft:itemshard@3",
+          "amount": 1
+        },
+        {
+          "kind": "item",
+          "id": "thaumcraft:itemshard@4",
+          "amount": 1
+        },
+        {
+          "kind": "item",
+          "id": "thaumcraft:itemshard@5",
+          "amount": 1
+        },
+        {
+          "kind": "item",
+          "id": "thaumcraft:itemshard@6",
+          "amount": 3
+        }
+      ],
+      "replacementRecipeId": "verified:rc2:arcane:crystal-cluster-6",
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptThaumcraft.java#L350"
+      }
+    },
+    {
+      "source_id": "oracle:local-2.9.0-beta-2:thaumcraft:arcane:80d5b6bf73870b83",
+      "sqliteRecipeId": 252397,
+      "output": "witchery:ingredient@10",
+      "addPhysicalInputs": [
+        {
+          "kind": "item",
+          "id": "witchery:ingredient@34",
+          "amount": 1
+        },
+        {
+          "kind": "item",
+          "id": "botania:manaresource@2",
+          "amount": 1
+        },
+        {
+          "kind": "item",
+          "id": "minecraft:lava_bucket",
+          "amount": 1
+        }
+      ],
+      "replacementRecipeId": "verified:rc2:arcane:attuned-stone",
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptWitchery.java#L394"
+      }
+    }
+  ],
+  "replaceIncompleteOriginalSourceIds": [
+    "oracle:local-2.9.0-beta-2:thaumcraft:arcane:b456c21f26c82be7",
+    "oracle:local-2.9.0-beta-2:thaumcraft:arcane:9a02a1ab88725c9f",
+    "oracle:local-2.9.0-beta-2:thaumcraft:arcane:8d432ec3da161f88",
+    "oracle:local-2.9.0-beta-2:thaumcraft:arcane:0d521d469cd2f164",
+    "oracle:local-2.9.0-beta-2:thaumcraft:arcane:44ca82fc7fe06578",
+    "oracle:local-2.9.0-beta-2:thaumcraft:arcane:08f2db6441928151",
+    "oracle:local-2.9.0-beta-2:thaumcraft:arcane:5ce73d69d8faa281",
+    "oracle:local-2.9.0-beta-2:thaumcraft:arcane:80d5b6bf73870b83"
+  ],
+  "scope": "Seven ASPECTS crystal clusters (six primal +mixed) and one ATTUNEDSTONE only.",
+  "notes": [
+    "Original exported records omitted all physical ingredients and must not remain selectable as zero-item Arcane recipes.",
+    "Preserved exported aspect quantities after matching pinned NHCore AspectLists. Parent must map these aspect entries to wand-vis resources rather than essentia.",
+    "Bucket return is explicitly marked returnedContainer to avoid a circular bucket producer."
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "schemaVersion": 1,
+  "packVersion": "2.9.0-RC-2",
+  "modVersion": "EnderIO 2.10.48",
+  "resources": {
+    "factoryflow:soul_vial:enderman": {
+      "name": "Soul Vial con Enderman · NBT id=Enderman",
+      "kind": "item"
+    },
+    "factoryflow:soul_vial:zombie": {
+      "name": "Soul Vial con Zombie · NBT id=Zombie",
+      "kind": "item"
+    },
+    "enderio:itemfrankenskull@2": {
+      "name": "Frank'N'Zombie",
+      "kind": "item"
+    }
+  },
+  "sourceUrls": [
+    "https://github.com/GTNewHorizons/EnderIO/blob/2.10.48/src/main/java/crazypants/enderio/machine/soul/SoulBinderPrecientCystalRecipe.java",
+    "https://github.com/GTNewHorizons/EnderIO/blob/2.10.48/src/main/java/crazypants/enderio/machine/soul/SoulBinderRecipeManager.java",
+    "https://github.com/GTNewHorizons/EnderIO/blob/2.10.48/src/main/java/crazypants/enderio/machine/soul/AbstractSoulBinderRecipe.java",
+    "https://github.com/GTNewHorizons/EnderIO/blob/2.10.48/src/main/java/crazypants/enderio/item/ItemSoulVessel.java",
+    "https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/blob/2.9.0-nightly-2026-10-04/config/enderio/EnderIO.cfg",
+    "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptEnderIO.java",
+    "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/recipes/RecipeRemover.java",
+    "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/gthandler/GT_Recipe_Remover.java",
+    "https://github.com/GTNewHorizons/EnderIO/blob/2.10.48/src/main/java/crazypants/enderio/machine/soul/SoulBinderEnderCystalRecipe.java",
+    "https://github.com/GTNewHorizons/EnderIO/blob/2.10.48/src/main/java/crazypants/enderio/machine/soul/SoulBinderReanimationRecipe.java",
+    "https://github.com/GTNewHorizons/EnderIO/blob/2.10.48/src/main/java/crazypants/enderio/material/FrankenSkull.java"
+  ],
+  "verification": {
+    "registration": "EnderIO.java postInit invokes SoulBinderRecipeManager.addDefaultRecipes; that method unconditionally registers SoulBinderPrecientCystalRecipe.instance.",
+    "nhcoreRemovalReview": "Reviewed pinned NHCore ScriptEnderIO, RecipeRemover, GT_Recipe_Remover and gthandler/recipes/RecipeRemoval. No Soul Binder MachineRecipeRegistry removal or replacement found. Crafting recipe removals do not remove this registered machine recipe.",
+    "capture": "ItemSoulVessel.itemInteractionForEntity requires a living non-player, an empty vial and an entity not on the blacklist; it serializes the registry entity id and removes the captured entity. RC2 config has an empty soulVesselBlackList and soulVesselCapturesBosses=false. Vanilla Enderman is not a boss.",
+    "binding": "SoulBinderPrecientCystalRecipe accepts Enderman and listed SpecialMobs Enderman variants; getInputStack returns PULSATING_CYSTAL and getOutputStack returns PRECIENT_CRYSTAL. Material enum ordinals are 5 and 13. AbstractSoulBinderRecipe requires two valid input slots and returns an empty Soul Vial plus the crystal.",
+    "configuration": "RC2 EnderIO.cfg soulBinderPrecientCystalRF=100000; soulBinderPrecientCystalLevels=10. Total RF is not EU/t. Time varies with configured Soul Binder power and upgrades.",
+    "scope": "Recipe and configuration evidence, not an in-game runtime test. Capture requires finding a living natural Enderman; no Powered Spawner or EEC prerequisite is asserted.",
+    "enderCrystal": "SoulBinderEnderCystalRecipe is also unconditionally registered in addDefaultRecipes. It accepts the same Enderman souls, consumes VIBRANT_CYSTAL ordinal6 and produces ENDER_CRYSTAL ordinal8. RC2 soulBinderEnderCystalRF=1000000 and soulBinderEnderCystalLevels=20. Shared AbstractSoulBinderRecipe returns the empty vial.",
+    "reanimation": "SoulBinderRecipeManager.addDefaultRecipes unconditionally registers SoulBinderReanimationRecipe.instance. Input ZOMBIE_CONTROLLER ordinal1 + Zombie soul; output FRANKEN_ZOMBIE ordinal2, not ENDER_RESONATOR ordinal3. AbstractSoulBinderRecipe returns empty vial. RC2 EnderIO.cfg: soulBinderReanimationRF=1000000, soulBinderReanimationLevels=10. Native vanilla Zombie capture is valid with empty configured soulVesselBlackList."
+  },
+  "recipes": [
+    {
+      "id": "verified:enderio:precient:capture-natural-enderman",
+      "machineType": "Captura de Enderman natural con Soul Vial",
+      "inputs": [
+        {
+          "id": "enderio:itemsoulvessel",
+          "amount": 1,
+          "consumed": true
+        }
+      ],
+      "outputs": [
+        {
+          "id": "factoryflow:soul_vial:enderman",
+          "amount": 1
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "conditions": [
+        "Encontrar un Enderman natural vivo y capturarlo con un Soul Vial vacío. La disponibilidad del encuentro no tiene tiempo fijo.",
+        "RC2: soulVesselBlackList está vacía; soulVesselCapturesBosses=false. El Enderman normal no es un jefe y está admitido.",
+        "El vial lleno conserva NBT id=Enderman; es un estado distinto del vial vacío. Se retira el Enderman vivo del mundo al capturarlo.",
+        "No requiere Powered Spawner, Broken Spawner ni Extreme Entity Crusher. No se produce un ítem Enderman."
+      ],
+      "source": {
+        "url": "https://github.com/GTNewHorizons/EnderIO/blob/2.10.48/src/main/java/crazypants/enderio/item/ItemSoulVessel.java"
+      }
+    },
+    {
+      "id": "verified:enderio:precient:soul-binding",
+      "machineType": "Soul Binder · Precient Crystal",
+      "inputs": [
+        {
+          "id": "factoryflow:soul_vial:enderman",
+          "amount": 1,
+          "consumed": true
+        },
+        {
+          "id": "enderio:itemmaterial@5",
+          "amount": 1,
+          "consumed": true
+        }
+      ],
+      "outputs": [
+        {
+          "id": "enderio:itemmaterial@13",
+          "amount": 1
+        },
+        {
+          "id": "enderio:itemsoulvessel",
+          "amount": 1,
+          "returnedContainer": true
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "energyRF": 100000,
+      "xpLevels": 10,
+      "conditions": [
+        "Requiere una Soul Binder existente y operativa. Consumir 1 Pulsating Crystal y el alma Enderman contenida en el vial.",
+        "Coste RC2 por operación: 100,000 RF y 10 niveles de experiencia. RF total no equivale a EU/t.",
+        "Tiempo dependiente del caudal RF y de las mejoras de la Soul Binder; no se inventa una duración base.",
+        "Produce 1 Precient Crystal y devuelve 1 Soul Vial vacío. El vial devuelto es un envase recuperado, no una fuente primaria de viales.",
+        "Ruta inicial alternativa a Autoclave: no consume Soul Infused Medium ni Vapor of Levity."
+      ],
+      "metadata": {
+        "energyRF": 100000,
+        "xpLevels": 10,
+        "sourceRecipeClass": "SoulBinderPrecientCystalRecipe",
+        "returnedContainers": [
+          "enderio:itemsoulvessel"
+        ]
+      },
+      "source": {
+        "url": "https://github.com/GTNewHorizons/EnderIO/blob/2.10.48/src/main/java/crazypants/enderio/machine/soul/SoulBinderPrecientCystalRecipe.java"
+      }
+    },
+    {
+      "id": "verified:enderio:ender-crystal:soul-binding",
+      "machineType": "Soul Binder · Ender Crystal",
+      "inputs": [
+        {
+          "id": "factoryflow:soul_vial:enderman",
+          "amount": 1,
+          "consumed": true
+        },
+        {
+          "id": "enderio:itemmaterial@6",
+          "amount": 1,
+          "consumed": true
+        }
+      ],
+      "outputs": [
+        {
+          "id": "enderio:itemmaterial@8",
+          "amount": 1
+        },
+        {
+          "id": "enderio:itemsoulvessel",
+          "amount": 1,
+          "returnedContainer": true
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "energyRF": 1000000,
+      "xpLevels": 20,
+      "conditions": [
+        "Requiere una Soul Binder existente y operativa. Consumir 1 Vibrant Crystal y el alma Enderman contenida en el vial.",
+        "Coste RC2 por operación: 1,000,000 RF y 20 niveles de experiencia. RF total no equivale a EU/t.",
+        "Tiempo dependiente del caudal RF y de las mejoras de la Soul Binder; no se inventa una duración base.",
+        "Produce 1 Ender Crystal y devuelve 1 Soul Vial vacío. El vial devuelto es un envase recuperado, no una fuente primaria de viales.",
+        "Ruta inicial alternativa a Autoclave: no consume Soul Infused Medium, Vapor of Levity ni Dew of the Void."
+      ],
+      "metadata": {
+        "energyRF": 1000000,
+        "xpLevels": 20,
+        "sourceRecipeClass": "SoulBinderEnderCystalRecipe",
+        "returnedContainers": [
+          "enderio:itemsoulvessel"
+        ]
+      },
+      "source": {
+        "url": "https://github.com/GTNewHorizons/EnderIO/blob/2.10.48/src/main/java/crazypants/enderio/machine/soul/SoulBinderEnderCystalRecipe.java"
+      }
+    },
+    {
+      "id": "verified:enderio:reanimation:capture-natural-zombie",
+      "machineType": "Captura de Zombie natural con Soul Vial",
+      "inputs": [
+        {
+          "id": "enderio:itemsoulvessel",
+          "amount": 1,
+          "consumed": true
+        }
+      ],
+      "outputs": [
+        {
+          "id": "factoryflow:soul_vial:zombie",
+          "amount": 1
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "conditions": [
+        "Encontrar un Zombie natural vivo y capturarlo con un Soul Vial vacío. La disponibilidad del encuentro no tiene tiempo fijo.",
+        "El vial lleno conserva NBT id=Zombie; es un estado distinto del vial vacío. Se retira el Zombie vivo del mundo al capturarlo.",
+        "RC2: soulVesselBlackList vacía y soulVesselCapturesBosses=false; Zombie vanilla no es jefe y está admitido.",
+        "No requiere Powered Spawner, Broken Spawner ni Extreme Entity Crusher."
+      ],
+      "source": {
+        "url": "https://github.com/GTNewHorizons/EnderIO/blob/2.10.48/src/main/java/crazypants/enderio/item/ItemSoulVessel.java"
+      }
+    },
+    {
+      "id": "verified:enderio:reanimation:soul-binding",
+      "machineType": "Soul Binder · Frank'N'Zombie",
+      "inputs": [
+        {
+          "id": "factoryflow:soul_vial:zombie",
+          "amount": 1,
+          "consumed": true
+        },
+        {
+          "id": "enderio:itemfrankenskull@1",
+          "amount": 1,
+          "consumed": true
+        }
+      ],
+      "outputs": [
+        {
+          "id": "enderio:itemfrankenskull@2",
+          "amount": 1
+        },
+        {
+          "id": "enderio:itemsoulvessel",
+          "amount": 1,
+          "returnedContainer": true
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "energyRF": 1000000,
+      "xpLevels": 10,
+      "conditions": [
+        "Requiere una Soul Binder existente y operativa. Consumir un Z-Logic Controller y el alma Zombie contenida en un Soul Vial.",
+        "Coste exacto RC2: 1,000,000 RF y 10 niveles de experiencia por operación; RF total no equivale a EU/t.",
+        "El tiempo depende del caudal RF y las mejoras de Soul Binder; no se inventa duración fija.",
+        "Produce un Frank'N'Zombie (FrankenSkull.FRANKEN_ZOMBIE ordinal2) y devuelve un Soul Vial vacío. No genera viales primarios.",
+        "Z-Logic Controller es FrankenSkull.ZOMBIE_CONTROLLER ordinal1; Ender Resonator es ordinal3 y no participa en esta receta.",
+        "Ruta inicial desde Zombie natural: no consume Soul Infused Medium, Vapor of Levity, Powered Spawner ni sus drops."
+      ],
+      "metadata": {
+        "energyRF": 1000000,
+        "xpLevels": 10,
+        "sourceRecipeClass": "SoulBinderReanimationRecipe",
+        "returnedContainers": [
+          "enderio:itemsoulvessel"
+        ],
+        "acceptedSoulRegistryIds": [
+          "Zombie",
+          "SpecialMobs.BrutishZombie",
+          "SpecialMobs.FireZombie",
+          "SpecialMobs.FishingZombie",
+          "SpecialMobs.GiantZombie",
+          "SpecialMobs.HungryZombie",
+          "SpecialMobs.PlagueZombie"
+        ]
+      },
+      "source": {
+        "url": "https://github.com/GTNewHorizons/EnderIO/blob/2.10.48/src/main/java/crazypants/enderio/machine/soul/SoulBinderReanimationRecipe.java"
+      }
+    }
+  ],
+  "producerOverrides": {
+    "enderio:itemmaterial@13": "patch:verified:enderio:precient:soul-binding",
+    "enderio:itemmaterial@8": "patch:verified:enderio:ender-crystal:soul-binding",
+    "enderio:itemfrankenskull@2": "patch:verified:enderio:reanimation:soul-binding"
+  }
+}

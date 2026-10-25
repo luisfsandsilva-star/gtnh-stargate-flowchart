@@ -1,0 +1,102 @@
+{
+  "resources": [
+    {
+      "id": "enderio:itembrokenspawner",
+      "displayName": "Broken Spawner",
+      "kind": "item"
+    },
+    {
+      "id": "enderio:blockendermanskull",
+      "displayName": "Enderman Head",
+      "kind": "item"
+    }
+  ],
+  "recipes": [
+    {
+      "id": "verified:rc2:acquisition:broken-spawner",
+      "machineType": "Natural acquisition: break vanilla mob spawner",
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "enderio:itembrokenspawner",
+          "amount": 1
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/EnderIO/blob/2.10.48/src/main/java/crazypants/enderio/machine/spawner/BlockPoweredSpawner.java#L238"
+      },
+      "conditions": {
+        "acquisitionEvent": true,
+        "consumeWorldStructure": "One BlockMobSpawner with a valid TileEntityMobSpawner is destroyed. This is not an inventory crafting recipe.",
+        "player": "Non-creative player on server; uncancelled BreakEvent and HarvestDropsEvent.",
+        "probability": 1.0,
+        "configSource": "https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/blob/2.9.0-nightly-2026-10-04/config/enderio/EnderIO.cfg#L979",
+        "toolBlacklist": [
+          "RotaryCraft:rotarycraft_item_bedpick"
+        ],
+        "mobRestriction": "Spawner entity name must not be blacklisted in PoweredSpawnerConfig.",
+        "requiredOutputNBT": "mobType = entity name from original spawner; preserved in the Broken Spawner item.",
+        "nbtConstructorSource": "https://github.com/GTNewHorizons/EnderIO/blob/2.10.48/src/main/java/crazypants/enderio/machine/spawner/ItemBrokenSpawner.java#L34",
+        "scope": "Natural dungeon/mineshaft/fortress spawner, independent of Ender Fluidic EndoCrafting loops."
+      },
+      "steps": [
+        "Find an eligible natural mob spawner.",
+        "Break it as a survival player using a nonblacklisted tool.",
+        "Collect one Broken Spawner carrying the original mobType NBT."
+      ]
+    },
+    {
+      "id": "verified:rc2:acquisition:enderman-head",
+      "machineType": "Conditional natural acquisition: kill Enderman",
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "enderio:blockendermanskull",
+          "amount": 1
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/EnderIO/blob/2.10.48/src/main/java/crazypants/enderio/item/darksteel/ItemDarkSteelSword.java#L388"
+      },
+      "conditions": {
+        "acquisitionEvent": true,
+        "sourceEntity": "EntityEnderman, naturally encountered; no Ender Fluidic EndoCrafting spawner required.",
+        "killSource": "LivingDropsEvent damage source entity must be an EntityPlayer.",
+        "quantityPerSuccessfulLootEvent": 1,
+        "probabilityPerKillGuaranteed": false,
+        "ordinaryPlayerNoLootingPerHandlerChance": 0.05000000074505806,
+        "poweredDarkSteelPerHandlerChance": 0.10000000149011612,
+        "normalPerHandlerFormula": "vanillaSwordSkullChance + vanillaSwordSkullLootingModifier*lootingLevel = 0.05 + 0.05*L (display-rounded config values).",
+        "poweredPerHandlerFormula": "darkSteelSwordSkullChance + darkSteelSwordSkullLootingModifier*lootingLevel = 0.10 + 0.075*L (display-rounded config values).",
+        "fakePlayerMultiplier": 0.5,
+        "ticBranch": "For Enderman killed using TiC cleaver or Beheading tag, separate branch: cleaver base0.10 (otherwise0.05)+0.075*Beheading; this branch returns before ordinary FakePlayer multiplier.",
+        "listenerRegistrations": 3,
+        "listenerRegistrationEvidence": [
+          "https://github.com/GTNewHorizons/EnderIO/blob/2.10.48/src/main/java/crazypants/enderio/item/darksteel/DarkSteelItems.java#L55",
+          "https://github.com/GTNewHorizons/EnderIO/blob/2.10.48/src/main/java/crazypants/enderio/item/darksteel/ItemDarkSteelSword.java#L229",
+          "https://github.com/GTNewHorizons/EnderIO/blob/2.10.48/src/main/java/crazypants/enderio/item/darksteel/ItemEndSteelSword.java#L34",
+          "https://github.com/GTNewHorizons/EnderIO/blob/2.10.48/src/main/java/crazypants/enderio/item/darksteel/ItemStellarSword.java#L34"
+        ],
+        "eioOnlyProbabilityFormula": "For three independent handlers, if no prior head drop exists: 1-(1-min(1,p))^3. Duplicate-head guard permits at most one EnderIO-added head.",
+        "eioOnlyOrdinaryPlayerNoLootingProbability": 0.1426250020172447,
+        "probabilityScope": "Formula describes EnderIO source handlers under stated assumptions. Other mods may add their own head drops; do not convert a desired number of heads to guaranteed kills.",
+        "configSource": "https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/blob/2.9.0-nightly-2026-10-04/config/enderio/EnderIO.cfg#L236",
+        "headMappingSource": "https://github.com/GTNewHorizons/EnderIO/blob/2.10.48/src/main/java/crazypants/enderio/item/darksteel/ItemDarkSteelSword.java#L208"
+      },
+      "steps": [
+        "Find a naturally spawned Enderman.",
+        "Kill it as a player; looting/powered Dark Steel/TiC Beheading change per-roll chance.",
+        "Repeat until the Enderman Head drop is obtained; each successful event yields one head."
+      ]
+    }
+  ],
+  "notes": [
+    "These are conditional world acquisitions, not zero-cost repeatable crafting recipes.",
+    "Breaking a spawner destroys a naturally generated world structure; head drops are stochastic.",
+    "Primordial Pearl boss acquisition not added here: no exact primary implementation source already verified in this task."
+  ]
+}

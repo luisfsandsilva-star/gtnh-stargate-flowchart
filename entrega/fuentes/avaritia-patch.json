@@ -1,0 +1,1376 @@
+{
+  "resources": [
+    {
+      "id": "eternalsingularity:combined_singularity",
+      "displayName": "eternalsingularity:combined_singularity",
+      "kind": "item"
+    },
+    {
+      "id": "dreamcraft:blackplutonium",
+      "displayName": "Block of Black Plutonium",
+      "kind": "item"
+    },
+    {
+      "id": "avaritia:singularity@2",
+      "displayName": "Lapis Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "avaritia:singularity@1",
+      "displayName": "Golden Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "extrautilities:block_bedrockium",
+      "displayName": "Block of Bedrockium",
+      "kind": "item"
+    },
+    {
+      "id": "avaritia:singularity@8",
+      "displayName": "Silver Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "avaritia:singularity",
+      "displayName": "Iron Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "avaritia:singularity@3",
+      "displayName": "Redstone Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "avaritia:singularity@6",
+      "displayName": "Tin Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "avaritia:singularity@7",
+      "displayName": "Leaden Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "avaritia:singularity@5",
+      "displayName": "Copper Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "avaritia:singularity@4",
+      "displayName": "Nether Quartz Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "eternalsingularity:combined_singularity@1",
+      "displayName": "eternalsingularity:combined_singularity@1",
+      "kind": "item"
+    },
+    {
+      "id": "avaritia:singularity@9",
+      "displayName": "Nickel Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "avaritia:singularity@10",
+      "displayName": "Enderium Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.vanilla.singularity",
+      "displayName": "Coal Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.vanilla.singularity@2",
+      "displayName": "Diamond Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.vanilla.singularity@1",
+      "displayName": "Emerald Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.general.singularity@3",
+      "displayName": "Charcoal Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.general.singularity",
+      "displayName": "Aluminum Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.general.singularity@1",
+      "displayName": "Brass Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.general.singularity@2",
+      "displayName": "Bronze Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "eternalsingularity:combined_singularity@2",
+      "displayName": "Spaghettic Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.general.singularity@4",
+      "displayName": "Electrum Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.general.singularity@5",
+      "displayName": "Invar Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.general.singularity@6",
+      "displayName": "Magnesium Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.general.singularity@7",
+      "displayName": "Osmium Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.general.singularity@8",
+      "displayName": "Peridot Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.general.singularity@9",
+      "displayName": "Ruby Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.general.singularity@10",
+      "displayName": "Sapphire Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.general.singularity@11",
+      "displayName": "Steel Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.general.singularity@12",
+      "displayName": "Titanium Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "eternalsingularity:combined_singularity@3",
+      "displayName": "eternalsingularity:combined_singularity@3",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.general.singularity@13",
+      "displayName": "Tungsten Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.general.singularity@14",
+      "displayName": "Uranium Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.general.singularity@15",
+      "displayName": "Zinc Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.general.singularity@16",
+      "displayName": "Tricalcium Phosphate Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.general.singularity@17",
+      "displayName": "Palladium Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.general.singularity@18",
+      "displayName": "Damascus Steel Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.general.singularity@19",
+      "displayName": "Black Steel Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.general.singularity@20",
+      "displayName": "Fluxed Electrum Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.general.singularity@21",
+      "displayName": "Quicksilver Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "eternalsingularity:combined_singularity@4",
+      "displayName": "Cryptic Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.general.singularity@22",
+      "displayName": "Shadow Steel Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.general.singularity@23",
+      "displayName": "Iridium Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.general.singularity@24",
+      "displayName": "Nether Star Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.general.singularity@25",
+      "displayName": "Platinum Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.general.singularity@26",
+      "displayName": "Naquadria Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.general.singularity@27",
+      "displayName": "Plutonium Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.general.singularity@28",
+      "displayName": "Meteoric Iron Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.general.singularity@29",
+      "displayName": "Desh Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.general.singularity@30",
+      "displayName": "Europium Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "eternalsingularity:combined_singularity@5",
+      "displayName": "eternalsingularity:combined_singularity@5",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.draconicevolution.singularity",
+      "displayName": "Draconium Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.draconicevolution.singularity@1",
+      "displayName": "Awakened Draconium Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.enderio.singularity",
+      "displayName": "Conductive Iron Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.enderio.singularity@1",
+      "displayName": "Electrical Steel Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.enderio.singularity@2",
+      "displayName": "Energetic Alloy Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.enderio.singularity@3",
+      "displayName": "Dark Steel Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.enderio.singularity@4",
+      "displayName": "Pulsating Iron Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.enderio.singularity@5",
+      "displayName": "Redstone Alloy Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.enderio.singularity@6",
+      "displayName": "Soularium Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "eternalsingularity:combined_singularity@6",
+      "displayName": "eternalsingularity:combined_singularity@6",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.enderio.singularity@7",
+      "displayName": "Vibrant Alloy Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.extrautilities.singularity",
+      "displayName": "Unstable Ingot Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.projectred.singularity",
+      "displayName": "Electrotine Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.general.singularity@32",
+      "displayName": "Rose Gold Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.tinkersconstruct.singularity@1",
+      "displayName": "Obzinite Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.tinkersconstruct.singularity@2",
+      "displayName": "Ardite Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.tinkersconstruct.singularity@3",
+      "displayName": "Cobalt Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.tinkersconstruct.singularity@4",
+      "displayName": "Ender Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.tinkersconstruct.singularity@6",
+      "displayName": "Manyullyn Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "eternalsingularity:eternal_singularity",
+      "displayName": "Eternal Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "avaritia:resource_block",
+      "displayName": "Cosmic Neutronium Block",
+      "kind": "item"
+    },
+    {
+      "id": "avaritia:infinity_bow",
+      "displayName": "avaritia:infinity_bow",
+      "kind": "item"
+    },
+    {
+      "id": "oredict:plateInfinity",
+      "displayName": "Ore Dictionary: plateInfinity",
+      "kind": "item"
+    },
+    {
+      "id": "taintedmagic:itemfocusmeteorology",
+      "displayName": "Wand Focus: Meteorology",
+      "kind": "item"
+    },
+    {
+      "id": "thaumictinkerer:kamiresource@1",
+      "displayName": "Ichorcloth",
+      "kind": "item"
+    },
+    {
+      "id": "avaritia:resource@5",
+      "displayName": "Infinity Catalyst",
+      "kind": "item"
+    },
+    {
+      "id": "draconicevolution:draconicbow",
+      "displayName": "draconicevolution:draconicbow",
+      "kind": "item"
+    },
+    {
+      "id": "botania:crystalbow",
+      "displayName": "Crystal Bow",
+      "kind": "item"
+    },
+    {
+      "id": "galaxyspace:item.quantbow",
+      "displayName": "Quant Bow",
+      "kind": "item"
+    },
+    {
+      "id": "taintedmagic:itemfocustime",
+      "displayName": "Wand Focus: Time",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.rubber.singularity@5",
+      "displayName": "universalsingularities:universal.rubber.singularity@5",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.rubber.singularity",
+      "displayName": "Rubber Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.rubber.singularity@1",
+      "displayName": "Styrene-Butadiene Rubber Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.rubber.singularity@2",
+      "displayName": "Silicone Rubber Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.rubber.singularity@3",
+      "displayName": "Polyphenylene Sulfide Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.rubber.singularity@4",
+      "displayName": "Polyvinyl Chloride Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "oredict:plateStyreneButadieneRubber",
+      "displayName": "Ore Dictionary: plateStyreneButadieneRubber",
+      "kind": "item"
+    },
+    {
+      "id": "oredict:plateSilicone",
+      "displayName": "Ore Dictionary: plateSilicone",
+      "kind": "item"
+    },
+    {
+      "id": "oredict:platePolyvinylChloride",
+      "displayName": "Ore Dictionary: platePolyvinylChloride",
+      "kind": "item"
+    },
+    {
+      "id": "oredict:platePolyphenyleneSulfide",
+      "displayName": "Ore Dictionary: platePolyphenyleneSulfide",
+      "kind": "item"
+    },
+    {
+      "id": "eternalsingularity:combined_singularity@10",
+      "displayName": "eternalsingularity:combined_singularity@10",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.circuit2.singularity@6",
+      "displayName": "Blank Computational Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.circuit2.singularity@4",
+      "displayName": "Maximum Computation Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.circuit2.singularity@3",
+      "displayName": "Extended Mega Ultimate Computation Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.circuit2.singularity@2",
+      "displayName": "Mega Ultimate Computation Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.circuit2.singularity@1",
+      "displayName": "Insanely Ultimate Computation Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.circuit2.singularity",
+      "displayName": "Extremely Ultimate Computation Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.circuit.singularity@9",
+      "displayName": "Highly Ultimate Computation Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.circuit.singularity@8",
+      "displayName": "Ultimate Computation Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.circuit.singularity@7",
+      "displayName": "ZPM Computation Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.circuit.singularity@6",
+      "displayName": "Ludicrous Computation Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.circuit.singularity@5",
+      "displayName": "Insane Computation Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.circuit.singularity@4",
+      "displayName": "Extreme Computation Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.circuit.singularity@3",
+      "displayName": "High Computation Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.circuit.singularity@2",
+      "displayName": "Medium Computation Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.circuit.singularity@1",
+      "displayName": "Low Computation Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "universalsingularities:universal.circuit.singularity",
+      "displayName": "Ultra Low Computation Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.foundrycasings@4",
+      "displayName": "Universal Collapser Casing",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.metaitem.03@6139",
+      "displayName": "Superdense Universium Plate",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.metaitem.03@6586",
+      "displayName": "Superdense Black Dwarf Matter Plate",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.metaitem.03@6585",
+      "displayName": "Superdense White Dwarf Matter Plate",
+      "kind": "item"
+    }
+  ],
+  "recipes": [
+    {
+      "id": "verified:rc2:avaritia:0",
+      "inputs": [
+        {
+          "id": "dreamcraft:blackplutonium",
+          "amount": 12
+        },
+        {
+          "id": "avaritia:singularity@2",
+          "amount": 1
+        },
+        {
+          "id": "avaritia:singularity@1",
+          "amount": 1
+        },
+        {
+          "id": "extrautilities:block_bedrockium",
+          "amount": 4
+        },
+        {
+          "id": "avaritia:singularity@8",
+          "amount": 1
+        },
+        {
+          "id": "avaritia:singularity",
+          "amount": 1
+        },
+        {
+          "id": "avaritia:singularity@3",
+          "amount": 1
+        },
+        {
+          "id": "avaritia:singularity@6",
+          "amount": 1
+        },
+        {
+          "id": "avaritia:singularity@7",
+          "amount": 1
+        },
+        {
+          "id": "avaritia:singularity@5",
+          "amount": 1
+        },
+        {
+          "id": "avaritia:singularity@4",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "eternalsingularity:combined_singularity",
+          "amount": 1
+        }
+      ],
+      "machineType": "Extreme Crafting",
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptAvaritia.java"
+      },
+      "grid": [
+        "---------",
+        "--aa--a--",
+        "-a--b--a-",
+        "---cde-a-",
+        "--fdgdh--",
+        "-a-idj---",
+        "-a--k--a-",
+        "--a--aa--",
+        "---------"
+      ]
+    },
+    {
+      "id": "verified:rc2:avaritia:1",
+      "inputs": [
+        {
+          "id": "dreamcraft:blackplutonium",
+          "amount": 12
+        },
+        {
+          "id": "avaritia:singularity@9",
+          "amount": 1
+        },
+        {
+          "id": "avaritia:singularity@10",
+          "amount": 1
+        },
+        {
+          "id": "extrautilities:block_bedrockium",
+          "amount": 4
+        },
+        {
+          "id": "universalsingularities:universal.vanilla.singularity",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.vanilla.singularity@2",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.vanilla.singularity@1",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.general.singularity@3",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.general.singularity",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.general.singularity@1",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.general.singularity@2",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "eternalsingularity:combined_singularity@1",
+          "amount": 1
+        }
+      ],
+      "machineType": "Extreme Crafting",
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptAvaritia.java"
+      },
+      "grid": [
+        "---------",
+        "--aa--a--",
+        "-a--b--a-",
+        "---cde-a-",
+        "--fdgdh--",
+        "-a-idj---",
+        "-a--k--a-",
+        "--a--aa--",
+        "---------"
+      ]
+    },
+    {
+      "id": "verified:rc2:avaritia:2",
+      "inputs": [
+        {
+          "id": "dreamcraft:blackplutonium",
+          "amount": 12
+        },
+        {
+          "id": "universalsingularities:universal.general.singularity@4",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.general.singularity@5",
+          "amount": 1
+        },
+        {
+          "id": "extrautilities:block_bedrockium",
+          "amount": 4
+        },
+        {
+          "id": "universalsingularities:universal.general.singularity@6",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.general.singularity@7",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.general.singularity@8",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.general.singularity@9",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.general.singularity@10",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.general.singularity@11",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.general.singularity@12",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "eternalsingularity:combined_singularity@2",
+          "amount": 1
+        }
+      ],
+      "machineType": "Extreme Crafting",
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptAvaritia.java"
+      },
+      "grid": [
+        "---------",
+        "--aa--a--",
+        "-a--b--a-",
+        "---cde-a-",
+        "--fdgdh--",
+        "-a-idj---",
+        "-a--k--a-",
+        "--a--aa--",
+        "---------"
+      ]
+    },
+    {
+      "id": "verified:rc2:avaritia:3",
+      "inputs": [
+        {
+          "id": "dreamcraft:blackplutonium",
+          "amount": 12
+        },
+        {
+          "id": "universalsingularities:universal.general.singularity@13",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.general.singularity@14",
+          "amount": 1
+        },
+        {
+          "id": "extrautilities:block_bedrockium",
+          "amount": 4
+        },
+        {
+          "id": "universalsingularities:universal.general.singularity@15",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.general.singularity@16",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.general.singularity@17",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.general.singularity@18",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.general.singularity@19",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.general.singularity@20",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.general.singularity@21",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "eternalsingularity:combined_singularity@3",
+          "amount": 1
+        }
+      ],
+      "machineType": "Extreme Crafting",
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptAvaritia.java"
+      },
+      "grid": [
+        "---------",
+        "--aa--a--",
+        "-a--b--a-",
+        "---cde-a-",
+        "--fdgdh--",
+        "-a-idj---",
+        "-a--k--a-",
+        "--a--aa--",
+        "---------"
+      ]
+    },
+    {
+      "id": "verified:rc2:avaritia:4",
+      "inputs": [
+        {
+          "id": "dreamcraft:blackplutonium",
+          "amount": 12
+        },
+        {
+          "id": "universalsingularities:universal.general.singularity@22",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.general.singularity@23",
+          "amount": 1
+        },
+        {
+          "id": "extrautilities:block_bedrockium",
+          "amount": 4
+        },
+        {
+          "id": "universalsingularities:universal.general.singularity@24",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.general.singularity@25",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.general.singularity@26",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.general.singularity@27",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.general.singularity@28",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.general.singularity@29",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.general.singularity@30",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "eternalsingularity:combined_singularity@4",
+          "amount": 1
+        }
+      ],
+      "machineType": "Extreme Crafting",
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptAvaritia.java"
+      },
+      "grid": [
+        "---------",
+        "--aa--a--",
+        "-a--b--a-",
+        "---cde-a-",
+        "--fdgdh--",
+        "-a-idj---",
+        "-a--k--a-",
+        "--a--aa--",
+        "---------"
+      ]
+    },
+    {
+      "id": "verified:rc2:avaritia:5",
+      "inputs": [
+        {
+          "id": "dreamcraft:blackplutonium",
+          "amount": 12
+        },
+        {
+          "id": "universalsingularities:universal.draconicevolution.singularity",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.draconicevolution.singularity@1",
+          "amount": 1
+        },
+        {
+          "id": "extrautilities:block_bedrockium",
+          "amount": 4
+        },
+        {
+          "id": "universalsingularities:universal.enderio.singularity",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.enderio.singularity@1",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.enderio.singularity@2",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.enderio.singularity@3",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.enderio.singularity@4",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.enderio.singularity@5",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.enderio.singularity@6",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "eternalsingularity:combined_singularity@5",
+          "amount": 1
+        }
+      ],
+      "machineType": "Extreme Crafting",
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptAvaritia.java"
+      },
+      "grid": [
+        "---------",
+        "--aa--a--",
+        "-a--b--a-",
+        "---cde-a-",
+        "--fdgdh--",
+        "-a-idj---",
+        "-a--k--a-",
+        "--a--aa--",
+        "---------"
+      ]
+    },
+    {
+      "id": "verified:rc2:avaritia:6",
+      "inputs": [
+        {
+          "id": "dreamcraft:blackplutonium",
+          "amount": 12
+        },
+        {
+          "id": "universalsingularities:universal.enderio.singularity@7",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.extrautilities.singularity",
+          "amount": 1
+        },
+        {
+          "id": "extrautilities:block_bedrockium",
+          "amount": 4
+        },
+        {
+          "id": "universalsingularities:universal.projectred.singularity",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.general.singularity@32",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.tinkersconstruct.singularity@1",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.tinkersconstruct.singularity@2",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.tinkersconstruct.singularity@3",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.tinkersconstruct.singularity@4",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.tinkersconstruct.singularity@6",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "eternalsingularity:combined_singularity@6",
+          "amount": 1
+        }
+      ],
+      "machineType": "Extreme Crafting",
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptAvaritia.java"
+      },
+      "grid": [
+        "---------",
+        "--aa--a--",
+        "-a--b--a-",
+        "---cde-a-",
+        "--fdgdh--",
+        "-a-idj---",
+        "-a--k--a-",
+        "--a--aa--",
+        "---------"
+      ]
+    },
+    {
+      "id": "verified:rc2:avaritia:7",
+      "inputs": [
+        {
+          "id": "avaritia:resource_block",
+          "amount": 10
+        },
+        {
+          "id": "dreamcraft:blackplutonium",
+          "amount": 12
+        },
+        {
+          "id": "eternalsingularity:combined_singularity",
+          "amount": 1
+        },
+        {
+          "id": "eternalsingularity:combined_singularity@1",
+          "amount": 1
+        },
+        {
+          "id": "eternalsingularity:combined_singularity@2",
+          "amount": 1
+        },
+        {
+          "id": "eternalsingularity:combined_singularity@3",
+          "amount": 1
+        },
+        {
+          "id": "eternalsingularity:combined_singularity@4",
+          "amount": 1
+        },
+        {
+          "id": "eternalsingularity:combined_singularity@5",
+          "amount": 1
+        },
+        {
+          "id": "eternalsingularity:combined_singularity@6",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "eternalsingularity:eternal_singularity",
+          "amount": 1
+        }
+      ],
+      "machineType": "Extreme Crafting",
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptAvaritia.java"
+      },
+      "grid": [
+        "-----a---",
+        "--bb--b--",
+        "-b--c--b-",
+        "a--dae-b-",
+        "--aafaa--",
+        "-b-gah--a",
+        "-b--i--b-",
+        "--b--bb--",
+        "---a-----"
+      ]
+    },
+    {
+      "id": "verified:rc2:avaritia:14",
+      "inputs": [
+        {
+          "id": "oredict:plateInfinity",
+          "amount": 10
+        },
+        {
+          "id": "taintedmagic:itemfocusmeteorology",
+          "amount": 2
+        },
+        {
+          "id": "thaumictinkerer:kamiresource@1",
+          "amount": 6
+        },
+        {
+          "id": "avaritia:resource@5",
+          "amount": 1
+        },
+        {
+          "id": "draconicevolution:draconicbow",
+          "amount": 1
+        },
+        {
+          "id": "botania:crystalbow",
+          "amount": 1
+        },
+        {
+          "id": "galaxyspace:item.quantbow",
+          "amount": 1
+        },
+        {
+          "id": "taintedmagic:itemfocustime",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "avaritia:infinity_bow",
+          "amount": 1
+        }
+      ],
+      "machineType": "Extreme Crafting",
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptAvaritia.java"
+      },
+      "grid": [
+        "---aab---",
+        "--a-c----",
+        "-a--c----",
+        "a---cg---",
+        "d---ef---",
+        "a---ch---",
+        "-a--c----",
+        "--a-c----",
+        "---aab---"
+      ]
+    },
+    {
+      "id": "verified:rc2:avaritia:20",
+      "inputs": [
+        {
+          "id": "universalsingularities:universal.rubber.singularity",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.rubber.singularity@1",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.rubber.singularity@2",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.rubber.singularity@3",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.rubber.singularity@4",
+          "amount": 1
+        },
+        {
+          "id": "oredict:plateStyreneButadieneRubber",
+          "amount": 3
+        },
+        {
+          "id": "oredict:plateSilicone",
+          "amount": 3
+        },
+        {
+          "id": "oredict:platePolyvinylChloride",
+          "amount": 3
+        },
+        {
+          "id": "oredict:platePolyphenyleneSulfide",
+          "amount": 3
+        }
+      ],
+      "outputs": [
+        {
+          "id": "universalsingularities:universal.rubber.singularity@5",
+          "amount": 1
+        }
+      ],
+      "machineType": "Extreme Crafting",
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptAvaritia.java"
+      },
+      "grid": [
+        "---------",
+        "--ff--g--",
+        "-f-----g-",
+        "---b-c-g-",
+        "----a----",
+        "-i-d-e---",
+        "-i-----h-",
+        "--i--hh--",
+        "---------"
+      ]
+    },
+    {
+      "id": "verified:rc2:avaritia:21",
+      "inputs": [
+        {
+          "id": "universalsingularities:universal.circuit2.singularity@6",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.circuit2.singularity@4",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.circuit2.singularity@3",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.circuit2.singularity@2",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.circuit2.singularity@1",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.circuit2.singularity",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.circuit.singularity@9",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.circuit.singularity@8",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.circuit.singularity@7",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.circuit.singularity@6",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.circuit.singularity@5",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.circuit.singularity@4",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.circuit.singularity@3",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.circuit.singularity@2",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.circuit.singularity@1",
+          "amount": 1
+        },
+        {
+          "id": "universalsingularities:universal.circuit.singularity",
+          "amount": 1
+        },
+        {
+          "id": "gregtech:gt.foundrycasings@4",
+          "amount": 1
+        },
+        {
+          "id": "gregtech:gt.metaitem.03@6139",
+          "amount": 4
+        },
+        {
+          "id": "gregtech:gt.metaitem.03@6586",
+          "amount": 4
+        },
+        {
+          "id": "gregtech:gt.metaitem.03@6585",
+          "amount": 4
+        }
+      ],
+      "outputs": [
+        {
+          "id": "eternalsingularity:combined_singularity@10",
+          "amount": 1
+        }
+      ],
+      "machineType": "Extreme Crafting",
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptAvaritia.java"
+      },
+      "grid": [
+        "-----p---",
+        "--yx--z--",
+        "-z--d--y-",
+        "o--ebc-x-",
+        "--ijukl--",
+        "-x-fah--m",
+        "-y--g--z-",
+        "--z--xy--",
+        "---n-----"
+      ]
+    }
+  ]
+}

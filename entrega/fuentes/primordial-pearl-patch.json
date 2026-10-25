@@ -1,0 +1,146 @@
+{
+  "resources": [
+    {
+      "id": "thaumcraft:itemeldritchobject",
+      "displayName": "Eldritch Eye",
+      "kind": "item"
+    },
+    {
+      "id": "thaumcraft:itemeldritchobject@3",
+      "displayName": "Primordial Pearl",
+      "kind": "item"
+    },
+    {
+      "id": "access:thaumcraft:outer-lands",
+      "displayName": "Acceso abierto a Outer Lands",
+      "kind": "research",
+      "reusable": true
+    }
+  ],
+  "recipes": [
+    {
+      "id": "verified:rc2:access:outer-lands-portal",
+      "machineType": "Sidequest: open an Eldritch Portal",
+      "inputs": [
+        {
+          "id": "thaumcraft:itemeldritchobject",
+          "amount": 4
+        }
+      ],
+      "outputs": [
+        {
+          "id": "access:thaumcraft:outer-lands",
+          "amount": 1
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://mediafilez.forgecdn.net/files/2227/552/Thaumcraft-1.7.10-4.2.3.5.jar",
+        "sha256": "3dba9786966974701578a658d1bb369bf35bdf5f363079f5ac9c4910a39113be",
+        "class": "thaumcraft/common/blocks/BlockEldritch.class",
+        "decompiledLine": 279
+      },
+      "conditions": {
+        "research": "OCULUS complete",
+        "location": "Natural Eldritch altar/obelisk with DARK aura node directly above altar.",
+        "maze": "TileEldritchAltar.checkForMaze() must report maze ready.",
+        "wand": "Reusable ItemWandCasting with enough capacity and stored vis; not consumed.",
+        "baseWandVisCost": {
+          "aer": 100,
+          "ignis": 100,
+          "terra": 100,
+          "aqua": 100,
+          "ordo": 100,
+          "perditio": 100
+        },
+        "visCostMeaning": "Base displayed wand-vis units before wand/gear crafting consumption modifiers. This is not essentia; actual debited vis uses ItemWandCasting.getConsumptionModifier.",
+        "portalActivationSource": {
+          "url": "https://mediafilez.forgecdn.net/files/2227/552/Thaumcraft-1.7.10-4.2.3.5.jar",
+          "class": "thaumcraft/common/items/wands/WandManager.class",
+          "decompiledLine": 452
+        },
+        "researchCheckSource": {
+          "class": "thaumcraft/common/items/wands/WandManager.class",
+          "decompiledLine": 756
+        },
+        "consumptionSource": {
+          "class": "thaumcraft/common/items/wands/ItemWandCasting.class",
+          "decompiledLine": 325
+        },
+        "reusableAccess": true,
+        "accounting": "Four Eldritch Eyes and wand-vis cost belong to opening one portal/expedition infrastructure. Do not charge four Eyes separately for every boss or Pearl."
+      },
+      "steps": [
+        "Complete OCULUS research and locate an eligible Eldritch altar.",
+        "Insert four Eldritch Eyes; each insertion consumes one eye.",
+        "After maze generation is ready, activate using a charged wand.",
+        "Enter Outer Lands and progress through its maze to a boss encounter."
+      ]
+    },
+    {
+      "id": "verified:rc2:acquisition:primordial-pearl-warden",
+      "machineType": "Conditional natural acquisition: defeat Eldritch Warden",
+      "inputs": [
+        {
+          "id": "access:thaumcraft:outer-lands",
+          "amount": 1,
+          "consumed": false,
+          "role": "Reusable access prerequisite; portal opening is an expedition sidequest"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "thaumcraft:itemeldritchobject@3",
+          "amount": 1
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://mediafilez.forgecdn.net/files/2227/552/Thaumcraft-1.7.10-4.2.3.5.jar",
+        "sha256": "3dba9786966974701578a658d1bb369bf35bdf5f363079f5ac9c4910a39113be",
+        "class": "thaumcraft/common/entities/monster/boss/EntityThaumcraftBoss.class",
+        "decompiledLine": 219
+      },
+      "conditions": {
+        "acquisitionEvent": true,
+        "sourceEntity": "thaumcraft/common/entities/monster/boss/EntityEldritchWarden",
+        "location": "Outer Lands boss encounter; find a Warden encounter, not a guaranteed Warden in every room.",
+        "probability": 1.0,
+        "quantity": 1,
+        "fortuneAffectsPearlCount": false,
+        "inheritanceEvidence": {
+          "url": "https://mediafilez.forgecdn.net/files/2227/552/Thaumcraft-1.7.10-4.2.3.5.jar",
+          "class": "thaumcraft/common/entities/monster/boss/EntityEldritchWarden.class",
+          "decompiledLine": 101,
+          "extends": "EntityThaumcraftBoss"
+        },
+        "dropRule": "Base boss dropFewItems unconditionally calls entityDropSpecialItem with new ItemStack(ConfigItems.itemEldritchObject,1,3). No random roll or fortune-dependent quantity in this method.",
+        "lootCondition": "Normal enabled mob drops; events or server rules must not suppress drops.",
+        "specialItemEmissionEvidence": {
+          "url": "https://mediafilez.forgecdn.net/files/2227/552/Thaumcraft-1.7.10-4.2.3.5.jar",
+          "class": "thaumcraft/common/lib/utils/EntityUtils.class",
+          "decompiledLine": 221
+        },
+        "otherDropsNotCounted": "The same boss method also drops one rare loot bag; this patch models the Pearl only."
+      },
+      "steps": [
+        "Use established Outer Lands access.",
+        "Reach and defeat an Eldritch Warden.",
+        "Collect the one Primordial Pearl special-item drop."
+      ]
+    }
+  ],
+  "sourceProvenance": {
+    "manifestVersion": "GTNH2.9.0-RC-2 external_mods Thaumcraft4.2.3.5",
+    "downloadUrl": "https://mediafilez.forgecdn.net/files/2227/552/Thaumcraft-1.7.10-4.2.3.5.jar",
+    "sha256": "3dba9786966974701578a658d1bb369bf35bdf5f363079f5ac9c4910a39113be",
+    "analysis": "Selective CFR0.152 decompilation of boss superclass/Warden, portal altar and wand activation classes only.",
+    "localEvidenceDirectory": "sources/verified/tc4-decompiled"
+  },
+  "scopeNotes": [
+    "Boss combat gear and the whole wand crafting chain intentionally remain conditions; explicit portal-consumed items and base vis are shown.",
+    "Primordial Pearl acquisition does not depend on already having a Pearl or the cyclic conversion/loot-machine route."
+  ]
+}

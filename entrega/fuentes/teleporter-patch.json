@@ -1,0 +1,111 @@
+{
+  "resources": [
+    {
+      "id": "ic2:blockmachine2",
+      "displayName": "Teleporter",
+      "kind": "item"
+    },
+    {
+      "id": "oredict:plateTitanium",
+      "displayName": "Ore Dictionary: plateTitanium",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.metaitem.01@24506",
+      "displayName": "Nether Star Lens",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.metaitem.01@32672",
+      "displayName": "Field Generator (HV)",
+      "kind": "item"
+    },
+    {
+      "id": "ic2:itembatlamacrystal@26",
+      "displayName": "Lapotron Crystal",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.metaitem.01@32603",
+      "displayName": "Electric Motor (EV)",
+      "kind": "item"
+    },
+    {
+      "id": "ic2:blockelectric@5",
+      "displayName": "HV-Transformer",
+      "kind": "item"
+    },
+    {
+      "id": "oredict:cableGt04Aluminium",
+      "displayName": "Ore Dictionary: cableGt04Aluminium",
+      "kind": "item"
+    }
+  ],
+  "recipes": [
+    {
+      "id": "verified:rc2:extreme:ic2teleporter",
+      "inputs": [
+        {
+          "id": "oredict:plateTitanium",
+          "amount": 5
+        },
+        {
+          "id": "gregtech:gt.metaitem.01@24506",
+          "amount": 2
+        },
+        {
+          "id": "gregtech:gt.metaitem.01@32672",
+          "amount": 1
+        },
+        {
+          "id": "ic2:itembatlamacrystal@26",
+          "amount": 2
+        },
+        {
+          "id": "gregtech:gt.metaitem.01@32603",
+          "amount": 2
+        },
+        {
+          "id": "ic2:blockelectric@5",
+          "amount": 1
+        },
+        {
+          "id": "oredict:cableGt04Aluminium",
+          "amount": 2
+        }
+      ],
+      "outputs": [
+        {
+          "id": "ic2:blockmachine2",
+          "amount": 1
+        }
+      ],
+      "machineType": "Extreme Crafting",
+      "durationTicks": null,
+      "eut": null,
+      "grid": [
+        "---------",
+        "---------",
+        "---------",
+        "--abcba--",
+        "--defed--",
+        "--agaga--",
+        "---------",
+        "---------",
+        "---------"
+      ],
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptIndustrialCraft.java#L991"
+      },
+      "conditions": {
+        "lapotronCrystal": "Source accepts wildcard damage; selected metadata26 is produced by exact RC2 dataset Assembler recipe. Any damage value is accepted.",
+        "netherStarLens": "Source oreDictionary lensNetherStar; concrete Nether Star Lens selected (GregTech canonical item).",
+        "tierRegistrationSources": [
+          "https://github.com/GTNewHorizons/GT5-Unofficial/blob/5.09.54.205/src/main/java/gregtech/common/items/IDMetaItem01.java#L300",
+          "https://github.com/GTNewHorizons/GT5-Unofficial/blob/5.09.54.205/src/main/java/gregtech/common/items/IDMetaItem01.java#L364"
+        ]
+      }
+    }
+  ],
+  "unresolved": []
+}

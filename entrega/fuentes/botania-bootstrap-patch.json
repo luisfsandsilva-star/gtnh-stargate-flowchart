@@ -1,0 +1,365 @@
+{
+  "schemaVersion": 1,
+  "packVersion": "2.9.0-RC-2",
+  "resources": {
+    "factoryflow:botania:puredaisy": {
+      "name": "Pure Daisy [NBT type=puredaisy]",
+      "kind": "item"
+    },
+    "minecraft:diamond": {
+      "name": "Diamond",
+      "kind": "item"
+    },
+    "botania:manaresource@2": {
+      "name": "Mana Diamond",
+      "kind": "item"
+    },
+    "gregtech:gt.metaitem.02@29500": {
+      "name": "Flawless Diamond",
+      "kind": "item"
+    },
+    "gregtech:gt.metaitem.02@30500": {
+      "name": "Exquisite Diamond",
+      "kind": "item"
+    },
+    "gregtech:gt.metaitem.01@11305": {
+      "name": "Steel Ingot",
+      "kind": "item"
+    },
+    "botania:manaresource": {
+      "name": "Manasteel Ingot",
+      "kind": "item"
+    },
+    "gregtech:gt.metaitem.01@11330": {
+      "name": "Thaumium Ingot",
+      "kind": "item"
+    },
+    "botania:altar": {
+      "name": "Petal Apothecary",
+      "kind": "item"
+    },
+    "botania:petal": {
+      "name": "Mystical White Petal",
+      "kind": "item"
+    },
+    "minecraft:red_flower@6": {
+      "name": "White Tulip",
+      "kind": "item"
+    },
+    "minecraft:wheat_seeds": {
+      "name": "Wheat Seeds",
+      "kind": "item"
+    },
+    "water": {
+      "name": "Water",
+      "kind": "fluid"
+    },
+    "minecraft:log": {
+      "name": "Oak Log",
+      "kind": "item"
+    },
+    "botania:livingwood": {
+      "name": "Livingwood",
+      "kind": "item"
+    },
+    "botania:flower": {
+      "name": "Mystical White Flower",
+      "kind": "item"
+    },
+    "botania:fertilizer": {
+      "name": "Floral Fertilizer",
+      "kind": "item"
+    }
+  },
+  "recipes": [
+    {
+      "id": "verified:botania:mana-diamond-normal",
+      "machineType": "Mana Pool · infusión",
+      "inputs": [
+        {
+          "id": "minecraft:diamond",
+          "amount": 1,
+          "consumed": true
+        }
+      ],
+      "outputs": [
+        {
+          "id": "botania:manaresource@2",
+          "amount": 1,
+          "consumed": true
+        }
+      ],
+      "conditions": [
+        "Consume 40000 maná de un Mana Pool; no catalizador de alquimia.",
+        "Botanic Horizons sustituye las recetas predeterminadas; POOL_MAX_MANA_DILUTED=10000."
+      ],
+      "source": {
+        "url": "https://github.com/GTNewHorizons/Botanic-horizons/blob/1.12.10-GTNH/src/main/java/net/fuzzycraft/botanichorizons/patches/ManaInfusionPatches.java#L41-L45"
+      },
+      "manaCost": 40000
+    },
+    {
+      "id": "verified:botania:mana-diamond-flawless",
+      "machineType": "Mana Pool · infusión",
+      "inputs": [
+        {
+          "id": "gregtech:gt.metaitem.02@29500",
+          "amount": 1,
+          "consumed": true
+        }
+      ],
+      "outputs": [
+        {
+          "id": "botania:manaresource@2",
+          "amount": 1,
+          "consumed": true
+        }
+      ],
+      "conditions": [
+        "Consume 20000 maná de un Mana Pool; no catalizador de alquimia.",
+        "Botanic Horizons sustituye las recetas predeterminadas; POOL_MAX_MANA_DILUTED=10000."
+      ],
+      "source": {
+        "url": "https://github.com/GTNewHorizons/Botanic-horizons/blob/1.12.10-GTNH/src/main/java/net/fuzzycraft/botanichorizons/patches/ManaInfusionPatches.java#L41-L45"
+      },
+      "manaCost": 20000
+    },
+    {
+      "id": "verified:botania:mana-diamond-exquisite",
+      "machineType": "Mana Pool · infusión",
+      "inputs": [
+        {
+          "id": "gregtech:gt.metaitem.02@30500",
+          "amount": 1,
+          "consumed": true
+        }
+      ],
+      "outputs": [
+        {
+          "id": "botania:manaresource@2",
+          "amount": 1,
+          "consumed": true
+        }
+      ],
+      "conditions": [
+        "Consume 10000 maná de un Mana Pool; no catalizador de alquimia.",
+        "Botanic Horizons sustituye las recetas predeterminadas; POOL_MAX_MANA_DILUTED=10000."
+      ],
+      "source": {
+        "url": "https://github.com/GTNewHorizons/Botanic-horizons/blob/1.12.10-GTNH/src/main/java/net/fuzzycraft/botanichorizons/patches/ManaInfusionPatches.java#L41-L45"
+      },
+      "manaCost": 10000
+    },
+    {
+      "id": "verified:botania:manasteel-steel",
+      "machineType": "Mana Pool · infusión",
+      "inputs": [
+        {
+          "id": "gregtech:gt.metaitem.01@11305",
+          "amount": 1,
+          "consumed": true
+        }
+      ],
+      "outputs": [
+        {
+          "id": "botania:manaresource",
+          "amount": 1,
+          "consumed": true
+        }
+      ],
+      "conditions": [
+        "Consume 3000 maná de un Mana Pool. La entrada es steel, no hierro."
+      ],
+      "source": {
+        "url": "https://github.com/GTNewHorizons/Botanic-horizons/blob/1.12.10-GTNH/src/main/java/net/fuzzycraft/botanichorizons/patches/ManaInfusionPatches.java#L23-L27"
+      },
+      "manaCost": 3000
+    },
+    {
+      "id": "verified:botania:manasteel-thaumium",
+      "machineType": "Mana Pool · infusión",
+      "inputs": [
+        {
+          "id": "gregtech:gt.metaitem.01@11330",
+          "amount": 1,
+          "consumed": true
+        }
+      ],
+      "outputs": [
+        {
+          "id": "botania:manaresource",
+          "amount": 1,
+          "consumed": true
+        }
+      ],
+      "conditions": [
+        "Consume 1500 maná de un Mana Pool. La entrada es thaumium, no hierro."
+      ],
+      "source": {
+        "url": "https://github.com/GTNewHorizons/Botanic-horizons/blob/1.12.10-GTNH/src/main/java/net/fuzzycraft/botanichorizons/patches/ManaInfusionPatches.java#L23-L27"
+      },
+      "manaCost": 1500
+    },
+    {
+      "id": "verified:botania:pure-daisy",
+      "machineType": "Petal Apothecary",
+      "inputs": [
+        {
+          "id": "botania:altar",
+          "amount": 1,
+          "consumed": false
+        },
+        {
+          "id": "botania:petal",
+          "amount": 1,
+          "consumed": true
+        },
+        {
+          "id": "minecraft:red_flower@6",
+          "amount": 3,
+          "consumed": true
+        },
+        {
+          "id": "minecraft:wheat_seeds",
+          "amount": 1,
+          "consumed": true
+        },
+        {
+          "id": "water",
+          "amount": 1000,
+          "consumed": true
+        }
+      ],
+      "outputs": [
+        {
+          "id": "factoryflow:botania:puredaisy",
+          "amount": 1,
+          "consumed": true,
+          "nbt": {
+            "type": "puredaisy"
+          },
+          "tooltip": [
+            "Physical stack: Botania:specialFlower@0; NBT {type:\"puredaisy\"}"
+          ]
+        }
+      ],
+      "conditions": [
+        "Receta: flowerIngredientWhite×1 (petal blanco o mushroom blanco) y flowerWhite×3 (selección White Tulip vanilla, metadata6).",
+        "Llenar apothecary con un cubo de agua; recipiente reutilizable. Añadir una semilla compatible para completar, consumida.",
+        "La flor resultante es especial con NBT type=puredaisy, no cualquier Botania:specialFlower sin NBT."
+      ],
+      "source": {
+        "url": "https://github.com/GTNewHorizons/Botanic-horizons/blob/1.12.10-GTNH/src/main/java/net/fuzzycraft/botanichorizons/patches/ApothecaryPatches.java#L50-L52"
+      },
+      "supportingSourceUrls": [
+        "https://github.com/GTNewHorizons/Botania/blob/1.13.37-GTNH/src/main/java/vazkii/botania/common/block/tile/TileAltar.java#L76-L140",
+        "https://github.com/GTNewHorizons/Botanic-horizons/blob/1.12.10-GTNH/src/main/java/net/fuzzycraft/botanichorizons/patches/OredictPatches.java#L20-L31"
+      ]
+    },
+    {
+      "id": "verified:botania:livingwood",
+      "machineType": "Pure Daisy · transmutación en el mundo",
+      "inputs": [
+        {
+          "id": "minecraft:log",
+          "amount": 1,
+          "consumed": true
+        },
+        {
+          "id": "factoryflow:botania:puredaisy",
+          "amount": 1,
+          "consumed": false
+        }
+      ],
+      "outputs": [
+        {
+          "id": "botania:livingwood",
+          "amount": 1,
+          "consumed": true
+        }
+      ],
+      "conditions": [
+        "Colocar un bloque logWood adyacente a una Pure Daisy; resultado Livingwood meta0.",
+        "1200 ticks de tiempo nominal; la flor se conserva. No consume maná."
+      ],
+      "source": {
+        "url": "https://github.com/GTNewHorizons/Botanic-horizons/blob/1.12.10-GTNH/src/main/java/net/fuzzycraft/botanichorizons/patches/DaisyPatches.java#L8-L10"
+      },
+      "durationTicks": 1200,
+      "supportingSourceUrls": [
+        "https://github.com/GTNewHorizons/Botania/blob/1.13.37-GTNH/src/main/java/vazkii/botania/common/block/subtile/SubTilePureDaisy.java#L26-L90"
+      ]
+    },
+    {
+      "id": "verified:botania:white-petal",
+      "machineType": "Crafting · pétalo blanco",
+      "inputs": [
+        {
+          "id": "botania:flower",
+          "amount": 1,
+          "consumed": true
+        }
+      ],
+      "outputs": [
+        {
+          "id": "botania:petal",
+          "amount": 1,
+          "consumed": true
+        }
+      ],
+      "conditions": [
+        "Receta GTNH: 1 flor mystical blanca →1 pétalo blanco; el extractor existente61764 da2 como alternativa."
+      ],
+      "source": {
+        "url": "https://github.com/GTNewHorizons/Botanic-horizons/blob/1.12.10-GTNH/src/main/java/net/fuzzycraft/botanichorizons/patches/CraftingPatches.java#L43-L46"
+      }
+    },
+    {
+      "id": "verified:botania:floral-fertilizer-white-flower",
+      "machineType": "Floral Fertilizer · aplicar sobre terreno apto",
+      "inputs": [
+        {
+          "id": "botania:fertilizer",
+          "amount": 1,
+          "consumed": true
+        }
+      ],
+      "outputs": [
+        {
+          "id": "botania:flower",
+          "amount": "0…4; blanco con probabilidad 1/16 por flor generada",
+          "kind": "item",
+          "probabilityPerGeneratedFlower": 0.0625
+        }
+      ],
+      "conditions": [
+        "ItemFertilizer.onItemUse genera min(posiciones válidas,3 o4 equiprobables) flores mystical; cada flor elige metadata world.rand.nextInt(16). Blanco es metadata0.",
+        "Con espacio para4 flores, el promedio de flores blancas por uso es3.5/16=0.21875; no garantiza flor blanca. Repetir fertilización y recoger color blanco.",
+        "Requiere posiciones de aire donde ModBlocks.flower.canBlockStay; respeta restricción hasNoSky/y<255 del propio item. No consulta flowerDimensionWhitelist, no requiere dimensión64.",
+        "El fertilizante se consume incluso cuando no hay posiciones válidas. El resto de colores son coproductos aleatorios no contabilizados."
+      ],
+      "source": {
+        "url": "https://github.com/GTNewHorizons/Botania/blob/1.13.37-GTNH/src/main/java/vazkii/botania/common/item/ItemFertilizer.java#L30-L57"
+      }
+    }
+  ],
+  "producerOverrides": {
+    "botania:manaresource@2": "patch:verified:botania:mana-diamond-normal",
+    "botania:manaresource": "patch:verified:botania:manasteel-steel",
+    "botania:livingwood": "patch:verified:botania:livingwood",
+    "botania:flower": "patch:verified:botania:floral-fertilizer-white-flower",
+    "botania:petal": "patch:verified:botania:white-petal",
+    "gregtech:gt.metaitem.01@2206": 143835,
+    "botania:altar": 191863,
+    "botania:fertilizer": 231929
+  },
+  "candidateOverrides": {
+    "oredict:flowerIngredientWhite": "botania:petal",
+    "oredict:flowerWhite": "minecraft:red_flower@6"
+  },
+  "notes": [
+    "Botania1.13.37-GTNH default recipes disabled by exact RC2 config. Authoritative overrides are Botanic-horizons1.12.10-GTNH, not nonexistent NHCore ScriptBotania.",
+    "Mana supply is an energy condition as requested; this patch does not invent an energy plant. All recipe ingredients and reusable Pure Daisy/Apothecary are represented.",
+    "La generación decorativa whitelist64 no demuestra acceso a una dimensión registrada. Se retiró esa adquisición del parche: la ruta primaria es Floral Fertilizer, sin filtro de dimensión. Fertilizante231929: Mutandis1+BoneMeal1→FloralFertilizer1, CraftingPatches.java88 exacto; Mutandis ya cerrado por el parche Witchery."
+  ]
+}

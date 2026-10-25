@@ -1,0 +1,1456 @@
+{
+  "schemaVersion": 1,
+  "kind": "parametric_runtime_recipe",
+  "sourceFiles": [
+    "MTEExoticModule-5.09.54.205.java",
+    "Godforge-5.09.54.205.java"
+  ],
+  "sourceUrls": [
+    "https://github.com/GTNewHorizons/GT5-Unofficial/blob/5.09.54.205/src/main/java/tectech/thing/metaTileEntity/multi/godforge/MTEExoticModule.java",
+    "https://github.com/GTNewHorizons/GT5-Unofficial/blob/5.09.54.205/src/main/java/tectech/loader/recipe/Godforge.java"
+  ],
+  "excludeDisplayRecipes": true,
+  "notes": [
+    "The exotic module supplies the selected seed dust/fluid itself; its consumed recipe inputs are plasmas and molten time/space, not the fake NEI recipe.",
+    "P is actualParallel from Godforge machine; amounts below are literal generated base GTRecipe values. Godforge processing overclocks/parallel power must be modeled separately.",
+    "Random draws use integer ranges inclusive, weighted rejection of duplicates within each pool; probabilities conditional on accepted draws are weight/(remaining total weight). Do not treat all alternatives as simultaneous mandatory ingredients."
+  ],
+  "processes": [
+    {
+      "id": "verified:godforge:quark-gluon-parametric",
+      "machineType": "Godforge Exotic Module",
+      "output": {
+        "id": "quarkgluonplasma",
+        "displayName": "Degenerate Quark Gluon Plasma",
+        "kind": "fluid"
+      },
+      "outputAmountFormula": "1000*P",
+      "durationTicks": 200,
+      "baselineEut": "TierEU.RECIPE_MAX; machine overrides safe voltage",
+      "numberOfPlasmaInputs": 7,
+      "fluidPoolCountDistribution": "F=uniform integer 0..7; I=7-F",
+      "itemPool": [
+        {
+          "material": "Aluminium",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2019",
+            "displayName": "Aluminium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.aluminium",
+            "displayName": "Aluminium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Americium",
+          "pool": "item",
+          "weight": 10000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2103",
+            "displayName": "Americium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.americium",
+            "displayName": "Americium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Antimony",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2058",
+            "displayName": "Antimony Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.antimony",
+            "displayName": "Antimony Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Ardite",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2382",
+            "displayName": "Ardite Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.ardite",
+            "displayName": "Ardite Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Arsenic",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2039",
+            "displayName": "Arsenic Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.arsenic",
+            "displayName": "Arsenic Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Barium",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2063",
+            "displayName": "Barium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.barium",
+            "displayName": "Barium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Beryllium",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2008",
+            "displayName": "Beryllium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.beryllium",
+            "displayName": "Beryllium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Caesium",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2062",
+            "displayName": "Caesium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.caesium",
+            "displayName": "Caesium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Calcium",
+          "pool": "item",
+          "weight": 10000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2026",
+            "displayName": "Calcium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.calcium",
+            "displayName": "Calcium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Cadmium",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2055",
+            "displayName": "Cadmium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.cadmium",
+            "displayName": "Cadmium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Carbon",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2010",
+            "displayName": "Carbon Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.carbon",
+            "displayName": "Carbon Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Cerium",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2065",
+            "displayName": "Cerium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.cerium",
+            "displayName": "Cerium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Cobalt",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2033",
+            "displayName": "Cobalt Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.cobalt",
+            "displayName": "Cobalt Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Copper",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2035",
+            "displayName": "Copper Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.copper",
+            "displayName": "Copper Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Desh",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2884",
+            "displayName": "Desh Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.desh",
+            "displayName": "Desh Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Dysprosium",
+          "pool": "item",
+          "weight": 2000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2073",
+            "displayName": "Dysprosium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.dysprosium",
+            "displayName": "Dysprosium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Erbium",
+          "pool": "item",
+          "weight": 2000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2075",
+            "displayName": "Erbium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.erbium",
+            "displayName": "Erbium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Europium",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2070",
+            "displayName": "Europium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.europium",
+            "displayName": "Europium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Gadolinium",
+          "pool": "item",
+          "weight": 2000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2071",
+            "displayName": "Gadolinium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.gadolinium",
+            "displayName": "Gadolinium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Gallium",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2037",
+            "displayName": "Gallium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.gallium",
+            "displayName": "Gallium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Gold",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2086",
+            "displayName": "Gold Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.gold",
+            "displayName": "Gold Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Holmium",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2074",
+            "displayName": "Holmium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.holmium",
+            "displayName": "Holmium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Indium",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2056",
+            "displayName": "Indium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.indium",
+            "displayName": "Indium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Iron",
+          "pool": "item",
+          "weight": 10000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2032",
+            "displayName": "Iron Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.iron",
+            "displayName": "Iron Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Lanthanum",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2064",
+            "displayName": "Lanthanum Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.lanthanum",
+            "displayName": "Lanthanum Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Lithium",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2006",
+            "displayName": "Lithium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.lithium",
+            "displayName": "Lithium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Lutetium",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2078",
+            "displayName": "Lutetium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.lutetium",
+            "displayName": "Lutetium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Magnesium",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2018",
+            "displayName": "Magnesium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.magnesium",
+            "displayName": "Magnesium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Manganese",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2031",
+            "displayName": "Manganese Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.manganese",
+            "displayName": "Manganese Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "MeteoricIron",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2340",
+            "displayName": "Meteoric Iron Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.meteoriciron",
+            "displayName": "Meteoric Iron Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Molybdenum",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2048",
+            "displayName": "Molybdenum Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.molybdenum",
+            "displayName": "Molybdenum Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Neodymium",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2067",
+            "displayName": "Neodymium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.neodymium",
+            "displayName": "Neodymium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Nickel",
+          "pool": "item",
+          "weight": 10000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2034",
+            "displayName": "Nickel Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.nickel",
+            "displayName": "Nickel Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Niobium",
+          "pool": "item",
+          "weight": 10000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2047",
+            "displayName": "Niobium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.niobium",
+            "displayName": "Niobium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Oriharukon",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2393",
+            "displayName": "Oriharukon Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.oriharukon",
+            "displayName": "Oriharukon Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Palladium",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2052",
+            "displayName": "Palladium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.palladium",
+            "displayName": "Palladium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Phosphorus",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2021",
+            "displayName": "Phosphorus Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.phosphorus",
+            "displayName": "Phosphorus Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Potassium",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2025",
+            "displayName": "Potassium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.potassium",
+            "displayName": "Potassium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Praseodymium",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2066",
+            "displayName": "Praseodymium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.praseodymium",
+            "displayName": "Praseodymium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Promethium",
+          "pool": "item",
+          "weight": 2000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2068",
+            "displayName": "Promethium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.promethium",
+            "displayName": "Promethium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Rubidium",
+          "pool": "item",
+          "weight": 2000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2043",
+            "displayName": "Rubidium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.rubidium",
+            "displayName": "Rubidium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Samarium",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2069",
+            "displayName": "Samarium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.samarium",
+            "displayName": "Samarium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Silicon",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2020",
+            "displayName": "Raw Silicon Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.silicon",
+            "displayName": "Raw Silicon Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Silver",
+          "pool": "item",
+          "weight": 10000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2054",
+            "displayName": "Silver Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.silver",
+            "displayName": "Silver Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Sodium",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2017",
+            "displayName": "Sodium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.sodium",
+            "displayName": "Sodium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Strontium",
+          "pool": "item",
+          "weight": 2000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2044",
+            "displayName": "Strontium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.strontium",
+            "displayName": "Strontium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Sulfur",
+          "pool": "item",
+          "weight": 10000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2022",
+            "displayName": "Sulfur Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.sulfur",
+            "displayName": "Sulfur Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Tantalum",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2080",
+            "displayName": "Tantalum Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.tantalum",
+            "displayName": "Tantalum Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Tellurium",
+          "pool": "item",
+          "weight": 2000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2059",
+            "displayName": "Tellurium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.tellurium",
+            "displayName": "Tellurium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Terbium",
+          "pool": "item",
+          "weight": 1000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2072",
+            "displayName": "Terbium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.terbium",
+            "displayName": "Terbium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Thulium",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2076",
+            "displayName": "Thulium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.thulium",
+            "displayName": "Thulium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Tin",
+          "pool": "item",
+          "weight": 10000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2057",
+            "displayName": "Tin Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.tin",
+            "displayName": "Tin Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Titanium",
+          "pool": "item",
+          "weight": 10000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2028",
+            "displayName": "Titanium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.titanium",
+            "displayName": "Titanium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Tungsten",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2081",
+            "displayName": "Tungsten Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.tungsten",
+            "displayName": "Tungsten Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Uranium235",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2097",
+            "displayName": "Uranium 235 Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.uranium235",
+            "displayName": "Uranium 235 Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Uranium",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2098",
+            "displayName": "Uranium 238 Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.uranium",
+            "displayName": "Uranium 238 Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Vanadium",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2029",
+            "displayName": "Vanadium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.vanadium",
+            "displayName": "Vanadium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Ytterbium",
+          "pool": "item",
+          "weight": 2000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2077",
+            "displayName": "Ytterbium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.ytterbium",
+            "displayName": "Ytterbium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Yttrium",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2045",
+            "displayName": "Yttrium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.yttrium",
+            "displayName": "Yttrium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Zinc",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2036",
+            "displayName": "Zinc Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.zinc",
+            "displayName": "Zinc Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Zirconium",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "bartworks:gt.bwmetagenerateddust@3",
+            "displayName": "Zirconium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.zirconium",
+            "displayName": "Zirconium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Thorium232",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "bartworks:gt.bwmetagenerateddust@30",
+            "displayName": "Thorium 232 Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.thorium232",
+            "displayName": "Thorium 232 Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Germanium",
+          "pool": "item",
+          "weight": 2000,
+          "seedResource": {
+            "id": "miscutils:itemdustgermanium",
+            "displayName": "Germanium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.germanium",
+            "displayName": "Germanium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Thallium",
+          "pool": "item",
+          "weight": 2000,
+          "seedResource": {
+            "id": "miscutils:itemdustthallium",
+            "displayName": "Thallium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.thallium",
+            "displayName": "Thallium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Ruthenium",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "bartworks:gt.bwmetagenerateddust@64",
+            "displayName": "Ruthenium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.ruthenium",
+            "displayName": "Ruthenium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Rhenium",
+          "pool": "item",
+          "weight": 2000,
+          "seedResource": {
+            "id": "miscutils:itemdustrhenium",
+            "displayName": "Rhenium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.rhenium",
+            "displayName": "Rhenium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Rhodium",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "bartworks:gt.bwmetagenerateddust@78",
+            "displayName": "Rhodium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.rhodium",
+            "displayName": "Rhodium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Hafnium",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "bartworks:gt.bwmetagenerateddust@11000",
+            "displayName": "Hafnium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.hafnium",
+            "displayName": "Hafnium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Curium",
+          "pool": "item",
+          "weight": 10000,
+          "seedResource": {
+            "id": "miscutils:itemdustcurium",
+            "displayName": "Curium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.curium",
+            "displayName": "Curium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Iodine",
+          "pool": "item",
+          "weight": 6000,
+          "seedResource": {
+            "id": "bartworks:gt.bwmetagenerateddust@11012",
+            "displayName": "Iodine Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.iodine",
+            "displayName": "Iodine Plasma",
+            "kind": "fluid"
+          }
+        }
+      ],
+      "fluidPool": [
+        {
+          "material": "Argon",
+          "pool": "fluid",
+          "weight": 6000,
+          "seedResource": null,
+          "plasma": {
+            "id": "plasma.argon",
+            "displayName": "Argon Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Chlorine",
+          "pool": "fluid",
+          "weight": 6000,
+          "seedResource": null,
+          "plasma": {
+            "id": "plasma.chlorine",
+            "displayName": "Chlorine Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Deuterium",
+          "pool": "fluid",
+          "weight": 6000,
+          "seedResource": null,
+          "plasma": {
+            "id": "plasma.deuterium",
+            "displayName": "Deuterium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Fluorine",
+          "pool": "fluid",
+          "weight": 6000,
+          "seedResource": null,
+          "plasma": {
+            "id": "plasma.fluorine",
+            "displayName": "Fluorine Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Helium",
+          "pool": "fluid",
+          "weight": 10000,
+          "seedResource": null,
+          "plasma": {
+            "id": "plasma.helium",
+            "displayName": "Helium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Hydrogen",
+          "pool": "fluid",
+          "weight": 10000,
+          "seedResource": null,
+          "plasma": {
+            "id": "plasma.hydrogen",
+            "displayName": "Hydrogen Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Nitrogen",
+          "pool": "fluid",
+          "weight": 10000,
+          "seedResource": null,
+          "plasma": {
+            "id": "plasma.nitrogen",
+            "displayName": "Nitrogen Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Radon",
+          "pool": "fluid",
+          "weight": 10000,
+          "seedResource": null,
+          "plasma": {
+            "id": "plasma.radon",
+            "displayName": "Radon Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Tritium",
+          "pool": "fluid",
+          "weight": 6000,
+          "seedResource": null,
+          "plasma": {
+            "id": "plasma.tritium",
+            "displayName": "Tritium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Mercury",
+          "pool": "fluid",
+          "weight": 6000,
+          "plasma": {
+            "id": "plasma.mercury",
+            "displayName": "Mercury Plasma",
+            "kind": "fluid"
+          }
+        }
+      ],
+      "selection": "Choose I distinct weighted item seeds and F distinct weighted fluid seeds. Dust count D~UniformInt(1,7); fluid seed count G~UniformInt(1,64).",
+      "consumedAmountFormulas": {
+        "itemPoolPlasma": "144*9*D =1296*D litres per selected material",
+        "fluidPoolPlasma": "1000*G litres per selected material"
+      },
+      "conditions": [
+        "Unlocked exotic module and required Godforge upgrades",
+        "Wireless EU balance >= predicted startup cost"
+      ],
+      "seedByproducts": "Dust seeds D each and fluid seeds G litres are emitted to player before plasma conversion."
+    },
+    {
+      "id": "verified:godforge:magmatter-parametric",
+      "machineType": "Godforge Exotic Module",
+      "output": {
+        "id": "molten.magmatter",
+        "displayName": "Molten Magmatter",
+        "kind": "fluid"
+      },
+      "outputAmountFormula": "576*P",
+      "durationTicks": 200,
+      "baselineEut": "TierEU.RECIPE_MAX; machine overrides safe voltage",
+      "itemPool": [
+        {
+          "material": "CosmicNeutronium",
+          "weight": 100000,
+          "selectionProbability": "1/14",
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2982",
+            "displayName": "Cosmic Neutronium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.cosmicneutronium",
+            "displayName": "Cosmic Neutronium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Draconium",
+          "weight": 100000,
+          "selectionProbability": "1/14",
+          "seedResource": {
+            "id": "draconicevolution:draconiumdust",
+            "displayName": "Draconium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.draconium",
+            "displayName": "Draconium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "DraconiumAwakened",
+          "weight": 100000,
+          "selectionProbability": "1/14",
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2976",
+            "displayName": "Awakened Draconium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.draconiumawakened",
+            "displayName": "Awakened Draconium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Ichorium",
+          "weight": 100000,
+          "selectionProbability": "1/14",
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2978",
+            "displayName": "Ichorium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.ichorium",
+            "displayName": "Ichorium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Neutronium",
+          "weight": 100000,
+          "selectionProbability": "1/14",
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2129",
+            "displayName": "Neutronium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.neutronium",
+            "displayName": "Neutronium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Flerovium",
+          "weight": 100000,
+          "selectionProbability": "1/14",
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2984",
+            "displayName": "Flerovium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.flerovium_gt5u",
+            "displayName": "Flerovium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Bedrockium",
+          "weight": 100000,
+          "selectionProbability": "1/14",
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2395",
+            "displayName": "Bedrockium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.bedrockium",
+            "displayName": "Bedrockium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Infinity",
+          "weight": 100000,
+          "selectionProbability": "1/14",
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2397",
+            "displayName": "Infinity Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.infinity",
+            "displayName": "Infinity Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "Tritanium",
+          "weight": 100000,
+          "selectionProbability": "1/14",
+          "seedResource": {
+            "id": "gregtech:gt.metaitem.01@2329",
+            "displayName": "Tritanium Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.tritanium",
+            "displayName": "Tritanium Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "CELESTIAL_TUNGSTEN",
+          "weight": 100000,
+          "selectionProbability": "1/14",
+          "seedResource": {
+            "id": "miscutils:itemdustcelestialtungsten",
+            "displayName": "Celestial Tungsten Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.celestialtungsten",
+            "displayName": "Celestial Tungsten Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "HYPOGEN",
+          "weight": 100000,
+          "selectionProbability": "1/14",
+          "seedResource": {
+            "id": "miscutils:itemdusthypogen",
+            "displayName": "Hypogen Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.hypogen",
+            "displayName": "Hypogen Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "RHUGNOR",
+          "weight": 100000,
+          "selectionProbability": "1/14",
+          "seedResource": {
+            "id": "miscutils:itemdustrhugnor",
+            "displayName": "Rhugnor Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.rhugnor",
+            "displayName": "Rhugnor Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "CHRONOMATIC_GLASS",
+          "weight": 100000,
+          "selectionProbability": "1/14",
+          "seedResource": {
+            "id": "miscutils:itemdustchromaticglass",
+            "displayName": "Chromatic Glass Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.chromaticglass",
+            "displayName": "Chromatic Glass Plasma",
+            "kind": "fluid"
+          }
+        },
+        {
+          "material": "DRAGON_METAL",
+          "weight": 100000,
+          "selectionProbability": "1/14",
+          "seedResource": {
+            "id": "miscutils:itemdustdragonblood",
+            "displayName": "Dragonblood Dust",
+            "kind": "item"
+          },
+          "plasma": {
+            "id": "plasma.dragonblood",
+            "displayName": "Dragonblood Plasma",
+            "kind": "fluid"
+          }
+        }
+      ],
+      "selection": "Exactly one material, equal weight 100000 each; t=UniformInt(1,50); s=UniformInt(51,100)",
+      "consumedAmountFormulas": {
+        "selectedPlasma": "144*(s-t) litres; seed stack size1",
+        "temporalfluid": "t litres",
+        "spatialfluid": "s litres"
+      },
+      "fixedInputResources": [
+        {
+          "id": "temporalfluid",
+          "displayName": "Tachyon Rich Temporal Fluid",
+          "kind": "fluid",
+          "sourceExpression": "Materials.Time.getMolten(t)"
+        },
+        {
+          "id": "spatialfluid",
+          "displayName": "Spatially Enlarged Fluid",
+          "kind": "fluid",
+          "sourceExpression": "Materials.Space.getMolten(s)"
+        }
+      ],
+      "conditions": [
+        "Magmatter mode unlocked by Godforge upgrades",
+        "Wireless EU balance >= predicted startup cost"
+      ],
+      "seedByproducts": "Selected dust1 and molten.time(t) and molten.space(s) emitted before processing."
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+*.png binary
+entrega/stargate-rc2-atlas.html -diff
+entrega/stargate-rc2-mapa.html -diff
+entrega/stargate-rc2-recorrido.html -diff
+entrega/stargate-rc2.svg -diff

@@ -1,0 +1,1685 @@
+{
+  "schemaVersion": 1,
+  "packVersion": "2.9.0-RC-2",
+  "modVersion": "EnderIO2.10.48",
+  "notes": [
+    "Inventory identities use normalized lowercase IDs; mob identity uses original registry ID from EEC source metadata.",
+    "Two separate30-level operations. XP levels do not sum to a single60-level charge; do not infer raw XP points without machine/anvil XP rules.",
+    "Natural mob availability and per-mob capture/spawn blacklists require runtime verification; recipes are conditional acquisition routes.",
+    "All synthetic EEC resources are nonconsumed controller configuration."
+  ],
+  "sourceUrls": [
+    "https://github.com/GTNewHorizons/EnderIO/tree/2.10.48",
+    "https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/blob/2.9.0-nightly-2026-10-04/config/enderio/EnderIO.cfg"
+  ],
+  "patches": [
+    {
+      "id": "verified:prepare-spawner:enderman",
+      "name": "Prepare Enderman Spawner",
+      "machineType": "Soul capture \u2192 Soul Binder \u2192 Anvil \u2192 EEC setup",
+      "inputs": [
+        {
+          "id": "enderio:blockpoweredspawner",
+          "displayName": "Powered Spawner",
+          "kind": "item",
+          "amount": 1
+        },
+        {
+          "id": "enderio:itembrokenspawner",
+          "displayName": "Broken Spawner",
+          "kind": "item",
+          "amount": 1
+        },
+        {
+          "id": "enderio:itemsoulvessel",
+          "displayName": "Soul Vial",
+          "kind": "item",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "factoryflow:eec_mob:enderman",
+          "displayName": "Enderman Spawner",
+          "kind": "item",
+          "amount": 1,
+          "consumed": false
+        }
+      ],
+      "mobRegistryId": "Enderman",
+      "semantics": "Output is an existing Powered Spawner with mob NBT installed in EEC controller, not a new craftable item or per-batch consumable.",
+      "steps": [
+        {
+          "action": "Capture living mob with empty Soul Vial",
+          "mob": "Enderman",
+          "input": "enderio:itemsoulvessel",
+          "inputAmount": 1,
+          "output": "Soul Vial containing same mob (NBT)",
+          "restrictions": "Mob must be living, non-player, allowed by capture blacklist/boss config; NBT id preserves entity type."
+        },
+        {
+          "action": "Soul Binder: retarget Broken Spawner",
+          "inputs": [
+            {
+              "id": "enderio:itembrokenspawner",
+              "amount": 1
+            },
+            {
+              "id": "enderio:itemsoulvessel",
+              "amount": 1,
+              "requiredNBTMob": "Enderman"
+            }
+          ],
+          "outputs": [
+            {
+              "id": "enderio:itembrokenspawner",
+              "amount": 1,
+              "requiredNBTMob": "Enderman"
+            },
+            {
+              "id": "enderio:itemsoulvessel",
+              "amount": 1,
+              "empty": true
+            }
+          ],
+          "energyRF": 25000000,
+          "xpLevels": 30,
+          "note": "RC2 configured values; no zombie head ingredient."
+        },
+        {
+          "action": "Anvil: combine Powered Spawner + typed Broken Spawner",
+          "inputs": [
+            {
+              "id": "enderio:blockpoweredspawner",
+              "amount": 1
+            },
+            {
+              "id": "enderio:itembrokenspawner",
+              "amount": 1,
+              "requiredNBTMob": "Enderman"
+            }
+          ],
+          "output": {
+            "id": "enderio:blockpoweredspawner",
+            "amount": 1,
+            "requiredNBTMob": "Enderman"
+          },
+          "xpLevels": 30
+        },
+        {
+          "action": "Install mob-configured Powered Spawner in EEC controller slot",
+          "consumed": false
+        }
+      ],
+      "requiredMachines": [
+        {
+          "id": "enderio:blocksoulbinder",
+          "displayName": "Soul Binder",
+          "kind": "item",
+          "amount": 1,
+          "consumed": false
+        },
+        {
+          "id": "minecraft:anvil",
+          "kind": "item",
+          "amount": 1,
+          "consumed": false
+        }
+      ],
+      "byproducts": [
+        {
+          "id": "enderio:itemsoulvessel",
+          "displayName": "Soul Vial",
+          "kind": "item",
+          "amount": 1,
+          "note": "returned empty; reusable"
+        }
+      ],
+      "naturalAcquisitionRequirements": [
+        {
+          "resource": "Broken Spawner",
+          "method": "Break natural mob spawner (survival, allowed tool and mob); RC2 configured drop chance1.0. May instead use an existing Broken Spawner."
+        },
+        {
+          "resource": "Living Enderman",
+          "method": "Locate and capture the requested mob. This is an acquisition step, not a guessed item recipe."
+        }
+      ],
+      "sourceFiles": [
+        "SoulBinderSpawnerRecipe-EnderIO2.10.48.java",
+        "BlockPoweredSpawner-EnderIO2.10.48.java",
+        "ItemSoulVessel-EnderIO2.10.48.java",
+        "EnderIO-RC2.cfg"
+      ]
+    },
+    {
+      "id": "verified:prepare-spawner:galacticraftcore-evolvedenderman",
+      "name": "Prepare Evolved Enderman Spawner",
+      "machineType": "Soul capture \u2192 Soul Binder \u2192 Anvil \u2192 EEC setup",
+      "inputs": [
+        {
+          "id": "enderio:blockpoweredspawner",
+          "displayName": "Powered Spawner",
+          "kind": "item",
+          "amount": 1
+        },
+        {
+          "id": "enderio:itembrokenspawner",
+          "displayName": "Broken Spawner",
+          "kind": "item",
+          "amount": 1
+        },
+        {
+          "id": "enderio:itemsoulvessel",
+          "displayName": "Soul Vial",
+          "kind": "item",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "factoryflow:eec_mob:galacticraftcore-evolvedenderman",
+          "displayName": "Evolved Enderman Spawner",
+          "kind": "item",
+          "amount": 1,
+          "consumed": false
+        }
+      ],
+      "mobRegistryId": "GalacticraftCore.EvolvedEnderman",
+      "semantics": "Output is an existing Powered Spawner with mob NBT installed in EEC controller, not a new craftable item or per-batch consumable.",
+      "steps": [
+        {
+          "action": "Capture living mob with empty Soul Vial",
+          "mob": "GalacticraftCore.EvolvedEnderman",
+          "input": "enderio:itemsoulvessel",
+          "inputAmount": 1,
+          "output": "Soul Vial containing same mob (NBT)",
+          "restrictions": "Mob must be living, non-player, allowed by capture blacklist/boss config; NBT id preserves entity type."
+        },
+        {
+          "action": "Soul Binder: retarget Broken Spawner",
+          "inputs": [
+            {
+              "id": "enderio:itembrokenspawner",
+              "amount": 1
+            },
+            {
+              "id": "enderio:itemsoulvessel",
+              "amount": 1,
+              "requiredNBTMob": "GalacticraftCore.EvolvedEnderman"
+            }
+          ],
+          "outputs": [
+            {
+              "id": "enderio:itembrokenspawner",
+              "amount": 1,
+              "requiredNBTMob": "GalacticraftCore.EvolvedEnderman"
+            },
+            {
+              "id": "enderio:itemsoulvessel",
+              "amount": 1,
+              "empty": true
+            }
+          ],
+          "energyRF": 25000000,
+          "xpLevels": 30,
+          "note": "RC2 configured values; no zombie head ingredient."
+        },
+        {
+          "action": "Anvil: combine Powered Spawner + typed Broken Spawner",
+          "inputs": [
+            {
+              "id": "enderio:blockpoweredspawner",
+              "amount": 1
+            },
+            {
+              "id": "enderio:itembrokenspawner",
+              "amount": 1,
+              "requiredNBTMob": "GalacticraftCore.EvolvedEnderman"
+            }
+          ],
+          "output": {
+            "id": "enderio:blockpoweredspawner",
+            "amount": 1,
+            "requiredNBTMob": "GalacticraftCore.EvolvedEnderman"
+          },
+          "xpLevels": 30
+        },
+        {
+          "action": "Install mob-configured Powered Spawner in EEC controller slot",
+          "consumed": false
+        }
+      ],
+      "requiredMachines": [
+        {
+          "id": "enderio:blocksoulbinder",
+          "displayName": "Soul Binder",
+          "kind": "item",
+          "amount": 1,
+          "consumed": false
+        },
+        {
+          "id": "minecraft:anvil",
+          "kind": "item",
+          "amount": 1,
+          "consumed": false
+        }
+      ],
+      "byproducts": [
+        {
+          "id": "enderio:itemsoulvessel",
+          "displayName": "Soul Vial",
+          "kind": "item",
+          "amount": 1,
+          "note": "returned empty; reusable"
+        }
+      ],
+      "naturalAcquisitionRequirements": [
+        {
+          "resource": "Broken Spawner",
+          "method": "Break natural mob spawner (survival, allowed tool and mob); RC2 configured drop chance1.0. May instead use an existing Broken Spawner."
+        },
+        {
+          "resource": "Living Evolved Enderman",
+          "method": "Locate and capture the requested mob. This is an acquisition step, not a guessed item recipe."
+        }
+      ],
+      "sourceFiles": [
+        "SoulBinderSpawnerRecipe-EnderIO2.10.48.java",
+        "BlockPoweredSpawner-EnderIO2.10.48.java",
+        "ItemSoulVessel-EnderIO2.10.48.java",
+        "EnderIO-RC2.cfg"
+      ]
+    },
+    {
+      "id": "verified:prepare-spawner:sentryrobot",
+      "name": "Prepare Sentry Spawner",
+      "machineType": "Soul capture \u2192 Soul Binder \u2192 Anvil \u2192 EEC setup",
+      "inputs": [
+        {
+          "id": "enderio:blockpoweredspawner",
+          "displayName": "Powered Spawner",
+          "kind": "item",
+          "amount": 1
+        },
+        {
+          "id": "enderio:itembrokenspawner",
+          "displayName": "Broken Spawner",
+          "kind": "item",
+          "amount": 1
+        },
+        {
+          "id": "enderio:itemsoulvessel",
+          "displayName": "Soul Vial",
+          "kind": "item",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "factoryflow:eec_mob:sentryrobot",
+          "displayName": "Sentry Spawner",
+          "kind": "item",
+          "amount": 1,
+          "consumed": false
+        }
+      ],
+      "mobRegistryId": "sentryRobot",
+      "semantics": "Output is an existing Powered Spawner with mob NBT installed in EEC controller, not a new craftable item or per-batch consumable.",
+      "steps": [
+        {
+          "action": "Capture living mob with empty Soul Vial",
+          "mob": "sentryRobot",
+          "input": "enderio:itemsoulvessel",
+          "inputAmount": 1,
+          "output": "Soul Vial containing same mob (NBT)",
+          "restrictions": "Mob must be living, non-player, allowed by capture blacklist/boss config; NBT id preserves entity type."
+        },
+        {
+          "action": "Soul Binder: retarget Broken Spawner",
+          "inputs": [
+            {
+              "id": "enderio:itembrokenspawner",
+              "amount": 1
+            },
+            {
+              "id": "enderio:itemsoulvessel",
+              "amount": 1,
+              "requiredNBTMob": "sentryRobot"
+            }
+          ],
+          "outputs": [
+            {
+              "id": "enderio:itembrokenspawner",
+              "amount": 1,
+              "requiredNBTMob": "sentryRobot"
+            },
+            {
+              "id": "enderio:itemsoulvessel",
+              "amount": 1,
+              "empty": true
+            }
+          ],
+          "energyRF": 25000000,
+          "xpLevels": 30,
+          "note": "RC2 configured values; no zombie head ingredient."
+        },
+        {
+          "action": "Anvil: combine Powered Spawner + typed Broken Spawner",
+          "inputs": [
+            {
+              "id": "enderio:blockpoweredspawner",
+              "amount": 1
+            },
+            {
+              "id": "enderio:itembrokenspawner",
+              "amount": 1,
+              "requiredNBTMob": "sentryRobot"
+            }
+          ],
+          "output": {
+            "id": "enderio:blockpoweredspawner",
+            "amount": 1,
+            "requiredNBTMob": "sentryRobot"
+          },
+          "xpLevels": 30
+        },
+        {
+          "action": "Install mob-configured Powered Spawner in EEC controller slot",
+          "consumed": false
+        }
+      ],
+      "requiredMachines": [
+        {
+          "id": "enderio:blocksoulbinder",
+          "displayName": "Soul Binder",
+          "kind": "item",
+          "amount": 1,
+          "consumed": false
+        },
+        {
+          "id": "minecraft:anvil",
+          "kind": "item",
+          "amount": 1,
+          "consumed": false
+        }
+      ],
+      "byproducts": [
+        {
+          "id": "enderio:itemsoulvessel",
+          "displayName": "Soul Vial",
+          "kind": "item",
+          "amount": 1,
+          "note": "returned empty; reusable"
+        }
+      ],
+      "naturalAcquisitionRequirements": [
+        {
+          "resource": "Broken Spawner",
+          "method": "Break natural mob spawner (survival, allowed tool and mob); RC2 configured drop chance1.0. May instead use an existing Broken Spawner."
+        },
+        {
+          "resource": "Living Sentry",
+          "method": "Locate and capture the requested mob. This is an acquisition step, not a guessed item recipe."
+        }
+      ],
+      "sourceFiles": [
+        "SoulBinderSpawnerRecipe-EnderIO2.10.48.java",
+        "BlockPoweredSpawner-EnderIO2.10.48.java",
+        "ItemSoulVessel-EnderIO2.10.48.java",
+        "EnderIO-RC2.cfg"
+      ]
+    },
+    {
+      "id": "verified:prepare-spawner:specialmobs-blackberryslime",
+      "name": "Prepare Blackberry Slime Spawner",
+      "machineType": "Soul capture \u2192 Soul Binder \u2192 Anvil \u2192 EEC setup",
+      "inputs": [
+        {
+          "id": "enderio:blockpoweredspawner",
+          "displayName": "Powered Spawner",
+          "kind": "item",
+          "amount": 1
+        },
+        {
+          "id": "enderio:itembrokenspawner",
+          "displayName": "Broken Spawner",
+          "kind": "item",
+          "amount": 1
+        },
+        {
+          "id": "enderio:itemsoulvessel",
+          "displayName": "Soul Vial",
+          "kind": "item",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "factoryflow:eec_mob:specialmobs-blackberryslime",
+          "displayName": "Blackberry Slime Spawner",
+          "kind": "item",
+          "amount": 1,
+          "consumed": false
+        }
+      ],
+      "mobRegistryId": "SpecialMobs.BlackberrySlime",
+      "semantics": "Output is an existing Powered Spawner with mob NBT installed in EEC controller, not a new craftable item or per-batch consumable.",
+      "steps": [
+        {
+          "action": "Capture living mob with empty Soul Vial",
+          "mob": "SpecialMobs.BlackberrySlime",
+          "input": "enderio:itemsoulvessel",
+          "inputAmount": 1,
+          "output": "Soul Vial containing same mob (NBT)",
+          "restrictions": "Mob must be living, non-player, allowed by capture blacklist/boss config; NBT id preserves entity type."
+        },
+        {
+          "action": "Soul Binder: retarget Broken Spawner",
+          "inputs": [
+            {
+              "id": "enderio:itembrokenspawner",
+              "amount": 1
+            },
+            {
+              "id": "enderio:itemsoulvessel",
+              "amount": 1,
+              "requiredNBTMob": "SpecialMobs.BlackberrySlime"
+            }
+          ],
+          "outputs": [
+            {
+              "id": "enderio:itembrokenspawner",
+              "amount": 1,
+              "requiredNBTMob": "SpecialMobs.BlackberrySlime"
+            },
+            {
+              "id": "enderio:itemsoulvessel",
+              "amount": 1,
+              "empty": true
+            }
+          ],
+          "energyRF": 25000000,
+          "xpLevels": 30,
+          "note": "RC2 configured values; no zombie head ingredient."
+        },
+        {
+          "action": "Anvil: combine Powered Spawner + typed Broken Spawner",
+          "inputs": [
+            {
+              "id": "enderio:blockpoweredspawner",
+              "amount": 1
+            },
+            {
+              "id": "enderio:itembrokenspawner",
+              "amount": 1,
+              "requiredNBTMob": "SpecialMobs.BlackberrySlime"
+            }
+          ],
+          "output": {
+            "id": "enderio:blockpoweredspawner",
+            "amount": 1,
+            "requiredNBTMob": "SpecialMobs.BlackberrySlime"
+          },
+          "xpLevels": 30
+        },
+        {
+          "action": "Install mob-configured Powered Spawner in EEC controller slot",
+          "consumed": false
+        }
+      ],
+      "requiredMachines": [
+        {
+          "id": "enderio:blocksoulbinder",
+          "displayName": "Soul Binder",
+          "kind": "item",
+          "amount": 1,
+          "consumed": false
+        },
+        {
+          "id": "minecraft:anvil",
+          "kind": "item",
+          "amount": 1,
+          "consumed": false
+        }
+      ],
+      "byproducts": [
+        {
+          "id": "enderio:itemsoulvessel",
+          "displayName": "Soul Vial",
+          "kind": "item",
+          "amount": 1,
+          "note": "returned empty; reusable"
+        }
+      ],
+      "naturalAcquisitionRequirements": [
+        {
+          "resource": "Broken Spawner",
+          "method": "Break natural mob spawner (survival, allowed tool and mob); RC2 configured drop chance1.0. May instead use an existing Broken Spawner."
+        },
+        {
+          "resource": "Living Blackberry Slime",
+          "method": "Locate and capture the requested mob. This is an acquisition step, not a guessed item recipe."
+        }
+      ],
+      "sourceFiles": [
+        "SoulBinderSpawnerRecipe-EnderIO2.10.48.java",
+        "BlockPoweredSpawner-EnderIO2.10.48.java",
+        "ItemSoulVessel-EnderIO2.10.48.java",
+        "EnderIO-RC2.cfg"
+      ]
+    },
+    {
+      "id": "verified:prepare-spawner:specialmobs-dominationwitch",
+      "name": "Prepare Witch of Domination Spawner",
+      "machineType": "Soul capture \u2192 Soul Binder \u2192 Anvil \u2192 EEC setup",
+      "inputs": [
+        {
+          "id": "enderio:blockpoweredspawner",
+          "displayName": "Powered Spawner",
+          "kind": "item",
+          "amount": 1
+        },
+        {
+          "id": "enderio:itembrokenspawner",
+          "displayName": "Broken Spawner",
+          "kind": "item",
+          "amount": 1
+        },
+        {
+          "id": "enderio:itemsoulvessel",
+          "displayName": "Soul Vial",
+          "kind": "item",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "factoryflow:eec_mob:specialmobs-dominationwitch",
+          "displayName": "Witch of Domination Spawner",
+          "kind": "item",
+          "amount": 1,
+          "consumed": false
+        }
+      ],
+      "mobRegistryId": "SpecialMobs.DominationWitch",
+      "semantics": "Output is an existing Powered Spawner with mob NBT installed in EEC controller, not a new craftable item or per-batch consumable.",
+      "steps": [
+        {
+          "action": "Capture living mob with empty Soul Vial",
+          "mob": "SpecialMobs.DominationWitch",
+          "input": "enderio:itemsoulvessel",
+          "inputAmount": 1,
+          "output": "Soul Vial containing same mob (NBT)",
+          "restrictions": "Mob must be living, non-player, allowed by capture blacklist/boss config; NBT id preserves entity type."
+        },
+        {
+          "action": "Soul Binder: retarget Broken Spawner",
+          "inputs": [
+            {
+              "id": "enderio:itembrokenspawner",
+              "amount": 1
+            },
+            {
+              "id": "enderio:itemsoulvessel",
+              "amount": 1,
+              "requiredNBTMob": "SpecialMobs.DominationWitch"
+            }
+          ],
+          "outputs": [
+            {
+              "id": "enderio:itembrokenspawner",
+              "amount": 1,
+              "requiredNBTMob": "SpecialMobs.DominationWitch"
+            },
+            {
+              "id": "enderio:itemsoulvessel",
+              "amount": 1,
+              "empty": true
+            }
+          ],
+          "energyRF": 25000000,
+          "xpLevels": 30,
+          "note": "RC2 configured values; no zombie head ingredient."
+        },
+        {
+          "action": "Anvil: combine Powered Spawner + typed Broken Spawner",
+          "inputs": [
+            {
+              "id": "enderio:blockpoweredspawner",
+              "amount": 1
+            },
+            {
+              "id": "enderio:itembrokenspawner",
+              "amount": 1,
+              "requiredNBTMob": "SpecialMobs.DominationWitch"
+            }
+          ],
+          "output": {
+            "id": "enderio:blockpoweredspawner",
+            "amount": 1,
+            "requiredNBTMob": "SpecialMobs.DominationWitch"
+          },
+          "xpLevels": 30
+        },
+        {
+          "action": "Install mob-configured Powered Spawner in EEC controller slot",
+          "consumed": false
+        }
+      ],
+      "requiredMachines": [
+        {
+          "id": "enderio:blocksoulbinder",
+          "displayName": "Soul Binder",
+          "kind": "item",
+          "amount": 1,
+          "consumed": false
+        },
+        {
+          "id": "minecraft:anvil",
+          "kind": "item",
+          "amount": 1,
+          "consumed": false
+        }
+      ],
+      "byproducts": [
+        {
+          "id": "enderio:itemsoulvessel",
+          "displayName": "Soul Vial",
+          "kind": "item",
+          "amount": 1,
+          "note": "returned empty; reusable"
+        }
+      ],
+      "naturalAcquisitionRequirements": [
+        {
+          "resource": "Broken Spawner",
+          "method": "Break natural mob spawner (survival, allowed tool and mob); RC2 configured drop chance1.0. May instead use an existing Broken Spawner."
+        },
+        {
+          "resource": "Living Witch of Domination",
+          "method": "Locate and capture the requested mob. This is an acquisition step, not a guessed item recipe."
+        }
+      ],
+      "sourceFiles": [
+        "SoulBinderSpawnerRecipe-EnderIO2.10.48.java",
+        "BlockPoweredSpawner-EnderIO2.10.48.java",
+        "ItemSoulVessel-EnderIO2.10.48.java",
+        "EnderIO-RC2.cfg"
+      ]
+    },
+    {
+      "id": "verified:prepare-spawner:specialmobs-infernoblaze",
+      "name": "Prepare Inferno Spawner",
+      "machineType": "Soul capture \u2192 Soul Binder \u2192 Anvil \u2192 EEC setup",
+      "inputs": [
+        {
+          "id": "enderio:blockpoweredspawner",
+          "displayName": "Powered Spawner",
+          "kind": "item",
+          "amount": 1
+        },
+        {
+          "id": "enderio:itembrokenspawner",
+          "displayName": "Broken Spawner",
+          "kind": "item",
+          "amount": 1
+        },
+        {
+          "id": "enderio:itemsoulvessel",
+          "displayName": "Soul Vial",
+          "kind": "item",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "factoryflow:eec_mob:specialmobs-infernoblaze",
+          "displayName": "Inferno Spawner",
+          "kind": "item",
+          "amount": 1,
+          "consumed": false
+        }
+      ],
+      "mobRegistryId": "SpecialMobs.InfernoBlaze",
+      "semantics": "Output is an existing Powered Spawner with mob NBT installed in EEC controller, not a new craftable item or per-batch consumable.",
+      "steps": [
+        {
+          "action": "Capture living mob with empty Soul Vial",
+          "mob": "SpecialMobs.InfernoBlaze",
+          "input": "enderio:itemsoulvessel",
+          "inputAmount": 1,
+          "output": "Soul Vial containing same mob (NBT)",
+          "restrictions": "Mob must be living, non-player, allowed by capture blacklist/boss config; NBT id preserves entity type."
+        },
+        {
+          "action": "Soul Binder: retarget Broken Spawner",
+          "inputs": [
+            {
+              "id": "enderio:itembrokenspawner",
+              "amount": 1
+            },
+            {
+              "id": "enderio:itemsoulvessel",
+              "amount": 1,
+              "requiredNBTMob": "SpecialMobs.InfernoBlaze"
+            }
+          ],
+          "outputs": [
+            {
+              "id": "enderio:itembrokenspawner",
+              "amount": 1,
+              "requiredNBTMob": "SpecialMobs.InfernoBlaze"
+            },
+            {
+              "id": "enderio:itemsoulvessel",
+              "amount": 1,
+              "empty": true
+            }
+          ],
+          "energyRF": 25000000,
+          "xpLevels": 30,
+          "note": "RC2 configured values; no zombie head ingredient."
+        },
+        {
+          "action": "Anvil: combine Powered Spawner + typed Broken Spawner",
+          "inputs": [
+            {
+              "id": "enderio:blockpoweredspawner",
+              "amount": 1
+            },
+            {
+              "id": "enderio:itembrokenspawner",
+              "amount": 1,
+              "requiredNBTMob": "SpecialMobs.InfernoBlaze"
+            }
+          ],
+          "output": {
+            "id": "enderio:blockpoweredspawner",
+            "amount": 1,
+            "requiredNBTMob": "SpecialMobs.InfernoBlaze"
+          },
+          "xpLevels": 30
+        },
+        {
+          "action": "Install mob-configured Powered Spawner in EEC controller slot",
+          "consumed": false
+        }
+      ],
+      "requiredMachines": [
+        {
+          "id": "enderio:blocksoulbinder",
+          "displayName": "Soul Binder",
+          "kind": "item",
+          "amount": 1,
+          "consumed": false
+        },
+        {
+          "id": "minecraft:anvil",
+          "kind": "item",
+          "amount": 1,
+          "consumed": false
+        }
+      ],
+      "byproducts": [
+        {
+          "id": "enderio:itemsoulvessel",
+          "displayName": "Soul Vial",
+          "kind": "item",
+          "amount": 1,
+          "note": "returned empty; reusable"
+        }
+      ],
+      "naturalAcquisitionRequirements": [
+        {
+          "resource": "Broken Spawner",
+          "method": "Break natural mob spawner (survival, allowed tool and mob); RC2 configured drop chance1.0. May instead use an existing Broken Spawner."
+        },
+        {
+          "resource": "Living Inferno",
+          "method": "Locate and capture the requested mob. This is an acquisition step, not a guessed item recipe."
+        }
+      ],
+      "sourceFiles": [
+        "SoulBinderSpawnerRecipe-EnderIO2.10.48.java",
+        "BlockPoweredSpawner-EnderIO2.10.48.java",
+        "ItemSoulVessel-EnderIO2.10.48.java",
+        "EnderIO-RC2.cfg"
+      ]
+    },
+    {
+      "id": "verified:prepare-spawner:specialmobs-watermelonslime",
+      "name": "Prepare Watermelon Slime Spawner",
+      "machineType": "Soul capture \u2192 Soul Binder \u2192 Anvil \u2192 EEC setup",
+      "inputs": [
+        {
+          "id": "enderio:blockpoweredspawner",
+          "displayName": "Powered Spawner",
+          "kind": "item",
+          "amount": 1
+        },
+        {
+          "id": "enderio:itembrokenspawner",
+          "displayName": "Broken Spawner",
+          "kind": "item",
+          "amount": 1
+        },
+        {
+          "id": "enderio:itemsoulvessel",
+          "displayName": "Soul Vial",
+          "kind": "item",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "factoryflow:eec_mob:specialmobs-watermelonslime",
+          "displayName": "Watermelon Slime Spawner",
+          "kind": "item",
+          "amount": 1,
+          "consumed": false
+        }
+      ],
+      "mobRegistryId": "SpecialMobs.WatermelonSlime",
+      "semantics": "Output is an existing Powered Spawner with mob NBT installed in EEC controller, not a new craftable item or per-batch consumable.",
+      "steps": [
+        {
+          "action": "Capture living mob with empty Soul Vial",
+          "mob": "SpecialMobs.WatermelonSlime",
+          "input": "enderio:itemsoulvessel",
+          "inputAmount": 1,
+          "output": "Soul Vial containing same mob (NBT)",
+          "restrictions": "Mob must be living, non-player, allowed by capture blacklist/boss config; NBT id preserves entity type."
+        },
+        {
+          "action": "Soul Binder: retarget Broken Spawner",
+          "inputs": [
+            {
+              "id": "enderio:itembrokenspawner",
+              "amount": 1
+            },
+            {
+              "id": "enderio:itemsoulvessel",
+              "amount": 1,
+              "requiredNBTMob": "SpecialMobs.WatermelonSlime"
+            }
+          ],
+          "outputs": [
+            {
+              "id": "enderio:itembrokenspawner",
+              "amount": 1,
+              "requiredNBTMob": "SpecialMobs.WatermelonSlime"
+            },
+            {
+              "id": "enderio:itemsoulvessel",
+              "amount": 1,
+              "empty": true
+            }
+          ],
+          "energyRF": 25000000,
+          "xpLevels": 30,
+          "note": "RC2 configured values; no zombie head ingredient."
+        },
+        {
+          "action": "Anvil: combine Powered Spawner + typed Broken Spawner",
+          "inputs": [
+            {
+              "id": "enderio:blockpoweredspawner",
+              "amount": 1
+            },
+            {
+              "id": "enderio:itembrokenspawner",
+              "amount": 1,
+              "requiredNBTMob": "SpecialMobs.WatermelonSlime"
+            }
+          ],
+          "output": {
+            "id": "enderio:blockpoweredspawner",
+            "amount": 1,
+            "requiredNBTMob": "SpecialMobs.WatermelonSlime"
+          },
+          "xpLevels": 30
+        },
+        {
+          "action": "Install mob-configured Powered Spawner in EEC controller slot",
+          "consumed": false
+        }
+      ],
+      "requiredMachines": [
+        {
+          "id": "enderio:blocksoulbinder",
+          "displayName": "Soul Binder",
+          "kind": "item",
+          "amount": 1,
+          "consumed": false
+        },
+        {
+          "id": "minecraft:anvil",
+          "kind": "item",
+          "amount": 1,
+          "consumed": false
+        }
+      ],
+      "byproducts": [
+        {
+          "id": "enderio:itemsoulvessel",
+          "displayName": "Soul Vial",
+          "kind": "item",
+          "amount": 1,
+          "note": "returned empty; reusable"
+        }
+      ],
+      "naturalAcquisitionRequirements": [
+        {
+          "resource": "Broken Spawner",
+          "method": "Break natural mob spawner (survival, allowed tool and mob); RC2 configured drop chance1.0. May instead use an existing Broken Spawner."
+        },
+        {
+          "resource": "Living Watermelon Slime",
+          "method": "Locate and capture the requested mob. This is an acquisition step, not a guessed item recipe."
+        }
+      ],
+      "sourceFiles": [
+        "SoulBinderSpawnerRecipe-EnderIO2.10.48.java",
+        "BlockPoweredSpawner-EnderIO2.10.48.java",
+        "ItemSoulVessel-EnderIO2.10.48.java",
+        "EnderIO-RC2.cfg"
+      ]
+    },
+    {
+      "id": "verified:prepare-spawner:twilightforest-helmet-crab",
+      "name": "Prepare Helmet Crab Spawner",
+      "machineType": "Soul capture \u2192 Soul Binder \u2192 Anvil \u2192 EEC setup",
+      "inputs": [
+        {
+          "id": "enderio:blockpoweredspawner",
+          "displayName": "Powered Spawner",
+          "kind": "item",
+          "amount": 1
+        },
+        {
+          "id": "enderio:itembrokenspawner",
+          "displayName": "Broken Spawner",
+          "kind": "item",
+          "amount": 1
+        },
+        {
+          "id": "enderio:itemsoulvessel",
+          "displayName": "Soul Vial",
+          "kind": "item",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "factoryflow:eec_mob:twilightforest-helmet-crab",
+          "displayName": "Helmet Crab Spawner",
+          "kind": "item",
+          "amount": 1,
+          "consumed": false
+        }
+      ],
+      "mobRegistryId": "TwilightForest.Helmet Crab",
+      "semantics": "Output is an existing Powered Spawner with mob NBT installed in EEC controller, not a new craftable item or per-batch consumable.",
+      "steps": [
+        {
+          "action": "Capture living mob with empty Soul Vial",
+          "mob": "TwilightForest.Helmet Crab",
+          "input": "enderio:itemsoulvessel",
+          "inputAmount": 1,
+          "output": "Soul Vial containing same mob (NBT)",
+          "restrictions": "Mob must be living, non-player, allowed by capture blacklist/boss config; NBT id preserves entity type."
+        },
+        {
+          "action": "Soul Binder: retarget Broken Spawner",
+          "inputs": [
+            {
+              "id": "enderio:itembrokenspawner",
+              "amount": 1
+            },
+            {
+              "id": "enderio:itemsoulvessel",
+              "amount": 1,
+              "requiredNBTMob": "TwilightForest.Helmet Crab"
+            }
+          ],
+          "outputs": [
+            {
+              "id": "enderio:itembrokenspawner",
+              "amount": 1,
+              "requiredNBTMob": "TwilightForest.Helmet Crab"
+            },
+            {
+              "id": "enderio:itemsoulvessel",
+              "amount": 1,
+              "empty": true
+            }
+          ],
+          "energyRF": 25000000,
+          "xpLevels": 30,
+          "note": "RC2 configured values; no zombie head ingredient."
+        },
+        {
+          "action": "Anvil: combine Powered Spawner + typed Broken Spawner",
+          "inputs": [
+            {
+              "id": "enderio:blockpoweredspawner",
+              "amount": 1
+            },
+            {
+              "id": "enderio:itembrokenspawner",
+              "amount": 1,
+              "requiredNBTMob": "TwilightForest.Helmet Crab"
+            }
+          ],
+          "output": {
+            "id": "enderio:blockpoweredspawner",
+            "amount": 1,
+            "requiredNBTMob": "TwilightForest.Helmet Crab"
+          },
+          "xpLevels": 30
+        },
+        {
+          "action": "Install mob-configured Powered Spawner in EEC controller slot",
+          "consumed": false
+        }
+      ],
+      "requiredMachines": [
+        {
+          "id": "enderio:blocksoulbinder",
+          "displayName": "Soul Binder",
+          "kind": "item",
+          "amount": 1,
+          "consumed": false
+        },
+        {
+          "id": "minecraft:anvil",
+          "kind": "item",
+          "amount": 1,
+          "consumed": false
+        }
+      ],
+      "byproducts": [
+        {
+          "id": "enderio:itemsoulvessel",
+          "displayName": "Soul Vial",
+          "kind": "item",
+          "amount": 1,
+          "note": "returned empty; reusable"
+        }
+      ],
+      "naturalAcquisitionRequirements": [
+        {
+          "resource": "Broken Spawner",
+          "method": "Break natural mob spawner (survival, allowed tool and mob); RC2 configured drop chance1.0. May instead use an existing Broken Spawner."
+        },
+        {
+          "resource": "Living Helmet Crab",
+          "method": "Locate and capture the requested mob. This is an acquisition step, not a guessed item recipe."
+        }
+      ],
+      "sourceFiles": [
+        "SoulBinderSpawnerRecipe-EnderIO2.10.48.java",
+        "BlockPoweredSpawner-EnderIO2.10.48.java",
+        "ItemSoulVessel-EnderIO2.10.48.java",
+        "EnderIO-RC2.cfg"
+      ]
+    },
+    {
+      "id": "verified:prepare-spawner:twilightforest-redcap",
+      "name": "Prepare Redcap Spawner",
+      "machineType": "Soul capture \u2192 Soul Binder \u2192 Anvil \u2192 EEC setup",
+      "inputs": [
+        {
+          "id": "enderio:blockpoweredspawner",
+          "displayName": "Powered Spawner",
+          "kind": "item",
+          "amount": 1
+        },
+        {
+          "id": "enderio:itembrokenspawner",
+          "displayName": "Broken Spawner",
+          "kind": "item",
+          "amount": 1
+        },
+        {
+          "id": "enderio:itemsoulvessel",
+          "displayName": "Soul Vial",
+          "kind": "item",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "factoryflow:eec_mob:twilightforest-redcap",
+          "displayName": "Redcap Spawner",
+          "kind": "item",
+          "amount": 1,
+          "consumed": false
+        }
+      ],
+      "mobRegistryId": "TwilightForest.Redcap",
+      "semantics": "Output is an existing Powered Spawner with mob NBT installed in EEC controller, not a new craftable item or per-batch consumable.",
+      "steps": [
+        {
+          "action": "Capture living mob with empty Soul Vial",
+          "mob": "TwilightForest.Redcap",
+          "input": "enderio:itemsoulvessel",
+          "inputAmount": 1,
+          "output": "Soul Vial containing same mob (NBT)",
+          "restrictions": "Mob must be living, non-player, allowed by capture blacklist/boss config; NBT id preserves entity type."
+        },
+        {
+          "action": "Soul Binder: retarget Broken Spawner",
+          "inputs": [
+            {
+              "id": "enderio:itembrokenspawner",
+              "amount": 1
+            },
+            {
+              "id": "enderio:itemsoulvessel",
+              "amount": 1,
+              "requiredNBTMob": "TwilightForest.Redcap"
+            }
+          ],
+          "outputs": [
+            {
+              "id": "enderio:itembrokenspawner",
+              "amount": 1,
+              "requiredNBTMob": "TwilightForest.Redcap"
+            },
+            {
+              "id": "enderio:itemsoulvessel",
+              "amount": 1,
+              "empty": true
+            }
+          ],
+          "energyRF": 25000000,
+          "xpLevels": 30,
+          "note": "RC2 configured values; no zombie head ingredient."
+        },
+        {
+          "action": "Anvil: combine Powered Spawner + typed Broken Spawner",
+          "inputs": [
+            {
+              "id": "enderio:blockpoweredspawner",
+              "amount": 1
+            },
+            {
+              "id": "enderio:itembrokenspawner",
+              "amount": 1,
+              "requiredNBTMob": "TwilightForest.Redcap"
+            }
+          ],
+          "output": {
+            "id": "enderio:blockpoweredspawner",
+            "amount": 1,
+            "requiredNBTMob": "TwilightForest.Redcap"
+          },
+          "xpLevels": 30
+        },
+        {
+          "action": "Install mob-configured Powered Spawner in EEC controller slot",
+          "consumed": false
+        }
+      ],
+      "requiredMachines": [
+        {
+          "id": "enderio:blocksoulbinder",
+          "displayName": "Soul Binder",
+          "kind": "item",
+          "amount": 1,
+          "consumed": false
+        },
+        {
+          "id": "minecraft:anvil",
+          "kind": "item",
+          "amount": 1,
+          "consumed": false
+        }
+      ],
+      "byproducts": [
+        {
+          "id": "enderio:itemsoulvessel",
+          "displayName": "Soul Vial",
+          "kind": "item",
+          "amount": 1,
+          "note": "returned empty; reusable"
+        }
+      ],
+      "naturalAcquisitionRequirements": [
+        {
+          "resource": "Broken Spawner",
+          "method": "Break natural mob spawner (survival, allowed tool and mob); RC2 configured drop chance1.0. May instead use an existing Broken Spawner."
+        },
+        {
+          "resource": "Living Redcap",
+          "method": "Locate and capture the requested mob. This is an acquisition step, not a guessed item recipe."
+        }
+      ],
+      "sourceFiles": [
+        "SoulBinderSpawnerRecipe-EnderIO2.10.48.java",
+        "BlockPoweredSpawner-EnderIO2.10.48.java",
+        "ItemSoulVessel-EnderIO2.10.48.java",
+        "EnderIO-RC2.cfg"
+      ]
+    },
+    {
+      "id": "verified:prepare-spawner:twilightforest-slime-beetle",
+      "name": "Prepare Slime Beetle Spawner",
+      "machineType": "Soul capture \u2192 Soul Binder \u2192 Anvil \u2192 EEC setup",
+      "inputs": [
+        {
+          "id": "enderio:blockpoweredspawner",
+          "displayName": "Powered Spawner",
+          "kind": "item",
+          "amount": 1
+        },
+        {
+          "id": "enderio:itembrokenspawner",
+          "displayName": "Broken Spawner",
+          "kind": "item",
+          "amount": 1
+        },
+        {
+          "id": "enderio:itemsoulvessel",
+          "displayName": "Soul Vial",
+          "kind": "item",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "factoryflow:eec_mob:twilightforest-slime-beetle",
+          "displayName": "Slime Beetle Spawner",
+          "kind": "item",
+          "amount": 1,
+          "consumed": false
+        }
+      ],
+      "mobRegistryId": "TwilightForest.Slime Beetle",
+      "semantics": "Output is an existing Powered Spawner with mob NBT installed in EEC controller, not a new craftable item or per-batch consumable.",
+      "steps": [
+        {
+          "action": "Capture living mob with empty Soul Vial",
+          "mob": "TwilightForest.Slime Beetle",
+          "input": "enderio:itemsoulvessel",
+          "inputAmount": 1,
+          "output": "Soul Vial containing same mob (NBT)",
+          "restrictions": "Mob must be living, non-player, allowed by capture blacklist/boss config; NBT id preserves entity type."
+        },
+        {
+          "action": "Soul Binder: retarget Broken Spawner",
+          "inputs": [
+            {
+              "id": "enderio:itembrokenspawner",
+              "amount": 1
+            },
+            {
+              "id": "enderio:itemsoulvessel",
+              "amount": 1,
+              "requiredNBTMob": "TwilightForest.Slime Beetle"
+            }
+          ],
+          "outputs": [
+            {
+              "id": "enderio:itembrokenspawner",
+              "amount": 1,
+              "requiredNBTMob": "TwilightForest.Slime Beetle"
+            },
+            {
+              "id": "enderio:itemsoulvessel",
+              "amount": 1,
+              "empty": true
+            }
+          ],
+          "energyRF": 25000000,
+          "xpLevels": 30,
+          "note": "RC2 configured values; no zombie head ingredient."
+        },
+        {
+          "action": "Anvil: combine Powered Spawner + typed Broken Spawner",
+          "inputs": [
+            {
+              "id": "enderio:blockpoweredspawner",
+              "amount": 1
+            },
+            {
+              "id": "enderio:itembrokenspawner",
+              "amount": 1,
+              "requiredNBTMob": "TwilightForest.Slime Beetle"
+            }
+          ],
+          "output": {
+            "id": "enderio:blockpoweredspawner",
+            "amount": 1,
+            "requiredNBTMob": "TwilightForest.Slime Beetle"
+          },
+          "xpLevels": 30
+        },
+        {
+          "action": "Install mob-configured Powered Spawner in EEC controller slot",
+          "consumed": false
+        }
+      ],
+      "requiredMachines": [
+        {
+          "id": "enderio:blocksoulbinder",
+          "displayName": "Soul Binder",
+          "kind": "item",
+          "amount": 1,
+          "consumed": false
+        },
+        {
+          "id": "minecraft:anvil",
+          "kind": "item",
+          "amount": 1,
+          "consumed": false
+        }
+      ],
+      "byproducts": [
+        {
+          "id": "enderio:itemsoulvessel",
+          "displayName": "Soul Vial",
+          "kind": "item",
+          "amount": 1,
+          "note": "returned empty; reusable"
+        }
+      ],
+      "naturalAcquisitionRequirements": [
+        {
+          "resource": "Broken Spawner",
+          "method": "Break natural mob spawner (survival, allowed tool and mob); RC2 configured drop chance1.0. May instead use an existing Broken Spawner."
+        },
+        {
+          "resource": "Living Slime Beetle",
+          "method": "Locate and capture the requested mob. This is an acquisition step, not a guessed item recipe."
+        }
+      ],
+      "sourceFiles": [
+        "SoulBinderSpawnerRecipe-EnderIO2.10.48.java",
+        "BlockPoweredSpawner-EnderIO2.10.48.java",
+        "ItemSoulVessel-EnderIO2.10.48.java",
+        "EnderIO-RC2.cfg"
+      ]
+    },
+    {
+      "id": "verified:prepare-spawner:twilightforest-twilight-kobold",
+      "name": "Prepare Kobold Spawner",
+      "machineType": "Soul capture \u2192 Soul Binder \u2192 Anvil \u2192 EEC setup",
+      "inputs": [
+        {
+          "id": "enderio:blockpoweredspawner",
+          "displayName": "Powered Spawner",
+          "kind": "item",
+          "amount": 1
+        },
+        {
+          "id": "enderio:itembrokenspawner",
+          "displayName": "Broken Spawner",
+          "kind": "item",
+          "amount": 1
+        },
+        {
+          "id": "enderio:itemsoulvessel",
+          "displayName": "Soul Vial",
+          "kind": "item",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "factoryflow:eec_mob:twilightforest-twilight-kobold",
+          "displayName": "Kobold Spawner",
+          "kind": "item",
+          "amount": 1,
+          "consumed": false
+        }
+      ],
+      "mobRegistryId": "TwilightForest.Twilight Kobold",
+      "semantics": "Output is an existing Powered Spawner with mob NBT installed in EEC controller, not a new craftable item or per-batch consumable.",
+      "steps": [
+        {
+          "action": "Capture living mob with empty Soul Vial",
+          "mob": "TwilightForest.Twilight Kobold",
+          "input": "enderio:itemsoulvessel",
+          "inputAmount": 1,
+          "output": "Soul Vial containing same mob (NBT)",
+          "restrictions": "Mob must be living, non-player, allowed by capture blacklist/boss config; NBT id preserves entity type."
+        },
+        {
+          "action": "Soul Binder: retarget Broken Spawner",
+          "inputs": [
+            {
+              "id": "enderio:itembrokenspawner",
+              "amount": 1
+            },
+            {
+              "id": "enderio:itemsoulvessel",
+              "amount": 1,
+              "requiredNBTMob": "TwilightForest.Twilight Kobold"
+            }
+          ],
+          "outputs": [
+            {
+              "id": "enderio:itembrokenspawner",
+              "amount": 1,
+              "requiredNBTMob": "TwilightForest.Twilight Kobold"
+            },
+            {
+              "id": "enderio:itemsoulvessel",
+              "amount": 1,
+              "empty": true
+            }
+          ],
+          "energyRF": 25000000,
+          "xpLevels": 30,
+          "note": "RC2 configured values; no zombie head ingredient."
+        },
+        {
+          "action": "Anvil: combine Powered Spawner + typed Broken Spawner",
+          "inputs": [
+            {
+              "id": "enderio:blockpoweredspawner",
+              "amount": 1
+            },
+            {
+              "id": "enderio:itembrokenspawner",
+              "amount": 1,
+              "requiredNBTMob": "TwilightForest.Twilight Kobold"
+            }
+          ],
+          "output": {
+            "id": "enderio:blockpoweredspawner",
+            "amount": 1,
+            "requiredNBTMob": "TwilightForest.Twilight Kobold"
+          },
+          "xpLevels": 30
+        },
+        {
+          "action": "Install mob-configured Powered Spawner in EEC controller slot",
+          "consumed": false
+        }
+      ],
+      "requiredMachines": [
+        {
+          "id": "enderio:blocksoulbinder",
+          "displayName": "Soul Binder",
+          "kind": "item",
+          "amount": 1,
+          "consumed": false
+        },
+        {
+          "id": "minecraft:anvil",
+          "kind": "item",
+          "amount": 1,
+          "consumed": false
+        }
+      ],
+      "byproducts": [
+        {
+          "id": "enderio:itemsoulvessel",
+          "displayName": "Soul Vial",
+          "kind": "item",
+          "amount": 1,
+          "note": "returned empty; reusable"
+        }
+      ],
+      "naturalAcquisitionRequirements": [
+        {
+          "resource": "Broken Spawner",
+          "method": "Break natural mob spawner (survival, allowed tool and mob); RC2 configured drop chance1.0. May instead use an existing Broken Spawner."
+        },
+        {
+          "resource": "Living Kobold",
+          "method": "Locate and capture the requested mob. This is an acquisition step, not a guessed item recipe."
+        }
+      ],
+      "sourceFiles": [
+        "SoulBinderSpawnerRecipe-EnderIO2.10.48.java",
+        "BlockPoweredSpawner-EnderIO2.10.48.java",
+        "ItemSoulVessel-EnderIO2.10.48.java",
+        "EnderIO-RC2.cfg"
+      ]
+    },
+    {
+      "id": "verified:prepare-spawner:villagenames-guardian",
+      "name": "Prepare Guardian Spawner",
+      "machineType": "Soul capture \u2192 Soul Binder \u2192 Anvil \u2192 EEC setup",
+      "inputs": [
+        {
+          "id": "enderio:blockpoweredspawner",
+          "displayName": "Powered Spawner",
+          "kind": "item",
+          "amount": 1
+        },
+        {
+          "id": "enderio:itembrokenspawner",
+          "displayName": "Broken Spawner",
+          "kind": "item",
+          "amount": 1
+        },
+        {
+          "id": "enderio:itemsoulvessel",
+          "displayName": "Soul Vial",
+          "kind": "item",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "factoryflow:eec_mob:villagenames-guardian",
+          "displayName": "Guardian Spawner",
+          "kind": "item",
+          "amount": 1,
+          "consumed": false
+        }
+      ],
+      "mobRegistryId": "VillageNames.Guardian",
+      "semantics": "Output is an existing Powered Spawner with mob NBT installed in EEC controller, not a new craftable item or per-batch consumable.",
+      "steps": [
+        {
+          "action": "Capture living mob with empty Soul Vial",
+          "mob": "VillageNames.Guardian",
+          "input": "enderio:itemsoulvessel",
+          "inputAmount": 1,
+          "output": "Soul Vial containing same mob (NBT)",
+          "restrictions": "Mob must be living, non-player, allowed by capture blacklist/boss config; NBT id preserves entity type."
+        },
+        {
+          "action": "Soul Binder: retarget Broken Spawner",
+          "inputs": [
+            {
+              "id": "enderio:itembrokenspawner",
+              "amount": 1
+            },
+            {
+              "id": "enderio:itemsoulvessel",
+              "amount": 1,
+              "requiredNBTMob": "VillageNames.Guardian"
+            }
+          ],
+          "outputs": [
+            {
+              "id": "enderio:itembrokenspawner",
+              "amount": 1,
+              "requiredNBTMob": "VillageNames.Guardian"
+            },
+            {
+              "id": "enderio:itemsoulvessel",
+              "amount": 1,
+              "empty": true
+            }
+          ],
+          "energyRF": 25000000,
+          "xpLevels": 30,
+          "note": "RC2 configured values; no zombie head ingredient."
+        },
+        {
+          "action": "Anvil: combine Powered Spawner + typed Broken Spawner",
+          "inputs": [
+            {
+              "id": "enderio:blockpoweredspawner",
+              "amount": 1
+            },
+            {
+              "id": "enderio:itembrokenspawner",
+              "amount": 1,
+              "requiredNBTMob": "VillageNames.Guardian"
+            }
+          ],
+          "output": {
+            "id": "enderio:blockpoweredspawner",
+            "amount": 1,
+            "requiredNBTMob": "VillageNames.Guardian"
+          },
+          "xpLevels": 30
+        },
+        {
+          "action": "Install mob-configured Powered Spawner in EEC controller slot",
+          "consumed": false
+        }
+      ],
+      "requiredMachines": [
+        {
+          "id": "enderio:blocksoulbinder",
+          "displayName": "Soul Binder",
+          "kind": "item",
+          "amount": 1,
+          "consumed": false
+        },
+        {
+          "id": "minecraft:anvil",
+          "kind": "item",
+          "amount": 1,
+          "consumed": false
+        }
+      ],
+      "byproducts": [
+        {
+          "id": "enderio:itemsoulvessel",
+          "displayName": "Soul Vial",
+          "kind": "item",
+          "amount": 1,
+          "note": "returned empty; reusable"
+        }
+      ],
+      "naturalAcquisitionRequirements": [
+        {
+          "resource": "Broken Spawner",
+          "method": "Break natural mob spawner (survival, allowed tool and mob); RC2 configured drop chance1.0. May instead use an existing Broken Spawner."
+        },
+        {
+          "resource": "Living Guardian",
+          "method": "Locate and capture the requested mob. This is an acquisition step, not a guessed item recipe."
+        }
+      ],
+      "sourceFiles": [
+        "SoulBinderSpawnerRecipe-EnderIO2.10.48.java",
+        "BlockPoweredSpawner-EnderIO2.10.48.java",
+        "ItemSoulVessel-EnderIO2.10.48.java",
+        "EnderIO-RC2.cfg"
+      ]
+    }
+  ]
+}

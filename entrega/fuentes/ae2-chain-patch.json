@@ -1,0 +1,730 @@
+{
+  "resources": [
+    {
+      "id": "appliedenergistics2:tile.blocksingularitycraftingstorage",
+      "displayName": "appliedenergistics2:tile.blocksingularitycraftingstorage",
+      "kind": "item"
+    },
+    {
+      "id": "appliedenergistics2:tile.blockcreativeenergycell",
+      "displayName": "Neutronium Energy Cell",
+      "kind": "item"
+    },
+    {
+      "id": "dreamcraft:pikocircuit",
+      "displayName": "Pico Circuit",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.metaitem.01@32045",
+      "displayName": "Field Generator (UIV)",
+      "kind": "item"
+    },
+    {
+      "id": "draconicevolution:reactorstabilizer",
+      "displayName": "draconicevolution:reactorstabilizer",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.metaitem.03@4581",
+      "displayName": "Transcendent Metal Nanites",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.metaitem.01@22397",
+      "displayName": "Dense Infinity Plate",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.blockframes@588",
+      "displayName": "SpaceTime Frame Box",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.blockmachines@2606",
+      "displayName": "1x SpaceTime Wire",
+      "kind": "item"
+    },
+    {
+      "id": "appliedenergistics2:tile.blockcraftingunit",
+      "displayName": "Crafting Unit",
+      "kind": "item"
+    },
+    {
+      "id": "appliedenergistics2:item.itemextremestoragecell.singularity",
+      "displayName": "Digital Singularity ME Storage Cell",
+      "kind": "item"
+    },
+    {
+      "id": "avaritia:resource@6",
+      "displayName": "Infinity Ingot",
+      "kind": "item"
+    },
+    {
+      "id": "appliedenergistics2:tile.blockdenseenergycell",
+      "displayName": "Dense Energy Cell",
+      "kind": "item"
+    },
+    {
+      "id": "dreamcraft:engineeringprocessoritemadvemeraldcore",
+      "displayName": "Item Processor Tier IV",
+      "kind": "item"
+    },
+    {
+      "id": "avaritia:resource_block",
+      "displayName": "Cosmic Neutronium Block",
+      "kind": "item"
+    },
+    {
+      "id": "draconicevolution:draconiumfluxcapacitor",
+      "displayName": "draconicevolution:draconiumfluxcapacitor",
+      "kind": "item"
+    },
+    {
+      "id": "oredict:plateDraconium",
+      "displayName": "Ore Dictionary: plateDraconium",
+      "kind": "item"
+    },
+    {
+      "id": "oredict:wireGt02Superconductor",
+      "displayName": "Ore Dictionary: wireGt02Superconductor",
+      "kind": "item"
+    },
+    {
+      "id": "draconicevolution:draconiumenergycore",
+      "displayName": "Wyvern Energy Core",
+      "kind": "item"
+    },
+    {
+      "id": "enderio:blockcapbank@3",
+      "displayName": "Vibrant Capacitor Bank",
+      "kind": "item"
+    },
+    {
+      "id": "draconicevolution:wyverncore",
+      "displayName": "Wyvern Core",
+      "kind": "item"
+    },
+    {
+      "id": "draconicevolution:draconiumfluxcapacitor@1",
+      "displayName": "draconicevolution:draconiumfluxcapacitor@1",
+      "kind": "item"
+    },
+    {
+      "id": "oredict:plateDraconiumAwakened",
+      "displayName": "Ore Dictionary: plateDraconiumAwakened",
+      "kind": "item"
+    },
+    {
+      "id": "oredict:wireGt04Superconductor",
+      "displayName": "Ore Dictionary: wireGt04Superconductor",
+      "kind": "item"
+    },
+    {
+      "id": "draconicevolution:awakenedcore",
+      "displayName": "Awakened Core",
+      "kind": "item"
+    },
+    {
+      "id": "dreamcraft:enrichednaquadriasunnariumalloy",
+      "displayName": "Enriched Naquadria Sunnarium Alloy",
+      "kind": "item"
+    },
+    {
+      "id": "draconicevolution:draconiumenergycore@1",
+      "displayName": "Draconic Energy Core",
+      "kind": "item"
+    },
+    {
+      "id": "draconicevolution:reactorcraftingpart@1",
+      "displayName": "draconicevolution:reactorcraftingpart@1",
+      "kind": "item"
+    },
+    {
+      "id": "dreamcraft:engravedenergychip",
+      "displayName": "Engraved Energy Chip",
+      "kind": "item"
+    },
+    {
+      "id": "draconicevolution:reactorcraftingpart@2",
+      "displayName": "draconicevolution:reactorcraftingpart@2",
+      "kind": "item"
+    },
+    {
+      "id": "dreamcraft:engraveddiamondcrystalchip",
+      "displayName": "Engraved Diamond Crystal Chip",
+      "kind": "item"
+    },
+    {
+      "id": "draconicevolution:draconiccore",
+      "displayName": "Draconic Core",
+      "kind": "item"
+    },
+    {
+      "id": "draconicevolution:reactorcraftingpart@3",
+      "displayName": "draconicevolution:reactorcraftingpart@3",
+      "kind": "item"
+    },
+    {
+      "id": "oredict:stickLongDraconium",
+      "displayName": "Ore Dictionary: stickLongDraconium",
+      "kind": "item"
+    },
+    {
+      "id": "draconicevolution:draconium@2",
+      "displayName": "Charged Draconium Block",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.blockcasings4@7",
+      "displayName": "Fusion Coil Block",
+      "kind": "item"
+    },
+    {
+      "id": "draconicevolution:reactorcraftingpart@4",
+      "displayName": "draconicevolution:reactorcraftingpart@4",
+      "kind": "item"
+    },
+    {
+      "id": "oredict:stickRoseGold",
+      "displayName": "Ore Dictionary: stickRoseGold",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.metaitem.01@24506",
+      "displayName": "Nether Star Lens",
+      "kind": "item"
+    },
+    {
+      "id": "oredict:lensDiamond",
+      "displayName": "Ore Dictionary: lensDiamond",
+      "kind": "item"
+    },
+    {
+      "id": "draconicevolution:reactorcraftingpart",
+      "displayName": "draconicevolution:reactorcraftingpart",
+      "kind": "item"
+    },
+    {
+      "id": "oredict:plateBlackPlutonium",
+      "displayName": "Ore Dictionary: plateBlackPlutonium",
+      "kind": "item"
+    },
+    {
+      "id": "dreamcraft:engravedmanyullyncrystalchip",
+      "displayName": "Engraved Manyullyn Crystal Chip",
+      "kind": "item"
+    },
+    {
+      "id": "draconicevolution:chaoticcore",
+      "displayName": "Chaotic Core",
+      "kind": "item"
+    }
+  ],
+  "recipes": [
+    {
+      "id": "verified:rc2:extreme:appliedenergistics2:tile.blocksingularitycraftingstorage",
+      "inputs": [
+        {
+          "id": "appliedenergistics2:tile.blockcreativeenergycell",
+          "amount": 4
+        },
+        {
+          "id": "dreamcraft:pikocircuit",
+          "amount": 8
+        },
+        {
+          "id": "gregtech:gt.metaitem.01@32045",
+          "amount": 12
+        },
+        {
+          "id": "draconicevolution:reactorstabilizer",
+          "amount": 8
+        },
+        {
+          "id": "gregtech:gt.metaitem.03@4581",
+          "amount": 4
+        },
+        {
+          "id": "gregtech:gt.metaitem.01@22397",
+          "amount": 24
+        },
+        {
+          "id": "gregtech:gt.blockframes@588",
+          "amount": 4
+        },
+        {
+          "id": "gregtech:gt.blockmachines@2606",
+          "amount": 12
+        },
+        {
+          "id": "appliedenergistics2:tile.blockcraftingunit",
+          "amount": 4
+        },
+        {
+          "id": "appliedenergistics2:item.itemextremestoragecell.singularity",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "appliedenergistics2:tile.blocksingularitycraftingstorage",
+          "amount": 1
+        }
+      ],
+      "machineType": "Extreme Crafting",
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptAppliedEnergistics2.java"
+      },
+      "grid": [
+        "abcfhfcba",
+        "bcdfhfdcb",
+        "cdefhfedc",
+        "fffgigfff",
+        "hhhijihhh",
+        "fffgigfff",
+        "cdefhfedc",
+        "bcdfhfdcb",
+        "abcfhfcba"
+      ]
+    },
+    {
+      "id": "verified:rc2:extreme:appliedenergistics2:tile.blockcreativeenergycell",
+      "inputs": [
+        {
+          "id": "avaritia:resource@6",
+          "amount": 32
+        },
+        {
+          "id": "appliedenergistics2:tile.blockdenseenergycell",
+          "amount": 36
+        },
+        {
+          "id": "dreamcraft:engineeringprocessoritemadvemeraldcore",
+          "amount": 12
+        },
+        {
+          "id": "avaritia:resource_block",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "appliedenergistics2:tile.blockcreativeenergycell",
+          "amount": 1
+        }
+      ],
+      "machineType": "Extreme Crafting",
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptAppliedEnergistics2.java"
+      },
+      "grid": [
+        "aaaaaaaaa",
+        "abbbcbbba",
+        "abbbcbbba",
+        "abbbcbbba",
+        "acccdccca",
+        "abbbcbbba",
+        "abbbcbbba",
+        "abbbcbbba",
+        "aaaaaaaaa"
+      ]
+    },
+    {
+      "id": "verified:rc2:extreme:draconicevolution:draconiumfluxcapacitor",
+      "inputs": [
+        {
+          "id": "oredict:plateDraconium",
+          "amount": 12
+        },
+        {
+          "id": "oredict:wireGt02Superconductor",
+          "amount": 8
+        },
+        {
+          "id": "draconicevolution:draconiumenergycore",
+          "amount": 4
+        },
+        {
+          "id": "enderio:blockcapbank@3",
+          "amount": 4
+        },
+        {
+          "id": "draconicevolution:wyverncore",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "draconicevolution:draconiumfluxcapacitor",
+          "amount": 1
+        }
+      ],
+      "machineType": "Extreme Crafting",
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptDraconicEvolution.java"
+      },
+      "grid": [
+        "---------",
+        "----a----",
+        "--abcba--",
+        "--badab--",
+        "-acdedca-",
+        "--badab--",
+        "--abcba--",
+        "----a----",
+        "---------"
+      ]
+    },
+    {
+      "id": "verified:rc2:extreme:draconicevolution:draconiumfluxcapacitor@1",
+      "inputs": [
+        {
+          "id": "oredict:plateDraconiumAwakened",
+          "amount": 12
+        },
+        {
+          "id": "oredict:wireGt04Superconductor",
+          "amount": 8
+        },
+        {
+          "id": "draconicevolution:awakenedcore",
+          "amount": 1
+        },
+        {
+          "id": "dreamcraft:enrichednaquadriasunnariumalloy",
+          "amount": 4
+        },
+        {
+          "id": "draconicevolution:draconiumenergycore@1",
+          "amount": 3
+        },
+        {
+          "id": "draconicevolution:draconiumfluxcapacitor",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "draconicevolution:draconiumfluxcapacitor@1",
+          "amount": 1
+        }
+      ],
+      "machineType": "Extreme Crafting",
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptDraconicEvolution.java"
+      },
+      "grid": [
+        "---------",
+        "----a----",
+        "--abcba--",
+        "--badab--",
+        "-aedfdea-",
+        "--badab--",
+        "--abeba--",
+        "----a----",
+        "---------"
+      ]
+    },
+    {
+      "id": "verified:rc2:extreme:draconicevolution:reactorcraftingpart@1",
+      "inputs": [
+        {
+          "id": "oredict:plateDraconiumAwakened",
+          "amount": 4
+        },
+        {
+          "id": "dreamcraft:engravedenergychip",
+          "amount": 15
+        },
+        {
+          "id": "draconicevolution:wyverncore",
+          "amount": 2
+        }
+      ],
+      "outputs": [
+        {
+          "id": "draconicevolution:reactorcraftingpart@1",
+          "amount": 1
+        }
+      ],
+      "machineType": "Extreme Crafting",
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptDraconicEvolution.java"
+      },
+      "grid": [
+        "---------",
+        "---------",
+        "---------",
+        "-abbbbba-",
+        "-cbbbbbc-",
+        "-abbbbba-",
+        "---------",
+        "---------",
+        "---------"
+      ]
+    },
+    {
+      "id": "verified:rc2:extreme:draconicevolution:reactorcraftingpart@2",
+      "inputs": [
+        {
+          "id": "oredict:plateDraconium",
+          "amount": 4
+        },
+        {
+          "id": "dreamcraft:engraveddiamondcrystalchip",
+          "amount": 15
+        },
+        {
+          "id": "draconicevolution:draconiccore",
+          "amount": 2
+        }
+      ],
+      "outputs": [
+        {
+          "id": "draconicevolution:reactorcraftingpart@2",
+          "amount": 1
+        }
+      ],
+      "machineType": "Extreme Crafting",
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptDraconicEvolution.java"
+      },
+      "grid": [
+        "---------",
+        "---------",
+        "---------",
+        "-abbbbba-",
+        "-cbbbbbc-",
+        "-abbbbba-",
+        "---------",
+        "---------",
+        "---------"
+      ]
+    },
+    {
+      "id": "verified:rc2:extreme:draconicevolution:reactorcraftingpart@3",
+      "inputs": [
+        {
+          "id": "oredict:stickLongDraconium",
+          "amount": 6
+        },
+        {
+          "id": "draconicevolution:reactorcraftingpart@2",
+          "amount": 10
+        },
+        {
+          "id": "draconicevolution:reactorcraftingpart@1",
+          "amount": 10
+        },
+        {
+          "id": "draconicevolution:draconium@2",
+          "amount": 1
+        },
+        {
+          "id": "gregtech:gt.blockcasings4@7",
+          "amount": 4
+        },
+        {
+          "id": "draconicevolution:wyverncore",
+          "amount": 1
+        },
+        {
+          "id": "oredict:plateDraconium",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "draconicevolution:reactorcraftingpart@3",
+          "amount": 1
+        }
+      ],
+      "machineType": "Extreme Crafting",
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptDraconicEvolution.java"
+      },
+      "grid": [
+        "---------",
+        "---------",
+        "-aabbbbb-",
+        "-accccc--",
+        "-deeeefg-",
+        "-accccc--",
+        "-aabbbbb-",
+        "---------",
+        "---------"
+      ]
+    },
+    {
+      "id": "verified:rc2:extreme:draconicevolution:reactorcraftingpart@4",
+      "inputs": [
+        {
+          "id": "oredict:stickRoseGold",
+          "amount": 20
+        },
+        {
+          "id": "draconicevolution:reactorcraftingpart@2",
+          "amount": 4
+        },
+        {
+          "id": "draconicevolution:wyverncore",
+          "amount": 4
+        },
+        {
+          "id": "draconicevolution:reactorcraftingpart@1",
+          "amount": 4
+        },
+        {
+          "id": "gregtech:gt.metaitem.01@24506",
+          "amount": 4
+        },
+        {
+          "id": "oredict:lensDiamond",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "draconicevolution:reactorcraftingpart@4",
+          "amount": 1
+        }
+      ],
+      "machineType": "Extreme Crafting",
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptDraconicEvolution.java"
+      },
+      "grid": [
+        "---------",
+        "---aba---",
+        "--aacaa--",
+        "-aadedaa-",
+        "-bcefecb-",
+        "-aadedaa-",
+        "--aacaa--",
+        "---aba---",
+        "---------"
+      ]
+    },
+    {
+      "id": "verified:rc2:extreme:draconicevolution:reactorcraftingpart",
+      "inputs": [
+        {
+          "id": "oredict:plateBlackPlutonium",
+          "amount": 52
+        },
+        {
+          "id": "oredict:plateDraconiumAwakened",
+          "amount": 8
+        },
+        {
+          "id": "draconicevolution:awakenedcore",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "draconicevolution:reactorcraftingpart",
+          "amount": 1
+        }
+      ],
+      "machineType": "Extreme Crafting",
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptDraconicEvolution.java"
+      },
+      "grid": [
+        "aaaaaaaaa",
+        "aa-----aa",
+        "a-aaaaa-a",
+        "a-abbba-a",
+        "a-abcba-a",
+        "a-abbba-a",
+        "a-aaaaa-a",
+        "aa-----aa",
+        "aaaaaaaaa"
+      ]
+    },
+    {
+      "id": "verified:rc2:extreme:draconicevolution:reactorstabilizer",
+      "inputs": [
+        {
+          "id": "oredict:plateBlackPlutonium",
+          "amount": 4
+        },
+        {
+          "id": "oredict:plateDraconiumAwakened",
+          "amount": 17
+        },
+        {
+          "id": "dreamcraft:engravedmanyullyncrystalchip",
+          "amount": 4
+        },
+        {
+          "id": "draconicevolution:draconiumfluxcapacitor@1",
+          "amount": 4
+        },
+        {
+          "id": "draconicevolution:reactorcraftingpart",
+          "amount": 1
+        },
+        {
+          "id": "draconicevolution:chaoticcore",
+          "amount": 2
+        },
+        {
+          "id": "draconicevolution:reactorcraftingpart@4",
+          "amount": 1
+        },
+        {
+          "id": "avaritia:resource_block",
+          "amount": 1
+        },
+        {
+          "id": "draconicevolution:reactorcraftingpart@3",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "draconicevolution:reactorstabilizer",
+          "amount": 1
+        }
+      ],
+      "machineType": "Extreme Crafting",
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptDraconicEvolution.java"
+      },
+      "grid": [
+        "---------",
+        "---------",
+        "-abbbbba-",
+        "-bcdbdcb-",
+        "-efghifb-",
+        "-bcdbdcb-",
+        "-abbbbba-",
+        "---------",
+        "---------"
+      ]
+    }
+  ]
+}

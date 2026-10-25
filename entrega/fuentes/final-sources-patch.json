@@ -1,0 +1,318 @@
+{
+  "resources": [
+    {
+      "id": "oredict:plateSoularium",
+      "displayName": "Ore Dictionary: plateSoularium",
+      "kind": "item"
+    },
+    {
+      "id": "minecraft:skull@2",
+      "displayName": "Zombie Head",
+      "kind": "item"
+    },
+    {
+      "id": "oredict:plateSiliconSolarGrade",
+      "displayName": "Ore Dictionary: plateSiliconSolarGrade",
+      "kind": "item"
+    },
+    {
+      "id": "oredict:plateRedAlloy",
+      "displayName": "Ore Dictionary: plateRedAlloy",
+      "kind": "item"
+    },
+    {
+      "id": "enderio:itemfrankenskull@1",
+      "displayName": "Z-Logic Controller",
+      "kind": "item"
+    },
+    {
+      "id": "enderio:blockendermanskull",
+      "displayName": "Enderman Head",
+      "kind": "item"
+    },
+    {
+      "id": "oredict:plateVibrantAlloy",
+      "displayName": "Ore Dictionary: plateVibrantAlloy",
+      "kind": "item"
+    },
+    {
+      "id": "enderio:itemfrankenskull@3",
+      "displayName": "Ender Resonator",
+      "kind": "item"
+    },
+    {
+      "id": "draconicevolution:draconium",
+      "displayName": "Draconium Block",
+      "kind": "item"
+    },
+    {
+      "id": "draconicevolution:draconium@2",
+      "displayName": "Charged Draconium Block",
+      "kind": "item"
+    },
+    {
+      "id": "draconicevolution:chaosshard",
+      "displayName": "Chaos Shard",
+      "kind": "item"
+    },
+    {
+      "id": "minecraft:dragon_egg",
+      "displayName": "Dragon Egg",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:chalkheart",
+      "displayName": "witchery:chalkheart",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:chalkinfernal",
+      "displayName": "witchery:chalkinfernal",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:chalkritual",
+      "displayName": "Ritual Chalk",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:chalkotherwhere",
+      "displayName": "Otherwhere Chalk",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:ingredient@64",
+      "displayName": "Necromantic Stone",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:ingredient@45",
+      "displayName": "Infernal Animus",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:ingredient@80",
+      "displayName": "Demonic Blood",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:ingredient@23",
+      "displayName": "Demon Heart",
+      "kind": "item"
+    },
+    {
+      "id": "thaumcraft:itemeldritchobject@3",
+      "displayName": "Primordial Pearl",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:infinityegg",
+      "displayName": "Infinity Egg",
+      "kind": "item"
+    }
+  ],
+  "recipes": [
+    {
+      "id": "verified:rc2:sliceandsplice:1",
+      "inputs": [
+        {
+          "id": "oredict:plateSoularium",
+          "amount": 2
+        },
+        {
+          "id": "minecraft:skull@2",
+          "amount": 1
+        },
+        {
+          "id": "oredict:plateSiliconSolarGrade",
+          "amount": 2
+        },
+        {
+          "id": "oredict:plateRedAlloy",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "enderio:itemfrankenskull@1",
+          "amount": 1
+        }
+      ],
+      "machineType": "Slice and Splice",
+      "durationTicks": null,
+      "eut": null,
+      "energyRF": 200000,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/blob/2.9.0-nightly-2026-10-04/config/enderio/SliceAndSpliceRecipes_User.xml"
+      },
+      "conditions": [
+        "Core recipeGroup EnderIO disabled; GTNewHorizons override enabled.",
+        "Slice and Splice tool requirements are infrastructure."
+      ]
+    },
+    {
+      "id": "verified:rc2:sliceandsplice:3",
+      "inputs": [
+        {
+          "id": "oredict:plateSoularium",
+          "amount": 2
+        },
+        {
+          "id": "enderio:blockendermanskull",
+          "amount": 1
+        },
+        {
+          "id": "oredict:plateSiliconSolarGrade",
+          "amount": 2
+        },
+        {
+          "id": "oredict:plateVibrantAlloy",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "enderio:itemfrankenskull@3",
+          "amount": 1
+        }
+      ],
+      "machineType": "Slice and Splice",
+      "durationTicks": null,
+      "eut": null,
+      "energyRF": 200000,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/blob/2.9.0-nightly-2026-10-04/config/enderio/SliceAndSpliceRecipes_User.xml"
+      },
+      "conditions": [
+        "Core recipeGroup EnderIO disabled; GTNewHorizons override enabled.",
+        "Slice and Splice tool requirements are infrastructure."
+      ]
+    },
+    {
+      "id": "verified:rc2:charging:chargeddraconium",
+      "inputs": [
+        {
+          "id": "draconicevolution:draconium",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "draconicevolution:draconium@2",
+          "amount": 1
+        }
+      ],
+      "machineType": "RF charging (Energy Infuser)",
+      "durationTicks": null,
+      "eut": null,
+      "energyRF": 100000000,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/Draconic-Evolution/blob/1.5.33-GTNH/src/main/java/com/brandon3055/draconicevolution/common/blocks/itemblocks/DraconiumItemBlock.java#L53"
+      },
+      "conditions": [
+        "RC2 balance config: 100,000,000 RF capacity; maximum block charging speed 10,000,000 RF/t. Actual time depends on charger throughput."
+      ]
+    },
+    {
+      "id": "verified:rc2:natural:chaoscrystal",
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "draconicevolution:chaosshard",
+          "amount": 5
+        }
+      ],
+      "machineType": "Natural acquisition: Chaos Crystal",
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/Draconic-Evolution/blob/1.5.33-GTNH/src/main/java/com/brandon3055/draconicevolution/common/blocks/ChaosCrystal.java#L72"
+      },
+      "conditions": [
+        "Mine natural Chaos Crystal after defeating its Chaos Guardian. Crystal unbreakable before guardianDefeated.",
+        "ChaosWorldGenHandler generates a Chaos Crystal at Chaos Island center. 5 shards per crystal; Fortune does not change quantityDropped."
+      ],
+      "acquisitionEvent": true
+    },
+    {
+      "id": "verified:rc2:quest:405",
+      "inputs": [
+        {
+          "id": "minecraft:dragon_egg",
+          "amount": 1
+        },
+        {
+          "id": "witchery:chalkheart",
+          "amount": 1
+        },
+        {
+          "id": "witchery:chalkinfernal",
+          "amount": 1
+        },
+        {
+          "id": "witchery:chalkritual",
+          "amount": 1
+        },
+        {
+          "id": "witchery:chalkotherwhere",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@64",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@45",
+          "amount": 8
+        },
+        {
+          "id": "witchery:ingredient@80",
+          "amount": 4
+        },
+        {
+          "id": "witchery:ingredient@23",
+          "amount": 4
+        },
+        {
+          "id": "thaumcraft:itemeldritchobject@3",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "witchery:infinityegg",
+          "amount": 1
+        }
+      ],
+      "machineType": "Quest reward: The Power of Infinity",
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/blob/2.9.0-nightly-2026-10-04/config/betterquesting/DefaultQuests/Quests/KillAlltheThings-AAAAAAAAAAAAAAAAAAAAJQ==/ThePowerofInfini-AAAAAAAAAAAAAAAAAAABlQ==.json"
+      },
+      "conditions": {
+        "oneTimeOnly": true,
+        "prerequisiteQuestIds": [
+          400,
+          401,
+          402,
+          403,
+          404,
+          398,
+          399
+        ],
+        "repeatTime": -1,
+        "note": "Not a repeatable production recipe. Native Avaritia Infinity Egg recipe disabled when DreamCraft loaded.",
+        "prerequisiteQuestNames": {
+          "398": "Kill Baba Yaga",
+          "399": "Kill Horned Huntsman",
+          "400": "Kill Ender Dragon",
+          "401": "Kill Shade of Leonard",
+          "402": "Kill Lord of Torment",
+          "403": "Kill Mog and Gulg",
+          "404": "Kill Demon"
+        }
+      }
+    }
+  ]
+}

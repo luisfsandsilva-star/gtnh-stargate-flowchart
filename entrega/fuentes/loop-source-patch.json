@@ -1,0 +1,42 @@
+{
+  "resources": [
+    {
+      "id": "netherair",
+      "displayName": "Nether Air",
+      "kind": "fluid"
+    }
+  ],
+  "recipes": [
+    {
+      "id": "verified:rc2:natural:netherair-intake",
+      "machineType": "Air Intake Hatch",
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "netherair",
+          "amount": 5000
+        }
+      ],
+      "durationTicks": 20,
+      "eut": 0,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/GT5-Unofficial/blob/5.09.54.205/src/main/java/gtPlusPlus/xmod/gregtech/api/metatileentity/implementations/MTEHatchAirIntake.java#L42"
+      },
+      "conditions": {
+        "dimensionId": -1,
+        "frontFace": "Must face an air block",
+        "infrastructure": "gregtech:gt.blockmachines@861 Air Intake Hatch; hatch allowed to work and has tank space",
+        "fuel": "No fuel/EU debited by fluid generator logic.",
+        "baseClassSource": "https://github.com/GTNewHorizons/GT5-Unofficial/blob/5.09.54.205/src/main/java/gtPlusPlus/xmod/gregtech/api/metatileentity/implementations/MTEHatchFluidGenerator.java#L89"
+      }
+    }
+  ],
+  "forceProducerSuggestions": [
+    {
+      "resourceId": "gregtech:gt.fakecircuitcomponent@2119",
+      "sqliteRecipeId": 168991,
+      "source_id": "oracle:local-2.9.0-rc-2:gregtech:gt-recipe-nanochip-assemblymatrix:bbcf75cc3fa7b24c",
+      "source": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptNanochipRecipes.java#L2298"
+    }
+  ]
+}

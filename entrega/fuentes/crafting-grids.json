@@ -1,0 +1,790 @@
+{
+  "recipes": {
+    "patch:verified:rc2:extreme:appliedenergistics2:tile.blocksingularitycraftingstorage": {
+      "grid": [
+        "abcfhfcba",
+        "bcdfhfdcb",
+        "cdefhfedc",
+        "fffgigfff",
+        "hhhijihhh",
+        "fffgigfff",
+        "cdefhfedc",
+        "bcdfhfdcb",
+        "abcfhfcba"
+      ],
+      "gridLegend": {
+        "a": "appliedenergistics2:tile.blockcreativeenergycell",
+        "b": "dreamcraft:pikocircuit",
+        "c": "gregtech:gt.metaitem.01@32045",
+        "d": "draconicevolution:reactorstabilizer",
+        "e": "gregtech:gt.metaitem.03@4581",
+        "f": "gregtech:gt.metaitem.01@22397",
+        "g": "gregtech:gt.blockframes@588",
+        "h": "gregtech:gt.blockmachines@2606",
+        "i": "appliedenergistics2:tile.blockcraftingunit",
+        "j": "appliedenergistics2:item.itemextremestoragecell.singularity"
+      }
+    },
+    "patch:verified:rc2:extreme:appliedenergistics2:tile.blockcreativeenergycell": {
+      "grid": [
+        "aaaaaaaaa",
+        "abbbcbbba",
+        "abbbcbbba",
+        "abbbcbbba",
+        "acccdccca",
+        "abbbcbbba",
+        "abbbcbbba",
+        "abbbcbbba",
+        "aaaaaaaaa"
+      ],
+      "gridLegend": {
+        "a": "avaritia:resource@6",
+        "b": "appliedenergistics2:tile.blockdenseenergycell",
+        "c": "dreamcraft:engineeringprocessoritemadvemeraldcore",
+        "d": "avaritia:resource_block"
+      }
+    },
+    "patch:verified:rc2:extreme:draconicevolution:draconiumfluxcapacitor": {
+      "grid": [
+        "---------",
+        "----a----",
+        "--abcba--",
+        "--badab--",
+        "-acdedca-",
+        "--badab--",
+        "--abcba--",
+        "----a----",
+        "---------"
+      ],
+      "gridLegend": {
+        "a": "oredict:plateDraconium",
+        "b": "oredict:wireGt02Superconductor",
+        "c": "draconicevolution:draconiumenergycore",
+        "d": "enderio:blockcapbank@3",
+        "e": "draconicevolution:wyverncore"
+      }
+    },
+    "patch:verified:rc2:extreme:draconicevolution:draconiumfluxcapacitor@1": {
+      "grid": [
+        "---------",
+        "----a----",
+        "--abcba--",
+        "--badab--",
+        "-aedfdea-",
+        "--badab--",
+        "--abeba--",
+        "----a----",
+        "---------"
+      ],
+      "gridLegend": {
+        "a": "oredict:plateDraconiumAwakened",
+        "b": "oredict:wireGt04Superconductor",
+        "c": "draconicevolution:awakenedcore",
+        "d": "dreamcraft:enrichednaquadriasunnariumalloy",
+        "e": "draconicevolution:draconiumenergycore@1",
+        "f": "draconicevolution:draconiumfluxcapacitor"
+      }
+    },
+    "patch:verified:rc2:extreme:draconicevolution:reactorcraftingpart@1": {
+      "grid": [
+        "---------",
+        "---------",
+        "---------",
+        "-abbbbba-",
+        "-cbbbbbc-",
+        "-abbbbba-",
+        "---------",
+        "---------",
+        "---------"
+      ],
+      "gridLegend": {
+        "a": "oredict:plateDraconiumAwakened",
+        "b": "dreamcraft:engravedenergychip",
+        "c": "draconicevolution:wyverncore"
+      }
+    },
+    "patch:verified:rc2:extreme:draconicevolution:reactorcraftingpart@2": {
+      "grid": [
+        "---------",
+        "---------",
+        "---------",
+        "-abbbbba-",
+        "-cbbbbbc-",
+        "-abbbbba-",
+        "---------",
+        "---------",
+        "---------"
+      ],
+      "gridLegend": {
+        "a": "oredict:plateDraconium",
+        "b": "dreamcraft:engraveddiamondcrystalchip",
+        "c": "draconicevolution:draconiccore"
+      }
+    },
+    "patch:verified:rc2:extreme:draconicevolution:reactorcraftingpart@3": {
+      "grid": [
+        "---------",
+        "---------",
+        "-aabbbbb-",
+        "-accccc--",
+        "-deeeefg-",
+        "-accccc--",
+        "-aabbbbb-",
+        "---------",
+        "---------"
+      ],
+      "gridLegend": {
+        "a": "oredict:stickLongDraconium",
+        "b": "draconicevolution:reactorcraftingpart@2",
+        "c": "draconicevolution:reactorcraftingpart@1",
+        "d": "draconicevolution:draconium@2",
+        "e": "gregtech:gt.blockcasings4@7",
+        "f": "draconicevolution:wyverncore",
+        "g": "oredict:plateDraconium"
+      }
+    },
+    "patch:verified:rc2:extreme:draconicevolution:reactorcraftingpart@4": {
+      "grid": [
+        "---------",
+        "---aba---",
+        "--aacaa--",
+        "-aadedaa-",
+        "-bcefecb-",
+        "-aadedaa-",
+        "--aacaa--",
+        "---aba---",
+        "---------"
+      ],
+      "gridLegend": {
+        "a": "oredict:stickRoseGold",
+        "b": "draconicevolution:reactorcraftingpart@2",
+        "c": "draconicevolution:wyverncore",
+        "d": "draconicevolution:reactorcraftingpart@1",
+        "e": "gregtech:gt.metaitem.01@24506",
+        "f": "oredict:lensDiamond"
+      }
+    },
+    "patch:verified:rc2:extreme:draconicevolution:reactorcraftingpart": {
+      "grid": [
+        "aaaaaaaaa",
+        "aa-----aa",
+        "a-aaaaa-a",
+        "a-abbba-a",
+        "a-abcba-a",
+        "a-abbba-a",
+        "a-aaaaa-a",
+        "aa-----aa",
+        "aaaaaaaaa"
+      ],
+      "gridLegend": {
+        "a": "oredict:plateBlackPlutonium",
+        "b": "oredict:plateDraconiumAwakened",
+        "c": "draconicevolution:awakenedcore"
+      }
+    },
+    "patch:verified:rc2:extreme:draconicevolution:reactorstabilizer": {
+      "grid": [
+        "---------",
+        "---------",
+        "-abbbbba-",
+        "-bcdbdcb-",
+        "-efghifb-",
+        "-bcdbdcb-",
+        "-abbbbba-",
+        "---------",
+        "---------"
+      ],
+      "gridLegend": {
+        "a": "oredict:plateBlackPlutonium",
+        "b": "oredict:plateDraconiumAwakened",
+        "c": "dreamcraft:engravedmanyullyncrystalchip",
+        "d": "draconicevolution:draconiumfluxcapacitor@1",
+        "e": "draconicevolution:reactorcraftingpart",
+        "f": "draconicevolution:chaoticcore",
+        "g": "draconicevolution:reactorcraftingpart@4",
+        "h": "avaritia:resource_block",
+        "i": "draconicevolution:reactorcraftingpart@3"
+      }
+    },
+    "patch:verified:rc2:extreme:singularitycomputationcore": {
+      "grid": [
+        "eeebbbeee",
+        "es-----se",
+        "e-sgags-e",
+        "b-gsdsg-b",
+        "b-adcda-b",
+        "b-gsdsg-b",
+        "e-sgags-e",
+        "es-----se",
+        "eeebbbeee"
+      ],
+      "gridLegend": {
+        "b": "tectech:gt.godforgecasing",
+        "s": "appliedenergistics2:item.itemmultimaterial@47",
+        "g": "tectech:gt.stabilisation_field_generator@8",
+        "a": "tectech:item.tm.itemastralarrayfabricator",
+        "d": "appliedenergistics2:item.itemextremestoragecell.singularity",
+        "c": "appliedenergistics2:tile.blocksingularitycraftingstorage",
+        "e": "tectech:gt.spacetime_compression_field_generator@8"
+      }
+    },
+    "patch:verified:rc2:avaritia:0": {
+      "grid": [
+        "---------",
+        "--aa--a--",
+        "-a--b--a-",
+        "---cde-a-",
+        "--fdgdh--",
+        "-a-idj---",
+        "-a--k--a-",
+        "--a--aa--",
+        "---------"
+      ],
+      "gridLegend": {
+        "a": "dreamcraft:blackplutonium",
+        "b": "avaritia:singularity@2",
+        "c": "avaritia:singularity@1",
+        "d": "extrautilities:block_bedrockium",
+        "e": "avaritia:singularity@8",
+        "f": "avaritia:singularity",
+        "g": "avaritia:singularity@3",
+        "h": "avaritia:singularity@6",
+        "i": "avaritia:singularity@7",
+        "j": "avaritia:singularity@5",
+        "k": "avaritia:singularity@4"
+      }
+    },
+    "patch:verified:rc2:avaritia:1": {
+      "grid": [
+        "---------",
+        "--aa--a--",
+        "-a--b--a-",
+        "---cde-a-",
+        "--fdgdh--",
+        "-a-idj---",
+        "-a--k--a-",
+        "--a--aa--",
+        "---------"
+      ],
+      "gridLegend": {
+        "a": "dreamcraft:blackplutonium",
+        "b": "avaritia:singularity@9",
+        "c": "avaritia:singularity@10",
+        "d": "extrautilities:block_bedrockium",
+        "e": "universalsingularities:universal.vanilla.singularity",
+        "f": "universalsingularities:universal.vanilla.singularity@2",
+        "g": "universalsingularities:universal.vanilla.singularity@1",
+        "h": "universalsingularities:universal.general.singularity@3",
+        "i": "universalsingularities:universal.general.singularity",
+        "j": "universalsingularities:universal.general.singularity@1",
+        "k": "universalsingularities:universal.general.singularity@2"
+      }
+    },
+    "patch:verified:rc2:avaritia:2": {
+      "grid": [
+        "---------",
+        "--aa--a--",
+        "-a--b--a-",
+        "---cde-a-",
+        "--fdgdh--",
+        "-a-idj---",
+        "-a--k--a-",
+        "--a--aa--",
+        "---------"
+      ],
+      "gridLegend": {
+        "a": "dreamcraft:blackplutonium",
+        "b": "universalsingularities:universal.general.singularity@4",
+        "c": "universalsingularities:universal.general.singularity@5",
+        "d": "extrautilities:block_bedrockium",
+        "e": "universalsingularities:universal.general.singularity@6",
+        "f": "universalsingularities:universal.general.singularity@7",
+        "g": "universalsingularities:universal.general.singularity@8",
+        "h": "universalsingularities:universal.general.singularity@9",
+        "i": "universalsingularities:universal.general.singularity@10",
+        "j": "universalsingularities:universal.general.singularity@11",
+        "k": "universalsingularities:universal.general.singularity@12"
+      }
+    },
+    "patch:verified:rc2:avaritia:3": {
+      "grid": [
+        "---------",
+        "--aa--a--",
+        "-a--b--a-",
+        "---cde-a-",
+        "--fdgdh--",
+        "-a-idj---",
+        "-a--k--a-",
+        "--a--aa--",
+        "---------"
+      ],
+      "gridLegend": {
+        "a": "dreamcraft:blackplutonium",
+        "b": "universalsingularities:universal.general.singularity@13",
+        "c": "universalsingularities:universal.general.singularity@14",
+        "d": "extrautilities:block_bedrockium",
+        "e": "universalsingularities:universal.general.singularity@15",
+        "f": "universalsingularities:universal.general.singularity@16",
+        "g": "universalsingularities:universal.general.singularity@17",
+        "h": "universalsingularities:universal.general.singularity@18",
+        "i": "universalsingularities:universal.general.singularity@19",
+        "j": "universalsingularities:universal.general.singularity@20",
+        "k": "universalsingularities:universal.general.singularity@21"
+      }
+    },
+    "patch:verified:rc2:avaritia:4": {
+      "grid": [
+        "---------",
+        "--aa--a--",
+        "-a--b--a-",
+        "---cde-a-",
+        "--fdgdh--",
+        "-a-idj---",
+        "-a--k--a-",
+        "--a--aa--",
+        "---------"
+      ],
+      "gridLegend": {
+        "a": "dreamcraft:blackplutonium",
+        "b": "universalsingularities:universal.general.singularity@22",
+        "c": "universalsingularities:universal.general.singularity@23",
+        "d": "extrautilities:block_bedrockium",
+        "e": "universalsingularities:universal.general.singularity@24",
+        "f": "universalsingularities:universal.general.singularity@25",
+        "g": "universalsingularities:universal.general.singularity@26",
+        "h": "universalsingularities:universal.general.singularity@27",
+        "i": "universalsingularities:universal.general.singularity@28",
+        "j": "universalsingularities:universal.general.singularity@29",
+        "k": "universalsingularities:universal.general.singularity@30"
+      }
+    },
+    "patch:verified:rc2:avaritia:5": {
+      "grid": [
+        "---------",
+        "--aa--a--",
+        "-a--b--a-",
+        "---cde-a-",
+        "--fdgdh--",
+        "-a-idj---",
+        "-a--k--a-",
+        "--a--aa--",
+        "---------"
+      ],
+      "gridLegend": {
+        "a": "dreamcraft:blackplutonium",
+        "b": "universalsingularities:universal.draconicevolution.singularity",
+        "c": "universalsingularities:universal.draconicevolution.singularity@1",
+        "d": "extrautilities:block_bedrockium",
+        "e": "universalsingularities:universal.enderio.singularity",
+        "f": "universalsingularities:universal.enderio.singularity@1",
+        "g": "universalsingularities:universal.enderio.singularity@2",
+        "h": "universalsingularities:universal.enderio.singularity@3",
+        "i": "universalsingularities:universal.enderio.singularity@4",
+        "j": "universalsingularities:universal.enderio.singularity@5",
+        "k": "universalsingularities:universal.enderio.singularity@6"
+      }
+    },
+    "patch:verified:rc2:avaritia:6": {
+      "grid": [
+        "---------",
+        "--aa--a--",
+        "-a--b--a-",
+        "---cde-a-",
+        "--fdgdh--",
+        "-a-idj---",
+        "-a--k--a-",
+        "--a--aa--",
+        "---------"
+      ],
+      "gridLegend": {
+        "a": "dreamcraft:blackplutonium",
+        "b": "universalsingularities:universal.enderio.singularity@7",
+        "c": "universalsingularities:universal.extrautilities.singularity",
+        "d": "extrautilities:block_bedrockium",
+        "e": "universalsingularities:universal.projectred.singularity",
+        "f": "universalsingularities:universal.general.singularity@32",
+        "g": "universalsingularities:universal.tinkersconstruct.singularity@1",
+        "h": "universalsingularities:universal.tinkersconstruct.singularity@2",
+        "i": "universalsingularities:universal.tinkersconstruct.singularity@3",
+        "j": "universalsingularities:universal.tinkersconstruct.singularity@4",
+        "k": "universalsingularities:universal.tinkersconstruct.singularity@6"
+      }
+    },
+    "patch:verified:rc2:avaritia:7": {
+      "grid": [
+        "-----a---",
+        "--bb--b--",
+        "-b--c--b-",
+        "a--dae-b-",
+        "--aafaa--",
+        "-b-gah--a",
+        "-b--i--b-",
+        "--b--bb--",
+        "---a-----"
+      ],
+      "gridLegend": {
+        "a": "avaritia:resource_block",
+        "b": "dreamcraft:blackplutonium",
+        "c": "eternalsingularity:combined_singularity",
+        "d": "eternalsingularity:combined_singularity@1",
+        "e": "eternalsingularity:combined_singularity@2",
+        "f": "eternalsingularity:combined_singularity@3",
+        "g": "eternalsingularity:combined_singularity@4",
+        "h": "eternalsingularity:combined_singularity@5",
+        "i": "eternalsingularity:combined_singularity@6"
+      }
+    },
+    "patch:verified:rc2:avaritia:14": {
+      "grid": [
+        "---aab---",
+        "--a-c----",
+        "-a--c----",
+        "a---cg---",
+        "d---ef---",
+        "a---ch---",
+        "-a--c----",
+        "--a-c----",
+        "---aab---"
+      ],
+      "gridLegend": {
+        "a": "oredict:plateInfinity",
+        "b": "taintedmagic:itemfocusmeteorology",
+        "c": "thaumictinkerer:kamiresource@1",
+        "d": "avaritia:resource@5",
+        "e": "draconicevolution:draconicbow",
+        "g": "botania:crystalbow",
+        "h": "galaxyspace:item.quantbow",
+        "f": "taintedmagic:itemfocustime"
+      }
+    },
+    "patch:verified:rc2:avaritia:20": {
+      "grid": [
+        "---------",
+        "--ff--g--",
+        "-f-----g-",
+        "---b-c-g-",
+        "----a----",
+        "-i-d-e---",
+        "-i-----h-",
+        "--i--hh--",
+        "---------"
+      ],
+      "gridLegend": {
+        "a": "universalsingularities:universal.rubber.singularity",
+        "b": "universalsingularities:universal.rubber.singularity@1",
+        "c": "universalsingularities:universal.rubber.singularity@2",
+        "d": "universalsingularities:universal.rubber.singularity@3",
+        "e": "universalsingularities:universal.rubber.singularity@4",
+        "f": "oredict:plateStyreneButadieneRubber",
+        "g": "oredict:plateSilicone",
+        "h": "oredict:platePolyvinylChloride",
+        "i": "oredict:platePolyphenyleneSulfide"
+      }
+    },
+    "patch:verified:rc2:avaritia:21": {
+      "grid": [
+        "-----p---",
+        "--yx--z--",
+        "-z--d--y-",
+        "o--ebc-x-",
+        "--ijukl--",
+        "-x-fah--m",
+        "-y--g--z-",
+        "--z--xy--",
+        "---n-----"
+      ],
+      "gridLegend": {
+        "a": "universalsingularities:universal.circuit2.singularity@6",
+        "b": "universalsingularities:universal.circuit2.singularity@4",
+        "c": "universalsingularities:universal.circuit2.singularity@3",
+        "d": "universalsingularities:universal.circuit2.singularity@2",
+        "e": "universalsingularities:universal.circuit2.singularity@1",
+        "f": "universalsingularities:universal.circuit2.singularity",
+        "g": "universalsingularities:universal.circuit.singularity@9",
+        "h": "universalsingularities:universal.circuit.singularity@8",
+        "i": "universalsingularities:universal.circuit.singularity@7",
+        "j": "universalsingularities:universal.circuit.singularity@6",
+        "k": "universalsingularities:universal.circuit.singularity@5",
+        "l": "universalsingularities:universal.circuit.singularity@4",
+        "m": "universalsingularities:universal.circuit.singularity@3",
+        "n": "universalsingularities:universal.circuit.singularity@2",
+        "o": "universalsingularities:universal.circuit.singularity@1",
+        "p": "universalsingularities:universal.circuit.singularity",
+        "u": "gregtech:gt.foundrycasings@4",
+        "x": "gregtech:gt.metaitem.03@6139",
+        "y": "gregtech:gt.metaitem.03@6586",
+        "z": "gregtech:gt.metaitem.03@6585"
+      }
+    },
+    "patch:verified:rc2:extreme:ringblock": {
+      "grid": [
+        "aaafcffpp",
+        "addfffpgg",
+        "admfwpg--",
+        "sdmffpg--",
+        "sdmfcpg--",
+        "sdmffpg--",
+        "admfwpg--",
+        "addfffpgg",
+        "aaafcffpp"
+      ],
+      "gridLegend": {
+        "m": "gregtech:gt.blockmetal9@10",
+        "d": "galacticraftamunra:tile.baseblockrock@14",
+        "f": "dreamcraft:stargateframepart",
+        "c": "dreamcraft:stargatechevron",
+        "p": "dreamcraft:stargateshieldingfoil",
+        "g": "gregtech:gt.metaitem.01@32047",
+        "w": "gregtech:gt.metaitem.03@32312",
+        "a": "gregtech:gt.blockcasings13@7",
+        "s": "gregtech:gt.blockcasings13@5"
+      }
+    },
+    "patch:verified:rc2:extreme:chevronupgrade": {
+      "grid": [
+        "mmmmmmmmm",
+        "fpfsfpfm-",
+        "mfcgcfmmm",
+        "-mfwfefpf",
+        "--mfcgcfm",
+        "---mfwfm-",
+        "----mfm--",
+        "-----m---",
+        "---------"
+      ],
+      "gridLegend": {
+        "f": "dreamcraft:stargateframepart",
+        "c": "dreamcraft:stargatechevron",
+        "p": "gregtech:gt.metaitem.01@32023",
+        "g": "gregtech:gt.metaitem.01@32047",
+        "s": "gregtech:gt.metaitem.01@32043",
+        "e": "gregtech:gt.metaitem.01@32039",
+        "w": "gregtech:gt.metaitem.03@32312",
+        "m": "gregtech:gt.metaitem.03@6143"
+      }
+    },
+    "patch:verified:rc2:extreme:chevronblock": {
+      "grid": [
+        "---psp---",
+        "--pamap--",
+        "-pwdgdwp-",
+        "padfufdap",
+        "smgubugms",
+        "padfufdap",
+        "-pwdgdwp-",
+        "--pamap--",
+        "---psp---"
+      ],
+      "gridLegend": {
+        "m": "gregtech:gt.blockmetal9@10",
+        "d": "galacticraftamunra:tile.baseblockrock@14",
+        "u": "sgcraft:sgchevronupgrade",
+        "b": "sgcraft:stargatering",
+        "g": "gregtech:gt.metaitem.01@32047",
+        "f": "tectech:gt.godforgecasing@7",
+        "p": "dreamcraft:stargateshieldingfoil",
+        "w": "gregtech:gt.metaitem.03@32312",
+        "a": "gregtech:gt.blockcasings13@7",
+        "s": "gregtech:gt.blockcasings13@5"
+      }
+    },
+    "patch:verified:rc2:extreme:stargatebase": {
+      "grid": [
+        "tppcdcppt",
+        "pesmhmsep",
+        "psimjmisp",
+        "vkummmukv",
+        "dkamomakd",
+        "vkummmukv",
+        "psimnmisp",
+        "pesmhmsep",
+        "tppcdcppt"
+      ],
+      "gridLegend": {
+        "a": "gregtech:gt.blockmachines@14006",
+        "s": "sgcraft:stargatering@1",
+        "c": "gregtech:gt.metaitem.03@32315",
+        "d": "gregtech:gt.metaitem.03@4143",
+        "e": "tectech:gt.godforgecasing@7",
+        "h": "gtnhintergalactic:item.miningdrone@12",
+        "i": "gregtech:gt.metaitem.01@32146",
+        "j": "appliedenergistics2:item.itemextremestoragecell.universe",
+        "k": "tectech:item.tm.itemastralarrayfabricator",
+        "m": "gregtech:gt.foundrycasings@3",
+        "n": "ae2fc:fluid_storage.universe",
+        "o": "sgcraft:sgcorecrystal",
+        "p": "dreamcraft:stargateshieldingfoil",
+        "t": "gregtech:gt.metaitem.03@32758",
+        "u": "gregtech:gt.foundrycasings@4",
+        "v": "gregtech:gt.metaitem.03@32318"
+      }
+    },
+    "patch:verified:rc2:extreme:stargatecapacitor": {
+      "grid": [
+        "---sms---",
+        "---sms---",
+        "-ppgpgpp-",
+        "pcbcbcbcp",
+        "pbcblbcbp",
+        "pcbchcbcp",
+        "-ppgpgpp-",
+        "---sms---",
+        "---sms---"
+      ],
+      "gridLegend": {
+        "p": "dreamcraft:stargateshieldingfoil",
+        "s": "tectech:gt.godforgecasing@4",
+        "g": "gregtech:gt.metaitem.01@32047",
+        "b": "kekztech:kekztech_lapotronicenergyunit_block@10",
+        "c": "enderio:blockcapbank",
+        "l": "gregtech:gt.blockmachines@13106",
+        "h": "gregtech:gt.blockmachines@16027",
+        "m": "gregtech:gt.foundrycasings@3"
+      }
+    },
+    "patch:verified:rc2:extreme:irisblade": {
+      "grid": [
+        "-----wwww",
+        "----wmbw-",
+        "---wmbw--",
+        "--wmbw---",
+        "-wmmbw---",
+        "wpmmbw---",
+        "wpmmmbw--",
+        "wuppmmbw-",
+        "cwwwwwwww"
+      ],
+      "gridLegend": {
+        "w": "gregtech:gt.metaitem.03@6585",
+        "b": "gregtech:gt.metaitem.03@6586",
+        "m": "gregtech:gt.metaitem.03@6143",
+        "p": "gregtech:gt.metaitem.01@32023",
+        "u": "gregtech:gt.metaitem.01@32146",
+        "c": "gregtech:gt.blockcasings.bec@5"
+      }
+    },
+    "patch:verified:rc2:extreme:irisupgrade": {
+      "grid": [
+        "aabbbbbaa",
+        "ab--n--ba",
+        "b----n--b",
+        "b-nndn--b",
+        "bn-dmd-nb",
+        "b--ndnn-b",
+        "b--n----b",
+        "ab--n--ba",
+        "aabbbbbaa"
+      ],
+      "gridLegend": {
+        "b": "sgcraft:sgirisblade",
+        "d": "galacticraftamunra:tile.baseblockrock@14",
+        "n": "gregtech:gt.metaitem.03@4143",
+        "m": "gregtech:gt.foundrycasings@3",
+        "a": "gregtech:gt.blockcasings13@7"
+      }
+    },
+    "patch:verified:rc2:extreme:rfunit": {
+      "grid": [
+        "aacssscaa",
+        "adcnnncda",
+        "m-cnnnc-m",
+        "m--cpc--m",
+        "m-oprpo-m",
+        "m--cpc--m",
+        "ad--b--da",
+        "agd---dga",
+        "aaammmaaa"
+      ],
+      "gridLegend": {
+        "d": "galacticraftamunra:tile.baseblockrock@14",
+        "c": "gregtech:gt.blockcasings.bec@5",
+        "b": "gregtech:gt.metaitem.01@32146",
+        "p": "sgcraft:ic2capacitor",
+        "r": "sgcraft:stargatering",
+        "n": "gregtech:gt.metaitem.03@4143",
+        "g": "gregtech:gt.metaitem.01@32416",
+        "m": "gregtech:gt.foundrycasings@3",
+        "s": "gregtech:gt.blockcasings13@5",
+        "a": "gregtech:gt.blockcasings13@7",
+        "o": "gregtech:gt.metaitem.03@32326"
+      }
+    },
+    "patch:verified:rc2:extreme:ocinterface": {
+      "grid": [
+        "aacssscaa",
+        "adcnnncda",
+        "m-cnnnc-m",
+        "m--cpc--m",
+        "m-oprpo-m",
+        "m--cpc--m",
+        "ad--b--da",
+        "agd---dga",
+        "aaammmaaa"
+      ],
+      "gridLegend": {
+        "d": "galacticraftamunra:tile.baseblockrock@14",
+        "c": "gregtech:gt.blockcasings.bec@5",
+        "b": "gregtech:gt.blockmachines@15445",
+        "p": "appliedenergistics2:tile.blocksingularitycraftingstorage",
+        "r": "sgcraft:stargatering",
+        "n": "gregtech:gt.metaitem.03@4143",
+        "g": "gregtech:gt.metaitem.01@32416",
+        "m": "gregtech:gt.foundrycasings@3",
+        "s": "gregtech:gt.blockcasings13@5",
+        "a": "gregtech:gt.blockcasings13@7",
+        "o": "gregtech:gt.metaitem.03@32315"
+      }
+    },
+    "patch:verified:rc2:extreme:stargatecontroller": {
+      "grid": [
+        "---sss---",
+        "--dkfkd--",
+        "-skfcfks-",
+        "-sfmzmfs-",
+        "-skflfks-",
+        "--dkfkd--",
+        "--apbpa--",
+        "--apopa--",
+        "--apupa--"
+      ],
+      "gridLegend": {
+        "d": "galacticraftamunra:tile.baseblockrock@14",
+        "k": "opencomputers:keyboard",
+        "f": "dreamcraft:stargateframepart",
+        "c": "sgcraft:sgcontrollercrystal",
+        "p": "dreamcraft:stargateshieldingfoil",
+        "b": "gregtech:gt.metaitem.01@32146",
+        "o": "sgcraft:ocinterface",
+        "u": "ae2fc:fluid_storage.universe",
+        "s": "gregtech:gt.blockcasings13@5",
+        "a": "gregtech:gt.blockcasings13@7",
+        "l": "gregtech:gt.metaitem.01@32047",
+        "z": "eternalsingularity:combined_singularity@10",
+        "m": "gregtech:gt.metaitem.03@32334"
+      }
+    },
+    "patch:verified:rc2:extreme:ic2teleporter": {
+      "grid": [
+        "---------",
+        "---------",
+        "---------",
+        "--abcba--",
+        "--defed--",
+        "--agaga--",
+        "---------",
+        "---------",
+        "---------"
+      ],
+      "gridLegend": {
+        "a": "oredict:plateTitanium",
+        "b": "gregtech:gt.metaitem.01@24506",
+        "c": "gregtech:gt.metaitem.01@32672",
+        "d": "ic2:itembatlamacrystal@26",
+        "e": "gregtech:gt.metaitem.01@32603",
+        "f": "ic2:blockelectric@5",
+        "g": "oredict:cableGt04Aluminium"
+      }
+    }
+  },
+  "notMapped": []
+}

@@ -1,0 +1,137 @@
+{
+  "resources": [
+    {
+      "id": "dreamcraft:singularitycomputationcore",
+      "displayName": "Compressible Singularity Computation Core",
+      "kind": "item"
+    },
+    {
+      "id": "tectech:gt.godforgecasing",
+      "displayName": "Singularity Reinforced Stellar Shielding Casing",
+      "kind": "item"
+    },
+    {
+      "id": "appliedenergistics2:item.itemmultimaterial@47",
+      "displayName": "Singularity",
+      "kind": "item"
+    },
+    {
+      "id": "tectech:gt.stabilisation_field_generator@8",
+      "displayName": "\u00a7f\u00a7lGallifreyan\u00a7r Stabilisation Field Generator",
+      "kind": "item"
+    },
+    {
+      "id": "tectech:item.tm.itemastralarrayfabricator",
+      "displayName": "Astral Array Fabricator",
+      "kind": "item"
+    },
+    {
+      "id": "appliedenergistics2:item.itemextremestoragecell.singularity",
+      "displayName": "Digital Singularity ME Storage Cell",
+      "kind": "item"
+    },
+    {
+      "id": "appliedenergistics2:tile.blocksingularitycraftingstorage",
+      "displayName": "appliedenergistics2:tile.blocksingularitycraftingstorage",
+      "kind": "item"
+    },
+    {
+      "id": "tectech:gt.spacetime_compression_field_generator@8",
+      "displayName": "\u00a7f\u00a7lGallifreyan\u00a7r Spacetime Compression Field Generator",
+      "kind": "item"
+    }
+  ],
+  "recipes": [
+    {
+      "id": "verified:rc2:extreme:singularitycomputationcore",
+      "inputs": [
+        {
+          "id": "tectech:gt.godforgecasing",
+          "amount": 12
+        },
+        {
+          "id": "appliedenergistics2:item.itemmultimaterial@47",
+          "amount": 12
+        },
+        {
+          "id": "tectech:gt.stabilisation_field_generator@8",
+          "amount": 8
+        },
+        {
+          "id": "tectech:item.tm.itemastralarrayfabricator",
+          "amount": 4
+        },
+        {
+          "id": "appliedenergistics2:item.itemextremestoragecell.singularity",
+          "amount": 4
+        },
+        {
+          "id": "appliedenergistics2:tile.blocksingularitycraftingstorage",
+          "amount": 1
+        },
+        {
+          "id": "tectech:gt.spacetime_compression_field_generator@8",
+          "amount": 20
+        }
+      ],
+      "outputs": [
+        {
+          "id": "dreamcraft:singularitycomputationcore",
+          "amount": 1
+        }
+      ],
+      "machineType": "Extreme Crafting",
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptGregtech.java"
+      },
+      "grid": [
+        "eeebbbeee",
+        "es-----se",
+        "e-sgags-e",
+        "b-gsdsg-b",
+        "b-adcda-b",
+        "b-gsdsg-b",
+        "e-sgags-e",
+        "es-----se",
+        "eeebbbeee"
+      ]
+    }
+  ],
+  "equivalences": [
+    {
+      "id": "kekztech:kekztech_crafting_item@11",
+      "oreDictionary": "dustYttriumOxide",
+      "replacement": "bartworks:gt.bwmetagenerateddust@6",
+      "source": {
+        "url": "https://github.com/GTNewHorizons/GT5-Unofficial/blob/5.09.54.205/src/main/java/kekztech/Items.java#L23"
+      }
+    },
+    {
+      "id": "kekztech:kekztech_crafting_item@12",
+      "oreDictionary": "dustCubicZirconia",
+      "replacement": "bartworks:gt.bwmetagenerateddust@4",
+      "source": {
+        "url": "https://github.com/GTNewHorizons/GT5-Unofficial/blob/5.09.54.205/src/main/java/kekztech/Items.java#L24"
+      }
+    }
+  ],
+  "assessments": [
+    {
+      "id": "gregtech:gt.metaitem.01@32356",
+      "status": "reusable_tool_recipe_not_found",
+      "evidence": "Dataset Extruder fine-wire recipes mark consumed:false. Checked exact GT5 and NHCore loaders; no fabrication recipe found. Do not count per-batch consumption."
+    },
+    {
+      "id": "gregtech:gt.blockores2@1518",
+      "status": "registered_ore_without_verified_worldgen",
+      "evidence": "MaterialsInit loadForcicium registers ore items; GTWorldgenloader contains no Forcicium. Do not assume natural acquisition."
+    },
+    {
+      "id": "gregtech:gt.blockores2@1519",
+      "status": "registered_ore_without_verified_worldgen",
+      "evidence": "MaterialsInit loadForcillium registers ore items; GTWorldgenloader contains no Forcillium. Do not assume natural acquisition."
+    }
+  ]
+}

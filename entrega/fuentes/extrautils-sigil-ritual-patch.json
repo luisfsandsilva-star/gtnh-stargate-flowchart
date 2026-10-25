@@ -1,0 +1,695 @@
+{
+  "schemaVersion": 1,
+  "packVersion": "2.9.0-RC-2",
+  "modVersion": "Extra Utilities1.2.12",
+  "binary": {
+    "officialFileId": 2264383,
+    "url": "https://mediafilez.forgecdn.net/files/2264/383/extrautilities-1.2.12.jar",
+    "sha256": "a1941ee4d4b965c4d2ddc6ec0e0b1eb3f3ff8c8b492a18a25b5fcf27c67ba58b",
+    "decompiler": "CFR0.152",
+    "localSources": "sources/verified/extrautils-decompiled/"
+  },
+  "sourceUrls": [
+    "https://www.curseforge.com/minecraft/mc-mods/extra-utilities/files/2264383",
+    "https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/blob/2.9.0-nightly-2026-10-04/config/ExtraUtilities.cfg"
+  ],
+  "resources": {
+    "factoryflow:division_sigil:inactive": {
+      "name": "Division Sigil inactivo · sin NBT",
+      "kind": "item"
+    },
+    "factoryflow:division_sigil:active": {
+      "name": "Division Sigil activo · NBT damage=256",
+      "kind": "item"
+    }
+  },
+  "recipes": [
+    {
+      "id": "verified:extrautils:sigil:initial-wither-drop",
+      "machineType": "Adquisición · primer Wither derrotado por el jugador",
+      "inputs": [
+        {
+          "id": "minecraft:soul_sand",
+          "amount": 4,
+          "consumed": true
+        },
+        {
+          "id": "minecraft:skull@1",
+          "amount": 3,
+          "consumed": true
+        }
+      ],
+      "outputs": [
+        {
+          "id": "factoryflow:division_sigil:inactive",
+          "amount": 1
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "conditions": [
+        "Invocar y derrotar un Wither: 4 Soul Sand y 3 Wither Skeleton Skulls para construirlo; el daño final debe atribuirse al jugador.",
+        "Requiere doMobLoot=true y DivisionSigilEnabled=true (RC2 lo habilita). El primer Wither que mata ese jugador garantiza el drop de un Division Sigil inactivo.",
+        "El código incrementa PlayerPersisted.witherKills: garantiza cuando kills==1 o no existe hasSigil; en otros casos aplica nextInt(10)==0. Esta ruta corresponde al primer caso garantizado.",
+        "El sigil sin NBT es distinto del activo damage y del estable stable; no se usa como Pseudo-Inversion Sigil.",
+        "También puede aparecer en cofres de estructuras si esa opción no está deshabilitada; esta rama utiliza el Wither y no presupone loot de cofre."
+      ],
+      "metadata": {
+        "acquisition": true,
+        "firstWitherKill": true,
+        "outputNBT": "sin damage ni stable",
+        "sourceMethod": "EventHandlerServer.netherDrop"
+      },
+      "source": {
+        "url": "https://www.curseforge.com/minecraft/mc-mods/extra-utilities/files/2264383"
+      }
+    },
+    {
+      "id": "verified:extrautils:sigil:activation",
+      "machineType": "Ritual de activación · Division Sigil",
+      "inputs": [
+        {
+          "id": "factoryflow:division_sigil:inactive",
+          "amount": 1,
+          "consumed": true
+        },
+        {
+          "id": "minecraft:enchanting_table",
+          "amount": 1,
+          "consumed": false
+        },
+        {
+          "id": "minecraft:redstone",
+          "amount": 8,
+          "consumed": false
+        },
+        {
+          "id": "minecraft:dirt",
+          "amount": 21,
+          "consumed": true
+        }
+      ],
+      "outputs": [
+        {
+          "id": "factoryflow:division_sigil:active",
+          "amount": 1
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "conditions": [
+        "Preparar una Enchantment Table con polvo de redstone en los 8 bloques que la rodean (anillo3×3 sin el centro). El altar y el anillo deben apoyarse sobre Dirt o Grass.",
+        "El bloque del altar debe ver el cielo; luz combinada efectiva<=9 en las 9 posiciones del anillo/altar y en el bloque superior al altar.",
+        "Momento del mundo modulo24000 entre17500 y18500, ambos incluidos (medianoche18000±500ticks).",
+        "Deben existir más de20 superficies de Dirt/Grass válidas en radio8; la comprobación esférica cuenta columnas con superficie despejada/apropiada, no simplemente21bloques apilados. Las21unidades indicadas son terreno mínimo de preparación; pueden ser Dirt/Grass ya existentes.",
+        "Llevar el sigil inactivo en inventario y matar personalmente una criatura viva junto al altar. El buscador del evento encuentra el altar a±2 en X/Z y entre−2 y0 en Y respecto a la víctima.",
+        "La muerte debe atribuirse al jugador. El evento aplica NBT damage=256 a los Division Sigils del inventario, produce un rayo y convierte terreno cercano en Cursed Earth; el terreno se trata como preparación transformada, no catalizador perpetuo.",
+        "El sacrificio es una criatura del mundo y no un ítem craftable; no se sustituye por un spawner ni se inventa un consumoEU/t."
+      ],
+      "metadata": {
+        "ritual": true,
+        "outputNBT": {
+          "damage": 256
+        },
+        "worldTimeModuloTicks": [
+          17500,
+          18500
+        ],
+        "terrainMinimumSurfaceColumns": 21,
+        "terrainConvertedToCursedEarth": true,
+        "livingSacrificeRequired": true,
+        "sourceMethod": "EventHandlerServer.ActivationRitual + ActivationRitual"
+      },
+      "source": {
+        "url": "https://www.curseforge.com/minecraft/mc-mods/extra-utilities/files/2264383"
+      }
+    },
+    {
+      "id": "verified:extrautils:sigil:stabilization",
+      "machineType": "Ritual de estabilización · Siege del End",
+      "inputs": [
+        {
+          "id": "factoryflow:division_sigil:active",
+          "amount": 1,
+          "consumed": true
+        },
+        {
+          "id": "minecraft:beacon",
+          "amount": 1,
+          "consumed": true
+        },
+        {
+          "id": "minecraft:chest",
+          "amount": 4,
+          "consumed": true
+        },
+        {
+          "id": "minecraft:redstone",
+          "amount": 39,
+          "consumed": true
+        },
+        {
+          "id": "minecraft:string",
+          "amount": 50,
+          "consumed": true
+        },
+        {
+          "id": "minecraft:iron_block",
+          "amount": 4,
+          "consumed": true
+        },
+        {
+          "id": "minecraft:pumpkin",
+          "amount": 1,
+          "consumed": true
+        },
+        {
+          "id": "minecraft:stone",
+          "amount": 1,
+          "consumed": true
+        },
+        {
+          "id": "minecraft:dirt",
+          "amount": 1,
+          "consumed": true
+        },
+        {
+          "id": "minecraft:record_13",
+          "amount": 1,
+          "consumed": true
+        },
+        {
+          "id": "minecraft:potion@8197",
+          "amount": 1,
+          "consumed": true
+        }
+      ],
+      "outputs": [
+        {
+          "id": "extrautilities:divisionsigil",
+          "amount": 1
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "conditions": [
+        "Acceder al End (dimensión1). Llevar un Division Sigil activo con NBT damage; usar un solo sigil en el inventario evita que upgradeSigil encuentre primero un sigil inactivo.",
+        "Beacon en(x,y,z). Preparar4inventarios/cofres en el mismoY: norte(x,y,z−5), sur(x,y,z+5), oeste(x−5,y,z), este(x+5,y,z). El servidor busca exactamente TileEntityBeacon, no exige una pirámide de bloques de beacon ni un efecto activo.",
+        "Malla concreta verificada con39redstone(R) y50string/tripwire(S). Coordenadas(x,z) relativas al beacon; todo se coloca en el mismoY y sobre suelo que permita colocar los bloques. No necesita hooks. Las siguientes líneas definen una disposición válida, no la mínima.",
+        "R:posición(0,1); fila z=1 con x=1..5; columnas x=1,3,5 con z=2..12. Total39polvos de redstone.",
+        "S:fila z=13 con x=1..5; columnas x=2,4 con z=2..12; columna x=6 con z=−1..13; fila z=−1 con x=1..5 (x6 ya incluido); posiciones(1,0),(2,0),(3,0). Total50string.",
+        "La disposición deja libres beacon(0,0) y cofres(0,−5),(0,5),(−5,0),(5,0). Cada tipo forma una red conectada a un vecino del beacon; todas las coordenadas cumplen distanciaChebyshev<16 y hay exactamente64adyacenciasS–R, por lo que getStrength[0]==64.",
+        "Ofrenda norteFire:1Stone. SurEarth:1Dirt. OesteAir:1Music Disc13 registrado en oreDictionary record. EsteWater:1Potion of Healing8197 con un efecto. Se elige esta combinación entre las alternativas permitidas por el servidor.",
+        "Diferencia comprobada en el binario exacto1.2.12: la interfaz presenta12/12 por cofre, pero golemDeath usa intdebug=1 y acepta>=1 coincidencia por cada inventario. Se documenta el mínimo efectivo; completar12/12 es la variante descrita por la interfaz, no una condición adicional del servidor de esta versión.",
+        "Sacrificar personalmente un Iron Golem cerca del beacon: distancia al centro al cuadrado<300. Para construirlo desde materiales se presupuestan4IronBlocks+1Pumpkin; un golem ya existente puede cumplir el mismo evento.",
+        "Al comenzar se eliminan beacon y4inventarios y hay explosiones de fuerza6 en el centro y3 en cada inventario. Se prepara la malla/ofrendas como material expendible: no se garantiza su recuperación ni se asume que quede intacta.",
+        "El inicio elimina EntityMob existentes en el End y registra a los jugadores presentes como participantes. Matar personalmente101EntityMob marcados Siege mientras se mantiene un sigil activo: el código asciende cuando SiegeKills>100, no cuando==100.",
+        "Sólo cuentan mobs de la incursión con la marcaSiege, no cualquier monstruo. Mantenerse en el End y como participante; si no quedan participantes termina la incursión.",
+        "upgradeSigil reemplaza el sigil activo por newStableSigil con NBT stable=true. Es el recurso Pseudo-Inversion Sigil usado en la cadena, no un activo con usos restantes.",
+        "Los tiempos de combate, encuentro y montaje son variables. No se proporciona duración ni energía de máquina."
+      ],
+      "metadata": {
+        "ritual": true,
+        "dimensionId": 1,
+        "outputNBT": {
+          "stable": true
+        },
+        "requiredMarkedMobKills": 101,
+        "serverChestMinimum": 1,
+        "uiChestTarget": 12,
+        "requiredMarkingStrengthExact": 64,
+        "markingQuantities": {
+          "redstone": 39,
+          "string": 50,
+          "minimal": false,
+          "verifiedConnectedNetworks": true,
+          "verifiedSharedEdges": 64,
+          "radiusChebyshevMax": 13
+        },
+        "beaconPyramidRequiredByThisCode": false,
+        "ironGolemSacrifice": true,
+        "sourceMethod": "EventHandlerSiege.golemDeath/SiegeDeath/upgradeSigil",
+        "quantitativeCompleteness": false,
+        "markingLayout": [
+          {
+            "x": 0,
+            "z": 1,
+            "block": "R"
+          },
+          {
+            "x": 1,
+            "z": -1,
+            "block": "S"
+          },
+          {
+            "x": 1,
+            "z": 0,
+            "block": "S"
+          },
+          {
+            "x": 1,
+            "z": 1,
+            "block": "R"
+          },
+          {
+            "x": 1,
+            "z": 2,
+            "block": "R"
+          },
+          {
+            "x": 1,
+            "z": 3,
+            "block": "R"
+          },
+          {
+            "x": 1,
+            "z": 4,
+            "block": "R"
+          },
+          {
+            "x": 1,
+            "z": 5,
+            "block": "R"
+          },
+          {
+            "x": 1,
+            "z": 6,
+            "block": "R"
+          },
+          {
+            "x": 1,
+            "z": 7,
+            "block": "R"
+          },
+          {
+            "x": 1,
+            "z": 8,
+            "block": "R"
+          },
+          {
+            "x": 1,
+            "z": 9,
+            "block": "R"
+          },
+          {
+            "x": 1,
+            "z": 10,
+            "block": "R"
+          },
+          {
+            "x": 1,
+            "z": 11,
+            "block": "R"
+          },
+          {
+            "x": 1,
+            "z": 12,
+            "block": "R"
+          },
+          {
+            "x": 1,
+            "z": 13,
+            "block": "S"
+          },
+          {
+            "x": 2,
+            "z": -1,
+            "block": "S"
+          },
+          {
+            "x": 2,
+            "z": 0,
+            "block": "S"
+          },
+          {
+            "x": 2,
+            "z": 1,
+            "block": "R"
+          },
+          {
+            "x": 2,
+            "z": 2,
+            "block": "S"
+          },
+          {
+            "x": 2,
+            "z": 3,
+            "block": "S"
+          },
+          {
+            "x": 2,
+            "z": 4,
+            "block": "S"
+          },
+          {
+            "x": 2,
+            "z": 5,
+            "block": "S"
+          },
+          {
+            "x": 2,
+            "z": 6,
+            "block": "S"
+          },
+          {
+            "x": 2,
+            "z": 7,
+            "block": "S"
+          },
+          {
+            "x": 2,
+            "z": 8,
+            "block": "S"
+          },
+          {
+            "x": 2,
+            "z": 9,
+            "block": "S"
+          },
+          {
+            "x": 2,
+            "z": 10,
+            "block": "S"
+          },
+          {
+            "x": 2,
+            "z": 11,
+            "block": "S"
+          },
+          {
+            "x": 2,
+            "z": 12,
+            "block": "S"
+          },
+          {
+            "x": 2,
+            "z": 13,
+            "block": "S"
+          },
+          {
+            "x": 3,
+            "z": -1,
+            "block": "S"
+          },
+          {
+            "x": 3,
+            "z": 0,
+            "block": "S"
+          },
+          {
+            "x": 3,
+            "z": 1,
+            "block": "R"
+          },
+          {
+            "x": 3,
+            "z": 2,
+            "block": "R"
+          },
+          {
+            "x": 3,
+            "z": 3,
+            "block": "R"
+          },
+          {
+            "x": 3,
+            "z": 4,
+            "block": "R"
+          },
+          {
+            "x": 3,
+            "z": 5,
+            "block": "R"
+          },
+          {
+            "x": 3,
+            "z": 6,
+            "block": "R"
+          },
+          {
+            "x": 3,
+            "z": 7,
+            "block": "R"
+          },
+          {
+            "x": 3,
+            "z": 8,
+            "block": "R"
+          },
+          {
+            "x": 3,
+            "z": 9,
+            "block": "R"
+          },
+          {
+            "x": 3,
+            "z": 10,
+            "block": "R"
+          },
+          {
+            "x": 3,
+            "z": 11,
+            "block": "R"
+          },
+          {
+            "x": 3,
+            "z": 12,
+            "block": "R"
+          },
+          {
+            "x": 3,
+            "z": 13,
+            "block": "S"
+          },
+          {
+            "x": 4,
+            "z": -1,
+            "block": "S"
+          },
+          {
+            "x": 4,
+            "z": 1,
+            "block": "R"
+          },
+          {
+            "x": 4,
+            "z": 2,
+            "block": "S"
+          },
+          {
+            "x": 4,
+            "z": 3,
+            "block": "S"
+          },
+          {
+            "x": 4,
+            "z": 4,
+            "block": "S"
+          },
+          {
+            "x": 4,
+            "z": 5,
+            "block": "S"
+          },
+          {
+            "x": 4,
+            "z": 6,
+            "block": "S"
+          },
+          {
+            "x": 4,
+            "z": 7,
+            "block": "S"
+          },
+          {
+            "x": 4,
+            "z": 8,
+            "block": "S"
+          },
+          {
+            "x": 4,
+            "z": 9,
+            "block": "S"
+          },
+          {
+            "x": 4,
+            "z": 10,
+            "block": "S"
+          },
+          {
+            "x": 4,
+            "z": 11,
+            "block": "S"
+          },
+          {
+            "x": 4,
+            "z": 12,
+            "block": "S"
+          },
+          {
+            "x": 4,
+            "z": 13,
+            "block": "S"
+          },
+          {
+            "x": 5,
+            "z": -1,
+            "block": "S"
+          },
+          {
+            "x": 5,
+            "z": 1,
+            "block": "R"
+          },
+          {
+            "x": 5,
+            "z": 2,
+            "block": "R"
+          },
+          {
+            "x": 5,
+            "z": 3,
+            "block": "R"
+          },
+          {
+            "x": 5,
+            "z": 4,
+            "block": "R"
+          },
+          {
+            "x": 5,
+            "z": 5,
+            "block": "R"
+          },
+          {
+            "x": 5,
+            "z": 6,
+            "block": "R"
+          },
+          {
+            "x": 5,
+            "z": 7,
+            "block": "R"
+          },
+          {
+            "x": 5,
+            "z": 8,
+            "block": "R"
+          },
+          {
+            "x": 5,
+            "z": 9,
+            "block": "R"
+          },
+          {
+            "x": 5,
+            "z": 10,
+            "block": "R"
+          },
+          {
+            "x": 5,
+            "z": 11,
+            "block": "R"
+          },
+          {
+            "x": 5,
+            "z": 12,
+            "block": "R"
+          },
+          {
+            "x": 5,
+            "z": 13,
+            "block": "S"
+          },
+          {
+            "x": 6,
+            "z": -1,
+            "block": "S"
+          },
+          {
+            "x": 6,
+            "z": 0,
+            "block": "S"
+          },
+          {
+            "x": 6,
+            "z": 1,
+            "block": "S"
+          },
+          {
+            "x": 6,
+            "z": 2,
+            "block": "S"
+          },
+          {
+            "x": 6,
+            "z": 3,
+            "block": "S"
+          },
+          {
+            "x": 6,
+            "z": 4,
+            "block": "S"
+          },
+          {
+            "x": 6,
+            "z": 5,
+            "block": "S"
+          },
+          {
+            "x": 6,
+            "z": 6,
+            "block": "S"
+          },
+          {
+            "x": 6,
+            "z": 7,
+            "block": "S"
+          },
+          {
+            "x": 6,
+            "z": 8,
+            "block": "S"
+          },
+          {
+            "x": 6,
+            "z": 9,
+            "block": "S"
+          },
+          {
+            "x": 6,
+            "z": 10,
+            "block": "S"
+          },
+          {
+            "x": 6,
+            "z": 11,
+            "block": "S"
+          },
+          {
+            "x": 6,
+            "z": 12,
+            "block": "S"
+          },
+          {
+            "x": 6,
+            "z": 13,
+            "block": "S"
+          }
+        ]
+      },
+      "source": {
+        "url": "https://www.curseforge.com/minecraft/mc-mods/extra-utilities/files/2264383"
+      }
+    }
+  ],
+  "producerOverrides": {
+    "extrautilities:divisionsigil": "patch:verified:extrautils:sigil:stabilization"
+  },
+  "notes": [
+    "La identidad de inventario original extrautilities:divisionsigil del export está nombrada Pseudo-Inversion Sigil y lleva tooltipNBTstable:1b. Los estados iniciales se separan mediante IDsvirtuales para evitar un falso ciclo de autorrequisito.",
+    "Los ingredientes seleccionadosFire/Earth/Air/Water son una ruta mínima válida para el código de esta versión. Las listas completas de alternativas y la discrepancia12/1 permanecen en EventHandlerSiege decompilado.",
+    "No se reintroduce RecipeUnsigil como productor: ese proceso exige un sigil inactivo y da IronIngots aleatorios; el export vacío de esa receta no era una fuente de hierro gratis.",
+    "Una disposición concreta39redstone/50string se verificó por recorrido de ambas redes,64adyacenciasS–R, distancia<16 y ausencia de solapamiento con beacon/cofres. No se afirma optimalidad ni se contabiliza un suelo ya existente como consumo adicional."
+  ]
+}

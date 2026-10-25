@@ -1,0 +1,1331 @@
+{
+  "resources": [
+    {
+      "id": "witchery:ingredient@28",
+      "displayName": "Foul Fume",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:ingredient@16",
+      "displayName": "Quicklime",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:ingredient@27",
+      "displayName": "Clay Jar",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:ingredient@17",
+      "displayName": "Gypsum",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:ingredient@30",
+      "displayName": "Oil of Vitriol",
+      "kind": "item"
+    },
+    {
+      "id": "minecraft:slime_ball",
+      "displayName": "Slimeball",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:ingredient@32",
+      "displayName": "Breath of the Goddess",
+      "kind": "item"
+    },
+    {
+      "id": "minecraft:dye@4",
+      "displayName": "Lapis Lazuli",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:ingredient@37",
+      "displayName": "Tear of the Goddess",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:ingredient@34",
+      "displayName": "Whiff of Magic",
+      "kind": "item"
+    },
+    {
+      "id": "minecraft:diamond",
+      "displayName": "Diamond",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:ingredient@29",
+      "displayName": "Diamond Vapor",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:ingredient@36",
+      "displayName": "Odour of Purity",
+      "kind": "item"
+    },
+    {
+      "id": "minecraft:ghast_tear",
+      "displayName": "Ghast Tear",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:ingredient@35",
+      "displayName": "Reek of Misfortune",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:ingredient@38",
+      "displayName": "Refined Evil",
+      "kind": "item"
+    },
+    {
+      "id": "minecraft:ender_pearl",
+      "displayName": "Ender Pearl",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:ingredient@67",
+      "displayName": "Ender Dew",
+      "kind": "item"
+    },
+    {
+      "id": "minecraft:blaze_powder",
+      "displayName": "Blaze Powder",
+      "kind": "item"
+    },
+    {
+      "id": "minecraft:gunpowder",
+      "displayName": "Gunpowder",
+      "kind": "item"
+    },
+    {
+      "id": "minecraft:glowstone_dust",
+      "displayName": "Glowstone Dust",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:ingredient@23",
+      "displayName": "Demon Heart",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:ingredient@80",
+      "displayName": "Demonic Blood",
+      "kind": "item"
+    },
+    {
+      "id": "minecraft:netherrack",
+      "displayName": "Netherrack",
+      "kind": "item"
+    },
+    {
+      "id": "minecraft:soul_sand",
+      "displayName": "Soul Sand",
+      "kind": "item"
+    },
+    {
+      "id": "minecraft:redstone",
+      "displayName": "Redstone Dust",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:ingredient@39",
+      "displayName": "Drop of Luck",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:ingredient@24",
+      "displayName": "Wool of Bat",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:ingredient@25",
+      "displayName": "Tongue of Dog",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:ingredient@21",
+      "displayName": "Belladonna Flower",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:ingredient@22",
+      "displayName": "Mandrake Root",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:ingredient@40",
+      "displayName": "Redstone Soup",
+      "kind": "item"
+    },
+    {
+      "id": "minecraft:potionitem@8236",
+      "displayName": "minecraft:potionitem@8236",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:poppet@8",
+      "displayName": "Voodoo Poppet",
+      "kind": "item"
+    },
+    {
+      "id": "minecraft:blaze_rod",
+      "displayName": "Blaze Rod",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:ingredient@45",
+      "displayName": "Infernal Animus",
+      "kind": "item"
+    },
+    {
+      "id": "minecraft:potionitem@16172",
+      "displayName": "minecraft:potionitem@16172",
+      "kind": "item"
+    },
+    {
+      "id": "minecraft:nether_wart",
+      "displayName": "Nether Wart",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:ingredient@15",
+      "displayName": "Mutandis Extremis",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:ingredient@14",
+      "displayName": "Mutandis",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:ingredient@31",
+      "displayName": "Exhale of the Horned One",
+      "kind": "item"
+    },
+    {
+      "id": "minecraft:egg",
+      "displayName": "Egg",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:ingredient@18",
+      "displayName": "Wood Ash",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:chalkritual",
+      "displayName": "Ritual Chalk",
+      "kind": "item"
+    },
+    {
+      "id": "minecraft:gold_ingot",
+      "displayName": "Gold Ingot",
+      "kind": "item"
+    },
+    {
+      "id": "minecraft:sapling@3",
+      "displayName": "Jungle Sapling",
+      "kind": "item"
+    },
+    {
+      "id": "minecraft:sapling@2",
+      "displayName": "Birch Sapling",
+      "kind": "item"
+    },
+    {
+      "id": "minecraft:sapling",
+      "displayName": "Oak Sapling",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.metaitem.01@2086",
+      "displayName": "Gold Dust",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:chalkheart",
+      "displayName": "witchery:chalkheart",
+      "kind": "item"
+    },
+    {
+      "id": "gregtech:gt.metaitem.01@2533",
+      "displayName": "Endereye Dust",
+      "kind": "item"
+    },
+    {
+      "id": "hardcoreenderexpansion:end_powder",
+      "displayName": "End Powder",
+      "kind": "item"
+    },
+    {
+      "id": "dreamcraft:manyullyncrystal",
+      "displayName": "Manyullyn Crystal",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:chalkotherwhere",
+      "displayName": "Otherwhere Chalk",
+      "kind": "item"
+    },
+    {
+      "id": "minecraft:nether_star",
+      "displayName": "Nether Star",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:chalkinfernal",
+      "displayName": "witchery:chalkinfernal",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:ingredient@10",
+      "displayName": "Attuned Stone",
+      "kind": "item"
+    },
+    {
+      "id": "minecraft:bone",
+      "displayName": "Bone",
+      "kind": "item"
+    },
+    {
+      "id": "minecraft:rotten_flesh",
+      "displayName": "Rotten Flesh",
+      "kind": "item"
+    },
+    {
+      "id": "minecraft:iron_sword",
+      "displayName": "Iron Sword",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:ingredient@66",
+      "displayName": "Spectral Dust",
+      "kind": "item"
+    },
+    {
+      "id": "witchery:ingredient@64",
+      "displayName": "Necromantic Stone",
+      "kind": "item"
+    },
+    {
+      "id": "draconicevolution:dragonheart",
+      "displayName": "Dragon Heart",
+      "kind": "item"
+    }
+  ],
+  "recipes": [
+    {
+      "id": "verified:rc2:witchery-binary:distillery-591",
+      "machineType": "Witchery Distillery",
+      "inputs": [
+        {
+          "id": "witchery:ingredient@28",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@16",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@27",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "witchery:ingredient@17",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@30",
+          "amount": 1
+        },
+        {
+          "id": "minecraft:slime_ball",
+          "amount": 1
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://mediafilez.forgecdn.net/files/2234/410/witchery-1.7.10-0.24.1.jar",
+        "class": "WitcheryRecipes.class",
+        "decompiledLine": 591,
+        "sha256": "68c331f624cea6c0827a31e96a6dce2e75461227c42da70f11ba765a8c6a8cec"
+      },
+      "conditions": {
+        "nearAltar": true,
+        "jarCount": 1
+      }
+    },
+    {
+      "id": "verified:rc2:witchery-binary:distillery-592",
+      "machineType": "Witchery Distillery",
+      "inputs": [
+        {
+          "id": "witchery:ingredient@32",
+          "amount": 1
+        },
+        {
+          "id": "minecraft:dye@4",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@27",
+          "amount": 3
+        }
+      ],
+      "outputs": [
+        {
+          "id": "witchery:ingredient@37",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@34",
+          "amount": 1
+        },
+        {
+          "id": "minecraft:slime_ball",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@28",
+          "amount": 1
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://mediafilez.forgecdn.net/files/2234/410/witchery-1.7.10-0.24.1.jar",
+        "class": "WitcheryRecipes.class",
+        "decompiledLine": 592,
+        "sha256": "68c331f624cea6c0827a31e96a6dce2e75461227c42da70f11ba765a8c6a8cec"
+      },
+      "conditions": {
+        "nearAltar": true,
+        "jarCount": 3
+      }
+    },
+    {
+      "id": "verified:rc2:witchery-binary:distillery-593",
+      "machineType": "Witchery Distillery",
+      "inputs": [
+        {
+          "id": "minecraft:diamond",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@30",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@27",
+          "amount": 3
+        }
+      ],
+      "outputs": [
+        {
+          "id": "witchery:ingredient@29",
+          "amount": 2
+        },
+        {
+          "id": "witchery:ingredient@36",
+          "amount": 1
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://mediafilez.forgecdn.net/files/2234/410/witchery-1.7.10-0.24.1.jar",
+        "class": "WitcheryRecipes.class",
+        "decompiledLine": 593,
+        "sha256": "68c331f624cea6c0827a31e96a6dce2e75461227c42da70f11ba765a8c6a8cec"
+      },
+      "conditions": {
+        "nearAltar": true,
+        "jarCount": 3
+      }
+    },
+    {
+      "id": "verified:rc2:witchery-binary:distillery-594",
+      "machineType": "Witchery Distillery",
+      "inputs": [
+        {
+          "id": "witchery:ingredient@29",
+          "amount": 1
+        },
+        {
+          "id": "minecraft:ghast_tear",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@27",
+          "amount": 3
+        }
+      ],
+      "outputs": [
+        {
+          "id": "witchery:ingredient@36",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@35",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@28",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@38",
+          "amount": 1
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://mediafilez.forgecdn.net/files/2234/410/witchery-1.7.10-0.24.1.jar",
+        "class": "WitcheryRecipes.class",
+        "decompiledLine": 594,
+        "sha256": "68c331f624cea6c0827a31e96a6dce2e75461227c42da70f11ba765a8c6a8cec"
+      },
+      "conditions": {
+        "nearAltar": true,
+        "jarCount": 3
+      }
+    },
+    {
+      "id": "verified:rc2:witchery-binary:distillery-595",
+      "machineType": "Witchery Distillery",
+      "inputs": [
+        {
+          "id": "minecraft:ender_pearl",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@27",
+          "amount": 6
+        }
+      ],
+      "outputs": [
+        {
+          "id": "witchery:ingredient@67",
+          "amount": 5
+        },
+        {
+          "id": "witchery:ingredient@34",
+          "amount": 1
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://mediafilez.forgecdn.net/files/2234/410/witchery-1.7.10-0.24.1.jar",
+        "class": "WitcheryRecipes.class",
+        "decompiledLine": 595,
+        "sha256": "68c331f624cea6c0827a31e96a6dce2e75461227c42da70f11ba765a8c6a8cec"
+      },
+      "conditions": {
+        "nearAltar": true,
+        "jarCount": 6
+      }
+    },
+    {
+      "id": "verified:rc2:witchery-binary:distillery-596",
+      "machineType": "Witchery Distillery",
+      "inputs": [
+        {
+          "id": "minecraft:blaze_powder",
+          "amount": 1
+        },
+        {
+          "id": "minecraft:gunpowder",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@27",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "minecraft:glowstone_dust",
+          "amount": 2
+        },
+        {
+          "id": "witchery:ingredient@35",
+          "amount": 1
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://mediafilez.forgecdn.net/files/2234/410/witchery-1.7.10-0.24.1.jar",
+        "class": "WitcheryRecipes.class",
+        "decompiledLine": 596,
+        "sha256": "68c331f624cea6c0827a31e96a6dce2e75461227c42da70f11ba765a8c6a8cec"
+      },
+      "conditions": {
+        "nearAltar": true,
+        "jarCount": 1
+      }
+    },
+    {
+      "id": "verified:rc2:witchery-binary:distillery-597",
+      "machineType": "Witchery Distillery",
+      "inputs": [
+        {
+          "id": "witchery:ingredient@23",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@29",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@27",
+          "amount": 4
+        }
+      ],
+      "outputs": [
+        {
+          "id": "witchery:ingredient@80",
+          "amount": 4
+        },
+        {
+          "id": "witchery:ingredient@38",
+          "amount": 1
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://mediafilez.forgecdn.net/files/2234/410/witchery-1.7.10-0.24.1.jar",
+        "class": "WitcheryRecipes.class",
+        "decompiledLine": 597,
+        "sha256": "68c331f624cea6c0827a31e96a6dce2e75461227c42da70f11ba765a8c6a8cec"
+      },
+      "conditions": {
+        "nearAltar": true,
+        "jarCount": 4
+      }
+    },
+    {
+      "id": "verified:rc2:witchery-binary:distillery-598",
+      "machineType": "Witchery Distillery",
+      "inputs": [
+        {
+          "id": "witchery:ingredient@23",
+          "amount": 1
+        },
+        {
+          "id": "minecraft:netherrack",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@27",
+          "amount": 2
+        }
+      ],
+      "outputs": [
+        {
+          "id": "minecraft:soul_sand",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@80",
+          "amount": 2
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://mediafilez.forgecdn.net/files/2234/410/witchery-1.7.10-0.24.1.jar",
+        "class": "WitcheryRecipes.class",
+        "decompiledLine": 598,
+        "sha256": "68c331f624cea6c0827a31e96a6dce2e75461227c42da70f11ba765a8c6a8cec"
+      },
+      "conditions": {
+        "nearAltar": true,
+        "jarCount": 2
+      }
+    },
+    {
+      "id": "verified:rc2:witchery-binary:kettle-627",
+      "machineType": "Witchery Kettle",
+      "inputs": [
+        {
+          "id": "minecraft:redstone",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@39",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@24",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@25",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@21",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@22",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "witchery:ingredient@40",
+          "amount": 1
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://mediafilez.forgecdn.net/files/2234/410/witchery-1.7.10-0.24.1.jar",
+        "class": "WitcheryRecipes.class",
+        "decompiledLine": 627,
+        "sha256": "68c331f624cea6c0827a31e96a6dce2e75461227c42da70f11ba765a8c6a8cec"
+      },
+      "conditions": {
+        "altarPower": 1000.0,
+        "hatBonus": 0,
+        "familiarType": 0,
+        "dimension": 0
+      }
+    },
+    {
+      "id": "verified:rc2:witchery-binary:kettle-635",
+      "machineType": "Witchery Kettle",
+      "inputs": [
+        {
+          "id": "witchery:ingredient@40",
+          "amount": 1
+        },
+        {
+          "id": "minecraft:potionitem@8236",
+          "amount": 1
+        },
+        {
+          "id": "witchery:poppet@8",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@23",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@38",
+          "amount": 1
+        },
+        {
+          "id": "minecraft:blaze_rod",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "witchery:ingredient@45",
+          "amount": 2
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://mediafilez.forgecdn.net/files/2234/410/witchery-1.7.10-0.24.1.jar",
+        "class": "WitcheryRecipes.class",
+        "decompiledLine": 635,
+        "sha256": "68c331f624cea6c0827a31e96a6dce2e75461227c42da70f11ba765a8c6a8cec"
+      },
+      "conditions": {
+        "altarPower": 4000.0,
+        "hatBonus": 0,
+        "familiarType": 0,
+        "dimension": 0
+      }
+    },
+    {
+      "id": "verified:rc2:witchery-binary:kettle-636",
+      "machineType": "Witchery Kettle",
+      "inputs": [
+        {
+          "id": "witchery:ingredient@40",
+          "amount": 1
+        },
+        {
+          "id": "minecraft:potionitem@16172",
+          "amount": 1
+        },
+        {
+          "id": "witchery:poppet@8",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@23",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@38",
+          "amount": 1
+        },
+        {
+          "id": "minecraft:blaze_rod",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "witchery:ingredient@45",
+          "amount": 2
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://mediafilez.forgecdn.net/files/2234/410/witchery-1.7.10-0.24.1.jar",
+        "class": "WitcheryRecipes.class",
+        "decompiledLine": 636,
+        "sha256": "68c331f624cea6c0827a31e96a6dce2e75461227c42da70f11ba765a8c6a8cec"
+      },
+      "conditions": {
+        "altarPower": 4000.0,
+        "hatBonus": 0,
+        "familiarType": 0,
+        "dimension": 0
+      }
+    },
+    {
+      "id": "verified:rc2:witchery-binary:dropofluck",
+      "machineType": "Witches Cauldron",
+      "inputs": [
+        {
+          "id": "witchery:ingredient@22",
+          "amount": 1
+        },
+        {
+          "id": "minecraft:nether_wart",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@37",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@38",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@15",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "witchery:ingredient@39",
+          "amount": 1
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://mediafilez.forgecdn.net/files/2234/410/witchery-1.7.10-0.24.1.jar",
+        "class": "brewing/WitcheryBrewRegistry.class",
+        "decompiledLine": 1813,
+        "sha256": "68c331f624cea6c0827a31e96a6dce2e75461227c42da70f11ba765a8c6a8cec"
+      },
+      "conditions": {
+        "altarPower": 1800,
+        "finalIngredient": "witchery:ingredient@15"
+      }
+    },
+    {
+      "id": "verified:rc2:witchery-binary:mutandisextremis",
+      "machineType": "Witches Cauldron",
+      "inputs": [
+        {
+          "id": "minecraft:nether_wart",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@14",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "witchery:ingredient@15",
+          "amount": 1
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://mediafilez.forgecdn.net/files/2234/410/witchery-1.7.10-0.24.1.jar",
+        "class": "brewing/WitcheryBrewRegistry.class",
+        "decompiledLine": 1812,
+        "sha256": "68c331f624cea6c0827a31e96a6dce2e75461227c42da70f11ba765a8c6a8cec"
+      },
+      "conditions": {
+        "altarPower": 0,
+        "finalIngredient": "witchery:ingredient@14"
+      }
+    },
+    {
+      "id": "verified:rc2:witchery-binary:mutandis",
+      "machineType": "Witches Cauldron",
+      "inputs": [
+        {
+          "id": "witchery:ingredient@22",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@31",
+          "amount": 1
+        },
+        {
+          "id": "minecraft:egg",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "witchery:ingredient@14",
+          "amount": 6
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://mediafilez.forgecdn.net/files/2234/410/witchery-1.7.10-0.24.1.jar",
+        "class": "brewing/WitcheryBrewRegistry.class",
+        "decompiledLine": 1811,
+        "sha256": "68c331f624cea6c0827a31e96a6dce2e75461227c42da70f11ba765a8c6a8cec"
+      },
+      "conditions": {
+        "altarPower": 0,
+        "finalIngredient": "minecraft:egg"
+      }
+    },
+    {
+      "id": "verified:rc2:witchery-binary:ritualchalk",
+      "machineType": "Crafting",
+      "inputs": [
+        {
+          "id": "witchery:ingredient@37",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@18",
+          "amount": 6
+        },
+        {
+          "id": "witchery:ingredient@17",
+          "amount": 2
+        }
+      ],
+      "outputs": [
+        {
+          "id": "witchery:chalkritual",
+          "amount": 2
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://mediafilez.forgecdn.net/files/2234/410/witchery-1.7.10-0.24.1.jar",
+        "class": "WitcheryRecipes.class",
+        "decompiledLine": 373,
+        "sha256": "68c331f624cea6c0827a31e96a6dce2e75461227c42da70f11ba765a8c6a8cec"
+      },
+      "conditions": {}
+    },
+    {
+      "id": "verified:rc2:witchery:goldenchalk",
+      "machineType": "Witches Cauldron",
+      "inputs": [
+        {
+          "id": "witchery:ingredient@22",
+          "amount": 1
+        },
+        {
+          "id": "gregtech:gt.metaitem.01@2086",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@29",
+          "amount": 1
+        },
+        {
+          "id": "witchery:chalkritual",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "witchery:chalkheart",
+          "amount": 1
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/witchery/WitcheryPlugin.java",
+        "lines": 226
+      },
+      "conditions": {
+        "declaredAltarPower": 1000,
+        "override": "NHCore WitcheryPlugin removes all native chalk cauldron recipes.",
+        "finalIngredient": "witchery:chalkritual",
+        "powerCaveat": "All chalk recipes share the same trigger action; addBrewRecipe appends subsequent recipes without changing existing action power. Declared argument is not a measured runtime total, and other reagent actions can also consume altar power."
+      },
+      "steps": [
+        "Use heated water-filled Witches Cauldron.",
+        "Add all listed ingredients except Ritual Chalk; order of those ingredients does not matter.",
+        "Add Ritual Chalk last."
+      ]
+    },
+    {
+      "id": "verified:rc2:witchery:otherwherechalk",
+      "machineType": "Witches Cauldron",
+      "inputs": [
+        {
+          "id": "gregtech:gt.metaitem.01@2533",
+          "amount": 1
+        },
+        {
+          "id": "hardcoreenderexpansion:end_powder",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@37",
+          "amount": 1
+        },
+        {
+          "id": "dreamcraft:manyullyncrystal",
+          "amount": 1
+        },
+        {
+          "id": "witchery:chalkritual",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "witchery:chalkotherwhere",
+          "amount": 1
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/witchery/WitcheryPlugin.java",
+        "lines": 241
+      },
+      "conditions": {
+        "declaredAltarPower": 4000,
+        "override": "NHCore WitcheryPlugin removes all native chalk cauldron recipes.",
+        "finalIngredient": "witchery:chalkritual",
+        "powerCaveat": "All chalk recipes share the same trigger action; addBrewRecipe appends subsequent recipes without changing existing action power. Declared argument is not a measured runtime total, and other reagent actions can also consume altar power."
+      },
+      "steps": [
+        "Use heated water-filled Witches Cauldron.",
+        "Add all listed ingredients except Ritual Chalk; order of those ingredients does not matter.",
+        "Add Ritual Chalk last."
+      ]
+    },
+    {
+      "id": "verified:rc2:witchery:infernalchalk",
+      "machineType": "Witches Cauldron",
+      "inputs": [
+        {
+          "id": "minecraft:nether_wart",
+          "amount": 1
+        },
+        {
+          "id": "minecraft:blaze_rod",
+          "amount": 1
+        },
+        {
+          "id": "minecraft:nether_star",
+          "amount": 1
+        },
+        {
+          "id": "witchery:chalkritual",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "witchery:chalkinfernal",
+          "amount": 1
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/witchery/WitcheryPlugin.java",
+        "lines": 233
+      },
+      "conditions": {
+        "declaredAltarPower": 2000,
+        "override": "NHCore WitcheryPlugin removes all native chalk cauldron recipes.",
+        "finalIngredient": "witchery:chalkritual",
+        "powerCaveat": "All chalk recipes share the same trigger action; addBrewRecipe appends subsequent recipes without changing existing action power. Declared argument is not a measured runtime total, and other reagent actions can also consume altar power."
+      },
+      "steps": [
+        "Use heated water-filled Witches Cauldron.",
+        "Add all listed ingredients except Ritual Chalk; order of those ingredients does not matter.",
+        "Add Ritual Chalk last."
+      ]
+    },
+    {
+      "id": "verified:rc2:witchery:necromanticstone",
+      "machineType": "Circle Magic: Rite of Necromancy",
+      "inputs": [
+        {
+          "id": "witchery:ingredient@10",
+          "amount": 1
+        },
+        {
+          "id": "minecraft:bone",
+          "amount": 1
+        },
+        {
+          "id": "minecraft:rotten_flesh",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@18",
+          "amount": 1
+        },
+        {
+          "id": "minecraft:iron_sword",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@66",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "witchery:ingredient@64",
+          "amount": 1
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://mediafilez.forgecdn.net/files/2234/410/witchery-1.7.10-0.24.1.jar",
+        "class": "WitcheryRecipes.class",
+        "decompiledLine": 703
+      },
+      "conditions": {
+        "night": true,
+        "altarPower": 1000,
+        "circle": "Small 7x7 Ritual Chalk circle with Golden Chalk heart; reusable glyphs/infrastructure."
+      },
+      "steps": [
+        "At night arrange a small 7x7 Ritual Chalk circle.",
+        "Provide an Altar with 1000 power.",
+        "Drop six foci into circle; activate heart glyph."
+      ]
+    },
+    {
+      "id": "verified:rc2:witchery:dragonheart",
+      "machineType": "Natural acquisition: Ender Dragon",
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "draconicevolution:dragonheart",
+          "amount": 1
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/Draconic-Evolution/blob/1.5.33-GTNH/src/main/java/com/brandon3055/draconicevolution/common/handler/MinecraftForgeEventHandler.java#L140"
+      },
+      "conditions": {
+        "acquisitionEvent": true,
+        "sourceEntity": "EntityDragon or HardcoreEnderExpansion.Dragon",
+        "quantity": "One Dragon Heart entity for normal dragon, second additional heart for Uber EntityCustomDragon.",
+        "collectionSource": "https://github.com/GTNewHorizons/Draconic-Evolution/blob/1.5.33-GTNH/src/main/java/com/brandon3055/draconicevolution/common/entity/EntityDragonHeart.java"
+      },
+      "steps": [
+        "Defeat an Ender Dragon or HEE Dragon.",
+        "Collect the generated Dragon Heart entity."
+      ]
+    },
+    {
+      "id": "verified:rc2:witchery-binary:demonheart-offered-trade",
+      "machineType": "Conditional acquisition: Demon bargain",
+      "inputs": [
+        {
+          "id": "minecraft:gold_ingot",
+          "amount": 30
+        }
+      ],
+      "outputs": [
+        {
+          "id": "witchery:ingredient@23",
+          "amount": 1
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://mediafilez.forgecdn.net/files/2234/410/witchery-1.7.10-0.24.1.jar",
+        "class": "entity/EntityDemon.class",
+        "decompiledLine": 471,
+        "sha256": "68c331f624cea6c0827a31e96a6dce2e75461227c42da70f11ba765a8c6a8cec"
+      },
+      "conditions": {
+        "offeredCurrencyRequired": "gold ingot; other generated currencies differ",
+        "requires": "Summoned, trapped demon offering the heart trade. Trade availability and entity summoning are prerequisites, not free crafting.",
+        "dropAlternative": "Kill demon with Arthana; exact death-drop chance remains unspecified."
+      }
+    },
+    {
+      "id": "verified:rc2:witchery-binary:oven-itemFoulFume",
+      "machineType": "Witches Oven",
+      "inputs": [
+        {
+          "id": "minecraft:sapling@3",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@27",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "witchery:ingredient@18",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@28",
+          "amount": 1
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://mediafilez.forgecdn.net/files/2234/410/witchery-1.7.10-0.24.1.jar",
+        "class": "blocks/BlockWitchesOven$TileEntityWitchesOven.class",
+        "decompiledLine": 601,
+        "sha256": "68c331f624cea6c0827a31e96a6dce2e75461227c42da70f11ba765a8c6a8cec"
+      },
+      "conditions": {
+        "probability": 0.9,
+        "probabilisticOutput": "witchery:ingredient@28",
+        "probabilityBase": 0.3,
+        "fumeFunnels": "Two correctly oriented filtered funnels; each+0.3 in RC2 (DoubleFumeFilterChance=false).",
+        "inputConsumption": "Sapling consumed each attempt; jar consumed only when fume generated. Do not read as guaranteed 1 sapling per fume.",
+        "fuel": "Any valid furnace fuel; fuel type and per-attempt allocation chosen by user."
+      }
+    },
+    {
+      "id": "verified:rc2:witchery-binary:oven-itemBreathOfTheGoddess",
+      "machineType": "Witches Oven",
+      "inputs": [
+        {
+          "id": "minecraft:sapling@2",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@27",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "witchery:ingredient@18",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@32",
+          "amount": 1
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://mediafilez.forgecdn.net/files/2234/410/witchery-1.7.10-0.24.1.jar",
+        "class": "blocks/BlockWitchesOven$TileEntityWitchesOven.class",
+        "decompiledLine": 601,
+        "sha256": "68c331f624cea6c0827a31e96a6dce2e75461227c42da70f11ba765a8c6a8cec"
+      },
+      "conditions": {
+        "probability": 0.9,
+        "probabilisticOutput": "witchery:ingredient@32",
+        "probabilityBase": 0.3,
+        "fumeFunnels": "Two correctly oriented filtered funnels; each+0.3 in RC2 (DoubleFumeFilterChance=false).",
+        "inputConsumption": "Sapling consumed each attempt; jar consumed only when fume generated. Do not read as guaranteed 1 sapling per fume.",
+        "fuel": "Any valid furnace fuel; fuel type and per-attempt allocation chosen by user."
+      }
+    },
+    {
+      "id": "verified:rc2:witchery-binary:oven-itemExhaleOfTheHornedOne",
+      "machineType": "Witches Oven",
+      "inputs": [
+        {
+          "id": "minecraft:sapling",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@27",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "witchery:ingredient@18",
+          "amount": 1
+        },
+        {
+          "id": "witchery:ingredient@31",
+          "amount": 1
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://mediafilez.forgecdn.net/files/2234/410/witchery-1.7.10-0.24.1.jar",
+        "class": "blocks/BlockWitchesOven$TileEntityWitchesOven.class",
+        "decompiledLine": 601,
+        "sha256": "68c331f624cea6c0827a31e96a6dce2e75461227c42da70f11ba765a8c6a8cec"
+      },
+      "conditions": {
+        "probability": 0.9,
+        "probabilisticOutput": "witchery:ingredient@31",
+        "probabilityBase": 0.3,
+        "fumeFunnels": "Two correctly oriented filtered funnels; each+0.3 in RC2 (DoubleFumeFilterChance=false).",
+        "inputConsumption": "Sapling consumed each attempt; jar consumed only when fume generated. Do not read as guaranteed 1 sapling per fume.",
+        "fuel": "Any valid furnace fuel; fuel type and per-attempt allocation chosen by user."
+      }
+    }
+  ],
+  "binaryProvenance": {
+    "downloadUrl": "https://mediafilez.forgecdn.net/files/2234/410/witchery-1.7.10-0.24.1.jar",
+    "manifest": "GTNH2.9.0-RC-2 Witchery0.24.1",
+    "sha256": "68c331f624cea6c0827a31e96a6dce2e75461227c42da70f11ba765a8c6a8cec",
+    "decompiler": "CFR0.152, only recipe/registry/item/entity/oven classes selected.",
+    "mcpMappings": "de.oceanlabs.mcp:mcp_stable:12-1.7.10"
+  },
+  "notes": [
+    "Native recipes must yield to explicit NHCore2.9.84 overrides and already exported dataset producers.",
+    "Fume probability and Demon bargain availability remain conditional; graph cannot use these as unconditional guaranteed rates.",
+    "Cauldron/Kettle water fill and heat are infrastructure/environment prerequisites; fluid consumption not yet established in binary."
+  ]
+}

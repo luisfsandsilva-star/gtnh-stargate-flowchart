@@ -1,0 +1,520 @@
+{
+  "schemaVersion": 1,
+  "packVersion": "2.9.0-RC-2",
+  "resources": {
+    "gregtech:gt.integrated_circuit": {
+      "name": "Programmed Circuit",
+      "kind": "item"
+    },
+    "gregtech:gt.metatool.01@10": {
+      "name": "Saw",
+      "kind": "item"
+    },
+    "forestry:apiculture": {
+      "name": "Apiary",
+      "kind": "item"
+    },
+    "factoryflow:cropsnh_seed:cropsnh-cotton": {
+      "name": "Cotton Seeds",
+      "kind": "item"
+    },
+    "witchery:spanishmoss": {
+      "name": "Spanish Moss",
+      "kind": "item"
+    },
+    "gregtech:gt.metatool.01@22": {
+      "name": "Screwdriver",
+      "kind": "item"
+    },
+    "factoryflow:cropsnh_seed:cropsnh-primordialberry": {
+      "name": "Primordial Berry Seeds",
+      "kind": "item"
+    },
+    "natura:barley.seed@1": {
+      "name": "Cotton Seeds",
+      "kind": "item"
+    },
+    "forestry:apiculture@2": {
+      "name": "Bee House",
+      "kind": "item"
+    },
+    "gregtech:gt.metaitem.01@17032": {
+      "name": "Iron Plate",
+      "kind": "item"
+    },
+    "gregtech:gt.metaitem.01@23032": {
+      "name": "Iron Rod",
+      "kind": "item"
+    },
+    "gregtech:gt.metatool.01@12": {
+      "name": "Hammer",
+      "kind": "item"
+    },
+    "factoryflow:cropsnh_seed:cropsnh-spanishmoss": {
+      "name": "Spanish Moss Seeds",
+      "kind": "item"
+    },
+    "forestry:beecombs": {
+      "name": "Honey Comb",
+      "kind": "item"
+    },
+    "gregtech:gt.metatool.01@18": {
+      "name": "File",
+      "kind": "item"
+    },
+    "gregtech:gt.metatool.01@26": {
+      "name": "Wire Cutter",
+      "kind": "item"
+    },
+    "gregtech:gt.metaitem.01@26032": {
+      "name": "Iron Bolt",
+      "kind": "item"
+    },
+    "gregtech:gt.metaitem.02@7032": {
+      "name": "Iron Saw Blade",
+      "kind": "item"
+    },
+    "gregtech:gt.metatool.01@28": {
+      "name": "Scoop",
+      "kind": "item"
+    },
+    "gregtech:gt.metaitem.01@32710": {
+      "name": "Coated Circuit Board",
+      "kind": "item"
+    },
+    "gregtech:gt.metaitem.01@17035": {
+      "name": "Copper Plate",
+      "kind": "item"
+    },
+    "gregtech:gt.metaitem.01@29035": {
+      "name": "Copper Foil",
+      "kind": "item"
+    },
+    "gregtech:gt.metaitem.01@23305": {
+      "name": "Steel Rod",
+      "kind": "item"
+    },
+    "molten.brass": {
+      "name": "Molten Brass",
+      "kind": "fluid"
+    },
+    "gregtech:gt.metaitem.02@19035": {
+      "name": "Fine Copper Wire",
+      "kind": "item"
+    },
+    "tconstruct:searedblock": {
+      "name": "Casting Table",
+      "kind": "item"
+    },
+    "gregtech:gt.metaitem.03@32100": {
+      "name": "Circuit Board",
+      "kind": "item"
+    },
+    "gregtech:gt.metaitem.01@11301": {
+      "name": "Brass Ingot",
+      "kind": "item"
+    },
+    "gregtech:gt.metaitem.01@32716": {
+      "name": "Resistor",
+      "kind": "item"
+    },
+    "gregtech:gt.blockmachines@1360": {
+      "name": "1x Copper Wire",
+      "kind": "item"
+    },
+    "tconstruct:blankpattern@1": {
+      "name": "Blank Cast",
+      "kind": "item"
+    },
+    "ic2:itempartcircuit": {
+      "name": "Electronic Circuit",
+      "kind": "item"
+    },
+    "dreamcraft:moldformball": {
+      "name": "Casting Form (Ball Mold)",
+      "kind": "item"
+    },
+    "gregtech:gt.metaitem.01@32700": {
+      "name": "Vacuum Tube",
+      "kind": "item"
+    },
+    "gregtech:gt.blockmachines@2000": {
+      "name": "1x Red Alloy Wire",
+      "kind": "item"
+    },
+    "gregtech:gt.metaitem.01@32307": {
+      "name": "Mold (Ball)",
+      "kind": "item"
+    },
+    "gregtech:gt.metaitem.01@11305": {
+      "name": "Steel Ingot",
+      "kind": "item"
+    },
+    "gregtech:gt.metaitem.03@32012": {
+      "name": "Glass Tube",
+      "kind": "item"
+    },
+    "molten.steel": {
+      "name": "Molten Steel",
+      "kind": "fluid"
+    },
+    "gregtech:gt.metaitem.01@11880": {
+      "name": "Rubber Bar",
+      "kind": "item"
+    },
+    "gregtech:gt.metaitem.01@2896": {
+      "name": "Raw Rubber Dust",
+      "kind": "item"
+    },
+    "gregtech:gt.metaitem.01@2880": {
+      "name": "Rubber Pulp",
+      "kind": "item"
+    },
+    "ic2:blockrubwood": {
+      "name": "Rubber Wood",
+      "kind": "item"
+    }
+  },
+  "recipes": [
+    {
+      "id": "verified:bootstrap:natural-honeycomb",
+      "machineType": "Recolección inicial · colmena Forest/Meadows",
+      "inputs": [
+        {
+          "id": "gregtech:gt.metatool.01@28",
+          "amount": 1,
+          "consumed": false,
+          "tooltip": [
+            "GT Scoop; material y desgaste dependen de NBT. Reutilizable, con desgaste."
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "id": "forestry:beecombs",
+          "amount": 1
+        }
+      ],
+      "conditions": [
+        "Localizar colmena natural Forest o Meadows y romperla con una herramienta Scoop compatible.",
+        "Forestry PluginApiculture.registerBeehiveDrops asigna Honey Comb1 como additional drop de los HiveDrop de Forest/Meadows; HiveDrop.getAdditional copia ese stack.",
+        "Las tablas y RNG de la colmena deciden drops; 1 representa el stack de adquisición, no garantía de un intento. Repetir recolección cuando sea necesario.",
+        "Esta fuente inicial de comb no requiere Apiary, Bee House ni Bee Produce, y evita su dependencia circular."
+      ],
+      "source": {
+        "url": "https://github.com/GTNewHorizons/ForestryMC/blob/4.11.39/src/main/java/forestry/plugins/PluginApiculture.java",
+        "supportingUrls": [
+          "https://github.com/GTNewHorizons/ForestryMC/blob/4.11.39/src/main/java/forestry/apiculture/genetics/HiveDrop.java"
+        ]
+      },
+      "dynamic": true,
+      "metadata": {
+        "acquisition": true,
+        "bootstrap": true,
+        "hiveTypes": [
+          "forest",
+          "meadows"
+        ],
+        "honeyCombMetadata": 0,
+        "sourceVersion": "ForestryMC4.11.39"
+      }
+    },
+    {
+      "id": "verified:bootstrap:natura-cotton-seed",
+      "machineType": "Recolección inicial · semillas de hierba Natura",
+      "inputs": [],
+      "outputs": [
+        {
+          "id": "natura:barley.seed@1",
+          "amount": 1
+        }
+      ],
+      "conditions": [
+        "Romper hierba del mundo para obtener Cotton Seeds; no requiere Cotton ya cultivado.",
+        "Natura2.8.24 NContent registra addGrassSeed(new ItemStack(seeds,1,1),3). Peso3 es peso de selección, no3% de probabilidad total.",
+        "Configuración exacta RC2 config/Natura.cfg: Drop cotton seeds from grass=true; Generate Cotton Crops=true.",
+        "Repetir recolección conforme RNG; el stack1 no implica un intento garantizado."
+      ],
+      "source": {
+        "url": "https://github.com/GTNewHorizons/Natura/blob/2.8.24/src/main/java/mods/natura/common/NContent.java",
+        "supportingUrls": [
+          "https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/blob/2.9.0-nightly-2026-10-04/config/Natura.cfg"
+        ]
+      },
+      "dynamic": true,
+      "metadata": {
+        "acquisition": true,
+        "bootstrap": true,
+        "grassSeedWeight": 3,
+        "sourceVersion": "Natura2.8.24"
+      }
+    },
+    {
+      "id": "verified:bootstrap:tconstruct-blank-cast",
+      "machineType": "Tinkers Construct · Casting Table",
+      "inputs": [
+        {
+          "id": "molten.brass",
+          "kind": "fluid",
+          "amount": 144
+        },
+        {
+          "id": "tconstruct:searedblock",
+          "amount": 1,
+          "consumed": false,
+          "setup": true
+        }
+      ],
+      "outputs": [
+        {
+          "id": "tconstruct:blankpattern@1",
+          "amount": 1
+        }
+      ],
+      "durationTicks": 80,
+      "eut": null,
+      "conditions": [
+        "Verter144mB/L deMoltenBrass enCastingTable vacía: no hay cast previo ni ProgrammedCircuit como ingrediente.",
+        "TinkerSmeltery.registerCastingRecipes registra blankPattern meta1 con metalPatternFluidType, ingotLiquidValue144 y enfriamiento80ticks.",
+        "Configuración RC2 Metal cast FluidType=Brass; NHCoreSmelteryFluidTypes registra Brass→molten.brass.",
+        "Esta receta de handlerCastingTable falta en el corpus Oracle, que no exporta recetas CastingTinkers; añade el arranque real que rompe BlankCast↔ProgrammedCircuit.",
+        "Suministro de líquido por infraestructura compatible; la energía de fundir/producir Brass pertenece a sus pasos anteriores."
+      ],
+      "source": {
+        "url": "https://github.com/GTNewHorizons/TinkersConstruct/blob/1.14.118-GTNH/src/main/java/tconstruct/smeltery/TinkerSmeltery.java",
+        "supportingUrls": [
+          "https://github.com/GTNewHorizons/TinkersConstruct/blob/1.14.118-GTNH/src/main/java/tconstruct/library/crafting/LiquidCasting.java",
+          "https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/blob/2.9.0-nightly-2026-10-04/config/TinkersConstruct.cfg",
+          "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/tinkersConstruct/SmelteryFluidTypes.java"
+        ]
+      },
+      "metadata": {
+        "sourceLine": 1025,
+        "emptyCast": true,
+        "coolingTicks": 80,
+        "bootstrap": true,
+        "sourceVersions": {
+          "TinkersConstruct": "1.14.118-GTNH",
+          "NHCore": "2.9.84"
+        }
+      }
+    }
+  ],
+  "producerOverrides": {
+    "forestry:beecombs": "patch:verified:bootstrap:natural-honeycomb",
+    "natura:barley.seed@1": "patch:verified:bootstrap:natura-cotton-seed",
+    "factoryflow:cropsnh_seed:cropsnh-cotton": "patch:verified:biological:closure:cropsnh-cotton",
+    "factoryflow:cropsnh_seed:cropsnh-spanishmoss": "patch:verified:biological:closure:cropsnh-spanishmoss",
+    "witchery:spanishmoss": "patch:verified:biological:closure:spanishmoss",
+    "factoryflow:cropsnh_seed:cropsnh-primordialberry": "patch:verified:biological:primordialberry-planting",
+    "forestry:apiculture": "21775",
+    "forestry:apiculture@2": "238119",
+    "gregtech:gt.metatool.01@12": "200389",
+    "gregtech:gt.metaitem.01@17032": "224578",
+    "gregtech:gt.metatool.01@18": "225586",
+    "gregtech:gt.metaitem.01@23032": "222123",
+    "gregtech:gt.metaitem.02@7032": "220743",
+    "gregtech:gt.metatool.01@10": "232797",
+    "gregtech:gt.metaitem.01@26032": "222629",
+    "gregtech:gt.metatool.01@22": "200394",
+    "gregtech:gt.metatool.01@26": "200395",
+    "gregtech:gt.metatool.01@28": "200396",
+    "ic2:itempartcircuit": "219338",
+    "gregtech:gt.metaitem.03@32100": "192774",
+    "gregtech:gt.metaitem.01@32710": "231384",
+    "gregtech:gt.metaitem.01@32716": "192777",
+    "gregtech:gt.metaitem.01@32700": "192785",
+    "gregtech:gt.blockmachines@1360": "229716",
+    "gregtech:gt.blockmachines@2000": "229707",
+    "gregtech:gt.metaitem.02@19035": "229466",
+    "gregtech:gt.metaitem.01@29035": "228430",
+    "gregtech:gt.metaitem.01@17035": "224580",
+    "gregtech:gt.metaitem.01@11305": "175363",
+    "gregtech:gt.metaitem.01@23305": "222186",
+    "gregtech:gt.metaitem.01@11301": "6660",
+    "molten.brass": "78365",
+    "tconstruct:blankpattern@1": "patch:verified:bootstrap:tconstruct-blank-cast",
+    "dreamcraft:moldformball": "192828",
+    "gregtech:gt.metaitem.01@32307": "112998",
+    "gregtech:gt.metaitem.03@32012": "10814",
+    "gregtech:gt.integrated_circuit": "234092",
+    "molten.steel": "84681",
+    "tconstruct:materials@2": "246526",
+    "gregtech:gt.metaitem.01@2890": "230011",
+    "gregtech:gt.metaitem.01@11880": "7788",
+    "gregtech:gt.metaitem.01@2896": "61888",
+    "gregtech:gt.metaitem.01@2880": "148462"
+  },
+  "candidateOverrides": {
+    "oredict:craftingToolHardHammer": [
+      "gregtech:gt.metatool.01@12"
+    ],
+    "oredict:craftingToolFile": [
+      "gregtech:gt.metatool.01@18"
+    ],
+    "oredict:craftingToolSaw": [
+      "gregtech:gt.metatool.01@10"
+    ],
+    "oredict:craftingToolScrewdriver": [
+      "gregtech:gt.metatool.01@22"
+    ],
+    "oredict:craftingToolWireCutter": [
+      "gregtech:gt.metatool.01@26"
+    ],
+    "oredict:craftingToolScoop": [
+      "gregtech:gt.metatool.01@28"
+    ],
+    "gregtech:gt.integrated_circuit@32767": [
+      "gregtech:gt.integrated_circuit"
+    ],
+    "oredict:beeComb": [
+      "forestry:beecombs"
+    ],
+    "forestry:beecombs@32767": [
+      "forestry:beecombs"
+    ],
+    "oredict:circuitBasic": [
+      "ic2:itempartcircuit"
+    ],
+    "ic2:blockrubwood@32767": [
+      "ic2:blockrubwood"
+    ],
+    "oredict:logRubber": [
+      "ic2:blockrubwood"
+    ]
+  },
+  "notes": [
+    "Hints no aplicados a build_graph.py: parent debe importar explícitamente estos campos.",
+    "Overrides de herramientas seleccionan la varianteNBT Iron; los ids de herramienta solos no distinguen materiales. Preservar tooltips de la receta elegida.",
+    "Priorizar grupos de herramientas normales evita SingleUseTool→molde→SingleUseTool.",
+    "La ruta de semillas es adquisición inicial: CottonSeedNatural→CottonGenotype y Mutandis→SpanishMoss→SpanishMossGenotype; no usar CropFarm como primer productor.",
+    "Apiary21775 y BeeHouse238119 son recetas reales del corpus; HoneyComb natural corta su ciclo de bootstrap.",
+    "PrimordialBerry parte de PrimordialPearl genuina; el productor Warden binario debe mantenerse según patch de otra subtarea.",
+    "CandidateOverride de circuit wildcard usa el circuito no configurado como entrada a programación; no convertirlo en materia prima natural.",
+    "Incluir catalysts en Dijkstra sin corregir bootstrap hace raíz inalcanzable. Fallback debe señalar explícitamente falta de prueba, no presentar una ruta cíclica como alcanzable.",
+    "AuditoríaSCC: Apiary/BeeHouse necesitan elegir HoneyComb al resolver oredict:beeComb y wildcardforestry:beecombs@32767; no basta override del productor HoneyComb si se selecciona MundaneComb.",
+    "Bootstrap electrónico manual: ElectronicCircuit219338→Board192774/Resistor192777/VacuumTube192785, sinSMDResistor niBender/Wiremill conprogrammedcircuit.",
+    "El subciclo BlankCast→Circuit1 requería un handler ausente; ahora tiene recetaCastingTable verificada144MoltenBrass→BlankCast80ticks.",
+    "Los hints de productor fueron cotejados con outputsSQLite. Esto no implica que cada infraestructura de máquina esté completamente costeada.",
+    "Rubber bootstrap: RawRubber Dust2896 differs from RubberPulp2880. AlloySmelter7788 uses RawRubber3+Sulfur1, so replace Furnace249756 route requiring RubberPulp from PurpleSlime.",
+    "If RubberPulp2880 itself is required, Macerator148462 recycles bootstrap RubberBar1→Pulp1; it is not used to produce that first RubberBar.",
+    "No new world acquisition or Treetap recipe was invented; only exact SQLite producers and pinned GT5 recipe source are changed."
+  ],
+  "sccHintsEvidence": {
+    "apiaryCandidates": {
+      "oredict:beeComb": "forestry:beecombs",
+      "forestry:beecombs@32767": "forestry:beecombs"
+    },
+    "electronicBootstrap": {
+      "ic2:itempartcircuit": "219338",
+      "gregtech:gt.metaitem.03@32100": "192774",
+      "gregtech:gt.metaitem.01@32710": "231384",
+      "gregtech:gt.metaitem.01@32716": "192777",
+      "gregtech:gt.metaitem.01@32700": "192785",
+      "gregtech:gt.blockmachines@1360": "229716",
+      "gregtech:gt.blockmachines@2000": "229707",
+      "gregtech:gt.metaitem.02@19035": "229466",
+      "gregtech:gt.metaitem.01@29035": "228430",
+      "gregtech:gt.metaitem.01@17035": "224580",
+      "gregtech:gt.metaitem.01@11305": "175363",
+      "gregtech:gt.metaitem.01@23305": "222186",
+      "gregtech:gt.metaitem.01@11301": "6660",
+      "molten.brass": "78365",
+      "tconstruct:blankpattern@1": "patch:verified:bootstrap:tconstruct-blank-cast",
+      "dreamcraft:moldformball": "192828",
+      "gregtech:gt.metaitem.01@32307": "112998",
+      "gregtech:gt.metaitem.03@32012": "10814",
+      "gregtech:gt.integrated_circuit": "234092",
+      "molten.steel": "84681"
+    },
+    "excludedLateComponentsForInitialCircuit": [
+      "SMD Resistor",
+      "Fine Tantalum Wire",
+      "Polyethylene Circuit Board route"
+    ],
+    "sourceEvidence": [
+      "sources/verified/ScriptTinkersConstruct-2.9.84.java",
+      "sources/verified/SmelteryFluidTypes-2.9.84.java",
+      "sources/verified/TinkersConstruct-RC2.cfg"
+    ],
+    "verifiedBlankCastHandlerAbsentFromSQLite": true
+  },
+  "rubberBootstrapEvidence": {
+    "producerOverrides": {
+      "gregtech:gt.metaitem.01@11880": "7788",
+      "gregtech:gt.metaitem.01@2896": "61888",
+      "gregtech:gt.metaitem.01@2880": "148462"
+    },
+    "mainPath": [
+      {
+        "recipeId": "61888",
+        "machine": "Extractor",
+        "inputs": [
+          {
+            "id": "ic2:blockrubwood",
+            "amount": 1
+          }
+        ],
+        "outputs": [
+          {
+            "id": "gregtech:gt.metaitem.01@2896",
+            "amount": 1
+          }
+        ],
+        "durationTicks": 300,
+        "eut": 2,
+        "sourceURL": "https://github.com/GTNewHorizons/GT5-Unofficial/blob/5.09.54.205/src/main/java/gregtech/loaders/postload/recipes/ExtractorRecipes.java",
+        "sourceLine": 23
+      },
+      {
+        "recipeId": "7788",
+        "machine": "Alloy Smelter",
+        "inputs": [
+          {
+            "id": "gregtech:gt.metaitem.01@2896",
+            "amount": 3
+          },
+          {
+            "id": "gregtech:gt.metaitem.01@2022",
+            "amount": 1
+          }
+        ],
+        "outputs": [
+          {
+            "id": "gregtech:gt.metaitem.01@11880",
+            "amount": 1
+          }
+        ],
+        "durationTicks": 200,
+        "eut": 7,
+        "sourceURL": "https://github.com/GTNewHorizons/GT5-Unofficial/blob/5.09.54.205/src/main/java/gregtech/loaders/postload/recipes/AlloySmelterRecipes.java",
+        "sourceLine": 111
+      }
+    ],
+    "alternativeResinPath": {
+      "recipeId": "61893",
+      "inputs": [
+        {
+          "id": "ic2:itemharz",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "gregtech:gt.metaitem.01@2896",
+          "amount": 3
+        }
+      ],
+      "durationTicks": 300,
+      "eut": 2,
+      "sourceURL": "https://github.com/GTNewHorizons/GT5-Unofficial/blob/5.09.54.205/src/main/java/gregtech/loaders/postload/recipes/ExtractorRecipes.java",
+      "sourceLine": 34
+    },
+    "acquisitionNotes": [
+      "Main route uses harvested Rubber Wood as a normal world resource, not Purple Slime or EEC.",
+      "Sticky Resin alternative is supported by exact GT5 extractor source. Treetap/world-harvest acquisition is not encoded as a numeric recipe in this hint update.",
+      "IC2 RubWood wildcard candidate preference picks the concrete base registry ID; preserve all metadata alternatives in the atlas."
+    ],
+    "noNewGraphBuild": true
+  }
+}

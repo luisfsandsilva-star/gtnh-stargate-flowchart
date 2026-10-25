@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 1,
+  "packVersion": "2.9.0-RC-2",
+  "modVersion": "GT5-Unofficial5.09.54.205",
+  "confirmed": true,
+  "selectedInputRule": {
+    "applicability": [
+      "Forge/GT shaped or shapeless crafting input originally specified as oredict:craftingTool*",
+      "Chosen concrete item is gregtech:gt.metatool.01* / MetaGeneratedTool",
+      "Not an arbitrary machine input containing a tool, and not every item in the ore dictionary group"
+    ],
+    "normalizedFields": {
+      "consumed": false,
+      "toolWear": true,
+      "stockAmount": 1
+    },
+    "meaning": "One usable reusable tool must exist before crafting. It is returned with wear; it is neither a fresh consumed item per operation nor an immortal catalyst.",
+    "preserveFields": [
+      "source ore dictionary group",
+      "selected variant id",
+      "all alternative ids",
+      "NBT tooltip",
+      "current and maximum durability when known"
+    ],
+    "noGlobalMutation": "Do not set consumed:false on an entire craftingTool group, because disposable variants share those groups."
+  },
+  "normalSelectedTools": [
+    {
+      "id": "gregtech:gt.metatool.01@10",
+      "name": "Saw",
+      "damagePerCraftGTUnits": 200,
+      "consumedPerOperation": false,
+      "sourceURL": "https://github.com/GTNewHorizons/GT5-Unofficial/blob/5.09.54.205/src/main/java/gregtech/common/tools/ToolSaw.java",
+      "sourceLine": 33,
+      "localFile": "sources/verified/ToolSaw-5.09.54.205.java",
+      "notes": [
+        "Stock requirement1; tool returned with wear until it breaks. Material/maxDamage/currentDamage come from NBT."
+      ]
+    },
+    {
+      "id": "gregtech:gt.metatool.01@12",
+      "name": "Hard Hammer",
+      "damagePerCraftGTUnits": 400,
+      "consumedPerOperation": false,
+      "sourceURL": "https://github.com/GTNewHorizons/GT5-Unofficial/blob/5.09.54.205/src/main/java/gregtech/common/tools/ToolHardHammer.java",
+      "sourceLine": 54,
+      "localFile": "sources/verified/ToolHardHammer-5.09.54.205.java",
+      "notes": [
+        "Stock requirement1; tool returned with wear until it breaks. Material/maxDamage/currentDamage come from NBT."
+      ]
+    },
+    {
+      "id": "gregtech:gt.metatool.01@18",
+      "name": "File",
+      "damagePerCraftGTUnits": 400,
+      "consumedPerOperation": false,
+      "sourceURL": "https://github.com/GTNewHorizons/GT5-Unofficial/blob/5.09.54.205/src/main/java/gregtech/common/tools/ToolFile.java",
+      "sourceLine": 25,
+      "localFile": "sources/verified/ToolFile-5.09.54.205.java",
+      "notes": [
+        "Stock requirement1; tool returned with wear until it breaks. Material/maxDamage/currentDamage come from NBT."
+      ]
+    },
+    {
+      "id": "gregtech:gt.metatool.01@22",
+      "name": "Screwdriver",
+      "damagePerCraftGTUnits": 400,
+      "consumedPerOperation": false,
+      "sourceURL": "https://github.com/GTNewHorizons/GT5-Unofficial/blob/5.09.54.205/src/main/java/gregtech/common/tools/ToolScrewdriver.java",
+      "sourceLine": 51,
+      "localFile": "sources/verified/ToolScrewdriver-5.09.54.205.java",
+      "notes": [
+        "Stock requirement1; tool returned with wear until it breaks. Material/maxDamage/currentDamage come from NBT."
+      ]
+    },
+    {
+      "id": "gregtech:gt.metatool.01@26",
+      "name": "Wire Cutter",
+      "damagePerCraftGTUnits": 400,
+      "consumedPerOperation": false,
+      "sourceURL": "https://github.com/GTNewHorizons/GT5-Unofficial/blob/5.09.54.205/src/main/java/gregtech/common/tools/ToolWireCutter.java",
+      "sourceLine": 20,
+      "localFile": "sources/verified/ToolWireCutter-5.09.54.205.java",
+      "notes": [
+        "Stock requirement1; tool returned with wear until it breaks. Material/maxDamage/currentDamage come from NBT."
+      ]
+    },
+    {
+      "id": "gregtech:gt.metatool.01@28",
+      "name": "Scoop",
+      "damagePerCraftGTUnits": 200,
+      "consumedPerOperation": false,
+      "sourceURL": "https://github.com/GTNewHorizons/GT5-Unofficial/blob/5.09.54.205/src/main/java/gregtech/common/tools/ToolScoop.java",
+      "sourceLine": 30,
+      "localFile": "sources/verified/ToolScoop-5.09.54.205.java",
+      "notes": [
+        "Stock requirement1; tool returned with wear until it breaks. Material/maxDamage/currentDamage come from NBT."
+      ]
+    }
+  ],
+  "fullAtlasGroupRule": {
+    "quantityMeaning": "stock1 / tool slot requirement",
+    "consumption": "variant-dependent",
+    "annotation": "Herramienta requerida; la variante GT normal se devuelve con desgaste. Algunas alternativas Single Use se consumen. Consultar variante y NBT.",
+    "preserveAlternatives": true,
+    "candidateOverrides": "Default selection preference only; do not remove alternatives."
+  },
+  "singleUseVariants": {
+    "ggfab:gt.ggfab.d1": "File",
+    "ggfab:gt.ggfab.d1@1": "Wrench",
+    "ggfab:gt.ggfab.d1@2": "Crowbar",
+    "ggfab:gt.ggfab.d1@3": "Wire Cutter",
+    "ggfab:gt.ggfab.d1@4": "Hard Hammer",
+    "ggfab:gt.ggfab.d1@5": "Soft Mallet",
+    "ggfab:gt.ggfab.d1@6": "Screwdriver",
+    "ggfab:gt.ggfab.d1@7": "Saw"
+  },
+  "units": {
+    "GTToolDamage": "The listed wear values use internal GT.ToolStats damage units. doDamageToItem converts vanilla damage to GT units with factor100; getContainerItem uses internal units directly.",
+    "ordinaryFreshToolLifetime": "Requires chosen NBT maxDamage,currentDamage and break behavior. No exact replacement count has been calculated here.",
+    "electricTools": "Different power and probabilistic durability behavior; excluded from ordinary-tool wear lifetime assumptions."
+  },
+  "evidence": [
+    {
+      "sourceURL": "https://github.com/GTNewHorizons/GT5-Unofficial/blob/5.09.54.205/src/main/java/gregtech/api/items/MetaGeneratedTool.java",
+      "localFile": "sources/verified/MetaGeneratedTool-5.09.54.205.java",
+      "symbols": [
+        "getContainerItem(ItemStack)",
+        "hasContainerItem(ItemStack)",
+        "doesContainerItemLeaveCraftingGrid(ItemStack)",
+        "doDamage(ItemStack,long)"
+      ],
+      "lineReferences": [
+        703,
+        776,
+        788,
+        927
+      ],
+      "verifiedBehavior": [
+        "Crafting container callback copies one tool, applies the tool-stat crafting damage, and returns the remaining stack.",
+        "Usable tools with valid stats report a container item; the container stays in the crafting grid.",
+        "Non-electric tools accumulate GT durability damage; on reaching maximum damage they may become a broken item or be removed.",
+        "Electric variants consume their power and only sometimes accumulate durability damage; do not apply the ordinary-tool lifetime formula to them."
+      ]
+    },
+    {
+      "sourceURL": "https://github.com/GTNewHorizons/GT5-Unofficial/blob/5.09.54.205/src/main/java/gregtech/api/util/GTModHandler.java",
+      "localFile": "sources/verified/GTModHandler-5.09.54.205.java",
+      "symbols": [
+        "addCraftingRecipe",
+        "ToolDictNames lowercase character mappings"
+      ],
+      "lineReferences": [
+        617,
+        1039,
+        1051,
+        1055
+      ],
+      "verifiedBehavior": [
+        "Lowercase recipe characters map to ore dictionary craftingTool groups, including saw, file, screwdriver, hard hammer and wire cutter.",
+        "These groups can accept different item classes; group membership alone does not establish reusable-tool semantics."
+      ]
+    },
+    {
+      "sourceURL": "https://github.com/GTNewHorizons/GT5-Unofficial/blob/5.09.54.205/src/main/java/ggfab/items/SingleUseTool.java",
+      "localFile": "sources/verified/SingleUseTool-5.09.54.205.java",
+      "symbols": [
+        "SingleUseTool enum"
+      ],
+      "verifiedBehavior": [
+        "GGFab single-use variants are assigned the same craftingTool dictionary groups as normal GT tools.",
+        "Their enum contains independent mold/item IDs, so a full-group alternative list includes disposable variants."
+      ]
+    },
+    {
+      "sourceURL": "https://github.com/GTNewHorizons/GT5-Unofficial/blob/5.09.54.205/src/main/java/ggfab/items/GGMetaItemDumbItems.java",
+      "localFile": "sources/verified/GGMetaItemDumbItems-5.09.54.205.java",
+      "symbols": [
+        "GGMetaItemDumbItems extends MetaBaseItem"
+      ],
+      "verifiedBehavior": [
+        "Single-use item family uses a different item implementation from MetaGeneratedTool; do not apply its container callback by ore dictionary group alone."
+      ]
+    }
+  ]
+}

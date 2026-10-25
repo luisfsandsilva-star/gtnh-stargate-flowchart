@@ -1,0 +1,11 @@
+{
+  "resources": 4807,
+  "recipes": 4076,
+  "missing": 0,
+  "raw": 40,
+  "cycles": 0,
+  "quantitativeCompleteness": false,
+  "edges": 17755,
+  "inlineBytes": 575429,
+  "fullAtlasBytes": 17519916
+}

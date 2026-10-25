@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "packVersion": "2.9.0-RC-2",
+  "resources": {},
+  "sourceUrls": [
+    "https://github.com/GTNewHorizons/GT5-Unofficial/blob/5.09.54.205/src/main/java/gregtech/api/items/MetaGeneratedItemX32.java",
+    "https://github.com/GTNewHorizons/GT5-Unofficial/blob/5.09.54.205/src/main/java/gregtech/api/util/GTOreDictUnificator.java",
+    "https://mediafilez.forgecdn.net/files/6833/54/industrialcraft-2-2.2.828-experimental.jar",
+    "https://mediafilez.forgecdn.net/files/2227/552/Thaumcraft-1.7.10-4.2.3.5.jar",
+    "https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/blob/2.9.0-nightly-2026-10-04/config/ic2/compressor.ini"
+  ],
+  "verification": {
+    "ic2BinarySha256": "de1d4597972be036eccd1c3b37e9980c3c9d9cdb92f52df2bf470971873893f6",
+    "ic2Identity": "ItemPlate constructor: Ic2Items.plateobsidian=new ItemStack(this,1,7). IC2.init:OreDictionary.registerOre(\"plateObsidian\",Ic2Items.plateobsidian.copy()).",
+    "gtRegistration": "MetaGeneratedItem01 prefix list index17=plate. MetaGeneratedItemX32 loops metaID:prefix[i/1000],material[i%1000] and calls GTOreDictUnificator.add; add delegates set(...alreadyRegistered=false), which registers plate+material via OreDictionary. Existing dataset item17804 is generated ObsidianPlate and producers54652 etc produce this exact item.",
+    "thaumcraftAcceptance": "Exact TC4InfusionRecipe.matches calls areItemStacksEqual(i2,comp,true) for every pedestal component. The fuzzy branch obtains OreDictionary.getOreID(stack0) and containsMatch with stack1 among that ore group, after NBT validation. A GTplateObsidian component therefore matches the IC2plateObsidian recipe component.",
+    "scope": "Only the ingredients accepted by this Thaumcraft Infusion recipe are substituted. This is not a recipe converting GTplates into IC2plates, nor an asserted universal item alias.",
+    "rejectedNativeRecipe": "IC2jar compressor.ini contains dustObsidian→itemPlates@7, but RC2config/ic2/compressor.ini overrides it with a comment-only file; do not add that disabled recipe. block_cutter.ini is also empty inRC2.",
+    "baselineRecipe": "SQLite252431, researchBEACON,instability6,diamondBlockcenter,4glass+4obsidianplates+4NetherStarLens+64eachsixaspects; only the4plate identities are normalized."
+  },
+  "recipes": [
+    {
+      "id": "verified:thaumcraft:beacon:plateobsidian-matching",
+      "machineType": "Thaumcraft Infusion",
+      "inputs": [
+        {
+          "kind": "item",
+          "id": "minecraft:diamond_block",
+          "amount": 1
+        },
+        {
+          "kind": "item",
+          "id": "minecraft:glass",
+          "amount": 1
+        },
+        {
+          "kind": "item",
+          "id": "gregtech:gt.metaitem.01@17804",
+          "amount": 1
+        },
+        {
+          "kind": "item",
+          "id": "gregtech:gt.metaitem.01@24506",
+          "amount": 1
+        },
+        {
+          "kind": "item",
+          "id": "minecraft:glass",
+          "amount": 1
+        },
+        {
+          "kind": "item",
+          "id": "gregtech:gt.metaitem.01@17804",
+          "amount": 1
+        },
+        {
+          "kind": "item",
+          "id": "gregtech:gt.metaitem.01@24506",
+          "amount": 1
+        },
+        {
+          "kind": "item",
+          "id": "minecraft:glass",
+          "amount": 1
+        },
+        {
+          "kind": "item",
+          "id": "gregtech:gt.metaitem.01@17804",
+          "amount": 1
+        },
+        {
+          "kind": "item",
+          "id": "gregtech:gt.metaitem.01@24506",
+          "amount": 1
+        },
+        {
+          "kind": "item",
+          "id": "minecraft:glass",
+          "amount": 1
+        },
+        {
+          "kind": "item",
+          "id": "gregtech:gt.metaitem.01@17804",
+          "amount": 1
+        },
+        {
+          "kind": "item",
+          "id": "gregtech:gt.metaitem.01@24506",
+          "amount": 1
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:praecantatio",
+          "amount": 64
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:alienis",
+          "amount": 64
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:lux",
+          "amount": 64
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:ordo",
+          "amount": 64
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:ignis",
+          "amount": 64
+        },
+        {
+          "kind": "aspect",
+          "id": "thaumcraft:aspect:terra",
+          "amount": 64
+        }
+      ],
+      "outputs": [
+        {
+          "id": "minecraft:beacon",
+          "amount": 1
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "conditions": [
+        "InvestigaciónBEACON completa. Infusión con inestabilidad6 y los aspectos indicados.",
+        "Los4componentesObsidianPlate aceptan las placas GT: ambos ítems están registrados en plateObsidian y el matcher de Thaumcraft Infusion usa comparación fuzzy por OreDictionary.",
+        "El export mostró la varianteIC2itemPlates@7; se usa el ingredienteGTválido17804 sin afirmar que se fabrique un ítemIC2.",
+        "El tiempo de la infusión depende del suministro de essentia y del ritual; se omite la duración sintética del export.",
+        "La recetaIC2Compressor de la configuración embebida del jar NO se incorpora: el overrideRC2la deshabilita."
+      ],
+      "metadata": {
+        "sourceSqlRecipeId": 252431,
+        "thaumcraftType": "infusion",
+        "research": "BEACON",
+        "instability": 6,
+        "ingredientReplacement": {
+          "from": "ic2:itemplates@7",
+          "to": "gregtech:gt.metaitem.01@17804",
+          "count": 4,
+          "oreDictionary": "plateObsidian",
+          "scope": "ThaumcraftInfusion"
+        }
+      },
+      "source": {
+        "url": "https://mediafilez.forgecdn.net/files/2227/552/Thaumcraft-1.7.10-4.2.3.5.jar"
+      }
+    }
+  ],
+  "producerOverrides": {
+    "minecraft:beacon": "patch:verified:thaumcraft:beacon:plateobsidian-matching"
+  },
+  "scopedInputReplacements": [
+    {
+      "sqlRecipeId": 252431,
+      "from": "ic2:itemplates@7",
+      "to": "gregtech:gt.metaitem.01@17804",
+      "oreDictionary": "plateObsidian",
+      "reason": "InfusionRecipe.areItemStacksEqual fuzzy=true"
+    }
+  ]
+}

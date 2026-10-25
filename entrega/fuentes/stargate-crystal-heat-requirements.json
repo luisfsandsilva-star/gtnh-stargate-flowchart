@@ -1,0 +1,47 @@
+{
+  "packVersion": "2.9.0-RC-2",
+  "patches": [
+    {
+      "sqlRecipeId": 32293,
+      "output": "sgcraft:sgcontrollercrystal",
+      "metadataPatch": {
+        "coilHeat": 100000,
+        "minimumHeatKelvin": 100000,
+        "minimumProcessingVoltageEUt": 2013265912
+      },
+      "conditions": [
+        "Calor de proceso mínimo100000 K (COIL_HEAT), no simplemente valor especial decorativo.",
+        "Godforge Smelting Module puede ejecutar mapa Blast Furnace y exige getHeat()>=100000, processingVoltage>=2013265912EU/t y saldo de EU inalámbrico suficiente para arranque.",
+        "Tiempo base24192000ticks=14días; Godforge modifica velocidad/EU con configuración real.",
+        "CalorGodforge=12601+int(log(fuelFactor)/log(base)*1000); base1.5, o1.12 en Smelting con upgradeSEFCP.",
+        "No inferir que un Electric Blast Furnace normal con bobinas corrientes alcance este calor."
+      ],
+      "sourceUrls": [
+        "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/gthandler/recipes/BlastFurnaceRecipes.java",
+        "https://github.com/GTNewHorizons/GT5-Unofficial/blob/5.09.54.205/src/main/java/tectech/thing/metaTileEntity/multi/godforge/MTESmeltingModule.java",
+        "https://github.com/GTNewHorizons/GT5-Unofficial/blob/5.09.54.205/src/main/java/tectech/thing/metaTileEntity/multi/godforge/util/GodforgeMath.java"
+      ]
+    },
+    {
+      "sqlRecipeId": 32294,
+      "output": "sgcraft:sgcorecrystal",
+      "metadataPatch": {
+        "coilHeat": 100000,
+        "minimumHeatKelvin": 100000,
+        "minimumProcessingVoltageEUt": 2013265912
+      },
+      "conditions": [
+        "Calor de proceso mínimo100000 K (COIL_HEAT), no simplemente valor especial decorativo.",
+        "Godforge Smelting Module puede ejecutar mapa Blast Furnace y exige getHeat()>=100000, processingVoltage>=2013265912EU/t y saldo de EU inalámbrico suficiente para arranque.",
+        "Tiempo base24192000ticks=14días; Godforge modifica velocidad/EU con configuración real.",
+        "CalorGodforge=12601+int(log(fuelFactor)/log(base)*1000); base1.5, o1.12 en Smelting con upgradeSEFCP.",
+        "No inferir que un Electric Blast Furnace normal con bobinas corrientes alcance este calor."
+      ],
+      "sourceUrls": [
+        "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/gthandler/recipes/BlastFurnaceRecipes.java",
+        "https://github.com/GTNewHorizons/GT5-Unofficial/blob/5.09.54.205/src/main/java/tectech/thing/metaTileEntity/multi/godforge/MTESmeltingModule.java",
+        "https://github.com/GTNewHorizons/GT5-Unofficial/blob/5.09.54.205/src/main/java/tectech/thing/metaTileEntity/multi/godforge/util/GodforgeMath.java"
+      ]
+    }
+  ]
+}

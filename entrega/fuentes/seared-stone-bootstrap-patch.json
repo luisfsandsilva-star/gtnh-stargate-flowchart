@@ -1,0 +1,117 @@
+{
+  "resources": [
+    {
+      "id": "minecraft:cobblestone",
+      "displayName": "Cobblestone",
+      "kind": "item"
+    },
+    {
+      "id": "stone.seared",
+      "displayName": "Seared Stone",
+      "kind": "fluid"
+    },
+    {
+      "id": "tconstruct:smeltery@4",
+      "displayName": "Seared Stone",
+      "kind": "item"
+    },
+    {
+      "id": "tconstruct:searedblock@2",
+      "displayName": "Casting Basin",
+      "kind": "item"
+    }
+  ],
+  "recipes": [
+    {
+      "id": "verified:rc2:tconstruct:smeltery:cobblestone-seared-fluid",
+      "machineType": "TConstruct Smeltery \u00b7 melt cobblestone",
+      "inputs": [
+        {
+          "id": "minecraft:cobblestone",
+          "amount": 1
+        }
+      ],
+      "outputs": [
+        {
+          "id": "stone.seared",
+          "amount": 18
+        }
+      ],
+      "durationTicks": null,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/TinkersConstruct/blob/1.14.118-GTNH/src/main/java/tconstruct/smeltery/TinkerSmeltery.java#L1793"
+      },
+      "conditions": {
+        "meltingTemperature": 800,
+        "amountSource": "https://github.com/GTNewHorizons/TinkersConstruct/blob/1.14.118-GTNH/src/main/java/tconstruct/TConstruct.java#L126",
+        "amountDerivation": "stoneLiquidValue = ingotLiquidValue/8 =144/8 =18mB per cobblestone.",
+        "infrastructure": "Formed Smeltery with valid heat/fuel supply, controller, tank and drain. Casting Table and casts are not needed for melting.",
+        "energySystem": "Smeltery heat/fuel, not EU. Duration and fuel amount vary with heating; no fixed numbers invented.",
+        "overrideReview": "Pinned NHCore ScriptTinkersConstruct removes selected melting recipes, but no removal of vanilla stone/cobblestone native melting was found.",
+        "bootstrap": "Twenty cobblestone supply360mB for one cast Seared Stone block."
+      }
+    },
+    {
+      "id": "verified:rc2:tconstruct:casting-basin:seared-stone",
+      "machineType": "TConstruct Casting Basin \u00b7 Seared Stone",
+      "inputs": [
+        {
+          "id": "stone.seared",
+          "amount": 360
+        },
+        {
+          "id": "tconstruct:searedblock@2",
+          "amount": 1,
+          "consumed": false,
+          "role": "Reusable Casting Basin; independent crafting bootstrap"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "tconstruct:smeltery@4",
+          "amount": 1
+        }
+      ],
+      "durationTicks": 245,
+      "eut": null,
+      "source": {
+        "url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptTinkersConstruct.java#L1852"
+      },
+      "conditions": {
+        "cast": null,
+        "consumeCast": false,
+        "coolingTicks": 245,
+        "infrastructure": "Pour molten Seared Stone through Smeltery drain/faucet into Casting Basin. Basin is not consumed. No Casting Table, Blank Cast or Block Mold required.",
+        "overridePriority": "NHCore removes native basin recipe for Smeltery@4 atL1532, then installs this360mB recipe atL1852.",
+        "basinBootstrap": {
+          "sqliteRecipeId": 240307,
+          "source_id": "oracle:local-2.9.0-beta-2:crafting:shaped:c2d74cc729c3d36b",
+          "inputs": [
+            {
+              "id": "tconstruct:smeltery@2",
+              "amount": 7
+            }
+          ],
+          "output": {
+            "id": "tconstruct:searedblock@2",
+            "amount": 1
+          },
+          "source": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/blob/2.9.84/src/main/java/com/dreammaster/scripts/ScriptTinkersConstruct.java#L258"
+        },
+        "durationMeaning": "245 ticks is casting cooling time, not total Smeltery heating/pouring time."
+      }
+    }
+  ],
+  "producerOverrides": {
+    "tconstruct:smeltery@4": "patch:verified:rc2:tconstruct:casting-basin:seared-stone",
+    "stone.seared": "patch:verified:rc2:tconstruct:smeltery:cobblestone-seared-fluid"
+  },
+  "rejectCircularProducerSuggestions": [
+    {
+      "sqliteRecipeId": 130126,
+      "reason": "Industrial Chisel self-input display cannot bootstrap its own source block."
+    }
+  ],
+  "scope": "Small bootstrap patch only; basin crafting already exists in dataset240307 and is not duplicated."
+}
